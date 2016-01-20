@@ -1,0 +1,16 @@
+/**
+*	button mixin wrapper
+*/
+
+	/**
+	*	create a mixin that overwrites twitter bootstrap btn class properties
+	*/
+
+		@mixin btn($height, $width, $background, $color, $padding, $margin){
+			height: $height;
+			width: 	$width;
+			background: $background;
+			color: $color;
+			padding: $padding;
+			margin: $margin;
+		}

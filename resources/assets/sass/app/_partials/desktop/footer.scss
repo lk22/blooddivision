@@ -1,0 +1,69 @@
+/**
+*	blood division footer
+*/
+
+	/**
+	*	footer wrapper
+	*/
+
+		.blooddivision-footer-wrapper{
+			height:auto;
+			width: 100%;
+			background: #000;
+			color: #FFF;
+			padding: 20px;
+			
+			/**
+			*	inner footer wrapper
+			*/ 
+
+				.inner-footer-wrapper{
+					
+					/**
+					*	inner wrapper
+					*/
+
+						.inner-wrapper{
+							padding-top: 10px;
+							
+							/**
+							*	company information wrapper
+							*/
+
+								.company-information-wrapper{
+									
+									/**
+									*	mailto link
+									*/ 
+
+										a{
+											color: #FFF; 
+										}
+								}
+						}
+
+						/**
+						*	footer link wrapper
+						*/
+
+							.footer-link-wrapper{
+								padding-top:40px;
+								
+								/**
+								*	link 
+								*/
+
+									.link{
+										margin-left:10px;
+										
+										/**
+										*	anchor
+										*/
+
+											a{
+												color: #FFF; 
+											}
+									}
+							}
+				}
+		}

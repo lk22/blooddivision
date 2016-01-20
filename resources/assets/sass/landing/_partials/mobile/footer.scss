@@ -1,0 +1,52 @@
+/**
+*	blood division mobile landing footer
+*/
+
+	/**
+	*	footer wrapper
+	*/
+
+		.bloodDivisionMobileFooterWrapper{
+			//height:auto;
+			width: 100%;
+			background: #DDD;
+			padding:10px 0px 0px 20px;
+			
+			/**
+			*	link wrapper
+			*/  
+			
+				.bloodDivisionLinks{
+					padding: 15px;
+					border-bottom:1px solid #000;
+					
+					/**
+					*	link items
+					*/
+
+						.link-item{
+							list-style-type: none;
+							padding:15px;
+							
+							/**
+							*	footer buttons
+							*/
+
+								.btn{
+									//b@include btn(35px, 100%, #555, #000, 10px, 0px);
+									height: 35px;
+									width:100%;
+									background: #2c3e50;
+									color:#fff;
+									padding:10px;
+									margin:0px;
+									border-left:1px solid #fff;
+									border-right: 1px solid #fff;
+									border-top: 1px solid #fff;
+									border-bottom: 1px solid #fff;
+									//@include border-radius(0px 0px 0px 0px);
+									border-radius: 0px 0px 0px 0px;
+								}
+						}
+				}
+		}

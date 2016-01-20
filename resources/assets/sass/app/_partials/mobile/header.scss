@@ -1,0 +1,150 @@
+/**
+*	application mobile header 
+*/
+
+	/**
+	*	header wrapper
+	*
+	*	@property => height
+	*	@property => width
+	*	@property => background-color
+	*	@property => border-bottom
+	*	@property => position(fixed)
+	*/
+
+		.bloodDivisionMobileAppHeaderWrapper{
+			height:60px;
+			background: #2c3e50;
+			border-bottom:2px solid #000;
+			
+			z-index:2;
+			width: auto;
+			/**
+			*	inner header wrapper
+			*
+			*	@property => padding
+			*/  
+			
+				.innerHeaderWrapper{
+					padding:0px;
+					
+					/**
+					*	brand container wrapper
+					*
+					*	@property => margin-top
+					*	@property => padding
+					*/
+
+						.brandContainerWrapper{
+							margin-top:5px;
+							
+							/**
+							*	brand link 
+							*
+							*	@property => color
+							*	@property => padding
+							*	@property => text-decoration
+							*/
+
+								a{
+									color:#fff;
+									padding:0px 0px 0px 30px;
+									text-decoration:none;
+								}
+						}
+
+					/**
+					*	nav container wrapper	
+					*
+					*	@property => height
+					*	@property => border-left
+					*	@property => padding
+					*	@property => cursor
+					*/
+
+						.navContainerWrapper{
+							height:58px;
+							border-left: 1px solid #fff;
+							padding:19px 10px 10px 24px;
+							cursor:pointer;
+							
+							/**
+							*	Tasks button
+							*
+							*	@class => openNavCcontainer
+							*	
+							*	@property => font-size
+							*	@property => color
+							*/
+
+								.openNavContainer{
+									font-size: 20px;
+									color: #fff;
+								}
+						}
+				}
+		}
+
+	/**
+	*	nav container	
+	*	
+	*	@property => position:fixed
+	*	@property => background-color
+	*	@property => width
+	*	@property => height
+	*/
+
+		.bloodDivisionMobileNavContainer{
+			height:800px;
+			background: #2c3e50;
+			//position:fixed;
+			margin-top:60px;
+			color: #fff;
+			display:none;
+			z-index:1;
+			width: auto;
+			/**
+			*	menu wrapper
+			*
+			*	@property => padding
+			*	@property => height
+			*/
+
+				.bloodDivisionMenu{
+					height:auto;
+					padding:0px;
+
+					/**
+					*	menu tab 
+					*
+					*	@property => list-style-type
+					*	@property => border-bottom
+					*/
+
+						.menuTab{
+							list-style-type: none;
+							border-bottom: 1px solid #fff; 
+							padding:20px 10px 20px 10px;
+							
+							/**
+							*	avatar container
+							*
+							*	@property => padding
+							*/
+
+								.avatarContainer{
+									// padding: 0px;
+								}
+
+							/**
+							*	messageContainer
+							*
+							*	@property => padding
+							*/
+
+								.welcomeMessage{
+									padding: 10px 0px 0px 0px;
+								}
+						}
+				} 
+		}

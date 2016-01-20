@@ -1,0 +1,25 @@
+/**
+*	Mobile About section styles
+*/
+
+	/**
+	*	Wrapper
+	*/
+
+		.container-fluid.bdivision_about_section_mobile{
+			min-height:570px;
+			width: 100%;
+			@include image('/images/halopic2.jpg', cover);
+			padding-top:60px;
+			/**
+			*	bdivisionAboutDescriptionWrapper
+			*/ 
+
+				.bdivisionAboutDescriptionWrapper{
+					height: auto;
+					background: #000;
+					opacity: 0.9;
+					padding:25px;
+					font-size:14px;
+				}
+		}

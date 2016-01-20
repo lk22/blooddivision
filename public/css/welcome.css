@@ -1,0 +1,137 @@
+/**
+*	landing page stylesheet
+*/
+/**
+	*	welcome wrapper
+	*/
+.container-fluid.blooddivision-welcome-wrapper {
+  width: 100%;
+  height: auto;
+  background: url("../images/swb1.jpg") center center;
+  -ms-background-size: cover;
+  background-size: cover;
+  color: #fff;
+  margin: 0px;
+  z-index: 1px;
+  /**
+			*	the banner wrapper
+			*/
+  /**
+			*	Platform wrapper
+			*/
+  /**
+			*	see more wrapper
+			*/ }
+  .container-fluid.blooddivision-welcome-wrapper .banner-wrapper {
+    padding-top: 50px; }
+  .container-fluid.blooddivision-welcome-wrapper .platform-wrapper {
+    /**
+					*	xbox platform container
+					*/
+    /**
+					*	windows platform
+					*/ }
+    .container-fluid.blooddivision-welcome-wrapper .platform-wrapper .xbox-platform-container {
+      padding: 10px;
+      /**
+							*	platform logo
+							*/ }
+      .container-fluid.blooddivision-welcome-wrapper .platform-wrapper .xbox-platform-container img {
+        margin: 0px 0px 0px 35px; }
+    .container-fluid.blooddivision-welcome-wrapper .platform-wrapper .windows-platform-container {
+      padding: 10px;
+      margin-left: 22%;
+      /**
+							*	platform logo
+							*/ }
+      .container-fluid.blooddivision-welcome-wrapper .platform-wrapper .windows-platform-container img {
+        margin: 0px 0px 0px 25px; }
+  .container-fluid.blooddivision-welcome-wrapper .see-more-wrapper {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    /**
+					*	down arrow
+					*/ }
+    .container-fluid.blooddivision-welcome-wrapper .see-more-wrapper .caret-down {
+      margin-left: 49%;
+      font-size: 25px;
+      /**
+							*	link
+							*/ }
+      .container-fluid.blooddivision-welcome-wrapper .see-more-wrapper .caret-down a {
+        color: #FFF; }
+
+/**
+	*	about section wrapper
+	*/
+.container-fluid.blooddivision-about-wrapper {
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  /**
+			*	the inner wrapper 
+			*/ }
+  .container-fluid.blooddivision-about-wrapper .inner-about-wrapper {
+    height: auto;
+    width: auto;
+    padding: 40px;
+    /**
+					*	icon container
+					*/ }
+    .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-row {
+      padding: 0px 0px 0px 149px;
+      /**
+							*	the icon
+							*/ }
+      .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-row .fa {
+        font-size: 6em; }
+
+/**
+	*	signup oppurtinity wrapper
+	*/
+.container-fluid.signup-oppurtunity-wrapper {
+  height: 650px;
+  width: 100%;
+  background: url("../images/halopic2.jpg") center center;
+  -ms-background-size: cover;
+  background-size: cover;
+  color: #FFF;
+  /**
+			*	signup wrapper
+			*/ }
+  .container-fluid.signup-oppurtunity-wrapper .signup-wrapper {
+    /**
+					*	know more row
+					*/
+    /**
+					*	social media row
+					*/
+    /**
+					*	want to signup row
+					*/ }
+    .container-fluid.signup-oppurtunity-wrapper .signup-wrapper .know-more-row {
+      padding-top: 20px;
+      border-bottom: 1px solid #fff; }
+    .container-fluid.signup-oppurtunity-wrapper .signup-wrapper .social-media-row {
+      padding-top: 30px; }
+      .container-fluid.signup-oppurtunity-wrapper .signup-wrapper .social-media-row .btn {
+        background: #eee;
+        border-bottom: 3px solid #e74c3c;
+        width: 60%;
+        margin: 0px auto;
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        color: #000; }
+        .container-fluid.signup-oppurtunity-wrapper .signup-wrapper .social-media-row .btn:hover {
+          color: #fff;
+          background: #e74c3c;
+          transition: ease-in-out 0.2s all; }
+        .container-fluid.signup-oppurtunity-wrapper .signup-wrapper .social-media-row .btn:not(:hover) {
+          transition: ease-in-out 0.2s all; }
+    .container-fluid.signup-oppurtunity-wrapper .signup-wrapper .wantTo-signup-row {
+      padding-top: 15px; }
+      .container-fluid.signup-oppurtunity-wrapper .signup-wrapper .wantTo-signup-row a {
+        color: #fff; }
+
+/*# sourceMappingURL=welcome.css.map */

@@ -1,0 +1,56 @@
+/**
+*	mobile home wrapper
+*/
+	.container-fluid.bdivision_welcome_section_mobile{
+		min-height: 600px;
+		width: 100%;
+		@include image('/images/swb1.jpg', cover);
+		padding-top:70px;
+		
+		/**
+		*	Sign Up container
+		*/
+
+			.singUpRow, .btnRow{
+				padding-top: 20px;
+				
+				/**
+				*	Sign Up Links
+				*/
+
+					/**
+					*	Facebook Btn
+					*/
+
+						.facebonSignUpBtn{
+							margin:10px;
+							background: $bdivisionPrimaryBtn;
+							
+							&:hover{
+								background: $bdivisionPrimaryHover; 
+								@include transition(ease-in-out 0.3s all);
+							} 
+							&:not(:hover){
+								@include transition(ease-in-out 0.3s all);
+							}
+						}
+
+					/**
+					*	Halo Waypoint Btn
+					*/
+
+						.haloWaypointSignUpBtn{
+							background: $bdivisionInverseBtn;
+							border:1px solid $bdivisionDefaultBtn; 
+							&:hover{
+								background: $bdivisionInverseHover; 
+								border:1px solid $bdivisionInverseBtn;
+								@include transition(ease-in-out 0.3s all);
+							} 
+							&:not(:hover){
+								@include transition(ease-in-out 0.3s all);
+							}
+						}
+
+			}
+	}

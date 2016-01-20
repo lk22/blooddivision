@@ -1,0 +1,18 @@
+/**
+*	application main stylesheet
+*/
+
+// base variables
+	@import 'vars/_all';
+	
+// mixins
+	@import 'mixins/_all';
+	
+// blood division partials
+	@import 'app/_partials/_all';
+
+// views
+	@import 'app/views/_all';
+	
+// landing page stylesheet
+	@import 'welcome';

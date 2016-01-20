@@ -1,0 +1,13 @@
+// importing the supportive viewport sized partials
+
+	// desktop
+		@import 'desktop/footer';
+		@import 'desktop/header';
+	// mobile
+		@import 'mobile/footer';
+		@import 'mobile/header';
+	// tablet
+		@import 'tablet/footer';
+		@import 'tablet/header';
+	
+	

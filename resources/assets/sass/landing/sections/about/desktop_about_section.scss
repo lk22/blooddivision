@@ -1,0 +1,51 @@
+// about section
+
+	.container-fluid.bdivision_about_section_desktop{
+		min-height:710px;  
+		@include image('/images/halopic2.jpg', cover);
+		padding-top:100px;
+		
+		// Blood Division description wrapper
+		
+			.bdivisionAboutDescriptionWrapper{
+				height: auto;
+				background: #000;
+				opacity: 0.9;
+				padding:25px;
+				font-size:14px;
+			}
+
+		// blood division avatar wrapper
+		
+			.profileAvatarWrapper{
+				margin-top: 50px;
+				height: 235px;
+				width: auto;
+				background: #000;
+				opacity: 0.9; 
+				overflow:hidden;
+				
+				// blood division avatar profile carousel
+				
+					.blooddivisionProfileCarousel{
+
+						// bloodDivisionProfileList
+						
+							.bloodDivisionProfileList{
+								
+								display:block;
+								padding:0;
+								margin: 0;
+								// profile
+								
+									.profile{
+										list-style-type:none;
+										float:	left;
+										width:600px;
+										text-align: center;
+										height: 165px;
+									}
+							}
+					}
+			}
+	}

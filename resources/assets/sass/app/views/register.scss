@@ -1,0 +1,270 @@
+/**
+*	blood division user registration page styles
+*/
+	
+	/**
+	*	body
+	*/
+
+		.registration{
+			height: 100%;
+			width: 100%;  
+			@include image('../../images/halopic2.jpg', cover);
+			
+			/**
+			*	the form container wrapper
+			*/
+			
+				.formContainerWrapper{
+					background:#000;
+					padding:40px;
+					opacity:0.9;
+					color: #FFF;
+					margin-top:100px;
+					
+					/**
+					* the inner wrapper
+					*/
+					
+					.innerFormContainer{
+						border-right:1px solid #fff;
+							
+						/**
+						*	the registration form 
+						*/
+
+							.bloodDivisionAuthRegisterForm{
+								height: auto;
+								width: auto;
+								
+								/**
+								*	the name field
+								*/
+
+									.authNameField{
+										border-radius: 0px 0px 0px 0px;
+									}
+
+								/**
+								*	the name field info container
+								*/
+
+									.nameAuthInfoContainer{
+										height: auto;
+										width: auto;
+										padding:10px;
+										background:#fff;
+										//opacity:0.9;
+										color: #000; 
+										position:absolute;
+										top:-85px;
+										left:20px;
+										display:none;
+										font-size:12px;
+										/**
+										*	arrow container
+										*/
+
+											.nameArrowContainer{
+												position:relative;
+												background: #88b7d5;
+												top:10px;
+
+												&:after, :before{
+													top: 100%;
+													left: 50%;
+													border: solid transparent;
+													content: " ";
+													height: 0;
+													width: 0;
+													position: absolute;
+													pointer-events: none;
+												}
+
+												&:after{
+													border-color: rgba(136, 183, 213, 0);
+													border-top-color: #fff;
+													border-width: 15px;
+													margin-left: -30px;
+												}
+
+												&:before{
+													border-color: rgba(194, 225, 245, 0);
+													border-top-color: #fff;
+													border-width: 36px;
+													margin-left: -36px;
+												}
+											}
+									}
+
+								/**
+								*	the email field
+								*/
+
+									.authEmailField{
+										border-radius:0px 0px 0px 0px;
+																				
+										&:disabled{
+											color:#fff;
+											background:#e74c3c;
+											border: 1px solid #e74c3c;
+										}
+									}
+
+										/**
+										*	the email info container
+										*/
+
+											.authEmailInfoContainer{
+												height: auto;
+												width: 90%;
+												padding:10px;
+												background:#fff;
+												//opacity:0.9;
+												color: #000; 
+												position:absolute;
+												top:32px;
+												left:-287px;
+												display:none;	
+												font-size:12px;
+																							
+												/**
+												*	arrow container
+												*/
+
+													.emailArrowContainer{
+														position: relative;
+														background: #88b7d5;
+														border: 4px solid #fff;
+
+														&:after, :before{
+															left: 100%;
+															top: 50%;
+															border: solid transparent;
+															content: " ";
+															height: 0;
+															width: 0;
+															position: absolute;
+															pointer-events: none;	
+														}
+
+														&:after{
+															border-color: rgba(136, 183, 213, 0);
+															border-left-color: #fff;
+															border-width: 20px;
+															margin-top: -30px;
+
+														}
+
+														&:before{
+															border-color: rgba(194, 225, 245, 0);
+															border-left-color: #fff;
+															border-width: 18px;
+															margin-top: -36px;
+														}
+													}
+											}
+
+									/**
+									*	password field	
+									*/
+
+										.authPasswordField{
+											border-radius:0px 0px 0px 0px;
+											
+											&:disabled{
+												color:#fff;
+												background:#e74c3c;
+												border: 1px solid #e74c3c;
+											}
+										}
+
+								/**
+								*	password info container
+								*/
+
+									.authPasswordInfoContainer{
+										height: auto;
+										width: 90%;
+										padding:10px;
+										background:#fff;
+										//opacity:0.9;
+										color: #000; 
+										position:absolute;
+										top:154px;
+										left:-287px;
+										display:none;	
+										font-size:12px;
+
+										/**
+										*	arrow container
+										*/
+
+											.passwordArrowContainer{
+												position: relative;
+												background: #88b7d5;
+												top: -66px;
+
+												&:after, :before{
+													left: 100%;
+													top: 50%;
+													border: solid transparent;
+													content: " ";
+													height: 0;
+													width: 0;
+													position: absolute;
+													pointer-events: none;	
+												}
+
+												&:after{
+													border-color: rgba(136, 183, 213, 0);
+													border-left-color: #fff;
+													border-width: 15px;
+													margin-top: 5px;
+
+												}
+
+												&:before{
+													border-color: rgba(194, 225, 245, 0);
+													border-left-color: #fff;
+													border-width: 18px;
+													margin-top: -36px;
+												}
+											}
+
+										/**
+										*	verification info container
+										*/
+
+											.authVerifyPasswordInfoContainer{
+												display:none;
+											}
+
+									}
+									
+									/**
+									*	verification password field
+									*/
+
+										.authCorrectPasswordField{
+											border-radius:0px 0px 0px 0px;
+											
+											&:disabled{
+												color:#fff;
+												background:#e74c3c;
+												border: 1px solid #e74c3c;
+												
+												&:hover{
+													@include transition(ease-in-out 0.2s all);
+													background:#27ae60;
+												}
+
+												&:not(:hover){
+													@include transition(ease-in-out 0.2s all);
+												}
+											}
+										}
+							}
+					} 
+				}
+		}

@@ -1,0 +1,126 @@
+/*
+*	Blood Division desktop header partial
+*/
+
+	.container-fluid.bdivision_desk_header{
+		
+		min-height:$desk_header_height;
+		border-bottom:$desk_header_border;
+		background: $desk_header_color; 
+		position:fixed;
+		left: 0px;
+		right: 0px; 
+		top:0px;
+		font-family: 'Source Sans Pro', sans-serif;
+		color: #FFF; 
+		@include transition(ease-in-out 0.2s all);
+		z-index:9999;
+		//brand 
+
+			.brand{
+				height: auto;
+				width: auto;
+				font-size: 22px;
+				padding:10px;
+			}
+
+		//nav_wrapper
+
+			.nav_wrapper{
+				height: auto;
+				width: auto;
+				margin-top: 15px;
+				float: right;
+				//nav list
+					
+					ul{
+						display:inline;
+						
+						// list items
+						
+							li{
+								display:inline;
+								list-style-type:none;
+								padding-left: 10px;
+								
+								// anchor
+								
+									a{
+										font-size: 22px;
+										text-decoration:none;
+										color: #fff; 
+									}
+							}
+					}
+			}
+	}
+
+	/**
+	*	Login Form Wrapper
+	*/
+
+		.bloodDivisionLandingLoginWrapper{
+			position:fixed;
+			top:70px;
+			right:50px;
+			height:auto;
+			width:350px;
+			background:#ddd;
+			z-index:2;
+			border:1px solid #e74c3c;
+			border-radius: 5px 5px 5px 5px;
+			@include box-shadow(0px 1px 3px 3px #e74c3c);
+			display:none;
+			/**
+			*	inner form wrapper
+			*/
+
+				.loginInnerWrapper{
+					height: 100%;
+					width: 100%;
+					padding: 10px;
+					/**
+					*	login form
+					*/
+
+						.bloodDivisionLandingForm{
+							padding: 10px;
+							
+							/**
+							*	username field
+							*/
+
+								.bloodDivisionLandingUsername{
+									padding: 5px;
+									width:80%;
+									margin: 0px auto 0px auto;
+									&:hover{
+										border-color:#e74c3c;
+										@include transition(ease-in-out 0.2s all);
+									}
+
+									&:not(:hover){
+										@include transition(ease-in-out 0.2s all);
+									}
+								}
+
+							/**
+							*	password field
+							*/
+
+								.bloodDivisionLandingPassword{
+									padding: 5px;
+									width:80%;
+									margin: 0px auto 0px auto;
+									&:hover{
+										border-color:#e74c3c;
+										@include transition(ease-in-out 0.2s all);
+									}
+
+									&:not(:hover){
+										@include transition(ease-in-out 0.2s all);
+									}
+								}
+						}
+				}
+		}

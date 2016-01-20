@@ -1,0 +1,23 @@
+/*
+*	SCSS mixin for box shadow
+*/
+
+	/*
+	*	define mixin
+	*/
+
+		@mixin box-shadow($shadow){
+			//define the property with all the prefixes for following browsers
+			/*
+			*	Internet Explorer
+			*	Google Chrome Browser
+			*	Mozilla Firefox Browser
+			*	Opera, Safari Browser
+			*/
+			
+			-webkit-box-shadow: $shadow;
+	    	-moz-box-shadow: $shadow;
+	    	-ms-box-shadow: $shadow;
+	    	-o-box-shadow: $shadow;
+			box-shadow: $shadow;
+		}

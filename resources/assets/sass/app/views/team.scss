@@ -1,0 +1,30 @@
+/**
+*	Team view styles
+*/
+
+	/**
+	*	memmbers wrapper	
+	*/
+
+		.container-fluid.members-content-wrapper{
+			min-height:auto;
+			width: 100%;
+			padding: 25px; 
+			
+			/**
+			*	members-row
+			*/
+
+				.members-row{
+					
+					/**
+					*	member wrapper
+					*/
+
+						.member-wrapper{
+							padding:20px;
+							background:#eee;
+							border:5px solid #fff;
+						}
+				}
+		}

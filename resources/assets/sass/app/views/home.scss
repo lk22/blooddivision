@@ -1,0 +1,54 @@
+/**
+*	main page content styles
+*/
+
+	/**
+	*	content banner wrapper
+	*/
+
+		.container-fluid.content-wrapper{
+			min-height:500px;
+			width: 100%;
+			
+			/**
+			*	left sidebar
+			*/ 
+
+				.left-sidebar{
+					min-height:auto;
+					padding: 40px; 
+					
+					/**
+					*	rows
+					*/
+
+						.row{
+							border-bottom:1px solid #000;
+						}
+				}
+
+			/**
+			*	right sidebar
+			*/
+
+				.right-sidebar{
+					min-height: auto; 
+					padding:40px;
+					
+					/**
+					*	rows
+					*/
+
+						.latest-registered-users-row{
+							
+							.user-row{
+								margin-top:10px;
+								border-bottom:1px solid #000;
+								
+								&:after{
+									margin:15px 0px 15px 0px;
+								}
+							}
+						}
+				}
+		}

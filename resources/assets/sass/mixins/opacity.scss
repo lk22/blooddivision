@@ -1,0 +1,103 @@
+/*
+* SCSS mixin for opacity usage
+*/
+
+	/*
+	*	define mixin
+	*/
+
+		@mixin opacity($opacity){
+			
+			//check if the opacity is 0.1 to 1
+			
+			@if($opacity == 0.1){
+				opacity: $opacity;
+				
+				&:hover{
+					@include transition(ease-in-out 0.2s all);
+				}&:not(:hover){
+					@include transition(ease-in-out 0.2s all);
+				}
+			}
+
+			@if($opacity == 0.2){
+				opacity: $opacity;
+				
+				&:hover{
+					@include transition(ease-in-out 0.2s all);
+				}&:not(:hover){
+					@include transition(ease-in-out 0.2s all);
+				}
+			}
+
+			@if($opacity == 0.3){
+				opacity: $opacity;
+				
+				&:hover{
+					@include transition(ease-in-out 0.2s all);
+				}&:not(:hover){
+					@include transition(ease-in-out 0.2s all);
+				}
+			}
+
+			@if($opacity == 0.4){
+				opacity: $opacity;
+				
+				&:hover{
+					@include transition(ease-in-out 0.2s all);
+				}&:not(:hover){
+					@include transition(ease-in-out 0.2s all);
+				}
+			}
+
+			@if($opacity == 0.5){
+				opacity: $opacity;
+				
+				&:hover{
+					@include transition(ease-in-out 0.2s all);
+				}&:not(:hover){
+					@include transition(ease-in-out 0.2s all);
+				}
+			}
+
+			@if($opacity == 0.6){
+				opacity: $opacity;
+				
+				&:hover{
+					@include transition(ease-in-out 0.2s all);
+				}&:not(:hover){
+					@include transition(ease-in-out 0.2s all);
+				}
+			}
+
+			@if($opacity == 0.7){
+				opacity: $opacity;
+				
+				&:hover{
+					@include transition(ease-in-out 0.2s all);
+				}&:not(:hover){
+					@include transition(ease-in-out 0.2s all);
+				}
+			}
+
+			@if($opacity == 0.8){
+				opacity: $opacity;
+				
+				&:hover{
+					@include transition(ease-in-out 0.2s all);
+				}&:not(:hover){
+					@include transition(ease-in-out 0.2s all);
+				}
+			}
+
+			@if($opacity == 0.9){
+				opacity: $opacity;
+				
+				&:hover{
+					@include transition(ease-in-out 0.2s all);
+				}&:not(:hover){
+					@include transition(ease-in-out 0.2s all);
+				}
+			}
+
+		}

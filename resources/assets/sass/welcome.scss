@@ -1,0 +1,212 @@
+/**
+*	landing page stylesheet
+*/
+
+	/**
+	*	welcome wrapper
+	*/
+
+		.container-fluid.blooddivision-welcome-wrapper{
+			width: 100%;
+			height: auto;
+			background: url('../images/swb1.jpg') center center;
+			-webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -ms-background-size: cover; 
+		    -o-background-size: cover; 
+			background-size: cover;
+			color:#fff;
+			margin: 0px;
+			z-index:1px;
+			
+			/**
+			*	the banner wrapper
+			*/
+
+				.banner-wrapper{
+					padding-top:50px;
+				}
+
+			/**
+			*	Platform wrapper
+			*/
+
+				.platform-wrapper{
+					
+					/**
+					*	xbox platform container
+					*/
+
+						.xbox-platform-container{
+							padding:10px;
+
+							/**
+							*	platform logo
+							*/
+
+								img{
+									margin:0px 0px 0px 35px;
+								}
+						}
+
+					/**
+					*	windows platform
+					*/
+
+						.windows-platform-container{
+							padding:10px;
+							margin-left:22%;
+							/**
+							*	platform logo
+							*/
+
+								img{
+									margin:0px 0px 0px 25px;
+								}
+						}
+
+				}
+
+			/**
+			*	see more wrapper
+			*/
+
+				.see-more-wrapper{
+					padding-top:5%;
+					padding-bottom:5%;
+					/**
+					*	down arrow
+					*/
+					
+						.caret-down{
+							margin-left:49%;
+							font-size:25px; 
+							
+							/**
+							*	link
+							*/
+							
+								a{
+									color: #FFF; 
+								}
+						}
+				}
+
+		}
+
+	/**
+	*	about section wrapper
+	*/
+
+		.container-fluid.blooddivision-about-wrapper{
+			width: 100%;
+			height: auto;
+			z-index:2;
+			
+			/**
+			*	the inner wrapper 
+			*/
+
+				.inner-about-wrapper{
+					height: auto;
+					width: auto;
+					padding:40px;
+					/**
+					*	icon container
+					*/
+
+						.icon-row{
+							padding: 0px 0px 0px 149px;
+							
+							/**
+							*	the icon
+							*/
+
+								.fa{
+									font-size: 6em; 
+								}
+
+						}
+				}
+		}
+
+	/**
+	*	signup oppurtinity wrapper
+	*/
+
+		.container-fluid.signup-oppurtunity-wrapper{
+			height:650px;
+			width: 100%;
+			background: url('../images/halopic2.jpg') center center;
+			-webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -ms-background-size: cover; 
+		    -o-background-size: cover; 
+			background-size: cover;
+			color: #FFF; 
+			
+			/**
+			*	signup wrapper
+			*/
+
+				.signup-wrapper{
+					
+					/**
+					*	know more row
+					*/
+
+						.know-more-row{
+							padding-top:20px;
+							border-bottom:1px solid #fff;
+						}
+
+					/**
+					*	social media row
+					*/
+
+						.social-media-row{
+							padding-top: 30px;
+							
+								.btn{
+									background: #eee;
+									border-bottom:3px solid #e74c3c; 
+									width:60%;
+									margin: 0px auto;
+									border-left:none;
+									border-top:none;
+									border-right:none;
+									color: #000; 
+									
+										&:hover{
+											color: #fff; 
+											background: #e74c3c;
+											-webkit-transition:ease-in-out 0.2s all;
+											-moz-transition:ease-in-out 0.2s all;
+											-ms-transition:ease-in-out 0.2s all;
+											-o-transition:ease-in-out 0.2s all;
+											transition: ease-in-out 0.2s all;
+										}  
+										
+										&:not(:hover){
+											-webkit-transition:ease-in-out 0.2s all;
+											-moz-transition:ease-in-out 0.2s all;
+											-ms-transition:ease-in-out 0.2s all;
+											-o-transition:ease-in-out 0.2s all;
+											transition: ease-in-out 0.2s all;
+										}
+								}
+						}
+
+					/**
+					*	want to signup row
+					*/
+
+						.wantTo-signup-row{
+							padding-top:15px;
+							
+							a{
+								color: #fff; 
+							}
+						}
+				}
+		}

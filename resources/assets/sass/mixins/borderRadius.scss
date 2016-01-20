@@ -1,0 +1,23 @@
+/*
+* SCSS mixin for border radius  use
+*/
+
+	/*
+	*	define mixin
+	*/
+
+		@mixin border-radius($radius){
+			//define the property with all the prefixes for following browsers
+			/*
+			*	Internet Explorer
+			*	Google Chrome Browser
+			*	Mozilla Firefox Browser
+			*	Opera, Safari Browser
+			*/
+			
+			-webkit-border-radius: $radius;
+			-moz-border-radius: $radius;
+			-ms-border-radius: $radius;
+			-o-border-radius: $radius;
+			border-radius: $radius; 
+		}

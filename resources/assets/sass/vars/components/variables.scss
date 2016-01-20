@@ -1,0 +1,68 @@
+/*
+*	structure components variables
+*/
+
+	// landing header component
+	
+		// => desktop
+		
+			$desk_header_color:											#000;
+			$desk_header_height: 										60px;
+			$desk_header_width:											100%;
+			$desk_header_border_color:									#ddd;
+			$desk_header_border:										2px solid $desk_header_border_color;
+			
+		// => tablet
+		
+		// => mobile
+			
+			$mobile_header_color:										#ddd;
+			$mobile_header_height:										70px;
+			$mobile_header_width:										100%;
+			$mobile_header_border_color:								#000;
+			$mobile_header_border:										2px solid $mobile_header_border_color;
+			
+	// landing footer component
+	
+		// => desktop
+		
+			$desk_footer_color:											#000;
+			$desk_footer_height: 										auto;
+			$desk_footer_width:											100%;
+			
+		// => tablet
+		
+			$tab_footer_color:											#000;
+			$tab_footer_height: 										auto;
+			$tab_footer_width:											100%;
+		
+		// => mobile
+			
+			$mobile_footer_color:										#000;
+			$mobile_footer_height:										auto;
+			$mobile_footer_width:										100%;
+			
+	// btn-group colors
+	
+		// buttons ( overwrite bootstrap default button colors)
+		
+			$bdivisionPrimaryBtn:										#3498db;
+			$bdivisionInfoBtn:											#8e44ad;
+			$bdivisionDangerBtn:										#e74c3c;
+			$bdivisionDefaultBtn:										#bdc3c7;
+			$bdivisionInverseBtn:										   #000;
+			$bdivisionWarningBtn:										#e67e22;
+			
+				// hover colors
+				
+					$bdivisionPrimaryHover:								#34495e;
+					$bdivisionInfoHover:								#16a085;
+					$bdivisionDangerHover:								#c0392b;
+					$bdivisionDefaultHover:								#7f8c8d;
+					$bdivisionInverseHover:								   #333;
+					$bdivisionWarningHover:								#d35400;
+			
+
+
+
+			

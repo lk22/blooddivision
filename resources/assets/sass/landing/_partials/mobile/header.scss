@@ -1,0 +1,80 @@
+// mobile task div
+
+	.mobile_open_container{
+		height: 50px;
+		width:100px;
+		background: #000;
+	 	opacity: 0.9;
+	 	padding: 10px;
+	 	float: right;
+	 	position:fixed;
+	 	top:0px;
+	 	right:0px;
+	 	z-index:9999;
+	 	// tasks icon
+	 	
+	 		.fa-tasks{
+	 			color: #FFF;
+	 			font-size: 30px; 
+	 		}
+
+	 	// menu text
+	 	
+	 		span{
+	 			color: #FFF;
+	 			font-family: 'Exo 2', sans-serif; 
+	 		}
+	}
+
+// mobile navbar
+
+	.container-fluid.bdivision_navbar{
+		height:100%;
+		background: #000;
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		z-index:9999;
+		width: 45%;
+		display:none;
+		
+		// close btn
+		
+			.close_navbarBtn{
+				height: 50px;
+				width: 50px;
+				padding: 10px;
+				float: right;
+				// closing icon
+				
+				 	.fa-times{
+				 		color: #FFF;
+				 		font-size: 30px; 
+				 	}
+			}
+
+		// logo
+		
+			img{
+				margin:5px;
+			}
+
+		// navigation
+		
+			ul{
+				display:none;
+				
+				// list items
+				
+					li{
+						list-style-type:none;
+						border-bottom: 1px solid #eee;
+							// links
+							
+								a{
+									color: #FFF;
+	 								font-family: 'Exo 2', sans-serif;
+								}
+					}
+			}
+	}

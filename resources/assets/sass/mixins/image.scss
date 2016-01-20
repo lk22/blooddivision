@@ -1,0 +1,16 @@
+/*
+* SCSS mixin for image usage
+*/
+
+	/*
+	*	define mixin
+	*/
+
+		@mixin image($src, $size){
+			background: url($src) center center fixed;
+			-webkit-background-size: $size;
+		    -moz-background-size: $size;
+		    -ms-background-size: $size; 
+		    -o-background-size: $size; 
+			background-size: $size;
+		}

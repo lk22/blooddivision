@@ -1,0 +1,80 @@
+.container-fluid.bdivision_welcome_section_desktop{
+min-height:710px;  
+@include image('/images/bdivision_collage_blur.png', cover);
+padding-top:170px;
+//brand title
+
+	.brand_title{
+		padding-top:80px;
+		
+		h1{
+			font-size: 32px;
+			text-stroke:1px black;
+		}
+
+		// halo waypoint message
+
+			.halowaypointMsgContainer{
+				height:auto;
+				background: #000;
+				opacity: 0.9; 
+				padding: 25px;
+				display:none;
+			}
+
+		// facebook message
+		
+			.facebookMsgContainer{
+				@extend .halowaypointMsgContainer;
+			}
+		
+		// google plus message
+		
+			.googleplusMsgContainer{
+				@extend .facebookMsgContainer;
+			}
+
+
+	}
+
+// signUpRow
+
+	.signUpRow{
+		padding-top: 80px;
+		
+		.row{
+			padding-top:40px;
+			
+			// facebookBtn
+			
+				.facebookSignUpBtn{
+					margin:10px;
+					background: $bdivisionPrimaryBtn;
+					
+					&:hover{
+						background: $bdivisionPrimaryHover; 
+						@include transition(ease-in-out 0.3s all);
+					} 
+					&:not(:hover){
+						@include transition(ease-in-out 0.3s all);
+					}
+				}
+			
+			// haloWaypointBtn
+			 
+				.haloWaypointSignUpBtn{
+					background: $bdivisionInverseBtn;
+					border:1px solid $bdivisionDefaultBtn; 
+					&:hover{
+						background: $bdivisionInverseHover; 
+						border:1px solid $bdivisionInverseBtn;
+						@include transition(ease-in-out 0.3s all);
+					} 
+					&:not(:hover){
+						@include transition(ease-in-out 0.3s all);
+					}
+				}
+		}
+	}
+}
+
