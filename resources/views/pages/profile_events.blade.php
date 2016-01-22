@@ -5,7 +5,7 @@
 		@foreach($events as $event)
 			<div class="row events-row events-wrapper">
 				<div class="panel panel-default event">
-					<div class="panel-heading">{{$event->event_name}}</div>
+					<div class="panel-heading event-header">{{$event->event_name}}</div>
 					<div class="panel-body">
 						<div class="event-game">
 							<h5>Game: {{$event->event_game}}</h5>
@@ -20,7 +20,7 @@
 				</div>
 			</div>
 		@endforeach
-		<a href="/profile/{{Auth::user()->name}}/create-event">Create new event <i class="fa fa-calendar-plus-o"></i></a>
+		<a class="create-profile-event btn btn-default" href="/profile/{{Auth::user()->name}}/create-event">Create new event <i class="fa fa-calendar-plus-o"></i></a>
 	@else
 		<div class="row events-row events-wrapper">
 			<div class="no-events-container">

@@ -567,14 +567,29 @@
  													*/ }
             .container-fluid.profile-banner-wrapper .inner-profile-wrapper .banner .banner-footer-wrapper .inner-banner-footer-wrapper .profile-listing .profile-link {
               height: 100%;
-              padding-left: 50px;
+              padding-left: 20px;
               /**
 															* link
 															*/ }
               .container-fluid.profile-banner-wrapper .inner-profile-wrapper .banner .banner-footer-wrapper .inner-banner-footer-wrapper .profile-listing .profile-link a {
                 color: #000;
                 padding: 5px;
-                font-size: 15px; }
+                font-size: 17px;
+                padding: 14px;
+                text-decoration: none;
+                /**
+																	* hover class
+																	*/
+                /**
+																* not hover class
+																*/ }
+                .container-fluid.profile-banner-wrapper .inner-profile-wrapper .banner .banner-footer-wrapper .inner-banner-footer-wrapper .profile-listing .profile-link a:hover {
+                  background: #34495e;
+                  opacity: 0.8;
+                  color: #FFF;
+                  transition: ease-in-out 0.2s all; }
+                .container-fluid.profile-banner-wrapper .inner-profile-wrapper .banner .banner-footer-wrapper .inner-banner-footer-wrapper .profile-listing .profile-link a:not(:hover) {
+                  transition: ease-in-out 0.2s all; }
 
 /**
  	* the profile content wrapper
@@ -595,8 +610,12 @@
 					*/
     /**
 					* create event wrapper
+					*/
+    /**
+					* create-profile-event
 					*/ }
     .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .events-wrapper {
+      padding-top: 10px;
       /**
 							* event
 							*/
@@ -700,6 +719,15 @@
 										    */ }
           .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .create-event-wrapper .modal .close .fa {
             color: #FFF; }
+    .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .create-profile-event {
+      color: #000; }
+      .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .create-profile-event:hover {
+        border-color: #e74c3c;
+        color: #fff;
+        background: #e74c3c;
+        transition: ease-in-out 0.2s all; }
+      .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .create-profile-event:not(:hover) {
+        transition: ease-in-out 0.2s all; }
 
 /**
 	*	registration page
