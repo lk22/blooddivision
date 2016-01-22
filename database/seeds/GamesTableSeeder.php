@@ -14,7 +14,7 @@ class UserTableSeeder extends Seeder
 	
 	public function run()
 	{
-		factory('Blooddivision\User', 20)->create([
+		factory('Blooddivision\User', 6)->create([
 			'name' => $faker->name,
 			'email' => $faker->email,
 			'password' => "user1234",

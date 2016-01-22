@@ -492,7 +492,7 @@
       height: 100%;
       width: 100%;
       /**
- 							* profile edit btn
+ 							* profile-media
  							*/
       /**
  							* profile-information
@@ -500,8 +500,47 @@
       /**
  							* the banner footer
  							*/ }
-      .container-fluid.profile-banner-wrapper .inner-profile-wrapper .banner .edit-profile {
-        padding-top: 10px; }
+      .container-fluid.profile-banner-wrapper .inner-profile-wrapper .banner .profile-media {
+        /**
+									* profile image
+									*/
+        /**
+		 							* profile edit btn
+		 							*/ }
+        .container-fluid.profile-banner-wrapper .inner-profile-wrapper .banner .profile-media .profile-image {
+          height: 200px;
+          width: 200px;
+          margin: 0px 25px 0px 25px;
+          border: 10px solid #34495e; }
+          .container-fluid.profile-banner-wrapper .inner-profile-wrapper .banner .profile-media .profile-image:hover {
+            border-color: #13747D;
+            transition: ease-in-out 0.2s all; }
+          .container-fluid.profile-banner-wrapper .inner-profile-wrapper .banner .profile-media .profile-image:not(:hover) {
+            transition: ease-in-out 0.2s all; }
+        .container-fluid.profile-banner-wrapper .inner-profile-wrapper .banner .profile-media .edit-profile {
+          padding-top: 3px;
+          /**
+											* edit img link
+											*/ }
+          .container-fluid.profile-banner-wrapper .inner-profile-wrapper .banner .profile-media .edit-profile .edit-img-link {
+            height: auto;
+            width: auto;
+            color: #000;
+            padding: 10px 41px 10px 22px;
+            margin: -3px 0px 0px 40px;
+            /**
+													* hover class
+													*/
+            /**
+													* not hover class
+													*/ }
+            .container-fluid.profile-banner-wrapper .inner-profile-wrapper .banner .profile-media .edit-profile .edit-img-link:hover {
+              background: #34495e;
+              opacity: 0.8;
+              color: #FFF;
+              transition: ease-in-out 0.2s all; }
+            .container-fluid.profile-banner-wrapper .inner-profile-wrapper .banner .profile-media .edit-profile .edit-img-link:not(:hover) {
+              transition: ease-in-out 0.2s all; }
       .container-fluid.profile-banner-wrapper .inner-profile-wrapper .banner .profile-information {
         /**
  									* user name
@@ -1020,6 +1059,9 @@
       padding-top: 15px; }
       .container-fluid.signup-oppurtunity-wrapper .signup-wrapper .wantTo-signup-row a {
         color: #fff; }
+
+#app-layout {
+  padding-bottom: 0px; }
 
 /**
 *	landing page stylesheet

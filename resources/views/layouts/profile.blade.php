@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title> {{ Auth::user()->name}} - Profile</title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 	<!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
@@ -34,23 +36,23 @@
 			<!-- the banner -->
 			@foreach($profile as $user)
 			<div class="row banner">
-				<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 profile-media">
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 profile-media">
 					<!-- check if the user has a profile picture -->
 					@if(!$user->avatar)
 						<!-- if the user dont have a profile picture -->
 						<img class="img img-thumbnail img-responsive profile-image" src="/images/mystery-man.jpg" alt="">
 						<div class="row edit-profile">
-							<a href="/profile{{ $user->name }}?profileImg=edit">Edit profile picture.</a>
+							<a class="text-center edit-img-link" href="/profile{{ $user->name }}?profileImg=edit">Edit profile picture. <span class="text-right img-icon"><i class="fa fa-camera"></i></span></a>
 						</div>
 					@else
 						<!-- else then show the profile picture -->
 						<img class="img img-thumbnail img-responsive profile-image" src="{{ $user->avatar }}" alt="">
 						<div class="row edit-profile">
-							<a href="/profile{{ $user->name }}?profileImg=edit">Edit profile picture.</a>
+							<a class="edit-img-link" href="/profile{{ $user->name }}?profileImg=edit">Edit profile picture. <span class="text-right img-icon"><i class="fa fa-camera"></i></span></a>
 						</div>
 					@endif
 				</div>
-				<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 profile-information">
+				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 profile-information">
 					<div class="profile-name">
 						<h1 class="text-center">{{$user->name}}</h1>
 					</div>
@@ -68,13 +70,13 @@
 								<a href="/profile/{{$user->name}}/your-events"><i class="fa fa-calendar-o"></i> Your events</a>
 							</span>
 							<span class="profile-link">
-								<a href="/profile/$user->name/your-games"><i class="fa fa-gamepad"></i> Your games</a>
+								<a href="/profile/{{$user->name}}/your-games"><i class="fa fa-gamepad"></i> Your games</a>
 							</span>
 							<span class="profile-link">
-								<a href="/profile/$user->name/your-stats"><i class="fa fa-tasks"></i> Your stats</a>
+								<a href="/profile/{{$user->name}}/your-stats"><i class="fa fa-tasks"></i> Your stats</a>
 							</span>
 							<span class="profile-link">
-								<a href="/profile/$user->name/about"><i class="fa fa-user"></i> About</a>
+								<a href="/profile/{{$user->name}}/about"><i class="fa fa-user"></i> About</a>
 							</span>
 						</div>
 					</div>
