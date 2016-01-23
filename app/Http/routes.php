@@ -64,6 +64,17 @@ Route::group(['middleware' => 'web'], function () {
 });
 
 /**
+* events 
+*/
+
+    Route::group(['prefix' => '/events', 'middleware' => 'web'], function(){
+
+        // all events
+        Route::get('/filter/{filter}', 'EventController@allEvents');
+
+    });
+
+/**
 * set a route group for the profile navigations
 */
 
