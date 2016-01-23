@@ -17,6 +17,17 @@
 							<input type="text" class="form-control" placeholder="Search events...">
 						</div>
 					</div>
+					<div class="col-md-8 col-lg-8 filter-events">
+						<div class="col-md-2 col-lg-2 filter-container">
+							<span class="filter"><a href="/events/filter/{all}"><i class="fa fa-filter"> All</i></a></span>
+						</div>
+						<div class="col-md-3 col-lg-3 filter-container">
+							<span class="filter"><a href="/events/filter/{recent}"><i class="fa fa-repeat"> Recent</i></a></span>
+						</div>
+						<div class="col-md-3 col-lg-3 filter-container">
+							<span class="filter"><a href="/events/filter/{completed}"><i class="fa fa-check-square-o"> Completed</i></a></span>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="row hidden-xs hidden-sm events-content-wrapper">

@@ -250,6 +250,7 @@
       height: 45px;
       border-bottom: 1px solid #000;
       width: 75%;
+      margin-top: 20px;
       /**
 							* events header => desktop
 							*/
@@ -257,7 +258,7 @@
 							* events header => mobile
 							*/ }
       .container-fluid.app-events-wrapper .events-inner-wrapper .events-header-wrapper .events-header {
-        padding: 10px; }
+        padding: 0px; }
     .container-fluid.app-events-wrapper .events-inner-wrapper .events-content-wrapper {
       @extends .events-header-wrapper;
       /**
