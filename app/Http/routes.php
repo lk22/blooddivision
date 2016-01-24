@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('test', function(){
+    return view('test');
+});
+
 if(\Blooddivision\User::count() > 0){
     Route::get('/members', 'PageController@getMembersPage');
 }
@@ -70,7 +74,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::group(['prefix' => '/events', 'middleware' => 'web'], function(){
 
         // all events
-        Route::get('/filter/{filter}', 'EventController@allEvents');
+        Route::get('/filter/{all}', 'EventController@allEvents');
 
     });
 

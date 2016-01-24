@@ -11,14 +11,17 @@ var elixir = require('laravel-elixir');
  |
  */
 
-var bower = './vendor/bower_components/';
+var bower = 'bower_components/';
+var node = 'node_modules/';
 
 var paths = {
 	'bootstrap' : bower + 'bootstrap/',
 	'bootstrap_sass' : bower + 'bootstrap/scss',
 	'fontawesome' : bower + 'font-awesome/',
 	'jquery' : bower + 'jquery/',
-	'moment' : bower + 'moment/'
+	'moment' : bower + 'moment/',
+	'react'	 : node  + 'react/',
+	'lightbox' : bower + 'lightbox2/'
 };
 
 elixir(function(mix) {
@@ -30,8 +33,54 @@ elixir(function(mix) {
 	mix.sass(["app.scss", "welcome.scss"]);
 
 /**
+* copy scripts
+*/
+
+	/**
+	 * jQuery
+	 */
+	
+	    mix.copy(
+	    	paths.jquery + 'dist/jquery.min.js',
+	    	'public/js/vendor/jquery.js'
+	    );
+
+	/**
+	* Bootstrap
+	*/
+
+		mix.copy(
+			paths.bootstrap + 'dist/js/bootstrap.min.js',
+			'public/js/vendor/bootstrap.js'
+		);
+
+	/**
+	* React JS
+	*/
+
+		mix.copy(
+			paths.react + 'dist/react.min.js',
+			'public/js/vendor/react.js'
+		);
+
+	/**
+	* lightbox
+	*/
+
+		mix.copy(
+			paths.lightbox + 'dist/lightbox.min.js',
+			'public/js/vendor/lightbox.min.js'
+		);
+
+/**
 * add browserify support for js files
 */
+
+	mix.scripts([
+		'public/js/vendor/bootstrap.js',
+		'public/js/vendor/jquery.js',
+		'public/js/vendor/react.js'
+	], 'public/js/all.js', 'public/js');
 
 // do a version control of the javascript and css files
 

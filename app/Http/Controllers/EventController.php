@@ -9,6 +9,7 @@ use Blooddivision\Http\Controllers\Controller;
 use Blooddivision\Events;
 use Blooddivision\User;
 use Auth;
+use DB;
 
 class EventController extends Controller
 {
@@ -30,14 +31,17 @@ class EventController extends Controller
     public function events(){
     	/**
     	* get all the scheduled events from all the users
-    	* @param user_id(foreign key) => Auth::user()->id
+        * @return \Illuminate\Database\QueryBuilder::class
     	*/
-    	$events = Events::where('user_id', Auth::user()->id);
+    	$users_events = DB::table('events')
+                  ->join('users', 'users.id', '=', 'events.user_id')
+                  ->select('*')
+                  ->get();
 
     	/**
     	* return events view with the all the events
     	*/
-    	return view('pages.events')->with('events', $events);
+    	return view('pages.events')->with('users_events', $users_events);
     }
 
     /**

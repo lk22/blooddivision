@@ -32,19 +32,25 @@
 			</div>
 			<div class="row hidden-xs hidden-sm events-content-wrapper">
 				<ul class="timeline-wrapper">
+				@foreach($users_events as $event)
 					<li class="timeline-item">
 						<div class="timeline-avatar-badge">
+						@if(!$event->avatar)
 							<img class="img img-circle" height="50" width="50" src="/images/mystery-man.jpg" alt="">
+						@else
+							<img class="img img-circle" src="{{$event->avatar}}" height="50" width="50" alt="">
+						@endif
 						</div>
 						<div class="timeline-panel">
 							<div class="timeline-heading">
-								this is the heading
+								{{$event->event_name}} - created by {{$event->name}} at {{$event->created_at}}
 							</div>
 							<div class="timeline-body">
 								this is some info
 							</div>
 						</div>
 					</li>
+				@endforeach
 				</ul>
 			</div>
 		</div>
