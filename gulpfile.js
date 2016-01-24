@@ -64,12 +64,12 @@ elixir(function(mix) {
 		);
 
 	/**
-	* lightbox
+	* fullcalendar
 	*/
 
 		mix.copy(
-			paths.lightbox + 'dist/lightbox.min.js',
-			'public/js/vendor/lightbox.min.js'
+			bower + 'fullcalendar/dist/fullcalendar.min.js',
+			'public/js/vendor/fullcalendar.min.js'
 		);
 
 /**
@@ -79,7 +79,8 @@ elixir(function(mix) {
 	mix.scripts([
 		'public/js/vendor/bootstrap.js',
 		'public/js/vendor/jquery.js',
-		'public/js/vendor/react.js'
+		'public/js/vendor/react.js',
+		'public/js/vendor/fullcalendar.min.js'
 	], 'public/js/all.js', 'public/js');
 
 // do a version control of the javascript and css files
