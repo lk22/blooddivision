@@ -31,14 +31,14 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 see-more-wrapper">
         <p class="text-center">See more</p>
         <div class="caret-down">
-            <a href="#provides">
+            <a href="#services">
                 <i class="fa fa-angle-down"></i>
             </a>
         </div>
     </div><!-- see more wrapper end -->
 </div><!-- welcome banner wrapper end -->
 <!-- about wrapper -->
-<div id="provides" class="container-fluid blooddivision-about-wrapper">
+<div id="services" class="container-fluid blooddivision-about-wrapper">
     <div class="row">
         <h1 class="text-center">AVAILABLE MEMBER SERVICES</h1>
     </div>
@@ -46,7 +46,7 @@
     <div class="container inner-about-wrapper">
         
         <!-- provider container -->
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 service">
             <div class="row icon-row">
                 <i class="fa fa-calendar-plus-o"></i>
             </div>
@@ -56,7 +56,7 @@
             </div>
         </div><!-- provider container end -->
         <!-- provider container -->
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 service">
             <!--icon container -->
             <div class="row icon-row">
                 <i class="fa fa-cogs"></i>
@@ -68,7 +68,7 @@
             </div>
         </div><!-- provider container end -->
         <!-- provider container -->
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 service">
             <!-- icon container -->
             <div class="row icon-row">
                 <i class="fa fa-comment"></i>

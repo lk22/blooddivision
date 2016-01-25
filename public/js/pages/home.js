@@ -1,7 +1,7 @@
 // global app variable definition
-var blooddivision;
+var home;
 
-blooddivision = {
+home = {
 
 	/**
 	* initialize
@@ -18,6 +18,7 @@ blooddivision = {
 				*/
 
 					this.welcomWrapper = $('.blooddivision-welcome-wrapper');
+					this.welcomeWrapper.hide().fadeIn(2000);
 					this.bannerWrapper = $('.banner-wrapper');
 					this.platformWrapper = $('.platform-wrapper');
 					this.xboxPlatformContainer = $('.xbox-platform-container');
@@ -30,26 +31,42 @@ blooddivision = {
 					this.serviceWrapper = $('.blooddivision-about-wrapper');
 					this.service = $('.service');
 
+				/**
+				* init calls
+				*/
 
-
-				this.checkAppPort("3000");
-				this.returnAppUrl('localhost:3000', 'blooddivision.app');
+					this.checkAppPort("3000");
+					this.returnAppUrl('localhost:3000', 'blooddivision.app');
+					this.ajaxPrefilter();
 
 		},
 
+	/**
+	* animate any element
+	*
+	* @param component => class/id html: type {html}
+	* @param animation => {}: type {object}
+	* @param duration => type {int}
+	* @param callback => type {function}
+	*/
+
 		animateComponent: function(component, animation, duration, callback){
 
-			return $(component).animate(animation, duration);
+			$(component).animate(animation, duration);
 
 			/**
 			* check the component is hided
 			*/
 			if(!$(component).css({display: 'none'})){
-				this.warning(component + "is not hided use display:none in your css");
+				this.showWarning(component + "is not hided use display:none in your css");
 			}else {
 				this.logging(component, "is animated with succes");
 			}
 		},
+
+	/**
+	* set default ajax token on any ajax requests 
+	*/
 
 		ajaxPrefilter: function(){
 			$.ajaxPrefilter(function(options){
@@ -63,31 +80,61 @@ blooddivision = {
 			});
 		},
 
+	/**
+	* checking the running applications port
+	*
+	* @param port => @type {string}
+	*/
+
 		checkAppPort: function(port){
 			return !(window.location.href.indexOf(port) > 0);
+			this.logging(port);
 		},
+
+	/**
+	* replace the port to the expecting url
+	*
+	* @param port => @type {string}
+	* @param url => @type {string}
+	*/
 
 		returnAppUrl: function(port, url){
 			return window.location.href.replace(port, url);
 		},
 
+	/**
+	* get specific data with a get request (Ajax)
+	*/
+
 		getData: function(get, data, success){
 			$.get({
 				type:get,
-				data:date,
+				data:data,
 				success:success
 			});
 		},
 
-		warning: function(variable, warning){
+	/**
+	* log a warning to the console
+	*/
+
+		showWarning: function(variable, warning){
 			console.warn(variable, warning);
 		},
+
+	/**
+	* log a logging message to the console
+	*
+	* @param log => @type {string}
+	*/
 
 		logging: function(log){
 			console.log(log);
 		}
 
 };
+
+home.init();
 
 $(function(){
 
@@ -105,4 +152,3 @@ $(function(){
 	});
 
 });
-//# sourceMappingURL=all.js.map

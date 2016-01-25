@@ -41,7 +41,7 @@ elixir(function(mix) {
 	 */
 	
 	    mix.copy(
-	    	paths.jquery + 'dist/jquery.min.js',
+	    	paths.jquery + 'dist/jquery.js',
 	    	'public/js/vendor/jquery.js'
 	    );
 
@@ -50,7 +50,7 @@ elixir(function(mix) {
 	*/
 
 		mix.copy(
-			paths.bootstrap + 'dist/js/bootstrap.min.js',
+			paths.bootstrap + 'dist/js/bootstrap.js',
 			'public/js/vendor/bootstrap.js'
 		);
 
@@ -59,29 +59,31 @@ elixir(function(mix) {
 	*/
 
 		mix.copy(
-			paths.react + 'dist/react.min.js',
+			paths.react + 'dist/react.js',
 			'public/js/vendor/react.js'
 		);
-
-	/**
-	* fullcalendar
-	*/
-
-		mix.copy(
-			bower + 'fullcalendar/dist/fullcalendar.min.js',
-			'public/js/vendor/fullcalendar.min.js'
-		);
+	
 
 /**
-* add browserify support for js files
+* mix scripts
 */
 
 	mix.scripts([
-		'public/js/vendor/bootstrap.js',
 		'public/js/vendor/jquery.js',
+		'public/js/vendor/bootstrap.js',
 		'public/js/vendor/react.js',
-		'public/js/vendor/fullcalendar.min.js'
+
+		'public/js/pages/home.js'
+		// 'public/js/pages/events.js',
+		// 'public/js/pages/members.js',
+		// 'public/js/pages/authorization.js',
+		// 'public/js/pages/helpCenter.js',
+		// 'public/js/pages/profile/timeline.js',
+		// 'public/js/pages/profile/events.js',
+		// 'public/js/pages/profile/createEvent.js',
+		// 'public/js/pages/profile/games.js'
 	], 'public/js/all.js', 'public/js');
+
 
 // do a version control of the javascript and css files
 
