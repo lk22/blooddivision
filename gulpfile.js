@@ -69,14 +69,10 @@ elixir(function(mix) {
 */
 
 	mix.scripts([
-		'public/js/vendor/jquery.js',
-		'public/js/vendor/bootstrap.js',
-		'public/js/vendor/react.js',
-
-		'public/js/pages/home.js'
+		'public/js/pages/home.js',
 		// 'public/js/pages/events.js',
 		// 'public/js/pages/members.js',
-		// 'public/js/pages/authorization.js',
+		'public/js/pages/authorization.js',
 		// 'public/js/pages/helpCenter.js',
 		// 'public/js/pages/profile/timeline.js',
 		// 'public/js/pages/profile/events.js',

@@ -56,10 +56,6 @@ class Events extends Model
     	return $this->belongsTo('app/User');
     }
 
-    public function users(){
-    	return $this->belongsToMany('app/User');
-    }
-
     /**
     *   format the event date to the current day
     *   @return void

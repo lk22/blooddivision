@@ -12,6 +12,15 @@ use Blooddivision\Events;
 use Blooddivision\Games;
 use Carbon\Carbon;
 
+// brug sluggable i stedet for a lede efter User->name. https://github.com/cviebrock/eloquent-sluggable
+// aldrig brug DB klassen. Hvis du gør, kan det med 90% sikkerhed gøres på en nemmere måde.
+// brug ->first(); fremfor take(1)->get();
+// læs hele dokumentationen igennem for Laravel Relations: https://laravel.com/docs/5.2/eloquent-relationships, evt https://laracasts.com/series/laravel-5-fundamentals/episodes/14
+// modeller skal ALTID være kaldt i singular form. Dvs User, Post, Message, ikke Users, Posts, Messages
+
+
+
+
 class UserController extends Controller
 {
     /**
@@ -21,7 +30,7 @@ class UserController extends Controller
 
     public function profile($name){
     	// step 1 => get the specific user
-    	$profile = User::where('name', $name)->limit(1)->get();
+    	$user = User::where('name', $name)->take(1)->get(); // User::findBySlug($slug); - first name og lastname conventeres automatisk til leo-knudsen
 
     	// step 2 => get the events belongs to the user
 
@@ -30,8 +39,13 @@ class UserController extends Controller
     			  ->select('*')
     			  ->get();
 
+        //$events = $user->events; // ==== $user->events()->get();
+        //$events = $user->events()->take(10)->orderBy('start', 'ASC')->get();
+
+        //$events = Events::take(10)->with('user')->get(); // get  
+
     	// step 3 => get the profile view
-    	return view('pages.profile_home', compact('profile', 'events'));
+    	return view('pages.profile_home', compact('user', 'events'));
     }
 
     /**
@@ -41,7 +55,7 @@ class UserController extends Controller
 
     public function profileEvents($name){
     	// step 1 => get the profile
-    	$profile = User::where('name', $name)->limit(1)->get();
+    	$user = User::where('name', $name)->limit(1)->get();
     	// step 2 => get the events belongs to the user
 
     	$events = DB::table('events')
@@ -53,7 +67,7 @@ class UserController extends Controller
     	$counts = DB::table('events')->count();
 
     	// step 4 => load view
-    	return view('pages.profile_events', compact('profile', 'events', 'counts'));
+    	return view('pages.profile_events', compact('user', 'events', 'counts'));
     }
 
     /**

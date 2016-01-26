@@ -21,9 +21,6 @@ Route::get('test', function(){
     return view('test');
 });
 
-if(\Blooddivision\User::count() > 0){
-    Route::get('/members', 'PageController@getMembersPage');
-}
 
 
 /*

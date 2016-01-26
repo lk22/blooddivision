@@ -53,4 +53,8 @@ class User extends Authenticatable
     public function events(){
         return $this->hasMany('app/Events');
     }
+
+    public function url() {
+        return route('user.profile', $this->slug);
+    }
 }

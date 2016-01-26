@@ -147,7 +147,6 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        // Illuminate\Html\HtmlServiceProvider::class,
         AdamWathan\BootForms\BootFormsServiceProvider::class,
 
         /*
@@ -171,6 +170,8 @@ return [
 
         //Kilrizzy\Bootforms\BootformsServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+
+        Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
 
     ],
 
@@ -218,8 +219,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'Debugbar'  => Barryvdh\Debugbar\Facade::class,
-        // 'Html'      => Illuminate\Html\HtmlFacade::class,
-        // 'Form'      => Illuminate\Html\FormFacade::class,
         'BootForm'  => AdamWathan\BootForms\Facades\BootForm::class,
 
         // eloquent models

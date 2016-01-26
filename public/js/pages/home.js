@@ -18,7 +18,7 @@ home = {
 				*/
 
 					this.welcomWrapper = $('.blooddivision-welcome-wrapper');
-					this.welcomeWrapper.hide().fadeIn(2000);
+					this.welcomeWrapperHideFade = $('.blooddivision-welcome-wrapper').hide().fadeIn(2000);
 					this.bannerWrapper = $('.banner-wrapper');
 					this.platformWrapper = $('.platform-wrapper');
 					this.xboxPlatformContainer = $('.xbox-platform-container');
