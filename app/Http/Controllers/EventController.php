@@ -35,8 +35,10 @@ class EventController extends Controller
         * @return \Illuminate\Database\QueryBuilder::class
     	*/
 
-        $user = new User;
-        $events = $user->events; 
+        $events = DB::table('events')
+                  ->join('users', 'users.id', '=', 'events.user_id')
+                  ->select('*')
+                  ->get();
 
     	/**
     	* return events view with the all the events

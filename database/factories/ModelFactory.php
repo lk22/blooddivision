@@ -16,11 +16,13 @@
 
 $factory->define(Blooddivision\User::class, function(faker\Generator $faker) {
     return [
-        'name' => $faker->name,
+        'name' => str_slug($faker->name, '-'),
         'email' => $faker->email,
         'avatar' => $faker->randomElement([
 	        '/images/avatars/005-avatar-large-190x190-93034cb05164464887fa7f3e6fc936d8.jpg',
 	        '/images/avatars/008-avatar-large-190x190-88284542f8f44f58b7be6281c1347d25.jpg',
+	        '/images/avatars/1039002_0_2039002_3001_24_1.png',
+	        '/images/avatars/avatar-302-0e1742296505457fae4db552f5af41c3.png'
         ]),
         'password' => bcrypt('secret'),
         'remember_token' => str_random(10),
@@ -35,7 +37,7 @@ $factory->define(Blooddivision\User::class, function(faker\Generator $faker) {
 $factory->define(Blooddivision\Event::class, function(faker\Generator $faker){
 	return [
 		'event_name' => $faker->name,
-		'event_game' => $faker->randomElement([
+		'event_game' => $faker->randomElements([
 			'Destiny',
 			'Halo 5',
 			'Grand Theft Auto V',
@@ -44,8 +46,8 @@ $factory->define(Blooddivision\Event::class, function(faker\Generator $faker){
 			'Star Wars Battlefront',
 		]),
 		'event_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi voluptates, totam ducimus quas quam molestiae dolorum numquam deleniti, similique eaque, est molestias! Officiis molestias, amet voluptatibus asperiores iste, dignissimos rem.',
-		'event_datetime' => $faker->dateTime(\Carbon\Carbon::now()), 
-		'user_id' => rand(1, 20)
+		'event_datetime' => \Carbon\Carbon::now(), 
+		'user_id' => rand(1, 20),
 	];
 });
 

@@ -25,15 +25,20 @@ class UserController extends Controller
     * @return profile
     */
 
-    public function profile($slug){
+    public function profile($name){
     	// step 1 => get the specific user
-    	$user = User::findBySlug($slug); // User::findBySlug($slug); - first name og lastname conventeres automatisk til leo-knudsen
+    	$user = User::where('name', $name)->limit(1)->get(); //- first name og lastname conventeres automatisk til leo-knudsen
 
     	// step 2 => get the events belongs to the user
-        
-        $events = $user->events; // ==== $user->events()->get();
+
+       // $events = $user->events; // ==== $user->events()->get();
         
         // $events = Event::all()->take(10)->get(); // get  
+
+        $events = DB::table('events')
+                  ->join('users', 'users.id', '=', 'events.user_id')
+                  ->select('*')
+                  ->get();
 
     	// step 3 => get the profile view
     	return view('pages.profile_home', compact('user', 'events'));
