@@ -17,8 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('test', function(){
-    return view('test');
+Route::get('test', function(\Blooddivision\User $user){
+    return $user->events;
+
+    if($user->count() < 1){
+        return 'there is no events stored';
+    }
 });
 
 
@@ -60,7 +64,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/forum', 'ForumController@index');
     
     // profile route
-    Route::get('/profile/{name}', 'UserController@profile');
+    Route::get('/profile/{slug}', 'UserController@profile');
     
 });
 
@@ -79,7 +83,7 @@ Route::group(['middleware' => 'web'], function () {
 * set a route group for the profile navigations
 */
 
-Route::group(['prefix' => '/profile/{name}', 'middleware' => 'web'], function() {
+Route::group(['prefix' => '/profile/{slug}', 'middleware' => 'web'], function() {
 
     // the events route
     Route::get('your-events', 'UserController@profileEvents');

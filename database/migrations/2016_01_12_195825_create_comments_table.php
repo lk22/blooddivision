@@ -21,6 +21,8 @@ class CreateCommentsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('message_id')->unsigned();
             $table->foreign('message_id')->references('id')->on('messages')->onUpdate('cascade')->onDelete('cascade');
+            // $table->dropForeign('comments_user_id_foreign');
+            // $table->dropForeign('comments_message_id_foreign');
         });
     }
 

@@ -3,16 +3,32 @@
 namespace Blooddivision;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\SluggableTrait;
 
-class User extends Authenticatable
+class User extends Authenticatable implements SluggableInterface
 {
+
+    /**
+    * using SluggableTrait
+    *
+    * @return Cviebrock\EloquentSluggable\SluggableTrait
+    */
+
+    use SluggableTrait;
+
+    protected $sluggable = [
+        'build_from' => 'name',
+        'save_to'    => 'slug',
+    ];
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'avatar'
+        'name', 'email', 'password', 'avatar', 'remember_token'
     ];
 
     /**
@@ -31,7 +47,7 @@ class User extends Authenticatable
     */
 
     public function messages(){
-        return $this->hasMany('app/Messages');
+        return $this->hasMany('app/Message');
     }
 
     /**
@@ -41,7 +57,7 @@ class User extends Authenticatable
     */
 
     public function comments(){
-        return $this->hasMany('app/User');
+        return $this->hasMany('app/Comment');
     }
 
     /**
@@ -49,9 +65,9 @@ class User extends Authenticatable
     *
     *   @return void
     */
-
+   
     public function events(){
-        return $this->hasMany('app/Events');
+        return $this->hasMany('app/Event');
     }
 
     public function url() {

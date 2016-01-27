@@ -30,21 +30,8 @@
 				</div>
 
 				<div class="form-group">
-					<label class="col-xs-1 col-sm-6 col-md-4 col-lg-4 control-label">Event Date:</label>
-					<div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
-                    	<input type="date" class="form-control" name="event_date">
-					</div>
-				</div>
-
-				<div class="form-group">
-					<label class="col-xs-1 col-sm-6 col-md-3 col-lg-3 control-label">Event start time:</label>
-					<div class="col-xs-11 col-sm-6 col-md-3 col-lg-3">
-                    	<input type="time" class="form-control" name="event_start_time">
-					</div>
-					<label class="col-xs-1 col-sm-6 col-md-3 col-lg-3 control-label">Event end time:</label>
-					<div class="col-xs-11 col-sm-6 col-md-3 col-lg-3">
-                    	<input type="time" class="form-control" name="event_end_time">
-					</div>
+					<label class="control-label">event datetime</label>
+					<input type="datetime" placeholder="your event date and time goes here..." name="event_datetime">
 				</div>
 
 				<div class="form-group">

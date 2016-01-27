@@ -31,8 +31,9 @@
 				</div>
 			</div>
 			<div class="row hidden-xs hidden-sm events-content-wrapper">
+
 				<ul class="timeline-wrapper">
-				@foreach($users_events as $event)
+				@foreach($events as $event)
 					<li class="timeline-item">
 						<div class="timeline-avatar-badge">
 						@if(!$event->avatar)

@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- welcome banner wrapper -->
-<div class="container-fluid blooddivision-welcome-wrapper">
+<div class="container-fluid blooddivision-welcome-wrapper" id="welcome">
     <!-- inner banner wrapper -->
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 banner-wrapper">
         <h1 class="text-center">JOIN THE NEW DIVISION OF BLOOD!</h1>
@@ -92,7 +92,7 @@
         </div>--><!-- provider container end -->*/?>
     </div>
 </div>
-<div class="container-fluid signup-oppurtunity-wrapper">
+<div class="container-fluid signup-oppurtunity-wrapper" id="wannajoin">
     <div class="container">
         <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-6 col-lg-6 col-lg-offset-6 signup-wrapper">
             <div class="row know-more-row">
@@ -114,5 +114,9 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="scrollTopContainer">
+    <a href="#welcome"><i class="fa fa-arrow-up"></i></a>
 </div>
 @endsection

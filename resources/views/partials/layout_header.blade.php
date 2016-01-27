@@ -34,6 +34,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
+                        <li><a href="{{ url('#services') }}">Services <i class="fa fa-info-circle"></i></a></li>
                         <li><a href="{{ url('/members') }}">Crew members <i class="fa fa-users"></i></a></li>
                         <li><a href="{{ url('/login') }}">Login <i class="fa fa-user"></i></a></li>
                         <li><a href="{{ url('/register') }}">Register <i class="fa fa-user-plus"></i></a></li>

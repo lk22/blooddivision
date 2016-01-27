@@ -7,12 +7,12 @@ use Illuminate\Database\Seeder;
 * Users Seeder class
 */
 
-class UserTableSeeder extends Seeder
+class EventTableSeeder extends Seeder
 {
 	
 	public function run()
 	{
-		factory(Blooddivision\User::class, 20)->create();
+		factory(Blooddivision\Event::class, 20)->create();
 	}
 }
 

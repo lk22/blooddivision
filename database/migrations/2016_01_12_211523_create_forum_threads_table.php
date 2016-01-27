@@ -21,6 +21,8 @@ class CreateForumThreadsTable extends Migration
             $table->foreign('category_id')->references('id')->on('forum_categories')->onDelete('cascade');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            // $table->dropForeign('forum_threads_category_id_foreign');
+            // $table->dropForeign('forum_threads_user_id_foreign');
         });
     }
 

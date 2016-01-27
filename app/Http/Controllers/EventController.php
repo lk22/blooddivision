@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Blooddivision\Http\Requests;
 use Blooddivision\Http\Controllers\Controller;
-use Blooddivision\Events;
+use Blooddivision\Event;
 use Blooddivision\User;
 use Auth;
 use DB;
@@ -29,19 +29,19 @@ class EventController extends Controller
     */
 
     public function events(){
-    	/**
+    	
+        /**
     	* get all the scheduled events from all the users
         * @return \Illuminate\Database\QueryBuilder::class
     	*/
-    	$users_events = DB::table('events')
-                  ->join('users', 'users.id', '=', 'events.user_id')
-                  ->select('*')
-                  ->get();
+
+        $user = new User;
+        $events = $user->events; 
 
     	/**
     	* return events view with the all the events
     	*/
-    	return view('pages.events')->with('users_events', $users_events);
+    	return view('pages.events')->with('events', $events);
     }
 
     /**
@@ -61,7 +61,7 @@ class EventController extends Controller
     	*	@param user_id				=> Auth::user->id
     	*	@return model
     	*/
-    	Events::create([
+    	Event::create([
     		'event_title' 		=> $request->get('event_title'), 
     		'event_game' 		=> $request->get('event_game'), 
     		'event_description' => $request('event_description'),

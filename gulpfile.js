@@ -42,7 +42,7 @@ elixir(function(mix) {
 	
 	    mix.copy(
 	    	paths.jquery + 'dist/jquery.js',
-	    	'public/js/vendor/jquery.js'
+	    	'public/js/vendor/jquery.min.js'
 	    );
 
 	/**
@@ -51,7 +51,7 @@ elixir(function(mix) {
 
 		mix.copy(
 			paths.bootstrap + 'dist/js/bootstrap.js',
-			'public/js/vendor/bootstrap.js'
+			'public/js/vendor/bootstrap.min.js'
 		);
 
 	/**
@@ -60,7 +60,7 @@ elixir(function(mix) {
 
 		mix.copy(
 			paths.react + 'dist/react.js',
-			'public/js/vendor/react.js'
+			'public/js/vendor/react.min.js'
 		);
 	
 
@@ -69,6 +69,9 @@ elixir(function(mix) {
 */
 
 	mix.scripts([
+		'public/js/vendor/jquery.min.js',
+		'public/js/vendor/bootstrap.min.js',
+		'public/js/vendor/react.min.js',
 		'public/js/pages/home.js',
 		// 'public/js/pages/events.js',
 		// 'public/js/pages/members.js',

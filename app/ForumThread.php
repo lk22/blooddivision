@@ -4,7 +4,7 @@ namespace Blooddivision;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ForumThreads extends Model
+class ForumThread extends Model
 {
     /**
     * tell the model wich database table to use
@@ -42,7 +42,7 @@ class ForumThreads extends Model
     */
 
     public function threadHasManyMessages(){
-    	return $this->hasMany('app/Messages');
+    	return $this->hasMany('app/Message');
     }
 
     /**

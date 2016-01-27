@@ -46,11 +46,6 @@ class CreateUsersTable extends Migration
             $table->string('avatar');
 
             /**
-            * the profile cover image
-            */
-            $table->string('profile_cover');  
-
-            /**
             * profile description field
             */
             $table->text('profile_desc');

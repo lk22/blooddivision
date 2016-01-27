@@ -2,12 +2,20 @@
 
 namespace Blooddivision;
 
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\SluggableTrait;
 
-class Events extends Model
+class Event extends Model implements SluggableInterface
 {
+
+	/**
+	* use the sluggable trait
+	*/
+
+	use SluggableTrait;
+
     /**
     *   use the SoftDeletes trait
     */
@@ -22,6 +30,11 @@ class Events extends Model
 
     protected $table = ['events'];
 
+    protected $sluggable = [
+        'build_from' => 'event_name',
+        'save_to'    => 'slug',
+    ];
+
     /**
     * tell the model wich data fields can contain data
     *
@@ -33,9 +46,7 @@ class Events extends Model
     	'event_name',			// the event name
     	'event_game',			// the event game
     	'event_description',	// the event description
-    	'event_date',			// the date the event counts on
-        'event_start_time',     // the specific time the event starts
-        'event_end_time',       // the specific time the event ends
+        'event_datetime',
     	'user_id'				// the specific user that has added the event 
     ];
 
@@ -44,7 +55,7 @@ class Events extends Model
     * @var $dates = [] 
     */
 
-    protected $dates = ['event_date', 'event_start_time', 'event_end_time'];
+    protected $dates = ['event_date' ];
 
     /**
     *	Events belongs to relationship on users
@@ -53,7 +64,7 @@ class Events extends Model
     */
 
     public function user(){
-    	return $this->belongsTo('app/User');
+    	return $this->belongsTo(User::class);
     }
 
     /**
@@ -66,7 +77,7 @@ class Events extends Model
     }
 
     public function setCreatedAtAttribute($date){
-        $this->attributes['creeated_at'] = Carbon::createFromFormat('d-m-Y', $date);
+        // $this->attributes['creeated_at'] = Carbon::createFromFormat('d-m-Y', $date);
     }
 
     /**
@@ -75,17 +86,10 @@ class Events extends Model
     */
 
     public function setEventStartTimeAttribute($date){
-        $this->attributes['event_start_time'] = Carbon::createFromFormat('H-m-s', $date);
+        // $this->attributes['event_start_time'] = Carbon::createFromFormat('H-m-s', $date);
     }
 
     public function setEventEndTimeAttribute($date){
-        $this->attributes['event_end_time'] = Carbon::createFromFormat("H-m-s", $date);
+        // $this->attributes['event_end_time'] = Carbon::createFromFormat("H-m-s", $date);
     }
-
-    /**
-    *   soft delete event when the time is equal time of the event
-    *   @param $query
-    *   @return void
-    */
-
 }

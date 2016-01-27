@@ -5,7 +5,7 @@ namespace Blooddivision\Http\Controllers;
 use Blooddivision\Http\Requests;
 use Illuminate\Http\Request;
 use Blooddivision\MessageOfTheDay;
-use Blooddivision\Messages;
+use Blooddivision\Message;
 use Blooddivision\User;
 use Blooddivision\ForumThreads;
 
@@ -29,8 +29,8 @@ class HomeController extends Controller
     public function index(){
         $messages = MessageOfTheDay::all();
         $latest_users = User::latest()->limit(3)->get();
-        $feed = Messages::all();
-        $threads = ForumThreads::latest()->limit(3)->get();
+        $feed = Message::all();
+        // $threads = ForumThread::latest()->limit(3)->get();
 
         return view('home', compact('messages', 'latest_users', 'feed'));
     }
@@ -42,7 +42,7 @@ class HomeController extends Controller
     */
 
     public function storeMessageOfTheDay(Request $request){
-        Messages::create(['message' => $request->get('message'),  'user_id' => Auth::user()->id]);
+        Message::create(['message' => $request->get('message'),  'user_id' => Auth::user()->id]);
         return redirect('/home');
     }
 }

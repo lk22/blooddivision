@@ -27,6 +27,6 @@
 			</div><!-- timeline panel end -->
 		</li><!-- timeline item end -->
 		@endforeach
-	@endif
+	@else
 	</ul><!-- timeline wrapper end -->
 @stop

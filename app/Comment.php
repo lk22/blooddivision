@@ -4,7 +4,7 @@ namespace Blooddivision;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Comments extends Model
+class Comment extends Model
 {
     /**
    	*	tell the model wich table to use
@@ -29,6 +29,6 @@ class Comments extends Model
       */
 
       public function threads(){
-         return $this->belongsTo('app/ForumThreads');
+         return $this->belongsTo('app/ForumThread');
       }
 }

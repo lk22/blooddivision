@@ -17,14 +17,13 @@ class CreateEventsTable extends Migration
             $table->string('event_name');
             $table->string('event_game');
             $table->text('event_description');
-            $table->time('event_date');
-            $table->time('event_start_time');
-            $table->time('event_end_time');
+            $table->dateTime('event_datetime');
             $table->text('event_desc');
             $table->softDeletes();
             $table->timestamps();
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            // $table->dropForeign('events_user_id_foreign');
         });
     }
 

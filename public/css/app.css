@@ -1089,6 +1089,7 @@
   color: #fff;
   margin: 0px;
   z-index: 1px;
+  display: none;
   /**
 			*	the banner wrapper
 			*/
@@ -1109,6 +1110,7 @@
 					*/ }
     .container-fluid.blooddivision-welcome-wrapper .platform-wrapper .xbox-platform-container {
       padding: 10px;
+      display: none;
       /**
 							*	platform logo
 							*/ }
@@ -1117,6 +1119,7 @@
     .container-fluid.blooddivision-welcome-wrapper .platform-wrapper .windows-platform-container {
       padding: 10px;
       margin-left: 22%;
+      display: none;
       /**
 							*	platform logo
 							*/ }
@@ -1209,6 +1212,31 @@
       padding-top: 15px; }
       .container-fluid.signup-oppurtunity-wrapper .signup-wrapper .wantTo-signup-row a {
         color: #fff; }
+
+/**
+* scrollTop Container
+*/
+.scrollTopContainer {
+  height: 50px;
+  width: 50px;
+  background: #2C3E50;
+  border: 1px solid #e74c3c;
+  position: fixed;
+  top: 180px;
+  right: -50px;
+  padding: 5px 0px 5px 13px;
+  /**
+		* arrow
+		*/ }
+  .scrollTopContainer a {
+    font-size: 20px;
+    color: #fff; }
+    .scrollTopContainer a:hover {
+      -webkit-animation: rotate(360);
+      animation: rotate(360);
+      transition: ease-in-out 0.2s all; }
+    .scrollTopContainer a:not(:hover) {
+      transition: ease-in-out 0.2s all; }
 
 #app-layout {
   padding-bottom: 0px; }
@@ -1228,6 +1256,7 @@
   color: #fff;
   margin: 0px;
   z-index: 1px;
+  display: none;
   /**
 			*	the banner wrapper
 			*/
@@ -1248,6 +1277,7 @@
 					*/ }
     .container-fluid.blooddivision-welcome-wrapper .platform-wrapper .xbox-platform-container {
       padding: 10px;
+      display: none;
       /**
 							*	platform logo
 							*/ }
@@ -1256,6 +1286,7 @@
     .container-fluid.blooddivision-welcome-wrapper .platform-wrapper .windows-platform-container {
       padding: 10px;
       margin-left: 22%;
+      display: none;
       /**
 							*	platform logo
 							*/ }
@@ -1348,5 +1379,30 @@
       padding-top: 15px; }
       .container-fluid.signup-oppurtunity-wrapper .signup-wrapper .wantTo-signup-row a {
         color: #fff; }
+
+/**
+* scrollTop Container
+*/
+.scrollTopContainer {
+  height: 50px;
+  width: 50px;
+  background: #2C3E50;
+  border: 1px solid #e74c3c;
+  position: fixed;
+  top: 180px;
+  right: -50px;
+  padding: 5px 0px 5px 13px;
+  /**
+		* arrow
+		*/ }
+  .scrollTopContainer a {
+    font-size: 20px;
+    color: #fff; }
+    .scrollTopContainer a:hover {
+      -webkit-animation: rotate(360);
+      animation: rotate(360);
+      transition: ease-in-out 0.2s all; }
+    .scrollTopContainer a:not(:hover) {
+      transition: ease-in-out 0.2s all; }
 
 /*# sourceMappingURL=app.css.map */

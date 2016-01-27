@@ -4,7 +4,7 @@ namespace Blooddivision;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Games extends Model
+class Game extends Model
 {
     /**
     * tell the model wich table to use

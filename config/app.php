@@ -173,6 +173,8 @@ return [
 
         Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
 
+        Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
+
     ],
 
     /*

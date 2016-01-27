@@ -4,7 +4,7 @@ namespace Blooddivision;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Messages extends Model
+class Message extends Model
 {
     /**
    	*	tell the model wich table to use
@@ -29,6 +29,6 @@ class Messages extends Model
    	*/
 
    	public function Comments(){
-   		return $this->hasMany('app/Comments');
+   		return $this->hasMany('app/Comment');
    	}
 }

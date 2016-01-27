@@ -18,7 +18,7 @@
 			color:#fff;
 			margin: 0px;
 			z-index:1px;
-			
+			display:none;
 			/**
 			*	the banner wrapper
 			*/
@@ -39,7 +39,7 @@
 
 						.xbox-platform-container{
 							padding:10px;
-
+							display:none;
 							/**
 							*	platform logo
 							*/
@@ -56,6 +56,7 @@
 						.windows-platform-container{
 							padding:10px;
 							margin-left:22%;
+							display:none;
 							/**
 							*	platform logo
 							*/
@@ -210,3 +211,47 @@
 						}
 				}
 		}
+
+/**
+* scrollTop Container
+*/
+
+	.scrollTopContainer{
+		height:50px;
+		width: 50px; 
+		background: #2C3E50;
+		border:1px solid #e74c3c;
+		position:fixed;
+		top: 180px;
+		right: -50px;
+		padding:5px 0px 5px 13px;  
+		
+		/**
+		* arrow
+		*/
+
+			a{
+				font-size: 20px; 
+				color: #fff;
+			
+				 &:hover{
+				 	-webkit-animation: rotate(360); 
+				 	-moz-animation: rotate(360); 
+				 	-o-animation: rotate(360); 
+				 	animation: rotate(360);
+				  	-webkit-transition: ease-in-out 0.2s all; 
+				  	-moz-transition: ease-in-out 0.2s all; 
+				  	-ms-transition: ease-in-out 0.2s all; 
+				  	-o-transition: ease-in-out 0.2s all; 
+				  	transition: ease-in-out 0.2s all; 
+				 } 
+
+				 &:not(:hover){
+				 	-webkit-transition: ease-in-out 0.2s all; 
+				  	-moz-transition: ease-in-out 0.2s all; 
+				  	-ms-transition: ease-in-out 0.2s all; 
+				  	-o-transition: ease-in-out 0.2s all; 
+				  	transition: ease-in-out 0.2s all; 
+				 }
+			}  
+	}

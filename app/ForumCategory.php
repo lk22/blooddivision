@@ -4,7 +4,7 @@ namespace Blooddivision;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ForumCategories extends Model
+class ForumCategory extends Model
 {
     /**
     * tell the model wich table to use

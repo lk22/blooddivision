@@ -8,8 +8,8 @@ use Blooddivision\Http\Requests\CreateEventRequest;
 use Blooddivision\Http\Controllers\Controller;
 use Auth;
 use Blooddivision\User;
-use Blooddivision\Events;
-use Blooddivision\Games;
+use Blooddivision\Event;
+use Blooddivision\Game;
 use Carbon\Carbon;
 
 // brug sluggable i stedet for a lede efter User->name. https://github.com/cviebrock/eloquent-sluggable
@@ -18,9 +18,6 @@ use Carbon\Carbon;
 // læs hele dokumentationen igennem for Laravel Relations: https://laravel.com/docs/5.2/eloquent-relationships, evt https://laracasts.com/series/laravel-5-fundamentals/episodes/14
 // modeller skal ALTID være kaldt i singular form. Dvs User, Post, Message, ikke Users, Posts, Messages
 
-
-
-
 class UserController extends Controller
 {
     /**
@@ -28,21 +25,15 @@ class UserController extends Controller
     * @return profile
     */
 
-    public function profile($name){
+    public function profile($slug){
     	// step 1 => get the specific user
-    	$user = User::where('name', $name)->take(1)->get(); // User::findBySlug($slug); - first name og lastname conventeres automatisk til leo-knudsen
+    	$user = User::findBySlug($slug); // User::findBySlug($slug); - first name og lastname conventeres automatisk til leo-knudsen
 
     	// step 2 => get the events belongs to the user
-
-    	$events = DB::table('events')
-    			  ->join('users', 'users.id', '=', 'events.user_id')
-    			  ->select('*')
-    			  ->get();
-
-        //$events = $user->events; // ==== $user->events()->get();
-        //$events = $user->events()->take(10)->orderBy('start', 'ASC')->get();
-
-        //$events = Events::take(10)->with('user')->get(); // get  
+        
+        $events = $user->events; // ==== $user->events()->get();
+        
+        // $events = Event::all()->take(10)->get(); // get  
 
     	// step 3 => get the profile view
     	return view('pages.profile_home', compact('user', 'events'));
@@ -58,16 +49,10 @@ class UserController extends Controller
     	$user = User::where('name', $name)->limit(1)->get();
     	// step 2 => get the events belongs to the user
 
-    	$events = DB::table('events')
-    			  ->join('users', 'users.id', '=', 'events.user_id')
-    			  ->select('*')
-    			  ->get();
-
-    	// step 3 get the count of the events from the events table
-    	$counts = DB::table('events')->count();
+    	$events = $user->events()->orderBy('id', 'ASC')->get();
 
     	// step 4 => load view
-    	return view('pages.profile_events', compact('user', 'events', 'counts'));
+    	return view('pages.profile_events', compact('user', 'events'));
     }
 
     /**
@@ -76,7 +61,7 @@ class UserController extends Controller
     */
 
     public function profileEvent($slug){
-    	$the_event = Events::where('event_title', $slug)->limit(1)->get();
+    	$the_event = Event::where('event_title', $slug)->limit(1)->get();
     }
 
     /**
@@ -88,17 +73,17 @@ class UserController extends Controller
     	/**
     	* select the authorized user
     	*/
-    	$profile = User::where('name', Auth::user()->name)->limit(1)->get();
+    	$user = User::where('name', Auth::user()->name)->limit(1)->get();
 
     	/**
     	* select all games
     	*/
-    	$games = Games::all();
+    	$games = Game::all();
 
     	/**
     	* return the view
     	*/
-    	return view('pages.create_event', compact('profile', 'games'));
+    	return view('pages.create_event', compact('user', 'games'));
     }
 
     /**
@@ -111,14 +96,12 @@ class UserController extends Controller
     	/**
     	* step 1 => create the model row
     	*/
-    	Events::create([
-    		'event_name' 		=> $request->get('event_name'),
-    		'event_game' 		=> $request->get('event_game'),
-    		'event_date' 		=> Carbon::parse($request->get('event_date')),
-    		'event_start_time'  => Carbon::parse($request->get('event_start_time')),
-    		'event_end_time'	=> Carbon::parse($request->get('event_end_time')),	
-    		'event_desc' 		=> $request->get('event_desc'),
-    		'user_id'	 		=> Auth::user()->id
+    	Event::create([
+    		'event_name'         => $request->get('event_name'),
+            'event_game'         => $request->get('event_game'),
+            'event_description'  => $request->get('event_desc'),
+            'event_datetime'     => Carbon::now(),
+            'user_id'            => Auth::user()->id
     	]);
 
     	/**
@@ -133,7 +116,7 @@ class UserController extends Controller
     * @return void
     */
     public function thrashEvent($id){
-    	Events::where('id', $id)->delete();
+    	Event::where('id', $id)->delete();
     	return redirect('/profile/{{Auth::user()->name}}/your-events');
     }
 }

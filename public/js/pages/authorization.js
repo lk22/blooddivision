@@ -21,12 +21,8 @@ authorization = {
 	* append error message
 	*/
 
-		showError: function(error){
-			if(!$('.auth-error')){
-				document.write('<div class="alert alert-danger"></div>');
-			}else {
-				$('.auth-error').html(error);
-			}
+		showError: function(appendant, error){
+			$(appendant).html('<div class="alert alert-danger">' + error +' </div>');
 		},
 
 	/**
@@ -51,3 +47,35 @@ authorization = {
 		}
 
 };
+
+/**
+* initialize object
+*/
+
+authorization.init();
+
+$(function(){
+	var $this = $(this);
+	/**
+	* if the client is hovering the email field
+	*/
+	authorization.email.bind('click', function(){
+		/**
+		* render email tutorial
+		*/
+		authorization._renderTutorial(
+			authorization.login, // the login wrapper
+			'Your first step is to fill your valid email address it must contain @ to make it valid', // appending message
+			'login-email-tutorial' // the element class
+		);
+	}).bind('mouseenter', function(){
+		$this.focus();
+	}).bind('mouseleave', function(){
+		if(authorization.email.val() == ''){
+			authorization.showError(
+				authorization.email,
+				"your email is empty please fill the email field to proceed"
+			);
+		}
+	});
+});

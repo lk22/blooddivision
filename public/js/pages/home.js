@@ -146,9 +146,18 @@ $(function(){
 				$('html, body').delay(200).animate({
 					scrollTop: target.offset().top
 				}, 1500);
+				$('.scrollTopContainer').delay(200).animate({
+					opacity: "1",
+					right: "-1px"
+				}, 1500);
 			}
 		}
 		return false;
 	});
 
+});
+
+$(function(){
+	home.xboxPlatformContainer.fadeIn(2000);
+	home.windowsPlatformContainer.fadeIn(2000);
 });
