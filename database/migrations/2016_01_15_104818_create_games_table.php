@@ -42,6 +42,21 @@ class CreateGamesTable extends Migration
             */
             $table->timestamps();
 
+            /**
+             * deleted_at timestamp
+             */
+            $table->softDeletes();
+
+            /**
+             * integer for the user_id
+             */
+            $table->integer('user_id')->unsigned();
+
+            /**
+             * foreign key related to the user id
+             */
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+
         });
     }
 

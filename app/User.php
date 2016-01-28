@@ -5,6 +5,10 @@ namespace Blooddivision;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Cviebrock\EloquentSluggable\SluggableInterface;
 use Cviebrock\EloquentSluggable\SluggableTrait;
+use Blooddivision\Comment;
+use Blooddivision\Game;
+use Blooddivision\Event;
+use Bloddivision\Message;
 
 class User extends Authenticatable implements SluggableInterface
 {
@@ -47,7 +51,7 @@ class User extends Authenticatable implements SluggableInterface
     */
 
     public function messages(){
-        return $this->hasMany('app/Message');
+        return $this->hasMany(Message::class);
     }
 
     /**
@@ -57,7 +61,7 @@ class User extends Authenticatable implements SluggableInterface
     */
 
     public function comments(){
-        return $this->hasMany('app/Comment');
+        return $this->hasMany(Comment::class);
     }
 
     /**
@@ -68,6 +72,15 @@ class User extends Authenticatable implements SluggableInterface
    
     public function events(){
         return $this->hasMany(Event::class);
+    }
+
+    /**
+     * user has many games
+     * @return [relation] [join the games table]
+     */
+    
+    public function games(){
+        return $this->hasMany(Game::class);
     }
 
     public function url() {

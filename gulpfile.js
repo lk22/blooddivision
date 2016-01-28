@@ -69,9 +69,9 @@ elixir(function(mix) {
 */
 
 	mix.scripts([
-		'public/js/vendor/jquery.min.js',
-		'public/js/vendor/bootstrap.min.js',
-		'public/js/vendor/react.min.js',
+		// 'public/js/vendor/jquery.min.js',
+		// 'public/js/vendor/bootstrap.min.js',
+		// 'public/js/vendor/react.min.js',
 		'public/js/pages/home.js',
 		// 'public/js/pages/events.js',
 		// 'public/js/pages/members.js',

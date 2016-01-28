@@ -54,6 +54,7 @@ $factory->define(Blooddivision\Event::class, function(faker\Generator $faker){
 $factory->define(Blooddivision\Game::class, function(faker\Generator $faker){
 	return [
 		'game' => 'Halo 5',
-		'game_cover' => '/images/covers/halo5cover.jpg'
+		'game_cover' => '/images/covers/halo5cover.jpg',
+		'user_id' => rand(0, 20)
 	];
 });

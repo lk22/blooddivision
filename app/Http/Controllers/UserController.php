@@ -131,4 +131,15 @@ class UserController extends Controller
     	Event::where('id', $id)->delete();
     	return redirect('/profile/{{Auth::user()->name}}/your-events');
     }
+
+    /**
+     * get the games of the profile
+     * 
+     * @return [array] [the users favourite games]
+     */
+    
+    public function profileGames(){
+        $games = Game::all()->user()->where_user();
+        return view('pages.profile_games')->with('games', $games);
+    }
 }

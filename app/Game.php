@@ -3,6 +3,7 @@
 namespace Blooddivision;
 
 use Illuminate\Database\Eloquent\Model;
+use Blooddivision\User;
 
 class Game extends Model
 {
@@ -19,7 +20,19 @@ class Game extends Model
     protected $fillable = [
     	'game',
     	'game_cover',
+        'user_id'
     ];
+
+    /**
+     * mutate the user relation 
+     */
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function scopeWhereUser($query){
+        return $query->where('user_id', auth()->user()->id);
+    }
 
     /**
     * order by descending scope
