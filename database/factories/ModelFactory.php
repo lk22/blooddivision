@@ -47,7 +47,7 @@ $factory->define(Blooddivision\Event::class, function(faker\Generator $faker){
 		]),
 		'event_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi voluptates, totam ducimus quas quam molestiae dolorum numquam deleniti, similique eaque, est molestias! Officiis molestias, amet voluptatibus asperiores iste, dignissimos rem.',
 		'event_datetime' => \Carbon\Carbon::now(), 
-		'user_id' => rand(1, 20),
+		'user_id' => rand(0, 20),
 	];
 });
 

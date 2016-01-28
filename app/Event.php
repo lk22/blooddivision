@@ -77,6 +77,10 @@ class Event extends Model implements SluggableInterface
         $this->attributes['event_datetime'] = Carbon::createFromFormat('Y-m-d', $date);
     }
 
+    public function getEventDateTimeAttribute(){
+        return $this->event_date_time;
+    }
+
     public function setCreatedAtAttribute($date){
         // $this->attributes['creeated_at'] = Carbon::createFromFormat('d-m-Y', $date);
     }

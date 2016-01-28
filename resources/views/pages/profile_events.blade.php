@@ -1,7 +1,7 @@
 @extends('layouts.profile')
 
 @section('profile_content')
-	@if(Event::count() >= 1)
+	@if(count($events) >= 1)
 		@foreach($events as $event)
 			<div class="row events-row events-wrapper">
 				<div class="panel panel-default event">

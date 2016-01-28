@@ -12,14 +12,14 @@
 				<div class="form-group">
 					<label class="col-xs-1 col-sm-6 col-md-4 col-lg-4 control-label">Event name:</label>
 					<div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
-                    	<input type="text" class="form-control" name="event_name">
+                    	<input type="text" class="form-control event-name-input" name="event_name">
 					</div>
 				</div>
 
 				<div class="form-group">
 					<label class="col-xs-1 col-sm-6 col-md-4 col-lg-4 control-label">Event name:</label>
 					<div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
-                    	<select class="form-control" name="event_game" id="games">
+                    	<select class="form-control event-game-input" name="event_game" id="games">
 	                    	@foreach($games as $game)
 	                    		<option value="{{$game->id}}">
 	                    			{{$game->game}}
@@ -30,14 +30,14 @@
 				</div>
 
 				<div class="form-group">
-					<label class="control-label">event datetime</label>
-					<input type="datetime" placeholder="your event date and time goes here..." name="event_datetime">
+					<label class="control-label col-xs-1 col-sm-6 col-md-6 col-lg-5">event datetime</label>
+					<input type="datetime" class="form-control event-datetime-input" placeholder="your event date and time goes here..." name="event_datetime">
 				</div>
 
 				<div class="form-group">
 					<label class="col-xs-1 col-sm-6 col-md-4 col-lg-4 control-label">Event description:</label>
 					<div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
-                    	<textarea class="form-control" name="event_desc" id="" cols="30" rows="5"></textarea>
+                    	<textarea class="form-control event-desc-input" name="event_desc" id="" cols="30" rows="5"></textarea>
 					</div>
 				</div>
 

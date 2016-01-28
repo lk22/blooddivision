@@ -91,7 +91,7 @@ Route::group(['prefix' => '/profile/{slug}', 'middleware' => 'web'], function() 
     Route::get('your-events', 'UserController@profileEvents');
 
     // the event route
-    Route::get('/your-events/{slug}', 'UserController@profileEvent');
+    Route::get('/your-events/{name}', 'UserController@profileEvent');
 
     // create-event route
     Route::get('/create-event', 'UserController@createProfileEvent');

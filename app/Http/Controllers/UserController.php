@@ -56,7 +56,12 @@ class UserController extends Controller
     	$user = User::where('name', $name)->limit(1)->get();
     	// step 2 => get the events belongs to the user
 
-    	$events = $user->events()->orderBy('id', 'ASC')->get();
+    	//$events = $user->events()->orderBy('id', 'ASC')->get();
+
+        $events = DB::table('events')
+                  ->join('users', 'users.id', '=', 'events.user_id')
+                  ->select('*')
+                  ->get();
 
     	// step 4 => load view
     	return view('pages.profile_events', compact('user', 'events'));
