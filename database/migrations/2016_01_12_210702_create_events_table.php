@@ -17,8 +17,7 @@ class CreateEventsTable extends Migration
             $table->string('event_name');
             $table->string('event_game');
             $table->text('event_description');
-            $table->dateTime('event_datetime');
-            $table->text('event_desc');
+            $table->timestamp('event_datetime');
             $table->softDeletes();
             $table->timestamps();
             $table->integer('user_id')->unsigned();

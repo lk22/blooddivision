@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Cviebrock\EloquentSluggable\SluggableInterface;
 use Cviebrock\EloquentSluggable\SluggableTrait;
-
+use Blooddivision\User;
+use Carbon\Carbon;
 class Event extends Model implements SluggableInterface
 {
 
@@ -55,7 +56,7 @@ class Event extends Model implements SluggableInterface
     * @var $dates = [] 
     */
 
-    protected $dates = ['event_date' ];
+    protected $dates = ['event_datetime'];
 
     /**
     *	Events belongs to relationship on users
@@ -72,8 +73,8 @@ class Event extends Model implements SluggableInterface
     *   @return void
     */
 
-    public function setEventDateAttribute($date){
-        //$this->attributes['event_date'] = Carbon::createFromFormat('Y-m-d', $date);
+    public function setEventDateTimeAttribute($date){
+        $this->attributes['event_datetime'] = Carbon::createFromFormat('Y-m-d', $date);
     }
 
     public function setCreatedAtAttribute($date){

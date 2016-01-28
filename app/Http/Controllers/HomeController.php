@@ -27,6 +27,7 @@ class HomeController extends Controller
      * @return Response
      */
     public function index(){
+        
         $messages = MessageOfTheDay::all();
         $latest_users = User::latest()->limit(3)->get();
         $feed = Message::all();

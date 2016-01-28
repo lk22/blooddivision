@@ -38,45 +38,45 @@
 			<div class="row banner">
 				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 profile-media">
 					<!-- check if the user has a profile picture -->
-					@if(!$the_user->avatar)
+					@if(!Auth::user()->avatar)
 						<!-- if the profile dont have a profile picture -->
 						<img class="img img-thumbnail img-responsive profile-image" src="/images/mystery-man.jpg" alt="">
 						<div class="row edit-profile">
-							<a class="text-center edit-img-link" href="/profile{{ $the_user->name }}?profileImg=edit">Edit profile picture. <span class="text-right img-icon"><i class="fa fa-camera"></i></span></a>
+							<a class="text-center edit-img-link" href="/profile{{ Auth::user()->name }}?profileImg=edit">Edit profile picture. <span class="text-right img-icon"><i class="fa fa-camera"></i></span></a>
 						</div>
 					@else
 						<!-- else then show the profile picture -->
-						<img class="img img-thumbnail img-responsive profile-image" src="{{ $profile->avatar }}" alt="">
+						<img class="img img-thumbnail img-responsive profile-image" src="{{ Auth::user()->avatar }}" alt="">
 						<div class="row edit-profile">
-							<a class="edit-img-link" href="/profile{{ $the_user->name }}?profileImg=edit">Edit profile picture. <span class="text-right img-icon"><i class="fa fa-camera"></i></span></a>
+							<a class="edit-img-link" href="/profile{{ Auth::user()->name }}?profileImg=edit">Edit profile picture. <span class="text-right img-icon"><i class="fa fa-camera"></i></span></a>
 						</div>
 					@endif
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 profile-information">
 					<div class="profile-name">
-						<h1 class="text-center">{{$the_user->name}}</h1>
+						<h1 class="text-center">{{Auth::user()->name}}</h1>
 					</div>
 					<div class="profile-email">
-						<h4 class="text-center">{{$the_user->email}}</h4>
+						<h4 class="text-center">{{Auth::user()->email}}</h4>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 banner-footer-wrapper">
 					<div class="row inner-banner-footer-wrapper">
 						<div class="profile-listing">
 							<span class="profile-link">
-								<a href="/profile/{{Auth::profile()->name}}"><i class="fa fa-home"></i> Home</a>
+								<a href="/profile/{{Auth::user()->name}}"><i class="fa fa-home"></i> Home</a>
 							</span>
 							<span class="profile-link">
-								<a href="/profile/{{$profile->name}}/your-events"><i class="fa fa-calendar-o"></i> Your events</a>
+								<a href="/profile/{{Auth::user()->name}}/your-events"><i class="fa fa-calendar-o"></i> Your events</a>
 							</span>
 							<span class="profile-link">
-								<a href="/profile/{{$profile->name}}/your-games"><i class="fa fa-gamepad"></i> Your games</a>
+								<a href="/profile/{{Auth::user()->name}}/your-games"><i class="fa fa-gamepad"></i> Your games</a>
 							</span>
 							<span class="profile-link">
-								<a href="/profile/{{$profile->name}}/your-stats"><i class="fa fa-tasks"></i> Your stats</a>
+								<a href="/profile/{{Auth::user()->name}}/your-stats"><i class="fa fa-tasks"></i> Your stats</a>
 							</span>
 							<span class="profile-link">
-								<a href="/profile/{{$profile->name}}/about"><i class="fa fa-user"></i> About</a>
+								<a href="/profile/{{Auth::user()->name}}/about"><i class="fa fa-user"></i> About</a>
 							</span>
 						</div>
 					</div>

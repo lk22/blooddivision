@@ -67,7 +67,7 @@ class User extends Authenticatable implements SluggableInterface
     */
    
     public function events(){
-        return $this->hasMany('app/Event');
+        return $this->hasMany(Event::class);
     }
 
     public function url() {

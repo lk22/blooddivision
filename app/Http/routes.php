@@ -17,12 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('test', function(\Blooddivision\User $user){
-    return $user->events;
-
-    if($user->count() < 1){
-        return 'there is no events stored';
-    }
+Route::get('test',function(\Blooddivision\Event $event){
+    $event->create([
+        'event_name' => 'test event',
+        'event_game' => 'Halo 5',
+        'event_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus maiores perferendis sint enim architecto amet omnis ipsum incidunt odit quo, voluptate numquam voluptas, consequatur nemo modi assumenda a est. Assumenda.',
+        'event_datetime' => \Carbon\Carbon::today() . ' - ' . \Carbon\Carbon::parse('22:00:00'),
+        'user_id' => 1
+    ]);
 });
 
 

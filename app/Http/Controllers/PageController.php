@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Blooddivision\Http\Requests;
 use Blooddivision\Http\Controllers\Controller;
 use Blooddivision\User;
+use Blodddivsion\Event;
 
 class PageController extends Controller
 {

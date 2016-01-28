@@ -27,8 +27,9 @@ class UserController extends Controller
 
     public function profile($name){
     	// step 1 => get the specific user
-    	$user = User::where('name', $name)->limit(1)->get(); //- first name og lastname conventeres automatisk til leo-knudsen
+    	$user = User::where('name', Auth::user()->name)->limit(1)->get(); //- first name og lastname conventeres automatisk til leo-knudsen
 
+        $auth = auth()->user();
     	// step 2 => get the events belongs to the user
 
        // $events = $user->events; // ==== $user->events()->get();
@@ -42,6 +43,7 @@ class UserController extends Controller
 
     	// step 3 => get the profile view
     	return view('pages.profile_home', compact('user', 'events'));
+        return vide('layouts.profile', compact('user'));
     }
 
     /**
