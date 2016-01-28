@@ -47,7 +47,7 @@ class Event extends Model implements SluggableInterface
     	'event_name',			// the event name
     	'event_game',			// the event game
     	'event_description',	// the event description
-        'event_datetime',
+        'event_datetime',       // the event date and time
     	'user_id'				// the specific user that has added the event 
     ];
 

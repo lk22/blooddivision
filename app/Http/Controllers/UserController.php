@@ -106,7 +106,7 @@ class UserController extends Controller
     	Event::create([
     		'event_name'         => $request->get('event_name'),
             'event_game'         => $request->get('event_game'),
-            'event_description'  => $request->get('event_desc'),
+            'event_description'  => $request->get('event_description'),
             'event_datetime'     => Carbon::now(),
             'user_id'            => Auth::user()->id
     	]);
