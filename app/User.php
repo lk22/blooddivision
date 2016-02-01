@@ -50,8 +50,8 @@ class User extends Authenticatable implements SluggableInterface
     *   @return void
     */
 
-    public function messages(){
-        return $this->hasMany(Message::class);
+    public function message(){
+        return $this->hasMany('app/Message');
     }
 
     /**
@@ -60,8 +60,8 @@ class User extends Authenticatable implements SluggableInterface
     *   @return void
     */
 
-    public function comments(){
-        return $this->hasMany(Comment::class);
+    public function comment(){
+        return $this->hasMany('app/Comment');
     }
 
     /**
@@ -70,8 +70,12 @@ class User extends Authenticatable implements SluggableInterface
     *   @return void
     */
    
-    public function events(){
-        return $this->hasMany(Event::class);
+    public function userHasManyEvents(){
+        return $this->hasMany('app/Event');
+    }
+
+    public function eventHasOneEvent(){
+        return $this->hasOne('app/Event');
     }
 
     /**
@@ -80,7 +84,7 @@ class User extends Authenticatable implements SluggableInterface
      */
     
     public function games(){
-        return $this->hasMany(Game::class);
+        return $this->hasMany(Game::class, 'user_id');
     }
 
     public function url() {

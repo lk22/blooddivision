@@ -63,10 +63,9 @@ class EventController extends Controller
     	Event::create([
     		'event_title' 		=> $request->get('event_title'), 
     		'event_game' 		=> $request->get('event_game'), 
-    		'event_description' => $request('event_description'),
-    		'event_date' 		=> Carbon::now(),
-    		'event_time' 		=> Carbon::time(),
-    		'user_id'	 		=> Auth::user()->id
+    		'event_description' => $request->get('event_description'),
+            'event_datetime'    => $request->get('event_datetime'),
+    		'user_id'	 		=> auth()->user()->id
     	]);
 
     	/**

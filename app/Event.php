@@ -64,8 +64,12 @@ class Event extends Model implements SluggableInterface
     *	@return void
     */
 
-    public function user(){
-    	return $this->belongsTo(User::class);
+    public function eventBelongsToUser(){
+    	return $this->belongsTo('app/User');
+    }
+
+    public function eventBelongsToManyUsers(){
+        return $this->belongsToMany('app/User');
     }
 
     /**
@@ -74,11 +78,11 @@ class Event extends Model implements SluggableInterface
     */
 
     public function setEventDateTimeAttribute($date){
-        $this->attributes['event_datetime'] = Carbon::createFromFormat('Y-m-d', $date);
+        // $this->attributes['event_datetime'] = Carbon::createFromFormat('Y-m-d', $date);
     }
 
     public function getEventDateTimeAttribute(){
-        return $this->event_date_time;
+        // return $this->event_date_time;
     }
 
     public function setCreatedAtAttribute($date){

@@ -5,7 +5,7 @@
 		@foreach($events as $event)
 			<div class="row events-row events-wrapper">
 				<div class="panel panel-default event">
-					<div class="panel-heading event-header">{{$event->event_name}}</div>
+					<div class="panel-heading event-header">{{$event->event_name}} created by {{$event->name}}</div>
 					<div class="panel-body">
 						<div class="event-game">
 							<h5>Game: {{$event->event_game}}</h5>

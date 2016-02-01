@@ -31,7 +31,7 @@
 
 				<div class="form-group">
 					<label class="control-label col-xs-1 col-sm-6 col-md-6 col-lg-5">event datetime</label>
-					<input type="datetime" class="form-control event-datetime-input" placeholder="your event date and time goes here..." name="event_datetime">
+					<input type="datetime-local" class="form-control event-datetime-input" placeholder="your event date and time goes here..." name="event_datetime">
 				</div>
 
 				<div class="form-group">

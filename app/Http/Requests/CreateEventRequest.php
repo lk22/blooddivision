@@ -30,8 +30,7 @@ class CreateEventRequest extends Request
         return [
             'event_name'        => 'required',
             'event_game'        => 'required',
-            'event_date'        => 'required',
-            'event_time'        => 'required',
+            'event_datetime'    => 'required',
             'event_desc'        => 'required'
         ];
     }

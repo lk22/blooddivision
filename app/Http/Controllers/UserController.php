@@ -27,7 +27,7 @@ class UserController extends Controller
 
     public function profile($name){
     	// step 1 => get the specific user
-    	$user = User::where('name', Auth::user()->name)->limit(1)->get(); //- first name og lastname conventeres automatisk til leo-knudsen
+    	$user = User::where('name', Auth::user()->name)->orWhere('name', $name)->first(); //- first name og lastname conventeres automatisk til leo-knudsen
 
         $auth = auth()->user();
     	// step 2 => get the events belongs to the user
@@ -36,10 +36,10 @@ class UserController extends Controller
         
         // $events = Event::all()->take(10)->get(); // get  
 
-        $events = DB::table('events')
-                  ->join('users', 'users.id', '=', 'events.user_id')
-                  ->select('*')
-                  ->get();
+        // $events = DB::table('events')
+        //           ->join('users', 'users.id', '=', 'events.user_id')
+        //           ->select('*')
+        //           ->get();
 
     	// step 3 => get the profile view
     	return view('pages.profile_home', compact('user', 'events'));
@@ -53,15 +53,15 @@ class UserController extends Controller
 
     public function profileEvents($name){
     	// step 1 => get the profile
-    	$user = User::where('name', $name)->limit(1)->get();
+    	$user = User::where('name', $name)->first();
     	// step 2 => get the events belongs to the user
 
-    	//$events = $user->events()->orderBy('id', 'ASC')->get();
+    	$events = User::all()->event()->get();
 
-        $events = DB::table('events')
-                  ->join('users', 'users.id', '=', 'events.user_id')
-                  ->select('*')
-                  ->get();
+        // $events = DB::table('events')
+        //           ->join('users', 'users.id', '=', 'events.user_id')
+        //           ->select('*')
+        //           ->get();
 
     	// step 4 => load view
     	return view('pages.profile_events', compact('user', 'events'));
@@ -112,8 +112,8 @@ class UserController extends Controller
     		'event_name'         => $request->get('event_name'),
             'event_game'         => $request->get('event_game'),
             'event_description'  => $request->get('event_description'),
-            'event_datetime'     => Carbon::now(),
-            'user_id'            => Auth::user()->id
+            'event_datetime'     => $request->get('event_datetime'),
+            'user_id'            => auth()->user()->id
     	]);
 
     	/**
