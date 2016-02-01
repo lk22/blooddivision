@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Blooddivision\Http\Requests;
 use Blooddivision\Http\Requests\CreateEventRequest;
+use Blooddivision\Http\Requests\CreateGameRequest;
 use Blooddivision\Http\Controllers\Controller;
 use Auth;
 use Blooddivision\User;
@@ -27,7 +28,7 @@ class UserController extends Controller
 
     public function profile($name){
     	// step 1 => get the specific user
-    	$user = User::where('name', Auth::user()->name)->orWhere('name', $name)->first(); //- first name og lastname conventeres automatisk til leo-knudsen
+    	$user = User::where('name', Auth::user()->name)->orWhere('name', $name)->get(); //- first name og lastname conventeres automatisk til leo-knudsen
 
         $auth = auth()->user();
     	// step 2 => get the events belongs to the user
@@ -36,10 +37,10 @@ class UserController extends Controller
         
         // $events = Event::all()->take(10)->get(); // get  
 
-        // $events = DB::table('events')
-        //           ->join('users', 'users.id', '=', 'events.user_id')
-        //           ->select('*')
-        //           ->get();
+        $events = DB::table('events')
+                  ->join('users', 'users.id', '=', 'events.user_id')
+                  ->select('*')
+                  ->get();
 
     	// step 3 => get the profile view
     	return view('pages.profile_home', compact('user', 'events'));
@@ -53,15 +54,15 @@ class UserController extends Controller
 
     public function profileEvents($name){
     	// step 1 => get the profile
-    	$user = User::where('name', $name)->first();
+    	$user = User::where('name', $name)->get();
     	// step 2 => get the events belongs to the user
 
-    	$events = User::all()->event()->get();
+    	// $events = User::all()->event()->get();
 
-        // $events = DB::table('events')
-        //           ->join('users', 'users.id', '=', 'events.user_id')
-        //           ->select('*')
-        //           ->get();
+        $events = DB::table('events')
+                  ->join('users', 'users.id', '=', 'events.user_id')
+                  ->select('*')
+                  ->get();
 
     	// step 4 => load view
     	return view('pages.profile_events', compact('user', 'events'));
@@ -114,7 +115,7 @@ class UserController extends Controller
             'event_description'  => $request->get('event_description'),
             'event_datetime'     => $request->get('event_datetime'),
             'user_id'            => auth()->user()->id
-    	]);
+    	])->save();
 
     	/**
     	* step 2 => redirect the user to the your events route
@@ -139,7 +140,18 @@ class UserController extends Controller
      */
     
     public function profileGames(){
-        $games = Game::all()->user()->where_user();
-        return view('pages.profile_games')->with('games', $games);
+        $user = User::where('name', Auth::user()->name)->get();
+        $games = Game::with('user')->join('users', 'users.id', '=', 'games.user_id')->where('users.id', 'games.user_id')->get(['game', 'game_cover']);
+        return view('pages.profile_games', compact('user', 'games'));
+    }
+
+    /**
+     * store the users game 
+     *
+     * @return  object [game object model]
+     */
+    
+    public function storeProfileGame(CreateGameRequest $request){
+        Game::create(['game' => $request->get('game_name'), 'user_id' => Auth::user()->id]);
     }
 }

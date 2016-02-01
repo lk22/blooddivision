@@ -1,4 +1,4 @@
-@extends('layout.profile')
+@extends('layouts.profile')
 
 @section('profile_content')
 	@if(count($games) >= 1)
@@ -12,7 +12,17 @@
 				</div>
 			</div>
 		@endforeach
+		<form action="" method="post">
+			{{ csrf_field() }}
+			<input type="text" class="form-control" name="game_name">
+			<input type="submit" class="btn btn-success" value="add game">
+		</form>
 	@else
-		You dont have any favourite games
+		<h5 class="text-center">You dont have any games added to your profile add one here </h5>
+		<form action="" method="post">
+			{{ csrf_field() }}
+			<input type="text" class="form-control" name="game_name">
+			<input type="submit" class="btn btn-success" value="add game">
+		</form>
 	@endif
 @stop

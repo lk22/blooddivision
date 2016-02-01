@@ -4,7 +4,7 @@
 	<!-- timeline wrapper-->
 	<ul class="profile-timeline">
 		<!-- timeline item -->
-	@if(count($events) >= 1)
+	@if(count($events) <= 1)
 		@foreach($events as $event)
 		<li class="timeline-item">
 			<!-- timeline-bagde -->

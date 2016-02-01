@@ -12,19 +12,17 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+use Blooddivision\User;
+use Blooddivision\Game;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('test',function(\Blooddivision\Event $event){
-    $event->create([
-        'event_name' => 'test event',
-        'event_game' => 'Halo 5',
-        'event_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus maiores perferendis sint enim architecto amet omnis ipsum incidunt odit quo, voluptate numquam voluptas, consequatur nemo modi assumenda a est. Assumenda.',
-        'event_datetime' => \Carbon\Carbon::today() . ' - ' . \Carbon\Carbon::parse('22:00:00'),
-        'user_id' => 1
-    ]);
+Route::get('test',function(){
+
+    $user = User::where('id', 1)->with('games')->get();
+    return $user;
 });
 
 
@@ -99,6 +97,7 @@ Route::group(['prefix' => '/profile/{slug}', 'middleware' => 'web'], function() 
 
     // the games route
     Route::get('your-games', 'UserController@profileGames');
+    Route::post('your-games', 'UserController@storeProfileGame');
 
     // the stats route
     Route::get('your-stats', 'UserController@profileStats');

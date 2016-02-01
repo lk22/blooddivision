@@ -65,17 +65,12 @@ class User extends Authenticatable implements SluggableInterface
     }
 
     /**
-    *   create on to many relationship between users and events
+    *   create one to many relationship between users and events
     *
     *   @return void
     */
-   
-    public function userHasManyEvents(){
-        return $this->hasMany('app/Event');
-    }
-
-    public function eventHasOneEvent(){
-        return $this->hasOne('app/Event');
+    public function events(){
+        return $this->hasMany('app/Event', '');
     }
 
     /**
@@ -84,7 +79,7 @@ class User extends Authenticatable implements SluggableInterface
      */
     
     public function games(){
-        return $this->hasMany(Game::class, 'user_id');
+        return $this->hasMany(Game::class);
     }
 
     public function url() {

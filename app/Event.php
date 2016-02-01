@@ -18,12 +18,6 @@ class Event extends Model implements SluggableInterface
 	use SluggableTrait;
 
     /**
-    *   use the SoftDeletes trait
-    */
-
-    use SoftDeletes;
-
-    /**
     * tell the model wich database table to use	
     *
     * @var $table
@@ -64,12 +58,12 @@ class Event extends Model implements SluggableInterface
     *	@return void
     */
 
-    public function eventBelongsToUser(){
-    	return $this->belongsTo('app/User');
+    public function user(){
+        return $this->hasOne('app\User');
     }
 
-    public function eventBelongsToManyUsers(){
-        return $this->belongsToMany('app/User');
+    public function users(){
+        return $this->hasMany('app\User');
     }
 
     /**
@@ -78,7 +72,7 @@ class Event extends Model implements SluggableInterface
     */
 
     public function setEventDateTimeAttribute($date){
-        // $this->attributes['event_datetime'] = Carbon::createFromFormat('Y-m-d', $date);
+        
     }
 
     public function getEventDateTimeAttribute(){

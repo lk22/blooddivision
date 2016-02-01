@@ -66,7 +66,7 @@ class EventController extends Controller
     		'event_description' => $request->get('event_description'),
             'event_datetime'    => $request->get('event_datetime'),
     		'user_id'	 		=> auth()->user()->id
-    	]);
+    	])->save();
 
     	/**
     	*	redirect the user to the events page

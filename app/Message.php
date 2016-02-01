@@ -20,7 +20,7 @@ class Message extends Model
    	*	@var array
    	*/
 
-   	protected $fillable = ['message', 'user_id'];
+   	protected $fillable = ['message'];
 
    	/**
    	*	create on to many relationship with the columns table
