@@ -2,28 +2,14 @@
 *	Blood Division Login page
 */
 
-	/**
-	*	Wrapper
-	*/
-
-		.container-fluid.bloodDivisionLoginWrapper{
-			//margin:50px 50px 50px 50px;
-			background: #f6f6f6;
-			opacity: 0.9;  
-			
-			/**
-			*	Login Form
-			*/ 
-
-				.bloodDivisionLoginForm{
-					margin: 80px;
-					opacity: 1;
-					/**
-					*	name input
-					*/
-
-						.bloodDivisionNameInputRow{
-							margin: 0px 0px 40px;
-						}
-				}
-		}
+	.login-email-tutorial{
+		position:fixed;
+		bottom:0px;
+		left:0px;
+		height: 65px;
+		width: 100%;
+		background: #2ecc71;
+		color: #fff;
+		text-align:center;    
+		padding:15px;
+	}

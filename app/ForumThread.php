@@ -32,7 +32,7 @@ class ForumThread extends Model
     */
 
     public function threadBelongsToUser(){
-    	return $this->belongsTo('app/User');
+    	return $this->belongsTo('Blooddivision\User');
     }
 
     /**
@@ -42,7 +42,7 @@ class ForumThread extends Model
     */
 
     public function threadHasManyMessages(){
-    	return $this->hasMany('app/Message');
+    	return $this->hasMany('Blooddivision\Message');
     }
 
     /**

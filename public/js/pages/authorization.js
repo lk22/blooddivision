@@ -30,8 +30,20 @@ authorization = {
 	*/
 
 		_renderTutorial: function(appendant, message, elmClass){
-			var tutorial = "<div class=" + elmClass + ">" + message + "</div>";
+			var tutorial = "<div class=" + elmClass + "><h4>" + message + " <span class='icon'><i class='closeTutorialBtn fa fa-times'></i></span></h4></div>";
 			$(appendant).append(tutorial);
+
+			$(elmClass).bind('click' function(){
+				this._removeTutorial(tutorial, 2000);
+			});
+		},
+
+	/**
+	 * remove tutorial 
+	 */
+	
+		_removeTutorial: function(elmClass, duration){
+			$(elmClass).fadeOut(duration);
 		},
 
 	/**

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateForumCategoriesTable extends Migration
+class CreateTagsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,11 @@ class CreateForumCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('forum_categories', function (Blueprint $table) {
+        Schema::create('tags', function(Blueprint $table){
             $table->increments('id');
-            $table->string('category');
+            $table->string('tag');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -26,6 +27,6 @@ class CreateForumCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('forum_categories');
+        Schema::drop('tags');
     }
 }

@@ -100,8 +100,8 @@ Route::group(['prefix' => '/profile/{slug}', 'middleware' => 'web'], function() 
     Route::post('your-games', 'UserController@storeProfileGame');
 
     // the stats route
-    Route::get('your-stats', 'UserController@profileStats');
+    // Route::get('your-stats', 'UserController@profileStats');
 
     // the about route
-    Route::get('about', 'UserController@profileAbout');
+    Route::get('biography', 'UserController@profileAbout');
 });

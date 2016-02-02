@@ -76,7 +76,7 @@
 								<a href="/profile/{{auth()->user()->name}}/your-stats"><i class="fa fa-tasks"></i> Your stats</a>
 							</span>
 							<span class="profile-link">
-								<a href="/profile/{{auth()->user()->name}}/about"><i class="fa fa-user"></i> About</a>
+								<a href="/profile/{{auth()->user()->name}}/biography"><i class="fa fa-user"></i> About</a>
 							</span>
 						</div>
 					</div>
