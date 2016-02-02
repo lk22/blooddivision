@@ -140,8 +140,25 @@ class UserController extends Controller
      */
     
     public function profileGames(){
+        /**
+         * fetch the user
+         * @var [array]
+         */
         $user = User::where('name', Auth::user()->name)->get();
-        $games = Game::with('user')->join('users', 'users.id', '=', 'games.user_id')->where('users.id', 'games.user_id')->get(['game', 'game_cover']);
+        // $games = Game::find('id')->with('user')->get();
+    
+        /**
+         * fetch the users added games
+         */
+    
+        $games = DB::table('users')
+                 ->join('games', 'users.id', '=', 'games.user_id')
+                 ->select('*')
+                 ->where('games.user_id', Auth::user()->id)
+                 ->get();
+
+                 // dd($games);
+
         return view('pages.profile_games', compact('user', 'games'));
     }
 
@@ -152,6 +169,6 @@ class UserController extends Controller
      */
     
     public function storeProfileGame(CreateGameRequest $request){
-        Game::create(['game' => $request->get('game_name'), 'user_id' => Auth::user()->id]);
+        Game::create(['game' => $request->post('game_name'), 'user_id' => Auth::user()->id])->save();
     }
 }

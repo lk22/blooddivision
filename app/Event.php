@@ -59,11 +59,11 @@ class Event extends Model implements SluggableInterface
     */
 
     public function user(){
-        return $this->hasOne('app\User');
+        return $this->hasOne('Blooddivision\User');
     }
 
     public function users(){
-        return $this->hasMany('app\User');
+        return $this->hasMany('Blooddivision\User');
     }
 
     /**

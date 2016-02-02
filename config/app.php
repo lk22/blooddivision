@@ -169,7 +169,7 @@ return [
         */
 
         //Kilrizzy\Bootforms\BootformsServiceProvider::class,
-        // Barryvdh\Debugbar\ServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
 
         Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
 
@@ -220,7 +220,7 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-        // 'Debugbar'  => Barryvdh\Debugbar\Facade::class,
+        'Debugbar'  => Barryvdh\Debugbar\Facade::class,
         'BootForm'  => AdamWathan\BootForms\Facades\BootForm::class,
 
         // eloquent models

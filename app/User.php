@@ -51,7 +51,7 @@ class User extends Authenticatable implements SluggableInterface
     */
 
     public function message(){
-        return $this->hasMany('app/Message');
+        return $this->hasMany('Blooddivision\Message');
     }
 
     /**
@@ -61,7 +61,7 @@ class User extends Authenticatable implements SluggableInterface
     */
 
     public function comment(){
-        return $this->hasMany('app/Comment');
+        return $this->hasMany('Blooddivision\Comment');
     }
 
     /**
@@ -70,7 +70,7 @@ class User extends Authenticatable implements SluggableInterface
     *   @return void
     */
     public function events(){
-        return $this->hasMany('app/Event', '');
+        return $this->hasMany('Blooddivision\Event', '');
     }
 
     /**
@@ -79,10 +79,18 @@ class User extends Authenticatable implements SluggableInterface
      */
     
     public function games(){
-        return $this->hasMany(Game::class);
+        return $this->hasMany('Blooddivision\Game', 'user_id');
     }
 
     public function url() {
         return route('user.profile', $this->slug);
+    }
+
+    public function scopeWhereUserId($query){
+        return $query->where('id', Auth::user()->id);
+    }
+
+    public function scopeJoinGames($query){
+        return $query->with('games')->where('id', \Auth::user()->id)->get();
     }
 }
