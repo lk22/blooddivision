@@ -32,10 +32,6 @@ authorization = {
 		_renderTutorial: function(appendant, message, elmClass){
 			var tutorial = "<div class=" + elmClass + "><h4>" + message + " <span class='icon'><i class='closeTutorialBtn fa fa-times'></i></span></h4></div>";
 			$(appendant).append(tutorial);
-
-			$(elmClass).bind('click' function(){
-				this._removeTutorial(tutorial, 2000);
-			});
 		},
 
 	/**
@@ -80,10 +76,19 @@ $(function(){
 			'Your first step is to fill your valid email address it must contain @ to make it valid', // appending message
 			'login-email-tutorial' // the element class
 		);
+
+		/**
+		 * close the tutorial
+		 */
+		
+		$('.closeTutorialBtn').click(function(){
+			$('.login-email-tutorial').delay(200).fadeOut(1500);
+		});
+
 	}).bind('mouseenter', function(){
-		$this.focus();
+		$(this).focus();
 	}).bind('mouseleave', function(){
-		if(authorization.email.val() == ''){
+		if(authorization.email.val() = ''){
 			authorization.showError(
 				authorization.email,
 				"your email is empty please fill the email field to proceed"
