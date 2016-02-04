@@ -8,6 +8,7 @@ use Blooddivision\MessageOfTheDay;
 use Blooddivision\Message;
 use Blooddivision\User;
 use Blooddivision\ForumThreads;
+use Blooddivision\Event;
 
 class HomeController extends Controller
 {
@@ -28,12 +29,11 @@ class HomeController extends Controller
      */
     public function index(){
         
-        $messages = MessageOfTheDay::all();
         $latest_users = User::latest()->limit(3)->get();
         $feed = Message::all();
-        // $threads = ForumThread::latest()->limit(3)->get();
+        
 
-        return view('home', compact('messages', 'latest_users', 'feed'));
+        return view('home', compact('latest_users', 'feed'));
     }
 
     /**

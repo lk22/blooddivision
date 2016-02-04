@@ -3,9 +3,9 @@ var authorization;
 authorization = {
 
 	/**
-	* initialize object
-	*/
-
+	 * [initialize object]
+	 * @return {[object]} [the authorization object]
+	 */
 		init: function(){
 
 			this.login = $('.auth-wrapper');
@@ -15,37 +15,43 @@ authorization = {
 			this.loginHelpBtn = $('.helpBtn');
 			this.serialize = $(this).serialize();
 
+			this.register = $('.register-user-form');
+			this.username = $('.username-field');
+			this.regEmail = $('.email-field');
+			this.regPass  = $('.password-field');
+			this.rememberPassword = $('.remember-password');
+
 		},
 
 	/**
-	* append error message
-	*/
-
-		showError: function(appendant, error){
-			$(appendant).html('<div class="alert alert-danger">' + error +' </div>');
-		},
-
-	/**
-	* render a tutorial component
-	*/
-
-		_renderTutorial: function(appendant, message, elmClass){
+	 * [_renderHintMsg function]
+	 * @param  {[type]} appendant [the appending element]
+	 * @param  {[type]} message   [the error message]
+	 * @param  {[type]} elmClass  [the defined css class]
+	 * @return {[type]} HTML      [the rendered error]
+	 */
+		_renderHintMsg: function(appendant, message, elmClass){
 			var tutorial = "<div class=" + elmClass + "><h4>" + message + " <span class='icon'><i class='closeTutorialBtn fa fa-times'></i></span></h4></div>";
 			$(appendant).append(tutorial);
 		},
 
 	/**
-	 * remove tutorial 
+	 * [_renderErrorMsg description]
+	 * @param  {[type]} appendant [the appending element]
+	 * @param  {[type]} message   [the error message]
+	 * @param  {[type]} elmClass  [the defined css class]
+	 * @return {[type]} HTML      [the rendered error]
 	 */
-	
-		_removeTutorial: function(elmClass, duration){
-			$(elmClass).fadeOut(duration);
+		_renderErrorMsg: function(appendant, message, elmClass){
+			var error = "<div class=" + elmClass + "><h4>" + message + " <span class='icon'><i class='closeErrorBtn fa fa-times'></i></span></h4></div>";
+			$(appendant).append(error);		
 		},
 
 	/**
-	* load help modal
-	*/
-
+	 * [_openLoginHelpModal open an helping modal]
+	 * @param  {Function} callback [the callback shall be used when the modal is shown]
+	 * @return {[type]}   modal    [the modal]
+	 */
 		_openLoginHelpModal: function(callback){
 			this.loginHelpBtn.click(function(e){
 				e.preventDefault();
@@ -65,13 +71,13 @@ authorization.init();
 $(function(){
 	var $this = $(this);
 	/**
-	* if the client is hovering the email field
+	* if the client is clicking the email field
 	*/
 	authorization.email.bind('click', function(){
 		/**
 		* render email tutorial
 		*/
-		authorization._renderTutorial(
+		authorization._renderHintMsg(
 			authorization.login, // the login wrapper
 			'Your first step is to fill your valid email address it must contain @ to make it valid', // appending message
 			'login-email-tutorial' // the element class
@@ -85,14 +91,78 @@ $(function(){
 			$('.login-email-tutorial').delay(200).fadeOut(1500);
 		});
 
+		/**
+		 * if the client enters the email field
+		 */
+
+	}).bind('mouseenter', function(){
+		/**
+		 * set the field on a focus state
+		 */
+		$(this).focus();
+
+		/**
+		 * if the client leaves the field
+		 */
+		
+	}).bind('mouseleave', function(){
+		$(this).blur();
+		/**
+		 * validate the field for empty string
+		 */
+
+		if($(this).val() == ''){
+			authorization._renderErrorMsg(
+				authorization.login,
+				"your email is empty please fill the email field to proceed",
+				'warning-hint'
+			);
+		}
+		$('.closeErrorBtn').click(function() {
+			$('.warning-hint').delay(200).fadeOut(1500);
+		});
+	});
+});
+
+$(function(){
+	/**
+	 * if the client hovers the password field
+	 */
+	
+	authorization.password.bind('click', function(){
+		/**
+		 * append the hint
+		 */
+		authorization._renderHintMsg(
+			authorization.login,
+			"Enter the password you have registered you with",
+			"login-password-tutorial"
+		);
+
+		/**
+		 * close the tutorial
+		 */
+		
+		$('.closeTutorialBtn').click(function(){
+			$('.login-password-tutorial').delay(200).fadeOut(1500);
+		});
+
 	}).bind('mouseenter', function(){
 		$(this).focus();
 	}).bind('mouseleave', function(){
-		if(authorization.email.val() = ''){
-			authorization.showError(
-				authorization.email,
-				"your email is empty please fill the email field to proceed"
+		$(this).blur();
+
+		if($(this).val() == ''){
+			authorization._renderErrorMsg(
+				authorization.login,
+				"your password is empty please fill the email field to proceed",
+				'warning-hint'
 			);
 		}
+
+		$('.closeErrorBtn').click(function(){
+			$('.warning-hint').delay(200).fadeOut(1500);
+		});
 	});
 });
+

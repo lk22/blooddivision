@@ -14,14 +14,14 @@
         <h3 class="text-center">Join our battles on</h3>
         <!-- xbox platform -->
         <div class="col-xs-12 col-sm-12 col-md-3 col-md-offset-2 col-lg-3 col-lg-offset-2 xbox-platform-container">
-            <img src="/images/Xbox_360.png" height="128" width="128" alt="">
+            <img class="faa-parent faa-pulse animated" src="/images/Xbox_360.png" height="128" width="128" alt="">
             <div class="row">
                 <h3 class="text-left">Xbox One/360 platforms </h3>
             </div>
         </div><!-- xbox platform end -->
         <!-- windows platform -->
         <div class="col-xs-12 col-sm-12 col-md-3 col-md-offset-2 col-lg-3 col-lg-offset-2 windows-platform-container">
-            <img src="/images/10_windows-128.png" alt="">
+            <img class="faa-parent faa-pulse animated" src="/images/10_windows-128.png" alt="">
             <div class="row">
                 <h3 class="text-left">Windows platforms</h3>
             </div>
@@ -48,7 +48,7 @@
         <!-- provider container -->
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 service">
             <div class="row icon-row">
-                <i class="fa fa-calendar-plus-o"></i>
+                <i class="fa fa-calendar-plus-o faa-parent faa-float animated"></i>
             </div>
             <div class="row">
                 <h3 class="text-center">Schedule battles and other events</h3>
@@ -59,7 +59,7 @@
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 service">
             <!--icon container -->
             <div class="row icon-row">
-                <i class="fa fa-cogs"></i>
+                <i class="fa fa-cogs faa-parent faa-pulse animated"></i>
             </div><!-- icon container end -->
             <div class="row">
                 <h3 class="text-center">Setup your own profile</h3>
@@ -71,7 +71,7 @@
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 service">
             <!-- icon container -->
             <div class="row icon-row">
-                <i class="fa fa-comment"></i>
+                <i class="fa fa-comment faa-parent faa-passing animated"></i>
             </div><!-- icon container end -->
             <div class="row">
                 <h3 class="text-center">Communicate through private chat</h3>
@@ -100,13 +100,13 @@
                 <h4 class="text-center">VISIT US AT</h4>
             </div>
             <div class="row social-media-row">
-                <a href="https://www.halowaypoint.com/en-us/spartan-companies/blood%20division" class="btn btn-danger btn-block">HALO WAYPOINT <img src="/images/halo_logo.png" target="_blank" height="35" width="35" alt=""></a>
+                <a href="https://www.halowaypoint.com/en-us/spartan-companies/blood%20division" class="btn btn-danger btn-block faa-parent animated-hover faa-pulse">HALO WAYPOINT <img src="/images/halo_logo.png" target="_blank" height="35" width="35" alt=""></a>
             </div>
             <div class="row social-media-row">
-                <a href="https://www.facebook.com/groups/1545118995710570/" target="_blank" class="btn btn-primary btn-block">Blood Division official facebook page <i class="fa fa-facebook-official"></i></a>
+                <a href="https://www.facebook.com/groups/1545118995710570/" target="_blank" class="btn btn-primary btn-block faa-parent animated-hover faa-pulse">Blood Division official facebook page <i class="fa fa-facebook-official"></i></a>
             </div>
             <div class="row social-media-row">
-                <a href="" target="_blank" class="btn btn-danger btn-block">Blood Division Google plus page <i class="fa fa-google-plus-square"></i></a>
+                <a href="" target="_blank" class="btn btn-danger btn-block faa-parent animated-hover faa-pulse">Blood Division Google plus page <i class="fa fa-google-plus-square"></i></a>
             </div>
             <div class="row wantTo-signup-row">
                 <h3 class="text-center">READY TO JOIN THE COMMUNITY OF OTHER DANISH GAMERS?</h3>

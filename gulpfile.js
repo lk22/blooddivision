@@ -21,7 +21,8 @@ var paths = {
 	'jquery' : bower + 'jquery/',
 	'moment' : bower + 'moment/',
 	'react'	 : node  + 'react/',
-	'lightbox' : bower + 'lightbox2/'
+	'lightbox' : bower + 'lightbox2/',
+	'faa': bower + 'font-awesome-animation/dist/'
 };
 
 elixir(function(mix) {
@@ -62,6 +63,22 @@ elixir(function(mix) {
 			paths.react + 'dist/react.js',
 			'public/js/vendor/react.min.js'
 		);
+
+		mix.copy(
+			paths.faa + 'font-awesome-animation.min.css',
+			'public/css/vendor/font-awesome-animation.min.css'
+		);
+
+	/**
+	 * mix stylesheets
+	 */
+	
+		mix.styles([
+			'welcome.css',
+			'app.css',
+			'vendor/font-awesome-animation.min.css',
+			'vendor/animate.css'
+		], 'public/css/all.css', 'public/css');
 	
 
 /**

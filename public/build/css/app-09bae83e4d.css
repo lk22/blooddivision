@@ -585,6 +585,38 @@
   .login-email-tutorial .closeTutorialBtn {
     cursor: pointer; }
 
+.login-password-tutorial {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  height: 65px;
+  width: 100%;
+  background: #2ecc71;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  /**
+		 * closing tutorial btn
+		 */ }
+  .login-password-tutorial .closeTutorialBtn {
+    cursor: pointer; }
+
+.warning-hint {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  height: 65px;
+  width: 100%;
+  color: #FFF;
+  text-align: center;
+  padding: 15px;
+  background: #e74c3c;
+  /**
+		 * closing hint btn
+		 */ }
+  .warning-hint .closeErrorBtn {
+    cursor: pointer; }
+
 /**
 	* profile page
 	*/
