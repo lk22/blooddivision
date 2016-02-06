@@ -6,7 +6,7 @@
 			<h4 class="text-center">Create your new event</h4>
 		</div>
 		<div class="row create-event-wrapper">
-			<form action="" method="post" class="form-horizontal">
+			<form action="" method="post" class="form-horizontal create">
 				{{ csrf_field() }}
 
 				<div class="form-group">
@@ -43,7 +43,7 @@
 
 				<div class="form-group">
 					<div class="col-xs-12 col-sm-12 col-md- col-md-offset-4 col-lg-3 col-offset-4">
-						<button type="submit" class="btn btn-primary">
+						<button type="submit" class="btn btn-primary submit">
 	                        <i class="fa fa-calendar"></i> Create event
 	                    </button>
                     </div>
@@ -52,7 +52,40 @@
                     </div>
 				</div>
 			</form>
+			@if($errors->any())
+				<div class="alert alert-danger">
+					@foreach($errors->all() as $error)
+						<h5>{{$error}}</h5>
+					@endforeach
+				</div>
+			@endif
 		</div>
 		@include('partials.help_events_modal')
 	</div>
+
+	<script>
+$(function(){
+var auth = "auth()->user()->name";
+	$('.submit').click(function(){
+		$.ajax({
+			url: '/profile/' + auth + '/create-event',
+			type: 'GET',
+			dataType: 'json'
+			data: $('.create').serialize(),
+		})
+		.done(function() {
+			console.log("success");
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		.always(function() {
+			console.log("complete");
+		});
+		
+	});
+});
+	
+		
+	</script>
 @stop

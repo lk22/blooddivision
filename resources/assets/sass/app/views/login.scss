@@ -17,7 +17,7 @@
 		 * closing tutorial btn
 		 */
 		
-			.closeTutorialBtn{
+			.closeHintBtn{
 				cursor:pointer;
 			}
 	}
@@ -37,7 +37,7 @@
 		 * closing tutorial btn
 		 */
 		
-			.closeTutorialBtn{
+			.closeHintBtn{
 				cursor:pointer;
 			}
 	}
@@ -61,3 +61,34 @@
 			cursor:pointer;
 		}
 	}
+
+	/**
+	* helper modal
+	*/
+
+		.modal{
+			color: #FFF;
+			background: #000;
+			opacity: 0.9;  
+			
+			/**
+			* close btn
+			*/
+
+				.close {
+				    font-size: 50px;
+				    display:block; 
+				    color: #FFF;
+				    /**
+				    * closing icon
+				    */ 
+
+				    .fa{
+				    	color: #FFF; 
+				    }
+				}
+		}
+
+		.auth-login-helper{
+			cursor:pointer;
+		}

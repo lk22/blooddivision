@@ -10,7 +10,7 @@
         <hr>
         <p><strong>T</strong>he first thing to do is to enter your valid email address your information is bound to</p>
         <br><br>
-        <p><strong>T</strong>he next thing u need is to enter the password u authorized and registered with and the email and password are related to eachoter so the information must be entered correctly </p>
+        <p><strong>T</strong>he next thing you need is to enter the password you registered with and the email and password are related to each other so the information must be entered correctly </p>
         <br><br>
         <p><strong>NOTE: </strong>if us still are lost in this proccess u can enter the <a href="/help-center">Help Center</a> for more information</p>
       </div>

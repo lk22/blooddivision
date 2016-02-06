@@ -60,9 +60,11 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 Not recruited yet? <a class="btn btn-link" href="{{ url('/register') }}">register here</a>
+                                <span class="hidden-xs hidden-sm auth-login-helper" data-toggle="modal" data-target="#authHelperMddal"><i class="fa fa-question-circle"></i> Need Help?</span>
                             </div>
                         </div>
                     </form>
+
                 </div>
             </div>
         </div>

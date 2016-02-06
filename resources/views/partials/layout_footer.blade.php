@@ -20,7 +20,7 @@
                     @else
                         <span class="link"><a href="{{ url('/terms') }}">Terms and conditions <i class="fa fa-certificate"></i></a>
                         </span>
-                        <span class="link"><a href="{{ url('/help') }}">Help <i class="fa fa-question-circle"></i></a></span>
+                        <span class="link"><a href="{{ url('/help') }}">Help center <i class="fa fa-question-circle"></i></a></span>
                     @endif
                     </div>
                 </div>

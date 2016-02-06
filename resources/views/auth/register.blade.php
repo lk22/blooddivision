@@ -71,6 +71,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-user"></i>Register
                                 </button>
+                                <span class="hidden-xs hidden-sm auth-login-helper" data-toggle="modal" data-target="#authRegisterModal"><i class="fa fa-question-circle"></i> Need Help?</span>
                             </div>
                         </div>
                         <div class="form-group">

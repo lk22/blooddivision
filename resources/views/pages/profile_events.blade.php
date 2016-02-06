@@ -10,11 +10,8 @@
 						<div class="event-game">
 							<h5>Game: {{$event->event_game}}</h5>
 						</div>
-						<div class="event-date">
-							<h5>Date: {{$event->event_date}}</h5>
-						</div>
-						<div class="event-time">
-							<h5>Time: {{$event->event_start_time}}</h5>
+						<div class="event-datetime">
+							<h5>Date: {{$event->event_datetime}}</h5>
 						</div>
 					</div>
 				</div>

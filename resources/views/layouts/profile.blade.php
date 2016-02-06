@@ -98,5 +98,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!--<script src="{{ elixir('js/all.js') }}"></script>-->
+
+            <script>
+// $(function(){
+// var auth = "<?php Auth::user()->name ?>";
+//     $('.submit').click(function(e){
+//     	e.preventDefault();
+//         $.ajax({
+//             url: '/profile/'+auth+'/create-event',
+//             type: 'post',
+//             dataType: 'json',
+//             data: $('.create').serialize(),
+//         })
+//         .done(function() {
+//             console.log("success");
+//         })
+//         .fail(function() {
+//             console.log("error");
+//         })
+//         .always(function() {
+//             console.log("complete");
+//         });
+        
+//     });
+// });
+    
+        
+    </script>
 </body>
 </html>
