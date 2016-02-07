@@ -21,6 +21,14 @@ class PageController extends Controller
     }
 
     /**
+     * launching the application soon
+     * @return [void] [returning the view of the launching soon page]
+     */
+    public function launchSoon(){
+        return view('launch');
+    }
+
+    /**
     *	get all the registered crew members
     *
     *	@param Blooddivision\User

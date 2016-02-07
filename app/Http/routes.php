@@ -13,9 +13,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PageController@launchSoon');
 
 if(\Blooddivision\User::count() > 0){
     Route::get('/members', 'PageController@getMembersPage');
@@ -33,58 +31,58 @@ if(\Blooddivision\User::count() > 0){
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
-});
+// Route::group(['middleware' => ['web']], function () {
+//     //
+// });
 
-Route::group(['middleware' => 'web'], function () {
-    Route::auth();
+// Route::group(['middleware' => 'web'], function () {
+//     Route::auth();
 
-    Route::get('/', function () {
-        return view('welcome');
-    });
+//     Route::get('/', function () {
+//         return view('welcome');
+//     });
 
-    Route::get('/members', 'PageController@getMembersPage');
+//     Route::get('/members', 'PageController@getMembersPage');
 
-    // home route
-    Route::get('/home', 'HomeController@index');
+//     // home route
+//     Route::get('/home', 'HomeController@index');
     
-    // events route
-    Route::get('/events', 'EventController@events');
+//     // events route
+//     Route::get('/events', 'EventController@events');
     
-    // event route
-    Route::get('/event/{id}', 'EventController@event');
+//     // event route
+//     Route::get('/event/{id}', 'EventController@event');
     
-    // forum route
-    Route::get('/forum', 'ForumController@index');
+//     // forum route
+//     Route::get('/forum', 'ForumController@index');
     
-    // profile route
-    Route::get('/profile/{name}', 'UserController@profile');
+//     // profile route
+//     Route::get('/profile/{name}', 'UserController@profile');
     
-});
+// });
 
-/**
-* set a route group for the profile navigations
-*/
+// *
+// * set a route group for the profile navigations
 
-Route::group(['prefix' => '/profile/{name}', 'middleware' => 'web'], function() {
 
-    // the events route
-    Route::get('your-events', 'UserController@profileEvents');
+// Route::group(['prefix' => '/profile/{name}', 'middleware' => 'web'], function() {
 
-    // the event route
-    Route::get('/your-events/{slug}', 'UserController@profileEvent');
+//     // the events route
+//     Route::get('your-events', 'UserController@profileEvents');
 
-    // create-event route
-    Route::get('/create-event', 'UserController@createProfileEvent');
-    Route::post('/create-event', 'UserController@storeEvent');
+//     // the event route
+//     Route::get('/your-events/{slug}', 'UserController@profileEvent');
 
-    // the games route
-    Route::get('your-games', 'UserController@profileGames');
+//     // create-event route
+//     Route::get('/create-event', 'UserController@createProfileEvent');
+//     Route::post('/create-event', 'UserController@storeEvent');
 
-    // the stats route
-    Route::get('your-stats', 'UserController@profileStats');
+//     // the games route
+//     Route::get('your-games', 'UserController@profileGames');
 
-    // the about route
-    Route::get('about', 'UserController@profileAbout');
-});
+//     // the stats route
+//     Route::get('your-stats', 'UserController@profileStats');
+
+//     // the about route
+//     Route::get('about', 'UserController@profileAbout');
+// });

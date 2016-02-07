@@ -148,7 +148,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         // Illuminate\Html\HtmlServiceProvider::class,
-        AdamWathan\BootForms\BootFormsServiceProvider::class,
+        //AdamWathan\BootForms\BootFormsServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -163,14 +163,14 @@ return [
         * Laravel socialite
         */
 
-        Laravel\Socialite\SocialiteServiceProvider::class,
+        //Laravel\Socialite\SocialiteServiceProvider::class,
 
         /**
         * Killrizzy/BootForms
         */
 
         //Kilrizzy\Bootforms\BootformsServiceProvider::class,
-        Barryvdh\Debugbar\ServiceProvider::class,
+        //Barryvdh\Debugbar\ServiceProvider::class,
 
     ],
 
@@ -220,7 +220,7 @@ return [
         'Debugbar'  => Barryvdh\Debugbar\Facade::class,
         // 'Html'      => Illuminate\Html\HtmlFacade::class,
         // 'Form'      => Illuminate\Html\FormFacade::class,
-        'BootForm'  => AdamWathan\BootForms\Facades\BootForm::class,
+        //'BootForm'  => AdamWathan\BootForms\Facades\BootForm::class,
 
         // eloquent models
         'MessageOfTheDay' => Blooddivision\MessageOfTheDay::class,
@@ -232,7 +232,7 @@ return [
         'ForumThreads'    => Blooddivision\ForumThreads::class,
 
         // Socialite
-        'Socialite'       => Laravel\Socialite\Facades\Socialite::class,
+        //'Socialite'       => Laravel\Socialite\Facades\Socialite::class,
 
     ],
 

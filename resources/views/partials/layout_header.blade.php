@@ -31,7 +31,7 @@
                 @endif
 
                 <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
+               {{--  <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/members') }}">Crew members <i class="fa fa-users"></i></a></li>
@@ -59,7 +59,7 @@
                             </ul>
                         </li>
                     @endif
-                </ul>
+                </ul> --}}
             </div>
         </div>
     </nav>

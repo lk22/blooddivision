@@ -38,7 +38,7 @@
         }
     </style>
 </head>
-<body id="app-layout">
+<body id="app-layout" style="padding-bottom:0px;">
     @include('partials.layout_header')
 
     @yield('content')

@@ -1,4 +1,4 @@
-@if(url('/'))
+{{-- @if(url('/'))
     <div class="container-fluid blooddivision-footer-wrapper">
         <div class="container inner-footer-wrapper">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 inner-wrapper">
@@ -27,4 +27,4 @@
             </div>
         </div>
     </div>
-@endif
+@endif --}}

@@ -18,7 +18,7 @@
 			color:#fff;
 			margin: 0px;
 			z-index:1px;
-			
+			overflow-y:none;
 			/**
 			*	the banner wrapper
 			*/
@@ -72,7 +72,7 @@
 			*/
 
 				.see-more-wrapper{
-					padding-top:5%;
+					padding-top:10%;
 					padding-bottom:5%;
 					/**
 					*	down arrow
@@ -89,6 +89,17 @@
 								a{
 									color: #FFF; 
 								}
+						}
+
+					/**
+					 * social media icon
+					 */
+					
+						.social-media-icon{
+							
+							.fa{
+								font-size:30px;
+							}
 						}
 				}
 
