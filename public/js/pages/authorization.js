@@ -19,9 +19,11 @@ Auth = {
 			this.username = $('.username-field');
 			this.regEmail = $('.email-field');
 			this.regPass  = $('.password-field');
-			this.rememberPassword = $('.remember-password');
+			this.confirmPassword = $('.confirm-password');
 			this.registerSerialize = this.serialize;
 
+
+			this.errors = [];
 		},
 
 		closeRegisterHint: $('.register-hint'),
@@ -38,7 +40,10 @@ Auth = {
 		_renderHintMsg: function(appendant, message, elmClass){
 			var tutorial = "<div class=" + elmClass + "><h4>" + message + "</h4></div>";
 			$(appendant).append(tutorial);
-			$(elmClass).delay(200).fadeOut(1000);
+
+			$(elmClass).bind('click', function(){
+				$(this).delay(200).fadeOut(800);
+			});
 		},
 
 	/**
@@ -51,7 +56,6 @@ Auth = {
 		_renderErrorMsg: function(appendant, message, elmClass){
 			var error = "<div class=" + elmClass + "><h4>" + message + " <span class='icon'><i class='closeErrorBtn fa fa-times'></i></span></h4></div>";
 			$(appendant).append(error);
-			$(elmClass).delay(200).fadeOut(1000);
 		},
 
 	/**
@@ -65,6 +69,24 @@ Auth = {
 				$('#AuthHelperModal').modal('show.bs.modal', callback);
 			});
 			// $('#AuthHelperModal').modal('show.bs.modal', callback);
+		},
+
+		_validateField: function(field, expression){
+			if(!field){
+				console.log("currently field for validation: " + field);
+			}
+
+			if(!expression){
+
+			}
+		},
+
+		addError: function(error){
+			this.errors.push(error);
+		},
+
+		hasErrors: function(){
+			return (this.errors.length);
 		}
 
 };
@@ -75,7 +97,6 @@ Auth = {
 
 Auth.init();
 
-var $this = $(this);
 
 $(function(){
 
@@ -127,6 +148,11 @@ $(function(){
 				'warning-hint'
 			);
 		}
+
+		if(!$(this).val() == valueOf('@')){
+
+		}
+
 		$('.closeErrorBtn').click(function() {
 			$('.warning-hint').delay(200).fadeOut(1000).empty();
 		});
@@ -192,7 +218,7 @@ $(function() {
 		 * @param {elm class} [elmClass] [the css class]
 		 */
 		Auth._renderHintMsg(
-			Auth.register,
+			'body',
 			'Enter a name that fits you recruit ',
 			'register-hint'
 		);
@@ -210,7 +236,7 @@ $(function() {
 
 		if($(this).val().length < 1){
 			Auth._renderErrorMsg(
-				Auth.register,
+				'body',
 				'The username field is empty, please empty the field to proceed to the next step',
 				'warning-hint'
 			);
@@ -227,6 +253,15 @@ $(function() {
  */
 
 $(function(){
+
+	var availableEmailDomains = [
+		'hotmail',
+		'live',
+		'gmail',
+		'yahoo',
+		'jubii',
+	];
+
 	/**
 	 * bind events for the email field
 	 */
@@ -238,7 +273,7 @@ $(function(){
 		 * render email hint message
 		 */
 		Auth._renderHintMsg(
-			Auth.register,
+			'body',
 			'Enter an email that is valid and are registered',
 			'register-hint'
 		);
@@ -264,10 +299,12 @@ $(function(){
 		 * check if the field is empty 
 		 */
 		if($(this).val().length == 0 || 
-		   !$(this).val() == RegExp('/^["@""]/')
+		!$(this).val() == valueOf('@') ||
+		!$(this).val() == valueOf(availableEmailDomains[0]) ||
+		!$(this).
 		){
 			Auth._renderErrorMsg(
-				Auth.register,
+				'body',
 				'your email is wrong entered or not valid',
 				'warning-hint'
 			);
@@ -299,7 +336,7 @@ $(function(){
 		 */
 		
 		Auth._renderHintMsg(
-			Auth.register,
+			'body',
 		 	'Type in a password that fits you, and make it protective as possible',
 		 	'register-hint'
 		 );
@@ -314,11 +351,11 @@ $(function(){
 		 * check if the field is empty
 		 */
 
-		if($(this).val().length = 0){
+		if($(this).val() == ''){
 
 			Auth._renderErrorMsg(
-				Auth.register, 
-				'the password field is empty, or not consisting a mix of letters and numbers please fill the field' , 
+				'body', 
+				'the password field is empty, or not consisting a mix of letters and numbers please fill the field', 
 				'warning-hint'
 			);
 
@@ -335,3 +372,17 @@ $(function(){
 	});
 });
 
+/**
+ * validate password confirmation field
+ */
+$(function(){
+
+	/**
+	 * if client clicks the field
+	 */
+	
+	 Auth.confirmPassword.bind('click, ', function(){
+
+	 });
+
+});

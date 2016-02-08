@@ -28,20 +28,15 @@ class UserController extends Controller
 
     public function profile($name){
     	// step 1 => get the specific user
+      $authenticate = auth()->user(); 
     	$user = User::where('name', Auth::user()->name)->orWhere('name', $name)->get(); //- first name og lastname conventeres automatisk til leo-knudsen
-
-        $auth = auth()->user();
     	// step 2 => get the events belongs to the user
 
        // $events = $user->events; // ==== $user->events()->get();
+       $events = User::with('events')->get();
         
         // $events = Event::all()->take(10)->get(); // get  
-
-        $events = DB::table('events')
-                  ->join('users', 'users.id', '=', 'events.user_id')
-                  ->select('*')
-                  ->get();
-
+        // 
     	// step 3 => get the profile view
     	return view('pages.profile_home', compact('user', 'events'));
         return vide('layouts.profile', compact('user'));
@@ -53,16 +48,14 @@ class UserController extends Controller
     */
 
     public function profileEvents($name){
+      $auth = auth()->user();
     	// step 1 => get the profile
     	$user = User::where('name', $name)->get();
     	// step 2 => get the events belongs to the user
 
     	// $events = User::all()->event()->get();
 
-        $events = DB::table('events')
-                  ->join('users', 'users.id', '=', 'events.user_id')
-                  ->select('*')
-                  ->get();
+        $events = Event::with('users')->where('events.user_id', $auth->id)->get();
 
     	// step 4 => load view
     	return view('pages.profile_events', compact('user', 'events'));

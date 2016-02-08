@@ -23,7 +23,7 @@ class Event extends Model implements SluggableInterface
     * @var $table
     */
 
-    protected $table = ['events'];
+    protected $table = 'events';
 
     protected $sluggable = [
         'build_from' => 'event_name',
@@ -58,12 +58,9 @@ class Event extends Model implements SluggableInterface
     *	@return void
     */
 
-    public function user(){
-        return $this->hasOne('Blooddivision\User');
-    }
 
     public function users(){
-        return $this->hasMany('Blooddivision\User');
+        return $this->belongsTo('Blooddivision\User');
     }
 
     /**

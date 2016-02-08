@@ -983,40 +983,37 @@
  * the registration page
  */
 /**
-	 * the register form 
-	 */
-.register-user-form {
-  /**
 		 * hints 
 		 */
-  /**
+/**
 			 * the name hint
 			 */
-  /**
+.register-hint {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  height: 65px;
+  width: 100%;
+  background: #2ecc71;
+  color: #fff;
+  text-align: center;
+  padding: 15px; }
+
+/**
 		 * errors
-		 */ }
-  .register-user-form .register-hint {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    height: 65px;
-    width: 100%;
-    background: #2ecc71;
-    color: #fff;
-    text-align: center;
-    padding: 15px; }
-  .register-user-form .warning-hint {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    height: 65px;
-    width: 100%;
-    background: #e74c3c;
-    color: #fff;
-    text-align: center;
-    padding: 15px; }
-    .register-user-form .warning-hint .closeErrorBtn {
-      cursor: pointer; }
+		 */
+.warning-hint {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  height: 65px;
+  width: 100%;
+  background: #e74c3c;
+  color: #fff;
+  text-align: center;
+  padding: 15px; }
+  .warning-hint .closeErrorBtn {
+    cursor: pointer; }
 
 /**
 	* helper modal
