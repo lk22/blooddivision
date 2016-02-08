@@ -16,7 +16,7 @@
         <p><strong>T</strong>he next thing is the password, its a required piece of data,</p>
         <p><strong>NOTE: </strong> your password is hashed with sha1 encryption <strong>For The Nerds</strong> (sha1 encryption is a 512mb encryption for good security ensurances for passwords) </p>
         <br><br>
-        <p><strong>NOTE: </strong>if us still are lost in this proccess u can enter the <a href="/help-center">Help Center</a> for more information</p>
+        <p><strong>I</strong>f us still are lost in this proccess u can enter the <a href="/help-center">Help Center</a> for more information</p>
       </div>
     </div>
   </div>

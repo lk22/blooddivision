@@ -15,7 +15,7 @@
 use Blooddivision\User;
 use Blooddivision\Game;
 
-Route::get('/', function () {
+Route::get('/', function(){
     return view('welcome');
 });
 

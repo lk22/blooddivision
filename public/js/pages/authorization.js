@@ -1,17 +1,17 @@
-var authorization;
+var Auth;
 
-authorization = {
+Auth = {
 
 	/**
 	 * [initialize object]
-	 * @return {[object]} [the authorization object]
+	 * @return {[object]} [the Auth object]
 	 */
 		init: function(){
 
-			this.login = $('.auth-wrapper');
+			this.login = $('.Auth-wrapper');
 			this.email = $('.email-input');
 			this.password = $('.pass-input'); 
-			this.authBtn = $('.auth-btn');
+			this.AuthBtn = $('.Auth-btn');
 			this.loginHelpBtn = $('.helpBtn');
 			this.serialize = $(this).serialize();
 
@@ -24,6 +24,10 @@ authorization = {
 
 		},
 
+		closeRegisterHint: $('.register-hint'),
+
+		closeWarningHint: $('.warning-hint'),
+
 	/**
 	 * [_renderHintMsg function]
 	 * @param  {[type]} appendant [the appending element]
@@ -32,8 +36,9 @@ authorization = {
 	 * @return {[type]} HTML      [the rendered error]
 	 */
 		_renderHintMsg: function(appendant, message, elmClass){
-			var tutorial = "<div class=" + elmClass + "><h4>" + message + " <span class='icon'><i class='closeHintBtn fa fa-times'></i></span></h4></div>";
+			var tutorial = "<div class=" + elmClass + "><h4>" + message + "</h4></div>";
 			$(appendant).append(tutorial);
+			$(elmClass).delay(200).fadeOut(1000);
 		},
 
 	/**
@@ -45,7 +50,8 @@ authorization = {
 	 */
 		_renderErrorMsg: function(appendant, message, elmClass){
 			var error = "<div class=" + elmClass + "><h4>" + message + " <span class='icon'><i class='closeErrorBtn fa fa-times'></i></span></h4></div>";
-			$(appendant).append(error);		
+			$(appendant).append(error);
+			$(elmClass).delay(200).fadeOut(1000);
 		},
 
 	/**
@@ -56,9 +62,9 @@ authorization = {
 		_openLoginHelpModal: function(callback){
 			this.loginHelpBtn.click(function(e){
 				e.preventDefault();
-				$('#authHelperModal').modal('show.bs.modal', callback);
+				$('#AuthHelperModal').modal('show.bs.modal', callback);
 			});
-			// $('#authHelperModal').modal('show.bs.modal', callback);
+			// $('#AuthHelperModal').modal('show.bs.modal', callback);
 		}
 
 };
@@ -67,19 +73,21 @@ authorization = {
 * initialize object
 */
 
-authorization.init();
+Auth.init();
+
+var $this = $(this);
 
 $(function(){
-	var $this = $(this);
+
 	/**
 	* if the client is clicking the email field
 	*/
-	authorization.email.bind('click', function(){
+	Auth.email.bind('click', function(){
 		/**
 		* render email tutorial
 		*/
-		authorization._renderHintMsg(
-			authorization.login, // the login wrapper
+		Auth._renderHintMsg(
+			Auth.login, // the login wrapper
 			'Your first step is to fill your valid email address it must contain @ to make it valid', // appending message
 			'login-email-tutorial' // the element class
 		);
@@ -88,9 +96,9 @@ $(function(){
 		 * close the tutorial
 		 */
 		
-		$('.closeHintBtn').click(function(){
-			$('.login-email-tutorial').delay(200).fadeOut(1000).empty();
-		});
+		// $('.closeHintBtn').click(function(){
+		// 	$('.login-email-tutorial').delay(200).fadeOut(1000).empty();
+		// });
 
 		/**
 		 * if the client enters the email field
@@ -113,8 +121,8 @@ $(function(){
 		 */
 
 		if($(this).val() == ''){
-			authorization._renderErrorMsg(
-				authorization.login,
+			Auth._renderErrorMsg(
+				Auth.login,
 				"your email is empty please fill the email field to proceed",
 				'warning-hint'
 			);
@@ -130,12 +138,12 @@ $(function(){
 	 * if the client hovers the password field
 	 */
 	
-	authorization.password.bind('click', function(){
+	Auth.password.bind('click', function(){
 		/**
 		 * append the hint
 		 */
-		authorization._renderHintMsg(
-			authorization.login,
+		Auth._renderHintMsg(
+			Auth.login,
 			"Enter the password you have registered you with",
 			"login-password-tutorial"
 		);
@@ -144,9 +152,9 @@ $(function(){
 		 * close the tutorial
 		 */
 		
-		$('.closeHintBtn').click(function(){
-			$('.login-password-tutorial').delay(200).fadeOut(1000).empty();
-		});
+		// $('.closeHintBtn').click(function(){
+		// 	$('.login-password-tutorial').delay(200).fadeOut(1000).empty();
+		// });
 
 	}).bind('mouseenter', function(){
 		$(this).focus();
@@ -154,8 +162,8 @@ $(function(){
 		$(this).blur();
 
 		if($(this).val() == ''){
-			authorization._renderErrorMsg(
-				authorization.login,
+			Auth._renderErrorMsg(
+				Auth.login,
 				"your password is empty please fill the email field to proceed",
 				'warning-hint'
 			);
@@ -175,7 +183,7 @@ $(function() {
 	 * bind click event on the name register field
 	 */
 
-	authorization.username.bind('click', function(){
+	Auth.username.bind('click', function(){
 		/**
 		 * render hint for name registration
 		 * @type {[function]}
@@ -183,15 +191,11 @@ $(function() {
 		 * @param {message} [message] [the hint message]
 		 * @param {elm class} [elmClass] [the css class]
 		 */
-		authorization._renderHintMsg(
-			authorization.register,
-			'Enter a name that fits you :) ',
-			'register-name-hint'
+		Auth._renderHintMsg(
+			Auth.register,
+			'Enter a name that fits you recruit ',
+			'register-hint'
 		);
-
-		$('.closeHintBtn').bind('click', function(){
-			$('.register-name-hint').delay(200).fadeOut(1000).empty();
-		});
 
 	}).bind('mouseenter', function(){
 		/**
@@ -204,14 +208,17 @@ $(function() {
 		 */
 		$(this).blur();
 
-		if($(this).val() = ''){
-			authorization._renderErrorMsg(
-				authorization.register,
+		if($(this).val().length < 1){
+			Auth._renderErrorMsg(
+				Auth.register,
 				'The username field is empty, please empty the field to proceed to the next step',
-				'register-name-error'
+				'warning-hint'
 			);
 		}
-		
+
+		$('.closeErrorBtn').on('click', function(){
+			$('.warning-hint').delay(200).fadeOut(1000);
+		});
 	});
 });
 
@@ -225,20 +232,16 @@ $(function(){
 	 */
 	
 	// if client clicks the email field
-	authorization.regEmail.bind('click', function(){
+	Auth.regEmail.bind('click', function(){
 
 		/**
 		 * render email hint message
 		 */
-		authorization._renderHintMsg(
-			authorization.register,
+		Auth._renderHintMsg(
+			Auth.register,
 			'Enter an email that is valid and are registered',
-			'register-email-hint'
+			'register-hint'
 		);
-
-		$('.closeHintBtn').on('click', function(){
-			$('.register-email-hint').delay(200).fadeOut(1000).empty();
-		});
 
 		/**
 		 * if the client enters the field
@@ -263,19 +266,72 @@ $(function(){
 		if($(this).val().length == 0 || 
 		   !$(this).val() == RegExp('/^["@""]/')
 		){
-			authorization._renderErrorMsg(
-				authorization.register,
+			Auth._renderErrorMsg(
+				Auth.register,
 				'your email is wrong entered or not valid',
-				'error-email-hint'
+				'warning-hint'
 			);
 		}
 
 		/**
 		 * closing the hint message
 		 */
-		$('.closeErrorHint').on('click', function(){
-			$('.error-email-hint').delay(200).fadeOut(1000).empty();
+		$('.closeErrorBtn').on('click', function(){
+			$('.warning-hint').delay(200).fadeOut(1000);
 		});
+
+		$(this).blur();
+	});
+});
+
+/**
+ * validate the password field
+ */
+$(function(){
+
+	/**
+	 * bind events on the field
+	 */
+	Auth.regPass.bind('click', function(){
+
+		/**
+		 * render hint for the password field
+		 */
+		
+		Auth._renderHintMsg(
+			Auth.register,
+		 	'Type in a password that fits you, and make it protective as possible',
+		 	'register-hint'
+		 );
+
+
+	}).bind('mouseenter',function(){
+		$(this).focus();
+	}).bind('mouseleave', function(){
+		$(this).blur();
+
+		/**
+		 * check if the field is empty
+		 */
+
+		if($(this).val().length = 0){
+
+			Auth._renderErrorMsg(
+				Auth.register, 
+				'the password field is empty, or not consisting a mix of letters and numbers please fill the field' , 
+				'warning-hint'
+			);
+
+		}
+
+		/**
+		 * closing the warning
+		 */
+		
+		$('.closeErrorBtn').on('click', function(){
+			$('.warning-hint').delay(200).fadeOut(1000);
+		});
+
 	});
 });
 

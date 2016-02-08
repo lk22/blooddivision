@@ -145,7 +145,7 @@ $(function(){
 			if(target.length){
 				$('html, body').delay(200).animate({
 					scrollTop: target.offset().top
-				}, 1500);
+				}, 800);
 				$('.scrollTopContainer').delay(200).animate({
 					opacity: "1",
 					right: "-1px"

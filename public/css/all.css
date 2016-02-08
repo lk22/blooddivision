@@ -716,12 +716,7 @@
   background: #2ecc71;
   color: #fff;
   text-align: center;
-  padding: 15px;
-  /**
-		 * closing tutorial btn
-		 */ }
-  .login-email-tutorial .closeHintBtn {
-    cursor: pointer; }
+  padding: 15px; }
 
 .login-password-tutorial {
   position: fixed;
@@ -732,12 +727,7 @@
   background: #2ecc71;
   color: #fff;
   text-align: center;
-  padding: 15px;
-  /**
-		 * closing tutorial btn
-		 */ }
-  .login-password-tutorial .closeHintBtn {
-    cursor: pointer; }
+  padding: 15px; }
 
 .warning-hint {
   position: fixed;
@@ -1135,12 +1125,15 @@
 	 */
 .register-user-form {
   /**
+		 * hints 
+		 */
+  /**
 			 * the name hint
 			 */
   /**
-			 * email hint
-			 */ }
-  .register-user-form .register-name-hint {
+		 * errors
+		 */ }
+  .register-user-form .register-hint {
     position: fixed;
     bottom: 0px;
     left: 0px;
@@ -1150,7 +1143,17 @@
     color: #fff;
     text-align: center;
     padding: 15px; }
-    .register-user-form .register-name-hint .closeHintBtn {
+  .register-user-form .warning-hint {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    height: 65px;
+    width: 100%;
+    background: #e74c3c;
+    color: #fff;
+    text-align: center;
+    padding: 15px; }
+    .register-user-form .warning-hint .closeErrorBtn {
       cursor: pointer; }
 
 /**

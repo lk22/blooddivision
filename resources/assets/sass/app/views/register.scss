@@ -6,13 +6,19 @@
 	 * the register form 
 	 */
 	
+		
+	
 		.register-user-form{
+
+		/**
+		 * hints 
+		 */
 			
 			/**
 			 * the name hint
 			 */
 			
-			.register-name-hint{
+			.register-hint{
 				position:fixed;
 				bottom:0px;
 				left:0px;
@@ -22,18 +28,26 @@
 				color: #fff;
 				text-align:center;    
 				padding:15px;
-				
-				.closeHintBtn{
-					cursor:pointer;
-				}
 			}
 
-			/**
-			 * email hint
-			 */
-			
-			.register-email-hint{
+		/**
+		 * errors
+		 */
+		
+			.warning-hint{
+				position:fixed;
+				bottom:0px;
+				left:0px;
+				height: 65px;
+				width: 100%;
+				background: #e74c3c;
+				color: #fff;
+				text-align:center;    
+				padding:15px;
 				
+				.closeErrorBtn{
+					cursor:pointer;
+				}
 			}
 
 		}
