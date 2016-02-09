@@ -28,13 +28,12 @@ class UserController extends Controller
 
     public function profile($name){
     	// step 1 => get the specific user
-      $authenticate = auth()->user(); 
+      $auth = auth()->user(); 
     	$user = User::where('name', Auth::user()->name)->orWhere('name', $name)->get(); //- first name og lastname conventeres automatisk til leo-knudsen
     	// step 2 => get the events belongs to the user
 
        // $events = $user->events; // ==== $user->events()->get();
-       $events = User::with('events')->get();
-        
+       $events = Event::with('users')->where('events.user_id', $auth->id)->get();
         // $events = Event::all()->take(10)->get(); // get  
         // 
     	// step 3 => get the profile view
