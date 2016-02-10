@@ -106,8 +106,9 @@ elixir(function(mix) {
 */
 
 	mix.scripts([
-		'global.js',
 		'public/js/vendor/sweetalert-dev.js',
+		'public/js/vendor/react.js',
+		'global.js',
 		'public/js/pages/home.js',
 		// 'public/js/pages/events.js',
 		// 'public/js/pages/members.js',

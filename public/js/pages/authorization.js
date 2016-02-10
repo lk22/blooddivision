@@ -170,10 +170,10 @@ Auth = {
 			$.ajax({
 					url: '/login',
 					type: 'post',
-					data: this.serialize,
+					data: $('.Auth-wrapper').serializeArray(),
 					success: function (data) {
 						this.sweetAlert.success(
-							'Validation complete!' + this.email.val(),
+							'Validation complete!',
 							'You are fully authorized you will be redirected.',
 							false
 						);
@@ -516,25 +516,25 @@ $(function(){
  * clicking the login auth button send ajax request to the server and authorize the user
  * @return {[void]}
  */
-$(function(){
+// $(function(){
 
-	/**
-	 * binding click event for the auth button
-	 * @param  {[type]} e){	} [description]
-	 * @return {[type]}         [description]
-	 */
-	$('.auth-btn').click(function(e){
+// 	/**
+// 	 * binding click event for the auth button
+// 	 * @param  {[type]} e){	} [description]
+// 	 * @return {[type]}         [description]
+// 	 */
+// 	$('.auth-btn').click(function(e){
 
-		/**
-		 * preventing the default action to happen
-		 */
-		e.preventDefault();
+// 		*
+// 		 * preventing the default action to happen
+		 
+// 		e.preventDefault();
 
-		/**
-		 * sending ajax request to the server for authorization
-		 */
-		Auth.ajaxLogin('login', 'post');
+// 		/**
+// 		 * sending ajax request to the server for authorization
+// 		 */
+// 		Auth.ajaxLogin('/login', 'post');
 
-	});
+// 	});
 
-});
+// });
