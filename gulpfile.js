@@ -44,7 +44,7 @@ elixir(function(mix) {
 	
 	    mix.copy(
 	    	paths.jquery + 'dist/jquery.js',
-	    	'public/js/vendor/jquery.min.js'
+	    	'public/js/vendor/jquery.js'
 	    );
 
 	/**
@@ -53,7 +53,7 @@ elixir(function(mix) {
 
 		mix.copy(
 			paths.bootstrap + 'dist/js/bootstrap.js',
-			'public/js/vendor/bootstrap.min.js'
+			'public/js/vendor/bootstrap.js'
 		);
 
 	/**
@@ -62,7 +62,7 @@ elixir(function(mix) {
 
 		mix.copy(
 			paths.react + 'dist/react.js',
-			'public/js/vendor/react.min.js'
+			'public/js/vendor/react.js'
 		);
 
 	/**
@@ -79,8 +79,13 @@ elixir(function(mix) {
 	 */
 	
 		mix.copy(
-			paths.sa + 'sweetalert.dev.js',
-			'public/js/vendor/sweetalert.js'
+			paths.sa + 'sweetalert-dev.js',
+			'public/js/vendor/sweetalert-dev.js'
+		);
+
+		mix.copy(
+			paths.sa + 'sweetalert.css',
+			'public/css/vendor/sweetalert.css'
 		);
 
 	/**
@@ -91,7 +96,8 @@ elixir(function(mix) {
 			'welcome.css',
 			'app.css',
 			'vendor/font-awesome-animation.min.css',
-			'vendor/animate.css'
+			'vendor/animate.css',
+			'vendor/sweetalert.css'
 		], 'public/css/all.css', 'public/css');
 	
 
@@ -100,9 +106,8 @@ elixir(function(mix) {
 */
 
 	mix.scripts([
-		// 'public/js/vendor/jquery.min.js',
-		// 'public/js/vendor/bootstrap.min.js',
-		// 'public/js/vendor/react.min.js',
+		'global.js',
+		'public/js/vendor/sweetalert-dev.js',
 		'public/js/pages/home.js',
 		// 'public/js/pages/events.js',
 		// 'public/js/pages/members.js',

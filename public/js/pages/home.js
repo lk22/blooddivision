@@ -1,3 +1,5 @@
+
+
 // global app variable definition
 var home;
 
@@ -37,7 +39,6 @@ home = {
 
 					this.checkAppPort("3000");
 					this.returnAppUrl('localhost:3000', 'blooddivision.app');
-					this.ajaxPrefilter();
 
 		},
 
@@ -62,22 +63,6 @@ home = {
 			}else {
 				this.logging(component, "is animated with succes");
 			}
-		},
-
-	/**
-	* set default ajax token on any ajax requests 
-	*/
-
-		ajaxPrefilter: function(){
-			$.ajaxPrefilter(function(options){
-				if( !options.beforeSend ){
-					xhr.setRequestHeader('Accept', 'applicaton/json');
-					var token = Blooddivision.token;
-					if( token ){
-						xhr.setRequestHeader('X-XSRF-TOKEN', token);
-					}
-				}
-			});
 		},
 
 	/**

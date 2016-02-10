@@ -11,16 +11,16 @@ Auth = {
 			this.login = $('.Auth-wrapper');
 			this.email = $('.email-input');
 			this.password = $('.pass-input'); 
-			this.AuthBtn = $('.Auth-btn');
+			this.authBtn = $('.Auth-btn');
 			this.loginHelpBtn = $('.helpBtn');
-			this.serialize = $(this).serialize();
+			this.serialize = this.login.serializeArray();
 
 			this.register = $('.register-user-form');
 			this.username = $('.username-field');
 			this.regEmail = $('.email-field');
 			this.regPass  = $('.password-field');
 			this.confirmPassword = $('.confirm-password');
-			this.registerSerialize = this.serialize;
+			this.registerSerialize = this.register.serialize();
 
 
 			this.errors = [];
@@ -68,7 +68,6 @@ Auth = {
 				e.preventDefault();
 				$('#AuthHelperModal').modal('show.bs.modal', callback);
 			});
-			// $('#AuthHelperModal').modal('show.bs.modal', callback);
 		},
 
 		_validateField: function(field, expression){
@@ -87,6 +86,99 @@ Auth = {
 
 		hasErrors: function(){
 			return (this.errors.length);
+		},
+
+		/**
+		 * sweet alerts 
+		 * @type {Object}
+		 */
+		sweetAlert: {
+			/**
+			 * [error description]
+			 * @param  {[string]} title [description]
+			 * @param  {[string} text  [description]
+			 * @param  {[string]} btn   [description]
+			 * @return {[type]} 	  [description]
+			 */
+			error: function(title, text, btn){
+				swal({
+					title: title,
+					text: text,
+					type: 'error',
+					confirmButtonText: btn
+				});
+			},
+
+			/**
+			 * [succes description]
+			 * @param  {[string]} title [description]
+			 * @param  {[string]} text  [description]
+			 * @param  {[boolean]} bool   [description]
+			 * @return {[object]}       [description]
+			 */
+			succes: function(title, text, bool){
+				swal({
+					title: title,
+					text: text,
+					type: 'succes',
+					showConfirmationButton: bool,
+					timer: 5000
+				});
+			},
+
+			/**
+			 * [warning description]
+			 * @param  {[string]} title [description]
+			 * @param  {[string]} text  [description]
+			 * @param  {[string/bool]} btn   [description]
+			 * @return {[object]}       [description]
+			 */
+			warning: function(title, text, btn){
+				swal({
+					title: title,
+					text: text,
+					type: 'info',
+					confirmButtonText: btn
+				});
+			},
+
+
+		},
+
+		/**
+		 * [ajaxLogin description]
+		 * @param  {[string]} url     [description]
+		 * @param  {[string]} type    [description]
+		 * @param  {[object]} data    [description]
+		 * @param  {[callback]} success [description]
+		 * @return {[jqXHR]}         [description]
+		 */
+		ajaxLogin: function(url, type){
+			// example for a ajax post request 
+			// $.ajax({
+			// 	url: '/login',
+			// 	type: 'post',
+			// 	data: {
+			// 		email: this.emai.val(),
+			// 		password: this.password.val()
+			// 	},
+			// 	success: function (data) {
+
+			// 	}
+			// });
+			
+			$.ajax({
+					url: '/login',
+					type: 'post',
+					data: this.serialize,
+					success: function (data) {
+						this.sweetAlert.success(
+							'Validation complete!' + this.email.val(),
+							'You are fully authorized you will be redirected.',
+							false
+						);
+					}
+				});
 		}
 
 };
@@ -147,10 +239,6 @@ $(function(){
 				"your email is empty please fill the email field to proceed",
 				'warning-hint'
 			);
-		}
-
-		if(!$(this).val() == valueOf('@')){
-
 		}
 
 		$('.closeErrorBtn').click(function() {
@@ -298,14 +386,18 @@ $(function(){
 		/**
 		 * check if the field is empty 
 		 */
-		if($(this).val().length == 0 || 
-		!$(this).val() == valueOf('@') ||
-		!$(this).val() == valueOf(availableEmailDomains[0])){
-			Auth._renderErrorMsg(
-				'body',
-				'your email is wrong entered or not valid',
-				'warning-hint'
-			);
+		// if($(this).val().length == 0 || 
+		// !$(this).val() == valueOf('@') ||
+		// !$(this).val() == valueOf(availableEmailDomains[0])){
+		// 	Auth._renderErrorMsg(
+		// 		'body',
+		// 		'your email is wrong entered or not valid',
+		// 		'warning-hint'
+		// 	);
+		// }
+		// 
+		for (var i = availableEmailDomains; i >= random(1,4); i++) {
+			console.log(2);
 		}
 
 		/**
@@ -410,15 +502,39 @@ $(function(){
 	 	$(this).blur(function(){
 
 	 		/**
-	 		 * if the password is not equal to the entered password 
-	 		 * @param  {String} $(this).val() [description]
-	 		 * @return {[type]}               [description]
+	 		 * if the password is not equal to the entered password field above
 	 		 */
-	 		if($(this).val() = '' || !$(this).val() == $(".password-field")){
+	 		// if($(this).val() = '' || !$(this).val() == $(".password-field")){
 
-	 		}
+	 		// }
 
 	 	});
 	 });
+});
+
+/**
+ * clicking the login auth button send ajax request to the server and authorize the user
+ * @return {[void]}
+ */
+$(function(){
+
+	/**
+	 * binding click event for the auth button
+	 * @param  {[type]} e){	} [description]
+	 * @return {[type]}         [description]
+	 */
+	$('.auth-btn').click(function(e){
+
+		/**
+		 * preventing the default action to happen
+		 */
+		e.preventDefault();
+
+		/**
+		 * sending ajax request to the server for authorization
+		 */
+		Auth.ajaxLogin('login', 'post');
+
+	});
 
 });
