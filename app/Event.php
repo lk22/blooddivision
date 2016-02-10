@@ -8,6 +8,7 @@ use Cviebrock\EloquentSluggable\SluggableInterface;
 use Cviebrock\EloquentSluggable\SluggableTrait;
 use Blooddivision\User;
 use Carbon\Carbon;
+
 class Event extends Model implements SluggableInterface
 {
 

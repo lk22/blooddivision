@@ -102,12 +102,12 @@ class UserController extends Controller
     	* step 1 => create the model row
     	*/
     	Event::create([
-    		'event_name'         => $request->get('event_name'),
-            'event_game'         => $request->get('event_game'),
-            'event_description'  => $request->get('event_description'),
-            'event_datetime'     => $request->get('event_datetime'),
-            'user_id'            => auth()->user()->id
-    	])->save();
+    		'event_name' => $request->get('event_name'),
+            'event_game' => $request->get('event_game'),
+            'event_datetime' => $request->get('event_datetime'),
+            'event_description' => $request->get('event_desc'),
+            'user_id' => auth()->user()->id
+    	]);
 
     	/**
     	* step 2 => redirect the user to the your events route
@@ -132,6 +132,8 @@ class UserController extends Controller
      */
     
     public function profileGames(){
+
+        $auth = auth()->user();
         /**
          * fetch the user
          * @var [array]
@@ -143,11 +145,7 @@ class UserController extends Controller
          * fetch the users added games
          */
     
-        $games = DB::table('users')
-                 ->join('games', 'users.id', '=', 'games.user_id')
-                 ->select('*')
-                 ->where('games.user_id', Auth::user()->id)
-                 ->get();
+        $games = Game::with('users')->where('games.user_id', $auth->id)->get();
 
                  // dd($games);
 

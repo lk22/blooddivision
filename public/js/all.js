@@ -240,7 +240,7 @@ Auth = {
 			}
 
 			if(!expression){
-
+				console.log("there is no expression for validation on: " + field);
 			}
 		},
 
@@ -446,10 +446,10 @@ $(function(){
 		 */
 
 	}).bind('mouseenter', function(){
+		
 		/**
 		 * Set the field on a focus state
 		 */
-		
 		$(this).focus();
 
 		/**
@@ -463,9 +463,7 @@ $(function(){
 		 */
 		if($(this).val().length == 0 || 
 		!$(this).val() == valueOf('@') ||
-		!$(this).val() == valueOf(availableEmailDomains[0]) ||
-		!$(this).
-		){
+		!$(this).val() == valueOf(availableEmailDomains[0])){
 			Auth._renderErrorMsg(
 				'body',
 				'your email is wrong entered or not valid',
@@ -546,6 +544,44 @@ $(function(){
 	
 	 Auth.confirmPassword.bind('click, ', function(){
 
+	 	/**
+	 	 * show hint 
+	 	 */
+	 	Auth._renderHintMsg(Auth.register, 'Confirm your entered password from the above password field', 'register-hint');
+
+	 	/**
+	 	 * if client mouseenters the field
+	 	 */
+	 }).bind('mouseenter', function(){
+
+	 	/**
+	 	 * set focus state
+	 	 */
+	 	$(this).focus();
+
+	 	/**
+	 	 * if the client leaves the field
+	 	 * @param  {[event, callback]}
+	 	 */
+	 }).bind('mouseleave', function(){
+
+	 	/**
+	 	 * [remove focus state from field and validate the field]
+	 	 * @param  {[callback]}
+	 	 * @return {[event]} 
+	 	 */
+	 	$(this).blur(function(){
+
+	 		/**
+	 		 * if the password is not equal to the entered password 
+	 		 * @param  {String} $(this).val() [description]
+	 		 * @return {[type]}               [description]
+	 		 */
+	 		if($(this).val() = '' || !$(this).val() == $(".password-field")){
+
+	 		}
+
+	 	});
 	 });
 
 });

@@ -22,7 +22,8 @@ var paths = {
 	'moment' : bower + 'moment/',
 	'react'	 : node  + 'react/',
 	'lightbox' : bower + 'lightbox2/',
-	'faa': bower + 'font-awesome-animation/dist/'
+	'faa': bower + 'font-awesome-animation/dist/',
+	'sa': bower + 'sweetalert/dist/'
 };
 
 elixir(function(mix) {
@@ -34,7 +35,7 @@ elixir(function(mix) {
 	mix.sass(["app.scss", "welcome.scss"]);
 
 /**
-* copy scripts
+* copy scripts and stylesheets
 */
 
 	/**
@@ -64,9 +65,22 @@ elixir(function(mix) {
 			'public/js/vendor/react.min.js'
 		);
 
+	/**
+	 * font awesome animation
+	 */
+
 		mix.copy(
 			paths.faa + 'font-awesome-animation.min.css',
 			'public/css/vendor/font-awesome-animation.min.css'
+		);
+
+	/**
+	 * sweetalert
+	 */
+	
+		mix.copy(
+			paths.sa + 'sweetalert.dev.js',
+			'public/js/vendor/sweetalert.js'
 		);
 
 	/**
