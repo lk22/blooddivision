@@ -168,17 +168,17 @@ Auth = {
 			// });
 			
 			$.ajax({
-					url: '/login',
-					type: 'post',
-					data: $('.Auth-wrapper').serializeArray(),
-					success: function (data) {
-						this.sweetAlert.success(
-							'Validation complete!',
-							'You are fully authorized you will be redirected.',
-							false
-						);
-					}
-				});
+				url: '/login',
+				type: 'post',
+				data: $('.Auth-wrapper').serializeArray(),
+				success: function (data) {
+					this.sweetAlert.success(
+						'Validation complete!',
+						'You are fully authorized you will be redirected.',
+						false
+					);
+				}
+			});
 		}
 
 };
