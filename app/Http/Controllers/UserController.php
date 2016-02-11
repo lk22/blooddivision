@@ -145,7 +145,7 @@ class UserController extends Controller
          * fetch the users added games
          */
     
-        $games = Game::with('users')->where('games.user_id', $auth->id)->get();
+        $games = Game::with('user')->where('games.user_id', $auth->id)->get();
 
                  // dd($games);
 
@@ -159,6 +159,6 @@ class UserController extends Controller
      */
     
     public function storeProfileGame(CreateGameRequest $request){
-        Game::create(['game' => $request->post('game_name'), 'user_id' => Auth::user()->id])->save();
+        Game::create(['game' => $request->get('game_name'), 'user_id' => Auth::user()->id])->save();
     }
 }

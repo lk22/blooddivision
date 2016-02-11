@@ -13,7 +13,7 @@ class CreateGameRequest extends Request
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**

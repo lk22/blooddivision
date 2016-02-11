@@ -120,6 +120,8 @@ elixir(function(mix) {
 		// 'public/js/pages/profile/games.js'
 	], 'public/js/all.js', 'public/js');
 
+	mix.browserify('components.jsx');
+
 
 // do a version control of the javascript and css files
 

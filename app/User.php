@@ -79,7 +79,7 @@ class User extends Authenticatable implements SluggableInterface
      */
     
     public function games(){
-        return $this->hasMany('Blooddivision\Game', 'user_id');
+        return $this->hasMany('Blooddivision\Game');
     }
 
     public function url() {
