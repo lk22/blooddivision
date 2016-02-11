@@ -34,7 +34,10 @@ class EventController extends Controller
     	* get all the scheduled events from all the users
         * @return \Illuminate\Database\QueryBuilder::class
     	*/
-        $events = DB::table('events')->leftJoin('users', 'users.id', '=', 'events.user_id')->where('users.id', 'events.user_id')->select('*')->get();
+    
+        // $events = DB::table('events')->leftJoin('users', 'users.id', '=', 'events.user_id')->where('users.id', 'events.user_id')->select('*')->get();
+        
+        $events = Event::with('users')->where('events.user_id', 'users.id')->get();
 
     	/**
     	* return events view with the all the events
