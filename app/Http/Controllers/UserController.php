@@ -33,9 +33,11 @@ class UserController extends Controller
     	// step 2 => get the events belongs to the user
 
        // $events = $user->events; // ==== $user->events()->get();
-       $events = Event::with('users')->where('events.user_id', $auth->id)->get();
+       $events = Event::with('users')->where('events.user_id', $auth->id)->latest()->take(1);
+
+       $games = Game::latest()->take(1);
         // $events = Event::all()->take(10)->get(); // get  
-        // 
+        
     	// step 3 => get the profile view
     	return view('pages.profile_home', compact('user', 'events'));
         return vide('layouts.profile', compact('user'));

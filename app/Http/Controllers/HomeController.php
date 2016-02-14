@@ -31,9 +31,9 @@ class HomeController extends Controller
         
         $latest_users = User::latest()->limit(3)->get();
         $feed = Message::all();
-        
+        $events = Event::all();
 
-        return view('home', compact('latest_users', 'feed'));
+        return view('home', compact('latest_users', 'feed', 'events'));
     }
 
     /**
@@ -41,7 +41,6 @@ class HomeController extends Controller
     *
     *   @return Illuminate\Http\Request;
     */
-
     public function storeMessageOfTheDay(Request $request){
         Message::create(['message' => $request->get('message'),  'user_id' => Auth::user()->id]);
         return redirect('/home');

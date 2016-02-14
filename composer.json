@@ -28,7 +28,7 @@
             "database"
         ],
         "files": [
-            "app/helpers.php"
+            "app/helper.php"
         ],
         "psr-4": {
             "Blooddivision\\": "app/"

@@ -29,7 +29,7 @@ function addNewGame(url, type){
 		url: 'login',
 		type: 'post',
 		data: $('.add-game-form').serialize(),
-		failed: funtion(data){
+		failed: function(data){
 			console.log("could not add following game: " + data);
 		}
 	});

@@ -19,13 +19,6 @@ Route::get('/', function(){
     return view('welcome');
 });
 
-Route::get('test',function(){
-
-    $user = User::where('id', 1)->with('games')->get();
-    return $user;
-});
-
-
 
 /*
 |--------------------------------------------------------------------------
@@ -53,12 +46,23 @@ Route::group(['middleware' => 'web'], function () {
 
     // home route
     Route::get('/home', 'HomeController@index');
-    
-    // events route
-    Route::get('/events', 'EventController@events');
-    
-    // event route
-    Route::get('/event/{id}', 'EventController@event');
+
+    // route group for events
+    Route::group(['prefix' => '/events'], function(){
+        // all events
+        Route::get('/', 'EventController@events');
+
+        // latest events
+        Route::get('/latest', 'EventController@latest');
+
+        // completed events
+        Route::get('/completed', 'EventController@completed');
+
+        // event route
+        Route::get('/event/{id}', 'EventController@event');
+
+    });
+
     
     // forum route
     Route::get('/forum', 'ForumController@index');
@@ -67,17 +71,6 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/profile/{slug}', 'UserController@profile');
     
 });
-
-/**
-* events 
-*/
-
-    Route::group(['prefix' => '/events', 'middleware' => 'web'], function(){
-
-        // all events
-        Route::get('/filter/{all}', 'EventController@allEvents');
-
-    });
 
 /**
 * set a route group for the profile navigations

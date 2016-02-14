@@ -10,7 +10,7 @@
 					</div>
 					<div class="right-databox col-xs-10 col-sm-10 col-md-9 col-lg-9">
 						<div class="databox-count">
-							0 events added
+							
 						</div>
 						<div class="databox-text">
 							<a href="/profile/{{auth()->user()->name}}/your-events">See all events</a>
@@ -27,7 +27,7 @@
 					</div>
 					<div class="right-databox col-xs-10 col-sm-10 col-md-9 col-lg-9">
 						<div class="databox-count">
-							2 games added
+							
 						</div>
 						<div class="databox-text">
 							<a href="/profile/{{auth()->user()->name}}/your-games">See all games</a>

@@ -7,12 +7,21 @@
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 left-sidebar animated bounceInLeft">
         <!-- message of the day partial -->
         {{-- @include('partials.message_of_the_day') --}}
-    
+    <div class="row">
+        <h4>Latest events</h4>
+    </div>
         <div class="row latest-event-row">
-            <h4>Latest event</h4>
+            <!-- <h4>Latest event</h4>
             <span>Raid Second Boss - Destiny Xbox one</span>
             <p>Date: 2016-16-01</p>
-            <p>Time: 20:00</p>
+            <p>Time: 20:00</p> -->
+            @foreach($events as $event)
+                <div class="row event">
+                    <div><strong>E</strong>vent name: <p>{{$event->event_name}}</p></div>
+                    <div><strong>E</strong>vent game: <p>{{$event->event_game}}</p></div>
+                    <div><strong>E</strong>vent description: <p>{{$event->event_description}}</p></div>
+                </div>
+            @endforeach
         </div>
     <p><a href="{{ url('/events') }}">See all events.</a></p>
 

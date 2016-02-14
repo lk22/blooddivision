@@ -44,10 +44,12 @@
 						</div>
 						<div class="timeline-panel">
 							<div class="timeline-heading">
-								{{$event->event_name}} - created by {{$event->name}} at {{$event->created_at}}
+								{{$event->event_name}} - created at {{$event->created_at}}
 							</div>
 							<div class="timeline-body">
-								this is some info
+								<div class="event-info">
+									<p>{{$event->event_description}}</p>
+								</div>
 							</div>
 						</div>
 					</li>

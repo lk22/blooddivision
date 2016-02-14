@@ -686,9 +686,19 @@
     padding: 40px;
     /**
 					*	rows
+					*/
+    /*
+					*	all events
 					*/ }
     .container-fluid.content-wrapper .left-sidebar .row {
       border-bottom: 1px solid #000; }
+    .container-fluid.content-wrapper .left-sidebar .latest-event-row {
+      padding: 10px;
+      /*
+							* event
+							*/ }
+      .container-fluid.content-wrapper .left-sidebar .latest-event-row .event {
+        padding: 10px; }
   .container-fluid.content-wrapper .right-sidebar {
     min-height: auto;
     padding: 40px;

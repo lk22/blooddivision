@@ -20122,7 +20122,7 @@ function addNewGame(url, type){
 		url: 'login',
 		type: 'post',
 		data: $('.add-game-form').serialize(),
-		failed: funtion(data){
+		failed: function(data){
 			console.log("could not add following game: " + data);
 		}
 	});
@@ -20446,17 +20446,17 @@ Auth = {
 			// });
 			
 			$.ajax({
-					url: '/login',
-					type: 'post',
-					data: $('.Auth-wrapper').serializeArray(),
-					success: function (data) {
-						this.sweetAlert.success(
-							'Validation complete!',
-							'You are fully authorized you will be redirected.',
-							false
-						);
-					}
-				});
+				url: '/login',
+				type: 'post',
+				data: $('.Auth-wrapper').serializeArray(),
+				success: function (data) {
+					this.sweetAlert.success(
+						'Validation complete!',
+						'You are fully authorized you will be redirected.',
+						false
+					);
+				}
+			});
 		}
 
 };

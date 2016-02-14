@@ -8,7 +8,7 @@
 		<!-- member row -->
 		<div class="row members-row">
 			@foreach($all_members as $member)
-				<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 member-wrapper animated flipInX">
+				<a href="{{ url('/members/{member}') }}"><div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 member-wrapper animated flipInX">
 					<div class="row member-picture-wrapper">
 						@if(!$member->avatar)
 							<img class="img img-circle img-responsive center-block" src="/images/mystery-man.jpg" alt="">
@@ -22,7 +22,7 @@
 							<p class="text-center">{{$member->email}}</p>
 						</div>
 					</div>
-				</div>
+				</div></a>
 			@endforeach
 		</div>
 	</div>

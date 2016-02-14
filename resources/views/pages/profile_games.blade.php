@@ -4,7 +4,7 @@
 <h3 class="text-center">Your games</h3>
 	@if(count($games) >= 1)
 		@foreach($games as $game)
-			<div class="col-xs-12 col-sm-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1 profile-game-container animated bounceInUp">
+			<div class="col-xs-12 col-sm-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1 profile-game-container animated bounceInUp"> 
 				<div class="game-cover">
 				@if(!$game->game_cover)
 					<div class="add-game-cover">

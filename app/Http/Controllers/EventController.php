@@ -37,12 +37,28 @@ class EventController extends Controller
     
         // $events = DB::table('events')->leftJoin('users', 'users.id', '=', 'events.user_id')->where('users.id', 'events.user_id')->select('*')->get();
         
-        $events = Event::with('users')->where('events.user_id', 'users.id')->get();
+        $events = Event::all();
 
     	/**
     	* return events view with the all the events
     	*/
     	return view('pages.events')->with('events', $events);
+    }
+
+    /**
+     * show latest events
+     * @return [type] [description]
+     */
+    public function latest(){
+
+    }
+
+    /**
+     * show all completed events
+     * @return [type] [description]
+     */
+    public function completed(){
+
     }
 
     /**
