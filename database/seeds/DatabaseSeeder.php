@@ -38,6 +38,8 @@ class DatabaseSeeder extends Seeder
 
             $this->call(EventTableSeeder::class);
 
+            $this->call(RoleTableSeeder::class);
+
 
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
