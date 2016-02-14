@@ -32,12 +32,10 @@ $factory->define(Blooddivision\User::class, function(faker\Generator $faker) {
 /**
 * define a new factory for the event seeding
 */
-
-
 $factory->define(Blooddivision\Event::class, function(faker\Generator $faker){
 	return [
-		'event_name' => $faker->name,
-		'event_game' => $faker->randomElements([
+		'event_name' => $faker->paragraph,
+		'event_game' => $faker->randomElement([
 			'Destiny',
 			'Halo 5',
 			'Grand Theft Auto V',
@@ -46,15 +44,45 @@ $factory->define(Blooddivision\Event::class, function(faker\Generator $faker){
 			'Star Wars Battlefront',
 		]),
 		'event_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi voluptates, totam ducimus quas quam molestiae dolorum numquam deleniti, similique eaque, est molestias! Officiis molestias, amet voluptatibus asperiores iste, dignissimos rem.',
-		'event_datetime' => \Carbon\Carbon::now(), 
+		'event_datetime' => $faker->date('Y-m-d', \Carbon\Carbon::now()), 
 		'user_id' => rand(0, 20),
 	];
 });
 
+/**
+ * define seeder factory for games
+ */
 $factory->define(Blooddivision\Game::class, function(faker\Generator $faker){
 	return [
-		'game' => 'Halo 5',
-		'game_cover' => '/images/covers/halo5cover.jpg',
+		'game' => $faker->randomElement([
+			'Star Wars Battlefront',
+			'World Of Warcraft',
+			'Grand Theft Auto V',
+			'Halo 5 Guardians',
+			'Star Wars The Old Republic',
+			'Destiny'
+		]),
+		'game_cover' => $faker->randomElement([
+			'/images/covers/battleforont.jpeg',
+			'/images/covers/Destiny.jpg',
+			'/images/covers/gta5.jpg',
+			'/images/covers/halo5cover.jpg',
+			'/images/covers/swtor_logo.png',
+			'/images/covers/wowlogo.png'
+		]),
 		'user_id' => rand(0, 20)
+	];
+});
+
+/**
+ * definer factory for roles seeding
+ */
+$factory->define(Blooddivision\Role::class, function(faker\Generator $faker){
+	return [
+		'role' => $faker->randomElement([
+			'user',
+			'admin',
+			'superAdmin'
+		])
 	];
 });

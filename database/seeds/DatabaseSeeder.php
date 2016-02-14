@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
             
             $this->call(GameTableSeeder::class);
 
-            // $this->call(EventTableSeeder::class);
+            $this->call(EventTableSeeder::class);
 
 
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');

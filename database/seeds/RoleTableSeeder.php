@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 use Illuminate\Database\Seeder;
 
@@ -11,6 +11,6 @@ class GameTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Blooddivision\Game::class, 100)->create();
+        factory(Blooddivision\Role::class, 3)->create();
     }
 }

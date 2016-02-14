@@ -59,6 +59,17 @@ class CreateUsersTable extends Migration
             * the created_at, updated_at timestamp fields
             */
             $table->timestamps();
+
+            /**
+             * set integer field for usage of a foreignkey => roles
+             */
+            // $table->integer('role_id')->unsigned();
+
+            /**
+             * set foreign key for the roles id 
+             */
+            // $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade')->nullable;
+
         });
     }
 

@@ -114,7 +114,7 @@ class UserController extends Controller
     	/**
     	* step 2 => redirect the user to the your events route
     	*/
-    	return redirect('/profile/{{Auth::user()->name}}/your-events');
+    	return redirect('/profile/' . Auth::user()->name . ' /your-events');
     }
 
     /**
@@ -149,7 +149,7 @@ class UserController extends Controller
     
         $games = Game::with('user')->where('games.user_id', $auth->id)->get();
 
-                 // dd($games);
+        // dd($games);
 
         return view('pages.profile_games', compact('user', 'games'));
     }

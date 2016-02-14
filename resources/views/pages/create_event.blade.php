@@ -21,7 +21,7 @@
 					<div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
                     	<select class="form-control event-game-input" name="event_game" id="games">
 	                    	@foreach($games as $game)
-	                    		<option value="{{$game->id}}">
+	                    		<option value="{{$game->game}}">
 	                    			{{$game->game}}
 	                    		</option>
 	                    	@endforeach

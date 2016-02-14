@@ -82,6 +82,10 @@ class User extends Authenticatable implements SluggableInterface
         return $this->hasMany('Blooddivision\Game');
     }
 
+    public function roles(){
+        return $this->belongsToMany('Blooddivision\Role');
+    }
+
     public function url() {
         return route('user.profile', $this->slug);
     }
