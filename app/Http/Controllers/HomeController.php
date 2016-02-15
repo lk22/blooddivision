@@ -31,7 +31,7 @@ class HomeController extends Controller
         
         $latest_users = User::latest()->limit(3)->get();
         $feed = Message::all();
-        $events = Event::all();
+        $events = Event::latest()->take(3)->get();
 
         return view('home', compact('latest_users', 'feed', 'events'));
     }

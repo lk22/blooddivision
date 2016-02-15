@@ -23,7 +23,8 @@ var paths = {
 	'react'	 : node  + 'react/',
 	'lightbox' : bower + 'lightbox2/',
 	'faa': bower + 'font-awesome-animation/dist/',
-	'sa': bower + 'sweetalert/dist/'
+	'sa': bower + 'sweetalert/dist/',
+	'alertify': bower + 'alertify.js/lib/'
 };
 
 elixir(function(mix) {
@@ -89,6 +90,15 @@ elixir(function(mix) {
 		);
 
 	/**
+	 * alertify.js
+	 */
+	
+		mix.copy(
+			paths.alertify + 'alertify.min.js',
+			'public/js/vendor/alertify.min.js'
+		);
+
+	/**
 	 * mix stylesheets
 	 */
 	
@@ -107,6 +117,7 @@ elixir(function(mix) {
 	mix.scripts([
 		'public/js/vendor/sweetalert-dev.js',
 		'public/js/vendor/react.js',
+		'public/js/vendor/alertify.min.js',
 		'global.js',
 		'public/js/pages/home.js',
 		// 'public/js/pages/events.js',
