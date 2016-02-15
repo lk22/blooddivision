@@ -13,10 +13,14 @@
 |
 */
 
-Route::get('/', 'PageController@launchSoon');
+Route::get('/commingsoon', 'PageController@launchSoon');
 
 if(\Blooddivision\User::count() > 0){
     Route::get('/members', 'PageController@getMembersPage');
+}
+
+if(\Request::get('/')){
+	return redirect('/commingsoon');
 }
 
 
