@@ -24,7 +24,9 @@ var paths = {
 	'lightbox' : bower + 'lightbox2/',
 	'faa': bower + 'font-awesome-animation/dist/',
 	'sa': bower + 'sweetalert/dist/',
-	'alertify': bower + 'alertify.js/lib/'
+	'alertify': bower + 'alertify.js/lib/',
+	'angular': bower + 'angular',
+	'vue': bower + 'vue/dist/'
 };
 
 elixir(function(mix) {
@@ -98,6 +100,39 @@ elixir(function(mix) {
 			'public/js/vendor/alertify.min.js'
 		);
 
+		mix.copy(
+			bower + 'alertify.js/themes/alertify.bootstrap.css',
+			'public/css/vendor/alertify.bootstrap.css'
+		);
+
+		mix.copy(
+			bower + 'alertify.js/themes/alertify.core.css',
+			'public/css/vendor/alertify.core.css'
+		);
+
+		mix.copy(
+			bower + 'alertify.js/themes/alertify.default.css',
+			'public/css/vendor/alertify.default.css'
+		);
+
+	/**
+	 * angular js
+	 */
+	
+		mix.copy(
+			paths.angular + 'angular.min.js',
+			'public/js/vendor/angular.min.js'
+		);
+
+	/**
+	 * vue js
+	 */
+	
+		mix.copy(
+			paths.vue + 'vue.min.js',
+			'public/js/vendor/vue.min.js'
+		);
+
 	/**
 	 * mix stylesheets
 	 */
@@ -107,7 +142,10 @@ elixir(function(mix) {
 			'app.css',
 			'vendor/font-awesome-animation.min.css',
 			'vendor/animate.css',
-			'vendor/sweetalert.css'
+			'vendor/sweetalert.css',
+			'vendor/alertify.boostrap.css',
+			'vendor/alertify.core.css',
+			'vendor/alertify.default.css'
 		], 'public/css/all.css', 'public/css');
 	
 /**
@@ -118,6 +156,8 @@ elixir(function(mix) {
 		'public/js/vendor/sweetalert-dev.js',
 		'public/js/vendor/react.js',
 		'public/js/vendor/alertify.min.js',
+		'public/js/vendor/angular.min.js',
+		'public/js/vendor/vue.min.js',
 		'global.js',
 		'public/js/pages/home.js',
 		// 'public/js/pages/events.js',

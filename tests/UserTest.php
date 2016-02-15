@@ -14,4 +14,8 @@ class UserTest extends TestCase
 	public static function setUpBeforeClass(){
 		// logic here...
 	}
+
+	public function check_if_user_model_class_exists(){
+		
+	}
 }

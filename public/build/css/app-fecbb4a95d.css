@@ -537,15 +537,21 @@
 .container-fluid.content-wrapper {
   min-height: 500px;
   width: 100%;
+  background: #bdc3c7;
+  padding-top: 50px;
   /**
 			*	left sidebar
 			*/
   /**
 			*	right sidebar
 			*/ }
+  .container-fluid.content-wrapper a {
+    color: #FFF; }
   .container-fluid.content-wrapper .left-sidebar {
-    min-height: auto;
+    min-height: 900px;
     padding: 40px;
+    background: #2c3e50;
+    color: #fff;
     /**
 					*	rows
 					*/
@@ -553,25 +559,37 @@
 					*	all events
 					*/ }
     .container-fluid.content-wrapper .left-sidebar .row {
-      border-bottom: 1px solid #000; }
+      border-bottom: 1px solid #8e44ad; }
     .container-fluid.content-wrapper .left-sidebar .latest-event-row {
       padding: 10px;
+      border: none;
       /*
 							* event
 							*/ }
       .container-fluid.content-wrapper .left-sidebar .latest-event-row .event {
         padding: 10px; }
   .container-fluid.content-wrapper .right-sidebar {
-    min-height: auto;
+    min-height: 900px;
     padding: 40px;
+    background: #2c3e50;
     /**
 					*	rows
 					*/ }
-    .container-fluid.content-wrapper .right-sidebar .latest-registered-users-row .user-row {
-      margin-top: 10px;
-      border-bottom: 1px solid #000; }
-      .container-fluid.content-wrapper .right-sidebar .latest-registered-users-row .user-row:after {
-        margin: 15px 0px 15px 0px; }
+    .container-fluid.content-wrapper .right-sidebar .latest-registered-users-row {
+      color: #fff;
+      padding: 20px; }
+      .container-fluid.content-wrapper .right-sidebar .latest-registered-users-row .user-row {
+        margin-top: 10px;
+        border-bottom: 1px solid #000;
+        border: none; }
+        .container-fluid.content-wrapper .right-sidebar .latest-registered-users-row .user-row:after {
+          margin: 15px 0px 15px 0px; }
+        .container-fluid.content-wrapper .right-sidebar .latest-registered-users-row .user-row img {
+          border: 2px solid #8e44ad;
+          border-radius: 50px 50px 50px 50px; }
+          .container-fluid.content-wrapper .right-sidebar .latest-registered-users-row .user-row img:hover {
+            border-color: #2ecc71;
+            transition: ease-in-out 0.2s all; }
 
 /**
 	*	Login Page
@@ -655,6 +673,7 @@
   padding: 40px 40px 0px 40px;
   background: #eee;
   border-bottom: 1px solid #000;
+  padding-top: 100px;
   /**
  			* inner profile wrapper
  			*/ }
@@ -1057,7 +1076,7 @@
 .container-fluid.members-content-wrapper {
   min-height: auto;
   width: 100%;
-  padding: 25px;
+  padding: 75px 25px 25px 25px;
   /**
 			*	members-row
 			*/ }
