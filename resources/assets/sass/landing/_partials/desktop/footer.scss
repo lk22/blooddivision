@@ -6,120 +6,20 @@
 	*	Wrapper
 	*/
 
-		.container-fluid.bloodDivisionFooterWrapper{
+		.container-fluid.blooddivision-footer-wrapper{
 			min-height:100px;
 			width: 100%;
 			background: #ddd;
 			color: #000;
 			border-top:1px solid #000;
 			font-family: 'Exo 2', sans-serif;
-			/**
-			*	Blood Division Address column
-			*/
-
-				.bloodDivisionAddressInfo{
-					padding-top: 20px;
-					
-					/**
-					*	Address Field
-					*/
-
-						address{
-							
-							/**
-							*	company icon
-							*/
-
-								.company_icon{
-									font-size: 20px; 
-								}
-
-							/**
-							*	Email icon
-							*/
-
-								.email_icon{
-									@extend .company_icon;
-								}
-
-							/**
-							*	Email Link
-							*/
-
-								a{
-									color: #000; 
-									text-decoration: underline;
-								}
-
-						}
-
-				}
-
-			/**
-			*	Blood Division Footer Link Container
-			*/
-
-				.bloodDivisionFooterLinkContainer{
-					@extend .bloodDivisionAddressInfo;
-					
-					/**
-					*	List Group
-					*/
-
-						.list-group{
-							margin-top:-15px;
-							
-							/**
-							*	List items
-							*/
-
-								li{
-									list-style-type: none;
-									padding-top: 5px;
-									
-									/**
-									*	links
-									*/
-
-										a{
-											font-size: 15px;
-											color: #000; 
-										}
-								}
-						}
-				}
-
-			/**
-			*	Blood Division footer qoute container
-			*/
-
-				.bloodDivisionQuoteContainer{
-					margin-top:25px;
-					
-					/**
-					*	Quotation line
-					*/
-
-						.quote{
-							font-size: 18px;
-							text-decoration:underline;
-						}
-
-					/**
-					*	joining qoutation line
-					*/
-
-						.joinQoute{
-							font-size: 14px;
-							
-							/**
-							*	join qoutation link
-							*/
-
-								.joinQuoteSignUp{
-									color: #000;
-									text-decoration:underline; 
-								}
-						}
+		
+			/*
+			* inner wrapper
+			*/	
+		
+				.inner-footer-wrapper{
+					width:75%;
+				
 				}
 		}

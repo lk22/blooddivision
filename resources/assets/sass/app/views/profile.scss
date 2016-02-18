@@ -224,60 +224,68 @@
  					
  						.profile-data-wrapper{
  							margin:15px 0px 15px 0px;
- 							
- 							/**
- 							 * databox
- 							 */
- 							
- 								.profile-databox{
- 									width: 100%;
- 									height: 65px;
- 									margin-bottom:30px;
- 									margin-top:15px;
- 									border:1px solid #000;
- 									
- 									/**
- 									 * inner databox
- 									 */
- 									
- 										.inner-databox{
- 											
- 											/**
- 											 * left databox
- 											 */
- 											
- 												.left-databox{
- 													height: 63px;
- 													background: #2B4E72;
- 													padding:17px; 
- 													color: #fff; 
- 													width: 25%; 
- 													
- 													/**
- 													 * icon
- 													 */
- 													
- 														.fa{
- 															font-size: 25px; 
- 														}
- 												}
+ 								
+							.user-data{
+								width:100%;
+								
 
- 											/**
- 											 * right databox
- 											 */
- 											
- 												.right-databox{
- 													
- 													/**
- 													 * databox text
- 													 */
- 													
- 														.databox-text{
- 															margin-top:13px;
- 														}
- 												}
- 										}
- 								}
+								.event-data{
+									height: auto;
+									color: #FFF; 
+									
+									.inner-data{
+										background: #FB0047;
+										height: auto; 
+										padding: 34px;
+										color: #fff;
+										
+										.headline{
+											color: #FFF; 
+										}
+
+										.icon-container{
+											color: #FFF; 
+										}
+
+										.buttons{
+											
+											.events{
+												color: #FFF; 
+												
+												.btn-wrapper{
+													padding:20px;
+													border:1px solid #fff;
+												}
+											} 
+										}
+									}
+								}
+
+								.game-data{
+									height: auto;
+									
+									.inner-data{
+										background: #524763;
+										height: auto;
+										padding: 34px; 
+										color: #fff;
+										
+										.headline{
+											color: #FFF; 
+										}
+
+										.icon-container{
+											color: #FFF; 
+										}
+
+										.buttons{
+											.games{
+												color: #FFF; 
+											}
+										}
+									}
+								}
+							}
  						}
  					
 					/**

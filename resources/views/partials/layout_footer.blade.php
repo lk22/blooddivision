@@ -1,30 +1,41 @@
 @if(url('/'))
-    <div class="container-fluid blooddivision-footer-wrapper">
+    <div id="footer" class="container-fluid blooddivision-footer-wrapper">
         <div class="container inner-footer-wrapper">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 inner-wrapper">
-                <div class="col-xs- col-sm- col-md-3 col-md-offset-2 col-lg-3 col-lg-offset-2">
-                    <address class="company-information-wrapper">
-                        <strong>Blood Division</strong><br>
-                        <a href="mailto:#">info@blooddivision.com</a>
-                        <p>&reg; All rights reserved</p>
-                    </address>
-                </div>
-                <div class="col-xs- col-sm- col-md-5 col-md-offset-1 col-lg-5 col-lg-offset-1">
-                    <div class="footer-link-wrapper">
-                    @if(Auth::guest())
-                        <span class="link"><a href="{{ url('/login') }}">Login <i class="fa fa-user"></i></a></span>
-                        <span class="link"><a href="{{ url('/register') }}">Register <i class="fa fa-user-plus"></i></a></span>
-                        <span class="link"><a href="{{ url('/terms') }}">Terms and conditions <i class="fa fa-certificate"></i></a>
-                        </span>
-                        <span class="link"><a href="{{ url('/help') }}">Help <i class="fa fa-question-circle"></i></a></span>
-                    @else
-                        <span class="link"><a href="{{ url('/terms') }}">Terms and conditions <i class="fa fa-certificate"></i></a>
-                        </span>
-                        <span class="link"><a href="{{ url('/help') }}">Help center <i class="fa fa-question-circle"></i></a></span>
-                    @endif
-                    </div>
-                </div>
-            </div>
+           <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-2 col-md-offset-2 col-lg-2 col-lg-offset-2">
+                   <h4>Pages</h4>
+                   <ul>
+                       <li><a href="{{url('/terms')}}">Terms & Conditions</a></li>
+                       <li><a href="{{url('/members')}}">Members</a></li>
+                       <li><a href="{{url('/features')}}">Features</a></li>
+                   </ul>
+               </div>
+                <div class="col-xs-12 col-sm-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
+                   <h4>Information</h4>
+                   <ul>
+                       <li><a href="{{url('/helpcenter')}}">Help & FAQ</a></li>
+                       <li><a href="{{url('/blog')}}">Blog & News</a></li>
+                       <li><a href="{{url('/contact')}}">Contact</a></li>
+                       <li><a href="https://www.facebook.com/groups/1545118995710570/">Facebook</a></li>
+                       <li><a href="https://www.halowaypoint.com/en-us/spartan-companies/blood%20division">Halo Waypoint</a></li>
+                   </ul>
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
+                   <h4>Recruits</h4>
+                   <ul>
+                       <li><a href="{{url('/join')}}">Join Us</a></li>
+                       <li><a href="{{url('/login')}}">Login</a></li>
+                       <li><a href="{{url('/register')}}">Register</a></li>
+                   </ul>
+               </div> 
+           </div>
         </div>
     </div>
+    <!-- <div class="container-fluid address-bar" id="address">
+        <div class="row">
+            <span class="comapny">Blooddivision</span>
+            <span class="email"><a mailto="">info@blooddivision.com</a></span>
+            
+        </div>
+    </div> -->
 @endif

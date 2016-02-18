@@ -55,6 +55,7 @@
 	*	footer wrapper
 	*/
 .blooddivision-footer-wrapper {
+  font-size: .9em;
   height: auto;
   width: 100%;
   background: #000;
@@ -64,35 +65,12 @@
 			*	inner footer wrapper
 			*/ }
   .blooddivision-footer-wrapper .inner-footer-wrapper {
-    /**
-					*	inner wrapper
-					*/
-    /**
-						*	footer link wrapper
-						*/ }
-    .blooddivision-footer-wrapper .inner-footer-wrapper .inner-wrapper {
-      padding-top: 10px;
-      /**
-							*	company information wrapper
-							*/ }
-      .blooddivision-footer-wrapper .inner-footer-wrapper .inner-wrapper .company-information-wrapper {
-        /**
-									*	mailto link
-									*/ }
-        .blooddivision-footer-wrapper .inner-footer-wrapper .inner-wrapper .company-information-wrapper a {
-          color: #FFF; }
-    .blooddivision-footer-wrapper .inner-footer-wrapper .footer-link-wrapper {
-      padding-top: 40px;
-      /**
-								*	link 
-								*/ }
-      .blooddivision-footer-wrapper .inner-footer-wrapper .footer-link-wrapper .link {
-        margin-left: 10px;
-        /**
-										*	anchor
-										*/ }
-        .blooddivision-footer-wrapper .inner-footer-wrapper .footer-link-wrapper .link a {
-          color: #FFF; }
+    width: 100%; }
+    .blooddivision-footer-wrapper .inner-footer-wrapper ul {
+      list-style-type: none;
+      padding: 0px; }
+      .blooddivision-footer-wrapper .inner-footer-wrapper ul li a {
+        color: #FFF; }
 
 /**
 * The Application Header
@@ -250,7 +228,7 @@
       height: 45px;
       border-bottom: 1px solid #000;
       width: 75%;
-      margin-top: 20px;
+      margin-top: 80px;
       /**
 							* events header => desktop
 							*/
@@ -816,43 +794,39 @@
 					 * adding game row
 					 */ }
     .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper {
-      margin: 15px 0px 15px 0px;
-      /**
- 							 * databox
- 							 */ }
-      .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .profile-databox {
-        width: 100%;
-        height: 65px;
-        margin-bottom: 30px;
-        margin-top: 15px;
-        border: 1px solid #000;
-        /**
- 									 * inner databox
- 									 */ }
-        .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .profile-databox .inner-databox {
-          /**
- 											 * left databox
- 											 */
-          /**
- 											 * right databox
- 											 */ }
-          .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .profile-databox .inner-databox .left-databox {
-            height: 63px;
-            background: #2B4E72;
-            padding: 17px;
-            color: #fff;
-            width: 25%;
-            /**
- 													 * icon
- 													 */ }
-            .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .profile-databox .inner-databox .left-databox .fa {
-              font-size: 25px; }
-          .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .profile-databox .inner-databox .right-databox {
-            /**
- 													 * databox text
- 													 */ }
-            .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .profile-databox .inner-databox .right-databox .databox-text {
-              margin-top: 13px; }
+      margin: 15px 0px 15px 0px; }
+      .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data {
+        width: 100%; }
+        .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .event-data {
+          height: auto;
+          color: #FFF; }
+          .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .event-data .inner-data {
+            background: #FB0047;
+            height: auto;
+            padding: 34px;
+            color: #fff; }
+            .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .event-data .inner-data .headline {
+              color: #FFF; }
+            .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .event-data .inner-data .icon-container {
+              color: #FFF; }
+            .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .event-data .inner-data .buttons .events {
+              color: #FFF; }
+              .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .event-data .inner-data .buttons .events .btn-wrapper {
+                padding: 20px;
+                border: 1px solid #fff; }
+        .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .game-data {
+          height: auto; }
+          .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .game-data .inner-data {
+            background: #524763;
+            height: auto;
+            padding: 34px;
+            color: #fff; }
+            .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .game-data .inner-data .headline {
+              color: #FFF; }
+            .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .game-data .inner-data .icon-container {
+              color: #FFF; }
+            .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .game-data .inner-data .buttons .games {
+              color: #FFF; }
     .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .events-wrapper {
       padding-top: 10px;
       /**

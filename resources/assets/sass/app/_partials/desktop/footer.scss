@@ -7,6 +7,7 @@
 	*/
 
 		.blooddivision-footer-wrapper{
+			font-size:.9em;
 			height:auto;
 			width: 100%;
 			background: #000;
@@ -19,51 +20,17 @@
 
 				.inner-footer-wrapper{
 					
-					/**
-					*	inner wrapper
-					*/
-
-						.inner-wrapper{
-							padding-top: 10px;
-							
-							/**
-							*	company information wrapper
-							*/
-
-								.company-information-wrapper{
-									
-									/**
-									*	mailto link
-									*/ 
-
-										a{
-											color: #FFF; 
-										}
-								}
-						}
-
-						/**
-						*	footer link wrapper
-						*/
-
-							.footer-link-wrapper{
-								padding-top:40px;
-								
-								/**
-								*	link 
-								*/
-
-									.link{
-										margin-left:10px;
-										
-										/**
-										*	anchor
-										*/
-
-											a{
-												color: #FFF; 
-											}
-									}
+					width:100%;
+					
+					ul{
+						list-style-type:none;
+						padding:0px; 
+						
+						li{
+							a{
+								color: #FFF; 
 							}
+						}
+					}
 				}
 		}
