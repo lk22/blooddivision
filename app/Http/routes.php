@@ -14,6 +14,7 @@
 */
 use Blooddivision\User;
 use Blooddivision\Game;
+use Blooddivision\Event;
 
 Route::get('/', function(){
     return view('welcome');
@@ -37,6 +38,11 @@ Route::group(['middleware' => ['web']], function () {
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
+
+    Route::get('/test', function () {
+
+        return 'hi there';
+    });
 
     Route::get('/', function () {
         return view('welcome');
@@ -62,6 +68,12 @@ Route::group(['middleware' => 'web'], function () {
         Route::get('/event/{id}', 'EventController@event');
 
     });
+
+    Route::get('about', function(){
+    	return view('pages.about');
+    });
+
+    Route::get('contact-us', 'ContactController@index');
 
     
     // forum route

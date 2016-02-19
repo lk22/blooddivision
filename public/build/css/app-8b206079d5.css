@@ -202,6 +202,39 @@
 /**
 *	Views
 */
+/*
+	* about
+	*/
+/*
+* about page
+*/
+/*
+	* wrapper
+	*/
+.container.about-wrapper {
+  font-family: 'Lato';
+  padding-top: 60px;
+  /*
+			* the author
+			*/
+  /*
+			* author social medias
+			*/ }
+  .container.about-wrapper .author {
+    padding: 10px; }
+  .container.about-wrapper .socials {
+    text-align: center;
+    padding-bottom: 30px; }
+    .container.about-wrapper .socials a {
+      color: #000;
+      font-size: 35px;
+      padding: 0px 20px 0px 20px; }
+      .container.about-wrapper .socials a:hover {
+        color: #C0392B;
+        transition: ease-in-out 0.2s all; }
+      .container.about-wrapper .socials a:not(:hover) {
+        transition: ease-in-out 0.2s all; }
+
 /**
 	* events
 	*/
@@ -1060,8 +1093,17 @@
 					*/ }
     .container-fluid.members-content-wrapper .members-row .member-wrapper {
       padding: 20px;
-      background: #eee;
-      border: 5px solid #fff; }
+      background: #2c3e50;
+      border: 5px solid #fff;
+      color: #FFF; }
+      .container-fluid.members-content-wrapper .members-row .member-wrapper:hover {
+        background: #ddd;
+        color: #000;
+        transition: ease-in-out 0.2s all; }
+      .container-fluid.members-content-wrapper .members-row .member-wrapper:not(:hover) {
+        transition: ease-in-out 0.2s all; }
+      .container-fluid.members-content-wrapper .members-row .member-wrapper .member-picture-wrapper .img {
+        border: 1px solid; }
 
 /**
 *	landing page stylesheet

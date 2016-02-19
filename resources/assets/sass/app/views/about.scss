@@ -1,0 +1,42 @@
+/*
+* about page
+*/
+
+	/*
+	* wrapper
+	*/
+
+		.container.about-wrapper{
+			font-family: 'Lato';
+			padding-top:60px;
+			/*
+			* the author
+			*/
+		
+				.author{
+					padding:10px;
+				}
+
+			/*
+			* author social medias
+			*/
+		
+				.socials{
+					text-align:center;
+					padding-bottom:30px;				
+					a{
+						color: #000;
+						font-size:35px; 
+						padding:0px 20px 0px 20px;
+						
+						&:hover{
+							color: #C0392B; 
+							transition: ease-in-out 0.2s all;
+						}
+
+						&:not(:hover){
+							transition: ease-in-out 0.2s all;
+						}
+					}
+				}
+		}

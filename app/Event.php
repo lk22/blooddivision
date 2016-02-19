@@ -60,7 +60,7 @@ class Event extends Model implements SluggableInterface
     */
 
 
-    public function users(){
+    public function user(){
         return $this->belongsTo('Blooddivision\User');
     }
 

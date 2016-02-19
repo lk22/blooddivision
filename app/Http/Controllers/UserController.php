@@ -33,7 +33,7 @@ class UserController extends Controller
     	// step 2 => get the events belongs to the user
 
        // $events = $user->events; // ==== $user->events()->get();
-       $events = Event::with('users')->where('events.user_id', $auth->id)->latest()->take(1);
+       $events = Event::with('user')->where('events.user_id', $auth->id)->latest()->take(1);
 
        $games = Game::latest()->take(1);
         // $events = Event::all()->take(10)->get(); // get  
@@ -56,7 +56,9 @@ class UserController extends Controller
 
     	// $events = User::all()->event()->get();
 
-        $events = Event::with('users')->where('events.user_id', $auth->id)->get();
+        // $events = Event::with('user')->where('events.user_id', $auth->id)->get();
+        
+        $events = $user->events;
 
     	// step 4 => load view
     	return view('pages.profile_events', compact('user', 'events'));
@@ -163,4 +165,8 @@ class UserController extends Controller
     public function storeProfileGame(CreateGameRequest $request){
         Game::create(['game' => $request->get('game_name'), 'user_id' => Auth::user()->id])->save();
     }
+
+    Event::whereHas(['' => function($query){
+        $query->where('user_id', '=', 1);
+    }]);
 }
