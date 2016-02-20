@@ -59,33 +59,13 @@
 					@endforeach
 				</div>
 			@endif
+
+			@if(Session::has('event_success'))
+				<div class="alert alert-success">
+					{{Session::get('event_success')}}
+				</div>
+			@endif
 		</div>
 		@include('partials.help_events_modal')
 	</div>
-
-	<script>
-$(function(){
-var auth = "auth()->user()->name";
-	$('.submit').click(function(){
-		$.ajax({
-			url: '/profile/' + auth + '/create-event',
-			type: 'GET',
-			dataType: 'json'
-			data: $('.create').serialize(),
-		})
-		.done(function() {
-			console.log("success");
-		})
-		.fail(function() {
-			console.log("error");
-		})
-		.always(function() {
-			console.log("complete");
-		});
-		
-	});
-});
-	
-		
-	</script>
 @stop

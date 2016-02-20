@@ -7,7 +7,7 @@ use Symfony\Component\Console\Helper\ProgressBar;
 class DatabaseSeeder extends Seeder
 {
 
-	protected $toTruncate = ['users', 'games', 'events'];
+	protected $toTruncate = ['users', 'games', 'events', 'contact_messages'];
 
     /**
      * Run the database seeds.
@@ -32,13 +32,25 @@ class DatabaseSeeder extends Seeder
         *   Seed the test users from the user seeder class
         */
 
+            /**
+             * seeding users 
+             */
         	$this->call(UserTableSeeder::class);
             
+            /**
+             * seeding games
+             */
             $this->call(GameTableSeeder::class);
 
+            /**
+             * seeding events
+             */
             $this->call(EventTableSeeder::class);
 
-            $this->call(RoleTableSeeder::class);
+            /**
+             * seeding contact messages
+             */
+            $this->call(ContactTableSeeder::class);
 
 
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');

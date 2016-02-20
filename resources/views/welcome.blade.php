@@ -3,6 +3,18 @@
 @section('content')
 <!-- welcome banner wrapper -->
 <div class="container-fluid blooddivision-welcome-wrapper" id="welcome">
+<!-- <video preload="auto" class="welcomeVideo" loop="loop" class="video" autoplay loop muted>
+    <source src="STAR WARS- The Old Republic – Knights of the Fallen Empire – “Sacrifice” Trailer.avi" type="video/avi">
+    <source src="STAR WARS- The Old Republic – Knights of the Fallen Empire – “Sacrifice” Trailer.mp4" type="video/mp4">
+    <source src="STAR WARS- The Old Republic – Knights of the Fallen Empire – “Sacrifice” Trailer.webm" type="video/webm">
+</video> -->
+<video autoplay loop muted poster="/images/swtor1.jpg" id="video-bg">
+ 
+    <source src="/video/official trailer2.avi" type="video/avi">
+    <source src="/video/official trailer2.mp4" type="video/mp4">
+    <source src="/video/official trailer2.webm" type="video/webm">
+     
+</video>
     <!-- inner banner wrapper -->
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 banner-wrapper">
         <h1 class="text-center">JOIN THE NEW DIVISION OF BLOOD!</h1>

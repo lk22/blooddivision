@@ -56,9 +56,9 @@ class UserController extends Controller
 
     	// $events = User::all()->event()->get();
 
-        // $events = Event::with('user')->where('events.user_id', $auth->id)->get();
+        $events = Event::with('user')->where('events.user_id', $auth->id)->get();
         
-        $events = $user->events;
+        // $events = $user->events;
 
     	// step 4 => load view
     	return view('pages.profile_events', compact('user', 'events'));
@@ -117,6 +117,8 @@ class UserController extends Controller
     	* step 2 => redirect the user to the your events route
     	*/
     	return redirect('/profile/' . Auth::user()->name . ' /your-events');
+
+        $helper->flash('event_success', 'Your Event is successfully created' . Auth::user()->name .'');
     }
 
     /**
@@ -166,7 +168,7 @@ class UserController extends Controller
         Game::create(['game' => $request->get('game_name'), 'user_id' => Auth::user()->id])->save();
     }
 
-    Event::whereHas(['' => function($query){
-        $query->where('user_id', '=', 1);
-    }]);
+    // Event::whereHas(['' => function($query){
+    //     $query->where('user_id', '=', 1);
+    // }]);
 }

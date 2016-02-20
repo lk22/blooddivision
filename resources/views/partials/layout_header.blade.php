@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-fixed-top blooddivision-header-navbabr">
+<nav class="navbar navbar-inverse blooddivision-header-navbabr">
         <div class="container">
             <div class="navbar-header">
 

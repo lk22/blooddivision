@@ -37,7 +37,7 @@ class EventController extends Controller
     
         // $events = DB::table('events')->leftJoin('users', 'users.id', '=', 'events.user_id')->where('users.id', 'events.user_id')->select('*')->get();
         
-        $events = Event::all();
+        $events = Event::with('users')->where('events.user_id', 'users.id')->get();
 
     	/**
     	* return events view with the all the events

@@ -16,8 +16,8 @@ class CreateHelpArticlesTables extends Migration
             $table->increments('id')->index();
             $table->string('title')->index();
             $table->text('body');
-            $table->timestamps();
             $table->timestamp('published_at')->index();
+            $table->timestamps();
         });
     }
 

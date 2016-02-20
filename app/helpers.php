@@ -64,12 +64,12 @@ class Helper
 	 * @param  [type] $message [description]
 	 * @return [type]          [description]
 	 */
-	public static function flash($message){
+	public static function flash($key, $message){
 
 		/**
 		 * flashing message
 		 */
-		return session()->flash('flash_message', $message);
+		return session()->flash($key, $message);
 	}
 
 	/**
@@ -77,12 +77,12 @@ class Helper
 	 * @param  [type] $message [description]
 	 * @return [type]          [description]
 	 */
-	public function flash($message){
+	public function flash($key, $message){
 
 		/**
 		 * flashing message
 		 */	
-		return session()->flash('flash_message', $message);
+		return session()->flash($key, $message);
 	}
 
 	/**

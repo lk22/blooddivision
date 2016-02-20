@@ -74,6 +74,7 @@ Route::group(['middleware' => 'web'], function () {
     });
 
     Route::get('contact-us', 'ContactController@index');
+    Route::post('contact-us', 'ContactController@create');
 
     
     // forum route

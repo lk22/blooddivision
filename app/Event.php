@@ -64,6 +64,10 @@ class Event extends Model implements SluggableInterface
         return $this->belongsTo('Blooddivision\User');
     }
 
+    public function users(){
+        return $this->belongsToMany('Blooddivision\User');
+    }
+
     /**
     *   format the event date to the current day
     *   @return void

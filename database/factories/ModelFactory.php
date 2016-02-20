@@ -86,3 +86,11 @@ $factory->define(Blooddivision\Role::class, function(faker\Generator $faker){
 		])
 	];
 });
+
+$factory->define(Blooddivision\Contact::class, function(faker\Generator $faker){
+	return [
+		'name' => $faker->name,
+		'email' => $faker->email,
+		'message' => $faker->paragraph
+	];
+});

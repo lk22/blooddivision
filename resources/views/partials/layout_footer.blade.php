@@ -14,8 +14,8 @@
                 <div class="col-xs-12 col-sm-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
                    <h4>Information</h4>
                    <ul>
-                       <li><a href="{{url('/helpcenter')}}">Help & FAQ</a></li>
-                       <li><a href="{{url('/blog')}}">Blog & News</a></li>
+                       <!-- <li><a href="{{url('/helpcenter')}}">Help & FAQ</a> --></li>
+                       <!-- li><a href="{{url('/blog')}}">Blog & News</a></li> -->
                        <li><a href="{{url('/contact-us')}}">Contact</a></li>
                        <li><a href="https://www.facebook.com/groups/1545118995710570/">Facebook</a></li>
                        <li><a href="https://www.halowaypoint.com/en-us/spartan-companies/blood%20division">Halo Waypoint</a></li>

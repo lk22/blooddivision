@@ -1252,13 +1252,9 @@
 .container-fluid.blooddivision-welcome-wrapper {
   width: 100%;
   height: auto;
-  background: url("../images/swb1.jpg") center center;
-  -ms-background-size: cover;
-  background-size: cover;
-  color: #fff;
   margin: 0px;
-  z-index: 1px;
   display: none;
+  z-index: 1px;
   /**
 			*	the banner wrapper
 			*/
@@ -1268,6 +1264,17 @@
   /**
 			*	see more wrapper
 			*/ }
+  .container-fluid.blooddivision-welcome-wrapper #video-bg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: -40px;
+    width: auto;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+    z-index: -100;
+    background: transparent url(/images/swtor1.jpg) no-repeat; }
   .container-fluid.blooddivision-welcome-wrapper .banner-wrapper {
     padding-top: 50px; }
   .container-fluid.blooddivision-welcome-wrapper .platform-wrapper {
@@ -1316,6 +1323,7 @@
   width: 100%;
   height: auto;
   z-index: 2;
+  background: #FFF;
   /**
 			*	the inner wrapper 
 			*/ }
@@ -1419,13 +1427,9 @@
 .container-fluid.blooddivision-welcome-wrapper {
   width: 100%;
   height: auto;
-  background: url("../images/swb1.jpg") center center;
-  -ms-background-size: cover;
-  background-size: cover;
-  color: #fff;
   margin: 0px;
-  z-index: 1px;
   display: none;
+  z-index: 1px;
   /**
 			*	the banner wrapper
 			*/
@@ -1435,6 +1439,17 @@
   /**
 			*	see more wrapper
 			*/ }
+  .container-fluid.blooddivision-welcome-wrapper #video-bg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: -40px;
+    width: auto;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+    z-index: -100;
+    background: transparent url(/images/swtor1.jpg) no-repeat; }
   .container-fluid.blooddivision-welcome-wrapper .banner-wrapper {
     padding-top: 50px; }
   .container-fluid.blooddivision-welcome-wrapper .platform-wrapper {
@@ -1483,6 +1498,7 @@
   width: 100%;
   height: auto;
   z-index: 2;
+  background: #FFF;
   /**
 			*	the inner wrapper 
 			*/ }

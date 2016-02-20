@@ -37,6 +37,10 @@
         .fa-btn {
             margin-right: 6px;
         }
+
+        #app-layout{
+            padding-bottom:0px;
+        }
     </style>
 </head>
 <body id="app-layout">
