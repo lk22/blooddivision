@@ -11,6 +11,7 @@ use Auth;
 use Blooddivision\User;
 use Blooddivision\Event;
 use Blooddivision\Game;
+use Blooddivision\Rank;
 use Carbon\Carbon;
 
 // brug sluggable i stedet for a lede efter User->name. https://github.com/cviebrock/eloquent-sluggable
@@ -35,12 +36,14 @@ class UserController extends Controller
        // $events = $user->events; // ==== $user->events()->get();
        $events = Event::with('user')->where('events.user_id', $auth->id)->latest()->take(1);
 
+       $ranks = Rank::with('user')->where('ranks.user_id', $auth->id)->take(1)->get();
+
        $games = Game::latest()->take(1);
         // $events = Event::all()->take(10)->get(); // get  
         
     	// step 3 => get the profile view
-    	return view('pages.profile_home', compact('user', 'events'));
-        return vide('layouts.profile', compact('user'));
+    	return view('pages.profile_home', compact('user', 'events', 'ranks'));
+        return vide('layouts.profile', compact('user', 'ranks'));
     }
 
     /**
@@ -57,11 +60,13 @@ class UserController extends Controller
     	// $events = User::all()->event()->get();
 
         $events = Event::with('user')->where('events.user_id', $auth->id)->get();
+
+        $ranks = Rank::with('user')->where('ranks.user_id', $auth->id)->take(1)->get();
         
         // $events = $user->events;
 
     	// step 4 => load view
-    	return view('pages.profile_events', compact('user', 'events'));
+    	return view('pages.profile_events', compact('user', 'events', 'ranks'));
     }
 
     /**
@@ -88,6 +93,8 @@ class UserController extends Controller
     	* select all games
     	*/
     	$games = Game::all();
+
+
 
     	/**
     	* return the view
@@ -152,10 +159,11 @@ class UserController extends Controller
          */
     
         $games = Game::with('user')->where('games.user_id', $auth->id)->get();
+        $ranks = Rank::with('user')->where('ranks.user_id', $auth->id)->take(1)->get();
 
         // dd($games);
 
-        return view('pages.profile_games', compact('user', 'games'));
+        return view('pages.profile_games', compact('user', 'games', 'ranks'));
     }
 
     /**

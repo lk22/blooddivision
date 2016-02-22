@@ -32,7 +32,7 @@ class User extends Authenticatable implements SluggableInterface
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'avatar', 'remember_token'
+        'name', 'email', 'password', 'avatar', 'cover', 'remember_token'
     ];
 
     /**
@@ -84,6 +84,10 @@ class User extends Authenticatable implements SluggableInterface
 
     public function roles(){
         return $this->belongsToMany('Blooddivision\Role');
+    }
+
+    public function rank(){
+        return $this->hasOne('Blooddivision\Rank');
     }
 
     public function url() {

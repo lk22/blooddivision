@@ -217,20 +217,20 @@ $(function(){
 
 $(function(){
 
-	Auth.authBtn.click(function(event){
+	// Auth.authBtn.click(function(event){
 
-		event.preventDefault();
+	// 	event.preventDefault();
 
-		if(!Auth.email.val()){
-			alertify.alert(Auth.email.val() + ': is not a valid email address please enter a valid email..');
-		}else {
+	// 	if(!Auth.email.val()){
+	// 		alertify.alert(Auth.email.val() + ': is not a valid email address please enter a valid email..');
+	// 	}else {
 
-			if(!Auth.password.val()){
-				alertify.alert(Auth.password.val() + ': is not correct or the field is empty')
-			}else{
-				$(this).unbind(event);
-			}
-		}
-	});
+	// 		if(!Auth.password.val()){
+	// 			alertify.alert(Auth.password.val() + ': is not correct or the field is empty')
+	// 		}else{
+	// 			$(this).unbind(event);
+	// 		}
+	// 	}
+	// });
 
 });

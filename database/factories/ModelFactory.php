@@ -24,6 +24,13 @@ $factory->define(Blooddivision\User::class, function(faker\Generator $faker) {
 	        '/images/avatars/1039002_0_2039002_3001_24_1.png',
 	        '/images/avatars/avatar-302-0e1742296505457fae4db552f5af41c3.png'
         ]),
+        'cover' => $faker->randomElement([
+        	'/images/halopic2.jpg',
+        	'/images/destiny1.jpg',
+        	'/images/swtor1.jpg',
+        	'/images/halo4screenshot2.jpg'
+        ]),
+        'profile_desc' => $faker->paragraph,
         'password' => bcrypt('secret'),
         'remember_token' => str_random(10),
     ];
@@ -92,5 +99,20 @@ $factory->define(Blooddivision\Contact::class, function(faker\Generator $faker){
 		'name' => $faker->name,
 		'email' => $faker->email,
 		'message' => $faker->paragraph
+	];
+});
+
+$factory->define(Blooddivision\Rank::class, function(faker\Generator $faker){
+	return [
+		'rank' => $faker->randomElement([
+			'Recruit',
+			'Sergeant',
+			'Commander',
+			'Major',
+			'General',
+			'Senior Sergeant',
+			'Over Sergeant'
+		]),
+		'user_id' => rand(0, 20)
 	];
 });

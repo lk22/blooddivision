@@ -11,7 +11,7 @@
 			height: auto;
 			margin: 0px;
 			display:none;
-			z-index:1px;
+			z-index:2px;
 
 			#video-bg{
 				position: absolute;
@@ -101,6 +101,19 @@
 
 		}
 
+	/*
+	* mobile platform wrapper
+	*/
+
+	.container-fluid.mobile-platform-wrapper{
+		height:400px;
+		width: auto;
+		margin-top:179px;
+		background: #2c3e50;
+		color: #fff;
+		margin-bottom:20px;  
+	}
+
 	/**
 	*	about section wrapper
 	*/
@@ -122,15 +135,15 @@
 					*	icon container
 					*/
 
-						.icon-row{
-							padding: 0px 0px 0px 149px;
+						.icon-column{
 							
 							/**
 							*	the icon
 							*/
 
 								.fa{
-									font-size: 6em; 
+									font-size: 6em;
+									text-align:center;
 								}
 
 						}

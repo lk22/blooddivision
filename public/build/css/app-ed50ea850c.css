@@ -683,19 +683,21 @@
   width: 100%;
   padding: 40px 40px 0px 40px;
   background: #eee;
-  border-bottom: 1px solid #000;
   padding-top: 100px;
+  color: #FFF;
   /**
  			* inner profile wrapper
  			*/ }
   .container-fluid.profile-banner-wrapper .inner-profile-wrapper {
     width: 65%;
+    color: #FFF;
     /**
  					* the banner 
  					*/ }
     .container-fluid.profile-banner-wrapper .inner-profile-wrapper .banner {
       height: 100%;
       width: 100%;
+      color: #FFF;
       /**
  							* profile-media
  							*/
@@ -733,6 +735,7 @@
             color: #000;
             padding: 10px 41px 10px 22px;
             margin: -3px 0px 0px 40px;
+            color: #FFF;
             /**
 													* hover class
 													*/
@@ -777,7 +780,7 @@
 															* link
 															*/ }
               .container-fluid.profile-banner-wrapper .inner-profile-wrapper .banner .banner-footer-wrapper .inner-banner-footer-wrapper .profile-listing .profile-link a {
-                color: #000;
+                color: #fff;
                 padding: 5px;
                 font-size: 17px;
                 padding: 14px;
@@ -789,9 +792,9 @@
 																* not hover class
 																*/ }
                 .container-fluid.profile-banner-wrapper .inner-profile-wrapper .banner .banner-footer-wrapper .inner-banner-footer-wrapper .profile-listing .profile-link a:hover {
-                  background: #34495e;
+                  background: #fff;
                   opacity: 0.8;
-                  color: #FFF;
+                  color: #000;
                   transition: ease-in-out 0.2s all; }
 
 /**
@@ -1116,7 +1119,7 @@
   height: auto;
   margin: 0px;
   display: none;
-  z-index: 1px;
+  z-index: 2px;
   /**
 			*	the banner wrapper
 			*/
@@ -1178,6 +1181,17 @@
       .container-fluid.blooddivision-welcome-wrapper .see-more-wrapper .caret-down a {
         color: #FFF; }
 
+/*
+	* mobile platform wrapper
+	*/
+.container-fluid.mobile-platform-wrapper {
+  height: 400px;
+  width: auto;
+  margin-top: 179px;
+  background: #2c3e50;
+  color: #fff;
+  margin-bottom: 20px; }
+
 /**
 	*	about section wrapper
 	*/
@@ -1196,13 +1210,13 @@
     /**
 					*	icon container
 					*/ }
-    .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-row {
-      padding: 0px 0px 0px 149px;
+    .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-column {
       /**
 							*	the icon
 							*/ }
-      .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-row .fa {
-        font-size: 6em; }
+      .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-column .fa {
+        font-size: 6em;
+        text-align: center; }
 
 /**
 	*	signup oppurtinity wrapper
@@ -1291,7 +1305,7 @@
   height: auto;
   margin: 0px;
   display: none;
-  z-index: 1px;
+  z-index: 2px;
   /**
 			*	the banner wrapper
 			*/
@@ -1353,6 +1367,17 @@
       .container-fluid.blooddivision-welcome-wrapper .see-more-wrapper .caret-down a {
         color: #FFF; }
 
+/*
+	* mobile platform wrapper
+	*/
+.container-fluid.mobile-platform-wrapper {
+  height: 400px;
+  width: auto;
+  margin-top: 179px;
+  background: #2c3e50;
+  color: #fff;
+  margin-bottom: 20px; }
+
 /**
 	*	about section wrapper
 	*/
@@ -1371,13 +1396,13 @@
     /**
 					*	icon container
 					*/ }
-    .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-row {
-      padding: 0px 0px 0px 149px;
+    .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-column {
       /**
 							*	the icon
 							*/ }
-      .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-row .fa {
-        font-size: 6em; }
+      .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-column .fa {
+        font-size: 6em;
+        text-align: center; }
 
 /**
 	*	signup oppurtinity wrapper

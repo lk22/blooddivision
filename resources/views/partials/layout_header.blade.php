@@ -40,8 +40,8 @@
                         <li><a href="{{ url('/register') }}">Register <i class="fa fa-user-plus"></i></a></li>
                     @else
                         <li><a href="{{ url('/members') }}">Crew members <i class="fa fa-users"></i></a></li>
-                        <li><a href="{{ url('/events') }}">Events <i class="fa fa-calendar-o"></i></a></li>
-                        <li><a href="{{ url('/forum') }}">Forum <i class="fa fa-comments"></i></a></li>
+                        <!-- <li><a href="{{ url('/events') }}">Events <i class="fa fa-calendar-o"></i></a></li> -->
+                        <!-- <li><a href="{{ url('/forum') }}">Forum <i class="fa fa-comments"></i></a></li> -->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} 

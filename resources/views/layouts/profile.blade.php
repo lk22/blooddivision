@@ -29,12 +29,13 @@
 </head>
 <body id="modal-wrap">
 	@include('partials.layout_header')
+	@foreach($user as $the_user)
 	<!-- the profile wrapper -->
-	<div class="container-fluid profile-banner-wrapper">
+	<div class="container-fluid profile-banner-wrapper" style="background-image: url({{$the_user->cover}});">
 		<!-- inner banner wrapper -->
 		<div class="container inner-profile-wrapper">
 			<!-- the banner -->
-			@foreach($user as $the_user)
+			
 			<div class="row banner">
 				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 profile-media">
 					<!-- check if the user has a profile picture -->
@@ -59,6 +60,11 @@
 					<div class="profile-email">
 						<h4 class="text-center">{{auth()->user()->email}}</h4>
 					</div>
+					<div class="profile-rank">
+					@foreach($ranks as $rank)
+						<h3 class="text-center">Rank: {{$rank->rank}}</h3>
+					@endforeach
+					</div>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 banner-footer-wrapper">
 					<div class="row inner-banner-footer-wrapper">
@@ -72,19 +78,17 @@
 							<span class="profile-link">
 								<a href="/profile/{{auth()->user()->name}}/your-games"><i class="fa fa-gamepad"></i> Your games</a>
 							</span>
-							<span class="profile-link">
+							<!-- <span class="profile-link">
 								<a href="/profile/{{auth()->user()->name}}/your-stats"><i class="fa fa-tasks"></i> Your stats</a>
-							</span>
-							<span class="profile-link">
-								<a href="/profile/{{auth()->user()->name}}/biography"><i class="fa fa-user"></i> About</a>
-							</span>
+							</span> -->
 						</div>
 					</div>
 				</div>
 			</div>
-			@endforeach
+			
 		</div>
 	</div>
+	@endforeach
 	<!-- profile content wrapper -->
 	<div class="container-fluid profile-content-wrapper">
 		<div class="container inner-profile-content-wrapper">

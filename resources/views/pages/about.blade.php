@@ -18,16 +18,15 @@
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 				<div class="row author">
-					<img height="250" width="250" class="img img-circle author-img" src="/images/12661768_10208654426819348_6775365158920848328_n.jpg" alt="">
-					<h3 class="text-center">Leo Knudsen</h3>
-					<p class="text-center">Laravel developer/designer at blooddivision.com</p>
-					<p class="text-center">Laravel/Test Driven developer at Athliit.com</p>
+					<img height="250" width="250" class="img img-circle author-img" src="/images/12074705_10153002304075916_5614228371048865833_n.jpg" alt="">
+					<h3 class="text-center">Steen Hessner</h3>
+					<p class="text-center">Founder of Blood(Division)</p>
 				</div>
-				<div class="row socials">
-					<a href="https://www.facebook.com/leo.knudsen.9"><span class="icon"><i class="fa fa-facebook-square"></i></span></a>
+<!-- 				<div class="row socials">
+					<a href="https://www.facebook.com/steen.hessner?fref=ts"><span class="icon"><i class="fa fa-facebook-square"></i></span></a>
 					<a href="https://plus.google.com/u/0/"><span class="icon"><i class="fa fa-google-plus-square"></i></span></a>
 					<a href="https://twitter.com/knudsen_leo"><span class="icon"><i class="fa fa-twitter"></i></span></a>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>

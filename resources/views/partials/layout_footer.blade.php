@@ -24,7 +24,7 @@
                <div class="col-xs-12 col-sm-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
                    <h4>Recruits</h4>
                    <ul>
-                       <li><a href="{{url('/join')}}">Join Us</a></li>
+                       <!-- <li><a href="{{url('/join')}}">Join Us</a></li> -->
                        <li><a href="{{url('/login')}}">Login</a></li>
                        <li><a href="{{url('/register')}}">Register</a></li>
                    </ul>
@@ -32,11 +32,4 @@
            </div>
         </div>
     </div>
-    <!-- <div class="container-fluid address-bar" id="address">
-        <div class="row">
-            <span class="comapny">Blooddivision</span>
-            <span class="email"><a mailto="">info@blooddivision.com</a></span>
-
-        </div>
-    </div> -->
 @endif
