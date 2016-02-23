@@ -2,6 +2,8 @@
 * profile stylesheet
 */
 
+
+
  	/**
  	* profile wrapper
  	*/
@@ -10,9 +12,10 @@
  			height:auto;
  			width: 100%;
  			padding:40px 40px 0px 40px;
- 			background: #eee;
+ 			background: #777;
  			padding-top:100px;
- 			color: #FFF; 
+ 			color: #e9eaed; 
+ 			margin-top:-20px;
  			/**
  			* inner profile wrapper
  			*/
@@ -211,7 +214,7 @@
  		.container-fluid.profile-content-wrapper{
  			width: 100%;
  			height: auto;
- 			
+ 			background: #fff; 
  			/**
  			* inner profile content wrapper
  			*/ 

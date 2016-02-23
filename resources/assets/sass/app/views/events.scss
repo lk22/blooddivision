@@ -8,8 +8,8 @@
 
 		.container-fluid.app-events-wrapper{
 			height:auto;
-			width: 75%;
-			
+			width: 100%;
+			background: #FFF; 
 			/**
 			* events inner wrapper
 			*/ 
@@ -24,7 +24,7 @@
 							height:45px;
 							border-bottom:1px solid #000;
 							width: 75%;
-							margin-top:80px;
+							margin-top:0px;
 							/**
 							* events header => desktop
 							*/ 
@@ -54,6 +54,7 @@
 
 						.events-content-wrapper{
 							@extends .events-header-wrapper;
+							margin-top:-20px;
 							/**
 							* timeline wrapper
 							*/

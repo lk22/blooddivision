@@ -25,9 +25,13 @@
         .fa-btn {
             margin-right: 6px;
         }
+
+        body.black{
+        	color: #000;
+        }
     </style>
 </head>
-<body id="modal-wrap">
+<body id="modal-wrap profile" style="background: #777">
 	@include('partials.layout_header')
 	@foreach($user as $the_user)
 	<!-- the profile wrapper -->
@@ -53,6 +57,21 @@
 						</div>
 					@endif
 				</div>
+				@if(!count($the_user->cover))
+				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 profile-information">
+					<div class="profile-name">
+						<h1 class="text-center black">{{auth()->user()->name}}</h1>
+					</div>
+					<div class="profile-email">
+						<h4 class="text-center black">{{auth()->user()->email}}</h4>
+					</div>
+					<div class="profile-rank">
+					@foreach($ranks as $rank)
+						<h3 class="text-center black">Rank: {{$rank->rank}}</h3>
+					@endforeach
+					</div>
+				</div>
+				@else
 				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 profile-information">
 					<div class="profile-name">
 						<h1 class="text-center">{{auth()->user()->name}}</h1>
@@ -66,6 +85,7 @@
 					@endforeach
 					</div>
 				</div>
+				@endif
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 banner-footer-wrapper">
 					<div class="row inner-banner-footer-wrapper">
 						<div class="profile-listing">

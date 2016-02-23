@@ -9,44 +9,47 @@
 		.container-fluid.content-wrapper{
 			min-height:500px;
 			width: 100%;
-			background: #bdc3c7; 
-			padding-top: 50px;
-			
+			background: #fff; 
+			margin-top:-20px;
 			a{
-				color: #FFF; 
+				color: #000; 
 			}
+
+			/*
+			* welcome user container
+			*/
+		
+				.welcome-user-container{
+					width: 45%; 
+					padding:20px;
+					border-bottom:1px solid #ECECEC; 
+					margin-bottom:10px;
+					.userimage{
+						img{
+							height: 55px;
+							width: 55px;
+						}
+					}
+
+					.welcomeMessage{
+						p{
+							font-size: 15px;
+							display:inline;
+							margin-left:10px;
+						}
+					}
+				}
+
 			/**
-			*	left sidebar
+			*	sidebar
 			*/ 
-
-				.left-sidebar{
-					min-height:900px;
-					padding: 40px; 
-					background: #2c3e50; 
-					color: #fff; 
-					/**
-					*	rows
-					*/
-
-						.row{
-							border-bottom:1px solid #8e44ad;
-						}
-
-					/*
-					*	all events
-					*/
 				
-						.latest-event-row{
-							padding:10px;
-							border:none;
-							/*
-							* event
-							*/
-						
-								.event{
-									padding:10px;
-								}
-						}
+				.sidebar-partial{
+					padding:20px;
+					
+					.link-container{
+						margin-bottom:25px;
+					}
 				}
 
 			/**
@@ -54,17 +57,16 @@
 			*/
 
 				.right-sidebar{
-					min-height: 900px; 
-					padding:40px;
-					background: #2c3e50;
+					min-height: auto; 
+					background: #fff; 
+					width: 45%; 
 					/**
 					*	rows
 					*/
 
 						.latest-registered-users-row{
-							
-							color: #fff;  
-							padding: 20px;
+						 border-bottom:1px solid #ECECEC;
+						 margin-bottom: 10px;
 							.user-row{
 								margin-top:10px;
 								border-bottom:1px solid #000;

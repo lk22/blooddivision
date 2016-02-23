@@ -141,8 +141,3 @@ $(function(){
 	});
 
 });
-
-$(function(){
-	home.xboxPlatformContainer.fadeIn(2000);
-	home.windowsPlatformContainer.fadeIn(2000);
-});

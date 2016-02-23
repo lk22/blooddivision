@@ -11,7 +11,7 @@
 			height: auto;
 			margin: 0px;
 			display:none;
-			z-index:2px;
+			z-index:100px;
 
 			#video-bg{
 				position: absolute;
@@ -45,7 +45,7 @@
 
 						.xbox-platform-container{
 							padding:10px;
-							display:none;
+							
 							/**
 							*	platform logo
 							*/
@@ -62,7 +62,7 @@
 						.windows-platform-container{
 							padding:10px;
 							margin-left:22%;
-							display:none;
+							
 							/**
 							*	platform logo
 							*/

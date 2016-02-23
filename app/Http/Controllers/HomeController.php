@@ -9,6 +9,8 @@ use Blooddivision\Message;
 use Blooddivision\User;
 use Blooddivision\ForumThreads;
 use Blooddivision\Event;
+use Blooddivision\Game;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -32,8 +34,10 @@ class HomeController extends Controller
         $latest_users = User::latest()->limit(3)->get();
         $feed = Message::all();
         $events = Event::latest()->take(3)->get();
+        // $games = Game::latest()->take(1)->where('user_id', Auth::user()->id)-get();
+        // $games = Game::with('user')->findOrFail('games.id')->whereUser()->take(1)->latest()->get();
 
-        return view('home', compact('latest_users', 'feed', 'events'));
+        return view('home', compact('latest_users', 'feed', 'events', 'games'));
     }
 
     /**

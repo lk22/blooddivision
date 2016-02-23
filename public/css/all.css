@@ -216,9 +216,37 @@
 /**
 	*	navbar
 	*/
-.navbar {
-  margin-bottom: 0px;
-  border-radius: 0px 0px 0px 0px; }
+.navbar-default {
+  background: transparent;
+  border: none; }
+  .navbar-default button {
+    border: none; }
+    .navbar-default button .icon-bar {
+      color: #FFF; }
+  .navbar-default .navbar-brand {
+    color: #FFF; }
+    .navbar-default .navbar-brand:hover {
+      color: #e74c3c;
+      transition: ease-in-out 0.2s all; }
+    .navbar-default .navbar-brand:not(:hover) {
+      transition: ease-in-out 0.2s all; }
+  .navbar-default .nav li a {
+    color: #FFF; }
+    .navbar-default .nav li a:hover {
+      color: #e74c3c;
+      transition: ease-in-out 0.2s all; }
+    .navbar-default .nav li a:not(:hover) {
+      transition: ease-in-out 0.2s all; }
+  .navbar-default .nav li.dropdown .dropdown-menu {
+    background: #777;
+    min-width: 167px; }
+    .navbar-default .nav li.dropdown .dropdown-menu li a {
+      color: #FFF; }
+      .navbar-default .nav li.dropdown .dropdown-menu li a:hover {
+        color: #000;
+        transition: ease-in-out 0.2s all; }
+      .navbar-default .nav li.dropdown .dropdown-menu li a:not(:hover) {
+        transition: ease-in-out 0.2s all; }
 
 /**
 *	application mobile header 
@@ -384,7 +412,8 @@
 	*/
 .container-fluid.app-events-wrapper {
   height: auto;
-  width: 75%;
+  width: 100%;
+  background: #FFF;
   /**
 			* events inner wrapper
 			*/ }
@@ -399,7 +428,7 @@
       height: 45px;
       border-bottom: 1px solid #000;
       width: 75%;
-      margin-top: 80px;
+      margin-top: 0px;
       /**
 							* events header => desktop
 							*/
@@ -413,6 +442,7 @@
 									*/ }
     .container-fluid.app-events-wrapper .events-inner-wrapper .events-content-wrapper {
       @extends .events-header-wrapper;
+      margin-top: -20px;
       /**
 							* timeline wrapper
 							*/ }
@@ -686,47 +716,45 @@
 .container-fluid.content-wrapper {
   min-height: 500px;
   width: 100%;
-  background: #bdc3c7;
-  padding-top: 50px;
+  background: #fff;
+  margin-top: -20px;
+  /*
+			* welcome user container
+			*/
   /**
-			*	left sidebar
+			*	sidebar
 			*/
   /**
 			*	right sidebar
 			*/ }
   .container-fluid.content-wrapper a {
-    color: #FFF; }
-  .container-fluid.content-wrapper .left-sidebar {
-    min-height: 900px;
-    padding: 40px;
-    background: #2c3e50;
-    color: #fff;
-    /**
-					*	rows
-					*/
-    /*
-					*	all events
-					*/ }
-    .container-fluid.content-wrapper .left-sidebar .row {
-      border-bottom: 1px solid #8e44ad; }
-    .container-fluid.content-wrapper .left-sidebar .latest-event-row {
-      padding: 10px;
-      border: none;
-      /*
-							* event
-							*/ }
-      .container-fluid.content-wrapper .left-sidebar .latest-event-row .event {
-        padding: 10px; }
+    color: #000; }
+  .container-fluid.content-wrapper .welcome-user-container {
+    width: 45%;
+    padding: 20px;
+    border-bottom: 1px solid #ECECEC;
+    margin-bottom: 10px; }
+    .container-fluid.content-wrapper .welcome-user-container .userimage img {
+      height: 55px;
+      width: 55px; }
+    .container-fluid.content-wrapper .welcome-user-container .welcomeMessage p {
+      font-size: 15px;
+      display: inline;
+      margin-left: 10px; }
+  .container-fluid.content-wrapper .sidebar-partial {
+    padding: 20px; }
+    .container-fluid.content-wrapper .sidebar-partial .link-container {
+      margin-bottom: 25px; }
   .container-fluid.content-wrapper .right-sidebar {
-    min-height: 900px;
-    padding: 40px;
-    background: #2c3e50;
+    min-height: auto;
+    background: #fff;
+    width: 45%;
     /**
 					*	rows
 					*/ }
     .container-fluid.content-wrapper .right-sidebar .latest-registered-users-row {
-      color: #fff;
-      padding: 20px; }
+      border-bottom: 1px solid #ECECEC;
+      margin-bottom: 10px; }
       .container-fluid.content-wrapper .right-sidebar .latest-registered-users-row .user-row {
         margin-top: 10px;
         border-bottom: 1px solid #000;
@@ -820,9 +848,10 @@
   height: auto;
   width: 100%;
   padding: 40px 40px 0px 40px;
-  background: #eee;
+  background: #777;
   padding-top: 100px;
-  color: #FFF;
+  color: #e9eaed;
+  margin-top: -20px;
   /**
  			* inner profile wrapper
  			*/ }
@@ -941,6 +970,7 @@
 .container-fluid.profile-content-wrapper {
   width: 100%;
   height: auto;
+  background: #fff;
   /**
  			* inner profile content wrapper
  			*/ }
@@ -1257,7 +1287,7 @@
   height: auto;
   margin: 0px;
   display: none;
-  z-index: 2px;
+  z-index: 100px;
   /**
 			*	the banner wrapper
 			*/
@@ -1289,7 +1319,6 @@
 					*/ }
     .container-fluid.blooddivision-welcome-wrapper .platform-wrapper .xbox-platform-container {
       padding: 10px;
-      display: none;
       /**
 							*	platform logo
 							*/ }
@@ -1298,7 +1327,6 @@
     .container-fluid.blooddivision-welcome-wrapper .platform-wrapper .windows-platform-container {
       padding: 10px;
       margin-left: 22%;
-      display: none;
       /**
 							*	platform logo
 							*/ }
@@ -1430,7 +1458,11 @@
       transition: ease-in-out 0.2s all; }
 
 #app-layout {
-  padding-bottom: 0px; }
+  padding-bottom: 0px;
+  background: #999; }
+
+#profile {
+  background: #999; }
 
 /**
 *	landing page stylesheet
@@ -1443,7 +1475,7 @@
   height: auto;
   margin: 0px;
   display: none;
-  z-index: 2px;
+  z-index: 100px;
   /**
 			*	the banner wrapper
 			*/
@@ -1475,7 +1507,6 @@
 					*/ }
     .container-fluid.blooddivision-welcome-wrapper .platform-wrapper .xbox-platform-container {
       padding: 10px;
-      display: none;
       /**
 							*	platform logo
 							*/ }
@@ -1484,7 +1515,6 @@
     .container-fluid.blooddivision-welcome-wrapper .platform-wrapper .windows-platform-container {
       padding: 10px;
       margin-left: 22%;
-      display: none;
       /**
 							*	platform logo
 							*/ }

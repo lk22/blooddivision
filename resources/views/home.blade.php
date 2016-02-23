@@ -3,37 +3,20 @@
 @section('content')
 <!-- content wrapper -->
 <div class="container-fluid content-wrapper">
-    <!-- left sidebar -->
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 left-sidebar animated bounceInLeft">
-        <!-- message of the day partial -->
-        {{-- @include('partials.message_of_the_day') --}}
     <div class="row">
-        <h4>Latest events</h4>
-    </div>
-        <div class="row latest-event-row">
-            <!-- <h4>Latest event</h4>
-            <span>Raid Second Boss - Destiny Xbox one</span>
-            <p>Date: 2016-16-01</p>
-            <p>Time: 20:00</p> -->
-            @foreach($events as $event)
-                <div class="row event">
-                    <div><strong>E</strong>vent name: <p>{{$event->event_name}}</p></div>
-                    <div><strong>E</strong>vent game: <p>{{$event->event_game}}</p></div>
-                    <div><strong>E</strong>vent description: <p>{{$event->event_description}}</p></div>
-                </div>
-            @endforeach
+        <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-4 col-lg-6 col-lg-offset-4 welcome-user-container">
+            <span class="userimage"><img class="img img-circle" src="{{Auth::user()->avatar}}" alt=""></span>
+            <span class="welcomeMessage"><p>Welcome: {{Auth::user()->name}}</p></span>
+<!--             <div class="row hidden-xs hidden-sm">
+                <span class="label label-default">See latest events</span>
+            </div> -->
         </div>
-    <p><a href="{{ url('/events') }}">See all events.</a></p>
-
-    </div><!-- left sidebar end -->
-    <!-- content container -->
-    <!--<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 inner-content-wrapper">
-        
-    </div>--><!-- content container end -->
+    </div>
+    @include('partials.home-menu-partial')
     <!-- right sidebar -->
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 right-sidebar animated bounceInRight">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 right-sidebar">
         <div class="row latest-registered-users-row">
-            <h4>Latest registered users</h4>
+            <h3>Latest registered users</h3>
             @foreach($latest_users as $user)
                 <div class="row user-row">
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
