@@ -49,6 +49,7 @@ Route::group(['middleware' => 'web'], function () {
     });
 
     Route::get('/members', 'PageController@getMembersPage');
+    
 
     // home route
     Route::get('/home', 'HomeController@index');

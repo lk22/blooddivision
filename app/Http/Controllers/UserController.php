@@ -27,10 +27,10 @@ class UserController extends Controller
     * @return profile
     */
 
-    public function profile($name){
+    public function profile($slug){
     	// step 1 => get the specific user
       $auth = auth()->user(); 
-    	$user = User::where('name', Auth::user()->name)->orWhere('name', $name)->get(); //- first name og lastname conventeres automatisk til leo-knudsen
+    	$user = User::where('name', Auth::user()->name)->orWhere('name', $slug)->get(); //- first name og lastname conventeres automatisk til leo-knudsen
     	// step 2 => get the events belongs to the user
 
        // $events = $user->events; // ==== $user->events()->get();
@@ -179,4 +179,7 @@ class UserController extends Controller
     // Event::whereHas(['' => function($query){
     //     $query->where('user_id', '=', 1);
     // }]);
+    // 
+    
+
 }
