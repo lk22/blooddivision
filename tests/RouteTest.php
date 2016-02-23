@@ -18,70 +18,159 @@ class RouteTest extends TestCase
     }
 
    /**
-   * test client visits mainsite route
-   *
-   * @test
-   * @return void
-   */
-   public function visit_mainsite_route()
-   {
-	   	// write the testing method to the terminal 
-	   	fwrite(STDOUT, __METHOD__ . ": Test passed! \n");
-	   	// make HTTP GET request call
-	   	$request = $this->call('GET', '/');
-	   	// assert that the expecting status code is equal to the actual status code
-	   	$this->assertEquals(200, $request->getStatusCode());
-   }
-
-   /**
-   * test client visits login route
-   *
-   * @test
-   * @return void
-   */
-   public function visit_login_route()
-   {
-	   	// write the testing method to the terminal 
-	   	fwrite(STDOUT, __METHOD__ . ": Test passed! \n");
-	   	// make HTTP GET request call
-	   	$request = $this->call('GET', '/login');
-	   	// assert that the expecting status code is equal to the actual status code
-	   	$this->assertEquals(200, $request->getStatusCode());
-   }
-
-   /**
-   * test client visits register route
-   *
-   * @test
-   * @return void
-   */
+    * test if client visits landing_page route
+    * @test
+    * @return void
+    */
+   public function check_if_client_visits_landing_page_route(){
+     /**
+      * output test method to terminal
+      */
+     fwrite(STDOUT, __METHOD__. "\n");
    
-   public function visit_register_route()
-   {
-	   	// write the testing method to the terminal 
-	   	fwrite(STDOUT, __METHOD__ . ": Test passed! \n");
-	   	// make HTTP GET request call
-	   	$request = $this->call('GET', '/register');
-	   	// assert that the expecting status code is equal to the actual status code
-	   	$this->assertEquals(200, $request->getStatusCode());
+     /**
+      * make http request and assert the response code is 200
+      */
+     $this->visit('/')->assertResponseOk();
+   }
+
+
+   /**
+    * test if client visits login route
+    * @test
+    * @return void
+    */
+   public function check_if_client_visits_login_route(){
+     /**
+      * output test method to terminal
+      */
+     fwrite(STDOUT, __METHOD__. "\n");
+   
+     /**
+      * make http request and assert the response code is 200
+      */
+     $this->visit('login')->assertResponseOk();
    }
 
    /**
-   * test client visits home route
-   *
-   * @test
-   * @return void
-   */
-   public function visit_route()
-   {
-   	// write the testing method to the terminal 
-   	fwrite(STDOUT, __METHOD__ . ": Test passed! \n");
-   	// make HTTP GET request call
-   	$response = $this->call('GET', '/home');
-   	// assert that the expecting status code is equal to the actual status code
-   	$this->assertEquals(302, $response->getStatusCode());
+    * test if client visits register route
+    * @test
+    * @return void
+    */
+   public function check_if_client_visits_register_route(){
+     /**
+      * output test method to terminal
+      */
+     fwrite(STDOUT, __METHOD__. "\n");
+   
+     /**
+      * make http request and assert the response code is 200
+      */
+     $this->visit('register')->assertResponseOk();
    }
 
+   /**
+    * test if client visits password_reset route
+    * @test
+    * @return void
+    */
+   public function check_if_client_visits_password_reset_route(){
+     /**
+      * output test method to terminal
+      */
+     fwrite(STDOUT, __METHOD__. "\n");
+   
+     /**
+      * make http request and assert the response code is 200
+      */
+     $this->visit('password/reset/{token?}')->assertResponseOk();
+   }
+
+   /**
+    * test if client visits members route
+    * @test
+    * @return void
+    */
+   public function check_if_client_visits_members_route(){
+     /**
+      * output test method to terminal
+      */
+     fwrite(STDOUT, __METHOD__. "\n");
+   
+     /**
+      * make http request and assert the response code is 200
+      */
+     $this->visit('/members')->assertResponseOk();
+   }
+
+   /**
+    * test if client visits home route
+    * @test
+    * @return void
+    */
+   public function check_if_client_visits_home_route(){
+     /**
+      * output test method to terminal
+      */
+     fwrite(STDOUT, __METHOD__. "\n");
+   
+     /**
+      * make http request and assert the response code is 200
+      */
+     $this->visit('/home')->assertResponseOk();
+   }
+
+   /**
+    * test if client visits about route
+    * @test
+    * @return void
+    */
+   public function check_if_client_visits_about_route(){
+     /**
+      * output test method to terminal
+      */
+     fwrite(STDOUT, __METHOD__. "\n");
+   
+     /**
+      * make http request and assert the response code is 200
+      */
+     $this->visit('about')->assertResponseOk();
+   }
+
+   /**
+    * test if client visits contact_us route
+    * @test
+    * @return void
+    */
+   public function check_if_client_visits_contact_us_route(){
+     /**
+      * output test method to terminal
+      */
+     fwrite(STDOUT, __METHOD__. "\n");
+   
+     /**
+      * make http request and assert the response code is 200
+      */
+     $this->visit('contact-us')->assertResponseOk();
+   }
+
+   /**
+    * test if client visits forum route
+    * @test
+    * @return void
+    */
+   public function check_if_client_visits_forum_route(){
+     /**
+      * output test method to terminal
+      */
+     fwrite(STDOUT, __METHOD__. "\n");
+   
+     /**
+      * make http request and assert the response code is 200
+      */
+     $this->visit('/forum')->assertResponseOk();
+   }
+   
    /**
     * show a message within end of test runnings
     * @return void

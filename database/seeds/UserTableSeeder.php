@@ -12,7 +12,7 @@ class UserTableSeeder extends Seeder
 	
 	public function run()
 	{
-		factory(Blooddivision\User::class, 20)->create();
+		factory(Blooddivision\User::class, 100)->create();
 	}
 }
 

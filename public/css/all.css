@@ -218,7 +218,8 @@
 	*/
 .navbar-default {
   background: transparent;
-  border: none; }
+  border: none;
+  border-bottom: 1px solid #fff; }
   .navbar-default button {
     border: none; }
     .navbar-default button .icon-bar {
@@ -234,11 +235,12 @@
     color: #FFF; }
     .navbar-default .nav li a:hover {
       color: #e74c3c;
+      background: #fff;
       transition: ease-in-out 0.2s all; }
     .navbar-default .nav li a:not(:hover) {
       transition: ease-in-out 0.2s all; }
   .navbar-default .nav li.dropdown .dropdown-menu {
-    background: #777;
+    background: #fff;
     min-width: 167px; }
     .navbar-default .nav li.dropdown .dropdown-menu li a {
       color: #FFF; }
