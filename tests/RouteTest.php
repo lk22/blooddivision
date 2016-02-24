@@ -170,7 +170,7 @@ class RouteTest extends TestCase
       */
      $this->visit('/forum')->assertResponseOk();
    }
-   
+
    /**
     * show a message within end of test runnings
     * @return void

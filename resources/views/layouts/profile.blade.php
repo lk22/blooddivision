@@ -31,7 +31,7 @@
         }
     </style>
 </head>
-<body id="modal-wrap profile" style="background: #777">
+<body id="modal-wrap profile" style="background: #E9EAED">
 	@include('partials.layout_header')
 	@foreach($user as $the_user)
 	<!-- the profile wrapper -->
@@ -43,7 +43,7 @@
 			<div class="row banner">
 				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 profile-media">
 					<!-- check if the user has a profile picture -->
-					@if(!auth()->user()->avatar)
+					@if(!$the_user->avatar)
 						<!-- if the profile dont have a profile picture -->
 						<img class="img img-thumbnail img-responsive profile-image" src="/images/mystery-man.jpg" alt="">
 						<div class="row edit-profile">
@@ -60,10 +60,10 @@
 				@if(!count($the_user->cover))
 				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 profile-information">
 					<div class="profile-name">
-						<h1 class="text-center black">{{auth()->user()->name}}</h1>
+						<h1 class="text-center black">{{$the_user->name}}</h1>
 					</div>
 					<div class="profile-email">
-						<h4 class="text-center black">{{auth()->user()->email}}</h4>
+						<h4 class="text-center black">{{$the_user->email}}</h4>
 					</div>
 					<div class="profile-rank">
 					@foreach($ranks as $rank)
@@ -74,10 +74,10 @@
 				@else
 				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 profile-information">
 					<div class="profile-name">
-						<h1 class="text-center">{{auth()->user()->name}}</h1>
+						<h1 class="text-center">{{$the_user->name}}</h1>
 					</div>
 					<div class="profile-email">
-						<h4 class="text-center">{{auth()->user()->email}}</h4>
+						<h4 class="text-center">{{$the_user->email}}</h4>
 					</div>
 					<div class="profile-rank">
 					@foreach($ranks as $rank)
@@ -98,14 +98,10 @@
 							<span class="profile-link">
 								<a href="/profile/{{auth()->user()->name}}/your-games"><i class="fa fa-gamepad"></i> Your games</a>
 							</span>
-							<!-- <span class="profile-link">
-								<a href="/profile/{{auth()->user()->name}}/your-stats"><i class="fa fa-tasks"></i> Your stats</a>
-							</span> -->
 						</div>
 					</div>
 				</div>
 			</div>
-			
 		</div>
 	</div>
 	@endforeach

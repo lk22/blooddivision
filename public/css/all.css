@@ -139,6 +139,9 @@
 /**
 *	application main stylesheet
 */
+* {
+  box-sizing: border-box; }
+
 /*
 *	Base Variables
 *	Assembling Colors
@@ -219,23 +222,23 @@
 .navbar-default {
   background: transparent;
   border: none;
-  border-bottom: 1px solid #fff; }
+  border-bottom: 1px solid #fff;
+  border-radius: 0px 0px 0px 0px; }
   .navbar-default button {
     border: none; }
     .navbar-default button .icon-bar {
       color: #FFF; }
   .navbar-default .navbar-brand {
-    color: #FFF; }
+    color: #000; }
     .navbar-default .navbar-brand:hover {
       color: #e74c3c;
       transition: ease-in-out 0.2s all; }
     .navbar-default .navbar-brand:not(:hover) {
       transition: ease-in-out 0.2s all; }
   .navbar-default .nav li a {
-    color: #FFF; }
+    color: #000; }
     .navbar-default .nav li a:hover {
       color: #e74c3c;
-      background: #fff;
       transition: ease-in-out 0.2s all; }
     .navbar-default .nav li a:not(:hover) {
       transition: ease-in-out 0.2s all; }
@@ -243,9 +246,9 @@
     background: #fff;
     min-width: 167px; }
     .navbar-default .nav li.dropdown .dropdown-menu li a {
-      color: #FFF; }
+      color: #000; }
       .navbar-default .nav li.dropdown .dropdown-menu li a:hover {
-        color: #000;
+        color: #e74c3c;
         transition: ease-in-out 0.2s all; }
       .navbar-default .nav li.dropdown .dropdown-menu li a:not(:hover) {
         transition: ease-in-out 0.2s all; }
@@ -722,8 +725,8 @@
 .container-fluid.content-wrapper {
   min-height: 500px;
   width: 100%;
-  background: #fff;
   margin-top: -20px;
+  font-size: 12px;
   /*
 			* welcome user container
 			*/
@@ -736,41 +739,47 @@
   .container-fluid.content-wrapper a {
     color: #000; }
   .container-fluid.content-wrapper .welcome-user-container {
-    width: 45%;
+    width: 100%;
     padding: 20px;
     border-bottom: 1px solid #ECECEC;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    margin-top: 20px;
+    background: #fff; }
     .container-fluid.content-wrapper .welcome-user-container .userimage img {
       height: 55px;
       width: 55px; }
     .container-fluid.content-wrapper .welcome-user-container .welcomeMessage p {
-      font-size: 15px;
+      font-size: 12px;
       display: inline;
       margin-left: 10px; }
   .container-fluid.content-wrapper .sidebar-partial {
-    padding: 20px; }
+    padding: 70px;
+    background: #fff;
+    width: 16.4%;
+    margin: 20px 0px 0px 50px; }
     .container-fluid.content-wrapper .sidebar-partial .link-container {
       margin-bottom: 25px; }
-  .container-fluid.content-wrapper .right-sidebar {
+  .container-fluid.content-wrapper .right-content {
     min-height: auto;
     background: #fff;
-    width: 45%;
+    width: 100%;
+    padding: 34px;
     /**
 					*	rows
 					*/ }
-    .container-fluid.content-wrapper .right-sidebar .latest-registered-users-row {
+    .container-fluid.content-wrapper .right-content .latest-registered-users-row {
       border-bottom: 1px solid #ECECEC;
       margin-bottom: 10px; }
-      .container-fluid.content-wrapper .right-sidebar .latest-registered-users-row .user-row {
+      .container-fluid.content-wrapper .right-content .latest-registered-users-row .user-row {
         margin-top: 10px;
         border-bottom: 1px solid #000;
         border: none; }
-        .container-fluid.content-wrapper .right-sidebar .latest-registered-users-row .user-row:after {
+        .container-fluid.content-wrapper .right-content .latest-registered-users-row .user-row:after {
           margin: 15px 0px 15px 0px; }
-        .container-fluid.content-wrapper .right-sidebar .latest-registered-users-row .user-row img {
+        .container-fluid.content-wrapper .right-content .latest-registered-users-row .user-row img {
           border: 2px solid #8e44ad;
           border-radius: 50px 50px 50px 50px; }
-          .container-fluid.content-wrapper .right-sidebar .latest-registered-users-row .user-row img:hover {
+          .container-fluid.content-wrapper .right-content .latest-registered-users-row .user-row img:hover {
             border-color: #2ecc71;
             transition: ease-in-out 0.2s all; }
 
@@ -780,6 +789,21 @@
 /**
 *	Blood Division Login page
 */
+@-webkit-keyframes btnWitdh {
+  from {
+    width: 0px; }
+  to {
+    width: 100px; } }
+
+.auth-btn {
+  border: none;
+  border-radius: 0px 0px 0px 0px; }
+  .auth-btn:hover {
+    background: #EE7326;
+    transition: ease-in-out 0.2s all; }
+  .auth-btn:not(:hover) {
+    transition: ease-in-out 0.2s all; }
+
 .login-email-tutorial {
   position: fixed;
   bottom: 0px;
@@ -1003,40 +1027,6 @@
     /**
 					 * adding game row
 					 */ }
-    .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper {
-      margin: 15px 0px 15px 0px; }
-      .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data {
-        width: 100%; }
-        .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .event-data {
-          height: auto;
-          color: #FFF; }
-          .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .event-data .inner-data {
-            background: #FB0047;
-            height: auto;
-            padding: 34px;
-            color: #fff; }
-            .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .event-data .inner-data .headline {
-              color: #FFF; }
-            .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .event-data .inner-data .icon-container {
-              color: #FFF; }
-            .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .event-data .inner-data .buttons .events {
-              color: #FFF; }
-              .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .event-data .inner-data .buttons .events .btn-wrapper {
-                padding: 20px;
-                border: 1px solid #fff; }
-        .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .game-data {
-          height: auto; }
-          .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .game-data .inner-data {
-            background: #524763;
-            height: auto;
-            padding: 34px;
-            color: #fff; }
-            .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .game-data .inner-data .headline {
-              color: #FFF; }
-            .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .game-data .inner-data .icon-container {
-              color: #FFF; }
-            .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .profile-data-wrapper .user-data .game-data .inner-data .buttons .games {
-              color: #FFF; }
     .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .events-wrapper {
       padding-top: 10px;
       /**
@@ -1465,10 +1455,10 @@
 
 #app-layout {
   padding-bottom: 0px;
-  background: #999; }
+  background: #E9EAED; }
 
 #profile {
-  background: #999; }
+  background: #E9EAED; }
 
 /**
 *	landing page stylesheet

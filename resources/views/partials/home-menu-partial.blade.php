@@ -1,4 +1,4 @@
-<div class="hidden-xs hidden-sm col-md-1 col-md-offset-2 col-lg-1 col-lg-offset-2 sidebar-partial">
+
 	<div class="container">
 		<div class="row link-container">
 			<a href="{{url('/events')}}">Events <i class="fa fa-calendar-o"></i></a>
@@ -13,4 +13,3 @@
 			<a href="/profile/{{Auth::user()->name}}">Profile <i class="fa fa-user"></i></a>
 		</div>
 	</div>
-</div>

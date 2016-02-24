@@ -2,6 +2,10 @@
 *	application main stylesheet
 */
 
+*{
+	box-sizing: border-box;
+}
+
 // base variables
 	@import 'vars/_all';
 	
@@ -19,9 +23,9 @@
 	
 #app-layout{
 	padding-bottom:0px;
-	background: #999; 
+	background: #E9EAED; 
 }
 
 #profile{
-	background: #999; 
+	background: #E9EAED; 
 }

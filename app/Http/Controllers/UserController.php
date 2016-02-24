@@ -30,7 +30,7 @@ class UserController extends Controller
     public function profile($slug){
     	// step 1 => get the specific user
       $auth = auth()->user(); 
-    	$user = User::where('name', Auth::user()->name)->orWhere('name', $slug)->get(); //- first name og lastname conventeres automatisk til leo-knudsen
+    	$user = User::Where('name', $slug)->get(); //- first name og lastname conventeres automatisk til leo-knudsen
     	// step 2 => get the events belongs to the user
 
        // $events = $user->events; // ==== $user->events()->get();

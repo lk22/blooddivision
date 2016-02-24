@@ -8,9 +8,9 @@
 
 		.container-fluid.content-wrapper{
 			min-height:500px;
-			width: 100%;
-			background: #fff; 
+			width: 100%; 
 			margin-top:-20px;
+			font-size: 12px;
 			a{
 				color: #000; 
 			}
@@ -20,10 +20,12 @@
 			*/
 		
 				.welcome-user-container{
-					width: 45%; 
+					width: 100%; 
 					padding:20px;
 					border-bottom:1px solid #ECECEC; 
 					margin-bottom:10px;
+					margin-top:20px;
+					background: #fff;
 					.userimage{
 						img{
 							height: 55px;
@@ -33,7 +35,7 @@
 
 					.welcomeMessage{
 						p{
-							font-size: 15px;
+							font-size: 12px;
 							display:inline;
 							margin-left:10px;
 						}
@@ -45,8 +47,10 @@
 			*/ 
 				
 				.sidebar-partial{
-					padding:20px;
-					
+					padding:70px;
+					background: #fff; 
+					width: 16.4%; 
+					margin:20px 0px 0px 50px;
 					.link-container{
 						margin-bottom:25px;
 					}
@@ -56,10 +60,11 @@
 			*	right sidebar
 			*/
 
-				.right-sidebar{
+				.right-content{
 					min-height: auto; 
 					background: #fff; 
-					width: 45%; 
+					width: 100%; 
+					padding: 34px;
 					/**
 					*	rows
 					*/
