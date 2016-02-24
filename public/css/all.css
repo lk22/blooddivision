@@ -229,14 +229,14 @@
     .navbar-default button .icon-bar {
       color: #FFF; }
   .navbar-default .navbar-brand {
-    color: #000; }
+    color: #fff; }
     .navbar-default .navbar-brand:hover {
       color: #e74c3c;
       transition: ease-in-out 0.2s all; }
     .navbar-default .navbar-brand:not(:hover) {
       transition: ease-in-out 0.2s all; }
   .navbar-default .nav li a {
-    color: #000; }
+    color: #fff; }
     .navbar-default .nav li a:hover {
       color: #e74c3c;
       transition: ease-in-out 0.2s all; }
@@ -246,7 +246,7 @@
     background: #fff;
     min-width: 167px; }
     .navbar-default .nav li.dropdown .dropdown-menu li a {
-      color: #000; }
+      color: #fff; }
       .navbar-default .nav li.dropdown .dropdown-menu li a:hover {
         color: #e74c3c;
         transition: ease-in-out 0.2s all; }
