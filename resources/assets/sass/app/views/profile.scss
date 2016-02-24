@@ -1,3 +1,11 @@
+@keyframes editcover{
+	from{
+		left:-68px;
+	}
+	to{
+		left: 0px; 
+	}
+}
 /**
 * profile stylesheet
 */
@@ -26,6 +34,36 @@
  					/**
  					* the banner 
  					*/
+ 				
+ 					/**
+ 					 * edit cover 
+ 					 */
+ 					
+ 						.edit-profile-cover{
+ 							position: absolute;
+						    top: 55px;
+						    left: -68px;
+						    padding: 5px;
+						    background: #fff; 
+						    color: #000; 
+						    
+						    &:hover{
+						    	left: 0px;
+						    	-webkit-transition:ease-in-out 0.2 all;
+						    	-moz-transition:ease-in-out 0.2 all;
+						    	-ms-transition:ease-in-out 0.2 all;
+						    	-o-transition:ease-in-out 0.2 all;
+						    	transition:ease-in-out 0.2 all;
+						    }
+
+						    &:not(:hover){
+						    	-webkit-transition:ease-in-out 0.2 all;
+						    	-moz-transition:ease-in-out 0.2 all;
+						    	-ms-transition:ease-in-out 0.2 all;
+						    	-o-transition:ease-in-out 0.2 all;
+						    	transition:ease-in-out 0.2 all;
+						    }
+ 						}
 
  						.banner{
  							height: 100%;

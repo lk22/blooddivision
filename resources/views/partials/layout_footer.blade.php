@@ -5,7 +5,7 @@
                <div class="col-xs-12 col-sm-12 col-md-2 col-md-offset-2 col-lg-2 col-lg-offset-2">
                    <h4>Pages</h4>
                    <ul>
-                       <li><a href="{{url('/terms')}}">Terms & Conditions</a></li>
+                       <!-- <li><a href="{{url('/terms')}}">Terms & Conditions</a></li> -->
                        <li><a href="{{url('/members')}}">Members</a></li>
                        <li><a href="{{url('/features')}}">Features</a></li>
                        <li><a href="{{url('/about')}}">About</a></li>

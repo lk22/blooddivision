@@ -222,7 +222,6 @@
 .navbar-default {
   background: transparent;
   border: none;
-  border-bottom: 1px solid #fff;
   border-radius: 0px 0px 0px 0px; }
   .navbar-default button {
     border: none; }
@@ -246,7 +245,7 @@
     background: #fff;
     min-width: 167px; }
     .navbar-default .nav li.dropdown .dropdown-menu li a {
-      color: #fff; }
+      color: #000; }
       .navbar-default .nav li.dropdown .dropdown-menu li a:hover {
         color: #e74c3c;
         transition: ease-in-out 0.2s all; }
@@ -422,7 +421,6 @@
 .container-fluid.app-events-wrapper {
   height: auto;
   width: 100%;
-  background: #FFF;
   /**
 			* events inner wrapper
 			*/ }
@@ -764,24 +762,23 @@
     background: #fff;
     width: 100%;
     padding: 34px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
     /**
 					*	rows
 					*/ }
-    .container-fluid.content-wrapper .right-content .latest-registered-users-row {
-      border-bottom: 1px solid #ECECEC;
-      margin-bottom: 10px; }
-      .container-fluid.content-wrapper .right-content .latest-registered-users-row .user-row {
-        margin-top: 10px;
-        border-bottom: 1px solid #000;
-        border: none; }
-        .container-fluid.content-wrapper .right-content .latest-registered-users-row .user-row:after {
-          margin: 15px 0px 15px 0px; }
-        .container-fluid.content-wrapper .right-content .latest-registered-users-row .user-row img {
-          border: 2px solid #8e44ad;
-          border-radius: 50px 50px 50px 50px; }
-          .container-fluid.content-wrapper .right-content .latest-registered-users-row .user-row img:hover {
-            border-color: #2ecc71;
-            transition: ease-in-out 0.2s all; }
+    .container-fluid.content-wrapper .right-content .latest-events-row .event-row {
+      margin-top: 10px;
+      border-bottom: 1px solid #000;
+      border: none; }
+      .container-fluid.content-wrapper .right-content .latest-events-row .event-row:after {
+        margin: 15px 0px 15px 0px; }
+      .container-fluid.content-wrapper .right-content .latest-events-row .event-row img {
+        border: 2px solid #8e44ad;
+        border-radius: 50px 50px 50px 50px; }
+        .container-fluid.content-wrapper .right-content .latest-events-row .event-row img:hover {
+          border-color: #2ecc71;
+          transition: ease-in-out 0.2s all; }
 
 /**
 	*	Login Page
@@ -868,6 +865,17 @@
 /**
 	* profile page
 	*/
+@-webkit-keyframes editcover {
+  from {
+    left: -68px; }
+  to {
+    left: 0px; } }
+@keyframes editcover {
+  from {
+    left: -68px; }
+  to {
+    left: 0px; } }
+
 /**
 * profile stylesheet
 */
@@ -890,7 +898,22 @@
     color: #FFF;
     /**
  					* the banner 
- 					*/ }
+ 					*/
+    /**
+ 					 * edit cover 
+ 					 */ }
+    .container-fluid.profile-banner-wrapper .inner-profile-wrapper .edit-profile-cover {
+      position: absolute;
+      top: 55px;
+      left: -68px;
+      padding: 5px;
+      background: #fff;
+      color: #000; }
+      .container-fluid.profile-banner-wrapper .inner-profile-wrapper .edit-profile-cover:hover {
+        left: 0px;
+        transition: ease-in-out 0.2 all; }
+      .container-fluid.profile-banner-wrapper .inner-profile-wrapper .edit-profile-cover:not(:hover) {
+        transition: ease-in-out 0.2 all; }
     .container-fluid.profile-banner-wrapper .inner-profile-wrapper .banner {
       height: 100%;
       width: 100%;

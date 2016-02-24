@@ -422,8 +422,15 @@ class UserTest extends TestCase
     	 */
     	$user = new User;
 
+    	/**
+    	 * check if the property is array
+    	 * @var array
+    	 */
     	if($user->hidden = array()){
 
+    		/**
+    		 * if true, assert the value password exists inside the array
+    		 */
     		$this->assertArrayHasKey('password', $user->hidden, 'message');
     	}
     }
@@ -432,7 +439,7 @@ class UserTest extends TestCase
      * test if user_model_hidden_has_remember_token_value
      * @test
      * @return void
-     */
+     *
     public function check_if_user_model_hidden_has_remember_token_value(){
     	/**
     	 * output testing method to terminal
@@ -445,8 +452,15 @@ class UserTest extends TestCase
     	 */
     	$user = new User;
 
+    	/**
+    	 * check if the property is array
+    	 * @var array
+    	 */
     	if($user->hidden = array()){
 
+    		/**
+    		 * if true, assert the value password exists inside the array
+    		 */
     		$this->assertArrayHasKey('remember_token', $user->hidden, 'message');
     	}
     }

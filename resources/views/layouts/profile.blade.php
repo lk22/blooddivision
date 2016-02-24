@@ -39,7 +39,9 @@
 		<!-- inner banner wrapper -->
 		<div class="container inner-profile-wrapper">
 			<!-- the banner -->
-			
+			<div class="edit-profile-cover">
+				<a href="/profile/{{Auth::user()->name}}/edit-cover">Edit cover <i class="fa fa-camera"></i></a>
+			</div>
 			<div class="row banner">
 				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 profile-media">
 					<!-- check if the user has a profile picture -->

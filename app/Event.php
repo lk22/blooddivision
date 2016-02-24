@@ -58,23 +58,26 @@ class Event extends Model implements SluggableInterface
     *
     *	@return void
     */
-
-
     public function user(){
         return $this->belongsTo('Blooddivision\User');
     }
 
     public function users(){
-        return $this->belongsToMany('Blooddivision\User');
+        return $this->belongsToMany('Blooddivision\User')->withTimestamps();
     }
 
-    /**
-    *   format the event date to the current day
-    *   @return void
-    */
-
-    public function setEventDateTimeAttribute($date){
+    public function scopeOrderByAsc($field = null, $query){
+        if(is_null($field)){
+            return $query->orderBy('id', 'ASC');
+        }
         
+        return $this->orderBy($field, 'ASC');
+    }
+
+    public function scopeOrderByDesc($field = null, $query){
+        $condition = (is_null($field)) ? $this->orderBy($field, 'DESC') : $this->orderBy('id', 'DESC');
+
+        return $condition;
     }
 
     public function getEventDateTimeAttribute(){
@@ -82,7 +85,7 @@ class Event extends Model implements SluggableInterface
     }
 
     public function setCreatedAtAttribute($date){
-        // $this->attributes['creeated_at'] = Carbon::createFromFormat('d-m-Y', $date);
+        // $this->attributes['event_datetime'] = Carbon::createFromFormat('d-m-Y', $date);
     }
 
     /**

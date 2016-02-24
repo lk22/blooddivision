@@ -33,7 +33,7 @@ class HomeController extends Controller
         
         $latest_users = User::latest()->limit(3)->get();
         $feed = Message::all();
-        $events = Event::latest()->take(3)->get();
+        $events = Event::with('user')->latest()->take(5)->get();
         // $games = Game::latest()->take(1)->where('user_id', Auth::user()->id)-get();
         // $games = Game::with('user')->findOrFail('games.id')->whereUser()->take(1)->latest()->get();
 

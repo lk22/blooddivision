@@ -26,7 +26,7 @@
         
         <!-- xbox platform -->
         <div class="col-md-3 col-md-offset-2 col-lg-3 col-lg-offset-2 xbox-platform-container">
-            <img class="faa-parent faa-pulse animated" src="/images/Xbox_360.png" height="128" width="128" alt="">
+            <img class="faa-parent faa-pulse animated" src="/images/XBox_360.png" height="128" width="128" alt="">
             <div class="row">
                 <h3 class="text-left">Xbox One/360 platforms </h3>
             </div>

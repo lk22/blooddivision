@@ -41,7 +41,7 @@ $factory->define(Blooddivision\User::class, function(faker\Generator $faker) {
 */
 $factory->define(Blooddivision\Event::class, function(faker\Generator $faker){
 	return [
-		'event_name' => $faker->paragraph,
+		'event_name' => "leokk2200",
 		'event_game' => $faker->randomElement([
 			'Destiny',
 			'Halo 5',

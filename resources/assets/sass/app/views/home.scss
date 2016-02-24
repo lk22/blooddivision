@@ -65,14 +65,14 @@
 					background: #fff; 
 					width: 100%; 
 					padding: 34px;
+					border-left:1px solid #ddd;
+					border-right:1px solid #ddd;
 					/**
 					*	rows
 					*/
 
-						.latest-registered-users-row{
-						 border-bottom:1px solid #ECECEC;
-						 margin-bottom: 10px;
-							.user-row{
+						.latest-events-row{
+							.event-row{
 								margin-top:10px;
 								border-bottom:1px solid #000;
 								border:none;	

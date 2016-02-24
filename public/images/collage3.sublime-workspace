@@ -1,0 +1,1586 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"subsc",
+				"Subscription"
+			],
+			[
+				"sub",
+				"subscription_mock"
+			],
+			[
+				"assertAr",
+				"assertArrayNotHasKey"
+			],
+			[
+				"modeltest",
+				"modeltestclass	testclass"
+			],
+			[
+				"assert",
+				"assertClassHasAttribute"
+			],
+			[
+				"Helper",
+				"Helper::url-asset	Generate a URL for an asset."
+			],
+			[
+				"c",
+				"class	Attr"
+			],
+			[
+				"bs3-form",
+				"bs3-form:label	bs3-form-label"
+			],
+			[
+				"mouseenter",
+				"mouseenter()	noty-default.js"
+			],
+			[
+				"Schema",
+				"Schema::table-update	Update an existing table"
+			],
+			[
+				"arra",
+				"array_key_exists"
+			],
+			[
+				"actiona",
+				"actionable_id"
+			],
+			[
+				"func",
+				"func_get_args"
+			],
+			[
+				"check_hidden_propert",
+				"check_hidden_property_exists"
+			],
+			[
+				"thro",
+				"http_throttle"
+			],
+			[
+				"address",
+				"address"
+			],
+			[
+				"property",
+				"property_exists"
+			],
+			[
+				"preventDef",
+				"preventDefault()	sinon-1.14.1.js"
+			],
+			[
+				"prevent",
+				"preventExtensions(it)	es6.object.prevent-extensions.js"
+			],
+			[
+				"function",
+				"functions(object)	index.js"
+			],
+			[
+				"swal",
+				"swal()	sweetalert-dev.js"
+			],
+			[
+				"random",
+				"random(min, max)	lodash.js"
+			],
+			[
+				"i",
+				"is	.is()"
+			],
+			[
+				"email",
+				"availableEmailDomains	authorization.js"
+			],
+			[
+				"bs3",
+				"bs3-form	bs3-form"
+			],
+			[
+				"bs3-label",
+				"bs3-label:info	bs3-label-info"
+			],
+			[
+				"content",
+				"content:figure	.snippet"
+			],
+			[
+				"project",
+				"projectflyer"
+			],
+			[
+				"au",
+				"anonymous function"
+			],
+			[
+				"a",
+				"al	alert"
+			],
+			[
+				"_render",
+				"_renderErrorMsg"
+			],
+			[
+				"focus",
+				"focus	.focus()"
+			],
+			[
+				"get",
+				"get	$.get()"
+			],
+			[
+				"fade",
+				"fadeOut	.fadeOut()"
+			],
+			[
+				"font-awesome",
+				"font-awesome-animation"
+			],
+			[
+				"font-aweso",
+				"font-awesome-animation"
+			],
+			[
+				"styles",
+				"style.top	Style CSS"
+			],
+			[
+				"Creat",
+				"CreateGameRequest"
+			],
+			[
+				"User",
+				"URL-setRequest	URL-setRequest"
+			],
+			[
+				"DB",
+				"DB-table	DB-table"
+			],
+			[
+				"doc",
+				"doc_d	Constant Definition"
+			],
+			[
+				"cla",
+				"class	class …"
+			],
+			[
+				"fac",
+				"factory"
+			],
+			[
+				"split",
+				"spliti"
+			],
+			[
+				"Sluggable",
+				"SluggableInterface"
+			],
+			[
+				"Slugg",
+				"SluggableTrait"
+			],
+			[
+				"Sluggab",
+				"SluggableInterface"
+			],
+			[
+				"slug",
+				"slug"
+			],
+			[
+				"users",
+				"users_events"
+			],
+			[
+				"user",
+				"users_events"
+			],
+			[
+				"var",
+				"valueOf()	Number"
+			],
+			[
+				"scrollTo",
+				"scrollTop	.scrollTop()"
+			],
+			[
+				"windoe",
+				"window.frameElement	Window"
+			],
+			[
+				"scroll",
+				"scrollLeft	Element"
+			],
+			[
+				"windows",
+				"window.fullScreen	Window"
+			],
+			[
+				"js",
+				"js	JSON.stringify"
+			],
+			[
+				"events",
+				"events"
+			],
+			[
+				"proer",
+				"property_exists"
+			],
+			[
+				"method",
+				"__method__"
+			],
+			[
+				"me",
+				"method"
+			],
+			[
+				"table",
+				"test_method_actinable_on_action_class"
+			],
+			[
+				"test",
+				"markTestIncomplete"
+			],
+			[
+				"n",
+				"n"
+			],
+			[
+				"join",
+				"join"
+			],
+			[
+				"route",
+				"routetest	routetest"
+			],
+			[
+				"routetest",
+				"routetest	routetest"
+			],
+			[
+				"it",
+				"it_visits_reviews_route"
+			],
+			[
+				"reset",
+				"reset-password"
+			],
+			[
+				"it_visits_",
+				"it_visits_reset_password_route"
+			],
+			[
+				"exists",
+				"exists"
+			],
+			[
+				"class",
+				"class_exists"
+			],
+			[
+				"f",
+				"fun	function …"
+			],
+			[
+				"String",
+				"toLocaleString()	Array"
+			],
+			[
+				"body",
+				"body	Document"
+			],
+			[
+				"console",
+				"description-String.prototype.toLocaleLowerCase()"
+			],
+			[
+				"j",
+				"assign(${0:target}, sources)	Object"
+			],
+			[
+				"jqu",
+				"jQuery.sub	jQuery.sub"
+			],
+			[
+				"q",
+				"quotes = '$0'	Style CSS"
+			],
+			[
+				"y",
+				"Math.atan2(${0:y}, x)	Math"
+			],
+			[
+				"jq",
+				"jq-boilerplate	jQuery Plugin Boilerplate"
+			],
+			[
+				"event",
+				"description-event.bubbles"
+			],
+			[
+				"Event",
+				"paste	Event"
+			],
+			[
+				"d",
+				"deviceproximity	Event"
+			],
+			[
+				"h",
+				"height	.height()"
+			],
+			[
+				"e",
+				"encodeURI(${0:URI})	Window"
+			],
+			[
+				"element",
+				"unshift(${0:element1})	Array"
+			],
+			[
+				"t",
+				"toggle	.toggle()"
+			],
+			[
+				"s",
+				"snbi	shouldNotBeAnInstanceOf / phpspec matcher"
+			],
+			[
+				"sh",
+				"shbc	shouldHaveBeenCalled / phpspec spy"
+			],
+			[
+				"auth",
+				"Authorization"
+			],
+			[
+				"Reque",
+				"Request::method	Various Request Methods to examine HTTP Requests"
+			],
+			[
+				"Request",
+				"Request-flash	Request-flash"
+			],
+			[
+				"blood",
+				"blooddivision"
+			],
+			[
+				"mess",
+				"message_of_the_day"
+			],
+			[
+				"id",
+				"id"
+			],
+			[
+				"Forum",
+				"ForumTag"
+			],
+			[
+				"Sof",
+				"SoftDeletingTrait-withTrashed	SoftDeletingTrait-withTrashed"
+			],
+			[
+				"bloodDivision",
+				"bloodDivisionLandingLoginWrapper"
+			],
+			[
+				"message",
+				"messageField"
+			],
+			[
+				"remai",
+				"remainingContainer"
+			],
+			[
+				"Auth",
+				"Auth::user	Auth-user"
+			],
+			[
+				"blo",
+				"bloodDivisionFeedForm"
+			],
+			[
+				"bloo",
+				"bloodDivisionFeedForm"
+			],
+			[
+				"min",
+				"minLength"
+			],
+			[
+				"max",
+				"maxLength"
+			],
+			[
+				"bloodDiv",
+				"bloodDivisionFeedField"
+			],
+			[
+				"mous",
+				"mouseenter"
+			],
+			[
+				"Au",
+				"Auth-user	Auth-user"
+			],
+			[
+				"A",
+				"Auth-user	Auth-user"
+			],
+			[
+				"request",
+				"request"
+			],
+			[
+				"U",
+				"URL-full	URL-full"
+			],
+			[
+				"Schem",
+				"Schema-table	Schema-table"
+			],
+			[
+				"name",
+				"name"
+			],
+			[
+				"bd",
+				"bdivision_navbar"
+			],
+			[
+				"php",
+				"php_check_syntax"
+			],
+			[
+				"S",
+				"Schema"
+			],
+			[
+				"Sc",
+				"Schema::connection	Specify connection for schema operation"
+			],
+			[
+				"link",
+				"login_link"
+			],
+			[
+				"last",
+				"last_page_minus_one"
+			],
+			[
+				"pre",
+				"prevLabel"
+			],
+			[
+				"prices",
+				"prices_string"
+			],
+			[
+				"error",
+				"error_reporting"
+			],
+			[
+				"number",
+				"number_votes"
+			],
+			[
+				"ID",
+				"Input::oldWithDefault	Retrieve Old Data with Default"
+			],
+			[
+				"wi",
+				"widget_id"
+			],
+			[
+				"preg",
+				"preg_match"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 123.0,
+		"last_filter": "git pull",
+		"selected_items":
+		[
+			[
+				"git pull",
+				"Git: Pull"
+			],
+			[
+				"gs",
+				"Git: Status"
+			],
+			[
+				"gp",
+				"Git: Push"
+			],
+			[
+				"artisan",
+				"Laravel Artisan 5: Make:Model"
+			],
+			[
+				"anf",
+				"ANF: New File"
+			],
+			[
+				"gc",
+				"Git: Checkout"
+			],
+			[
+				"artisan ",
+				"Laravel Artisan 5: Make:Middleware"
+			],
+			[
+				"git check",
+				"Git: Checkout"
+			],
+			[
+				"artisan migrate",
+				"Laravel Artisan 5: Migrate:Refresh"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git sta",
+				"Git: Status"
+			],
+			[
+				"git branch",
+				"Git: Checkout New Branch"
+			],
+			[
+				"git branc",
+				"Legit: Branches"
+			],
+			[
+				"php",
+				"PHPUnit: Run"
+			],
+			[
+				"gulp",
+				"Gulp"
+			],
+			[
+				"color",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"c",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"",
+				"ColorSchemeSelector: Random Color Scheme"
+			],
+			[
+				"colorsublie",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"colorsub",
+				"Colorsublime: Browse Themes"
+			],
+			[
+				"p",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"phpunit",
+				"PHPUnit: Run All Tests"
+			],
+			[
+				"Snippet: route",
+				"Snippet: routetest"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"snippet",
+				"Snippet: $.isWindow()"
+			],
+			[
+				"PHPSpec: ",
+				"PHPSpec: Run"
+			],
+			[
+				"phpspec",
+				"PHPSpec: Run"
+			]
+		],
+		"width": 548.0
+	},
+	"console":
+	{
+		"height": 120.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '462d6673ebd5b9ca297474c166b2e10d' + 'fd945a23b1a0642535aa906951315f52'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/leoknudsen/projects/athliit/app/Subscription.php",
+		"/Users/leoknudsen/projects/athliit/app/User.php",
+		"/Users/leoknudsen/projects/athliit/tests/model/ActionTest.php",
+		"/Users/leoknudsen/projects/athliit/tests/model/SubscriptionTest.php",
+		"/Users/leoknudsen/projects/athliit/tests/notes.txt",
+		"/Users/leoknudsen/projects/athliit/vendor/nesbot/carbon/src/Carbon/Carbon.php",
+		"/Users/leoknudsen/Library/Application Support/Sublime Text 3/Packages/User/phpsnips/unittest.sublime-snippet",
+		"/Users/leoknudsen/projects/athliit/.gitignore",
+		"/Users/leoknudsen/projects/athliit/tests/acceptance/RouteTest.php",
+		"/Users/leoknudsen/projects/athliit/.DS_Store",
+		"/Users/leoknudsen/projects/athliit/vendor/mockery/mockery/library/Mockery/CompositeExpectation.php",
+		"/Users/leoknudsen/projects/athliit/composer.json",
+		"/Users/leoknudsen/projects/blooddivisiontwo/.gitignore",
+		"/Users/leoknudsen/projects/athliit/app/Mailers/Mailer.php",
+		"/Users/leoknudsen/projects/athliit/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/Users/leoknudsen/projects/athliit/app/GalleryItem.php",
+		"/Users/leoknudsen/projects/athliit/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php",
+		"/Users/leoknudsen/projects/athliit/composer.lock",
+		"/Users/leoknudsen/projects/blooddivisiontwo/app/Http/Middleware/Authenticate.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/views/pages/profile-test.blade.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/app/Http/Controllers/EventController.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/views/pages/contact.blade.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/views/pages/create_event.blade.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/database/migrations/2016_02_19_004046_create_help_articles_tables.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/assets/sass/app/views/_all.scss",
+		"/Users/leoknudsen/projects/blooddivisiontwo/app/Event.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/app/Help.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/app/User.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/assets/sass/app/views/about.scss",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/views/auth/login.blade.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/database/seeds/DatabaseSeeder.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/database/seeds/ContactTableSeeder.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/database/migrations/2016_02_19_004024_create_blog_articles_table.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/database/factories/ModelFactory.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/database/migrations/2016_02_19_004202_create_terms_table.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/database/migrations/2016_02_19_004245_create_contact_message_table.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/app/Contact.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/app/Http/Controllers/ContactController.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/assets/sass/welcome.scss",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/views/welcome.blade.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/config/app.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/app/Http/Requests/CreateContactRequest.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/app/Http/Requests/CreateEventRequest.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/views/partials/layout_footer.blade.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/app/Http/routes.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/views/layouts/app.blade.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/app/helpers.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/app/Http/Controllers/UserController.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/storage/logs/laravel.log",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/views/partials/layout_header.blade.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/public/build/css/welcome-b204b4e1a1.css",
+		"/Users/leoknudsen/projects/blooddivisiontwo/public/css/all.css",
+		"/Users/leoknudsen/projects/blooddivisiontwo/public/css/welcome.css",
+		"/Users/leoknudsen/projects/blooddivisiontwo/composer.json",
+		"/Users/leoknudsen/projects/blooddivisiontwo/vendor/laravel/framework/src/Illuminate/Foundation/Providers/ComposerServiceProvider.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/assets/sass/app/views/contact.blade.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/views/pages/about.blade.php",
+		"/Users/leoknudsen/.homestead/Homestead.yaml",
+		"/Users/leoknudsen/projects/realworl-react-tutorial/webpack.config.js",
+		"/Users/leoknudsen/projects/realworld-react-tutorial/npm-debug.log",
+		"/Users/leoknudsen/projects/realworld-react-tutorial/npm.debug.log",
+		"/Users/leoknudsen/projects/react-0.14.7/examples/webcomponents/index.html",
+		"/Users/leoknudsen/projects/react-0.14.7/index.html",
+		"/Users/leoknudsen/projects/blooddivisiontwo/app/Messages.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/tests/UserTest.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/gulpfile.js",
+		"/Users/leoknudsen/projects/blooddivisiontwo/public/js/global.js",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/assets/sass/app/_partials/desktop/header.scss",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/assets/sass/app/views/team.scss",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/assets/sass/app/views/profile.scss",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/views/layouts/profile.blade.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/views/home.blade.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/assets/sass/app/views/home.scss",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/views/pages/members.blade.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/views/pages/profile_games.blade.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/app/Game.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/public/js/pages/authorization.js",
+		"/Users/leoknudsen/projects/athliit/vendor/symfony/http-foundation/Response.php",
+		"/Users/leoknudsen/projects/athliit/vendor/laravel/framework/src/Illuminate/Http/ResponseTrait.php",
+		"/Users/leoknudsen/projects/athliit/vendor/symfony/http-foundation/Request.php",
+		"/Users/leoknudsen/projects/athliit/app/Http/helpers.php",
+		"/Users/leoknudsen/projects/athliit/app/Address.php",
+		"/Users/leoknudsen/projects/athliit/app/Http/routes.php",
+		"/Users/leoknudsen/projects/athliit/storage/logs/laravel.log",
+		"/Users/leoknudsen/projects/athliit/vendor/phpunit/phpunit/src/Framework/Assert.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/public/js/all.js",
+		"/Users/leoknudsen/projects/blooddivisiontwo/bower_components/sweetalert/dist/sweetalert-dev.js",
+		"/Users/leoknudsen/projects/blooddivisiontwo/bower_components/jquery/external/requirejs/require.js",
+		"/Users/leoknudsen/projects/project-flyer/vendor/fzaninotto/faker/src/Faker/Provider/bn_BD/Utils.php",
+		"/Users/leoknudsen/projects/project-flyer/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php",
+		"/Users/leoknudsen/projects/project-flyer/resources/views/errors/503.blade.php",
+		"/Users/leoknudsen/projects/project-flyer/resources/views/pages/home.blade.php",
+		"/Users/leoknudsen/projects/project-flyer/app/Http/Utilities/Country.php",
+		"/Users/leoknudsen/projects/project-flyer/database/factories/ModelFactory.php",
+		"/Users/leoknudsen/projects/project-flyer/app/Photo.php",
+		"/Users/leoknudsen/projects/project-flyer/app/Flyer.php",
+		"/Users/leoknudsen/projects/project-flyer/.env",
+		"/Users/leoknudsen/projects/project-flyer/database/migrations/2016_02_08_214549_crete_flyer_photos_table.php",
+		"/Users/leoknudsen/projects/project-flyer/database/migrations/2016_02_08_214341_create_flyers_table.php",
+		"/Users/leoknudsen/projects/project-flyer/resources/views/flyers/form.blade.php",
+		"/Users/leoknudsen/projects/project-flyer/resources/views/layouts/app.blade.php",
+		"/Users/leoknudsen/projects/project-flyer/app/Http/routes.php",
+		"/Users/leoknudsen/projects/project-flyer/app/Http/Requests/FlyerRequest.php",
+		"/Users/leoknudsen/projects/project-flyer/app/Http/Controllers/FlyersController.php",
+		"/Users/leoknudsen/projects/project-flyer/resources/views/flyers/create_new_flyer.blade.php",
+		"/Users/leoknudsen/projects/project-flyer/app/Http/Utitlities/Country.php",
+		"/Users/leoknudsen/projects/project-flyer/resources/assets/sass/app.scss",
+		"/Users/leoknudsen/projects/blooddivisiontwo/public/images/swtor1.jpg",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/assets/sass/launch.scss",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/assets/sass/app.scss",
+		"/Users/leoknudsen/projects/blooddivisiontwo/app/Http/Controllers/HomeController.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/app/Http/Controllers/PageController.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/views/launch.blade.php",
+		"/Users/leoknudsen/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/views/pages/profile_events.blade.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/assets/sass/app/views/login.scss",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/views/pages/profile_home.blade.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/public/js/pages/home.js",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/views/auth/register.blade.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/views/partials/register_help_modal.blade.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/assets/sass/app/views/register.scss",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/views/partials/auth_help_modal.blade.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/public/build/js/all-adfa387b08.js",
+		"/Users/leoknudsen/projects/blooddivisiontwo/resources/views/pages/events.blade.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/database/seeds/GameTableSeeder.php",
+		"/Users/leoknudsen/projects/blooddivisiontwo/database/migrations/2016_01_15_104818_create_games_table.php"
+	],
+	"find":
+	{
+		"height": 70.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"active",
+			"check_if_subscription_class_table_has_subscriptions_value(",
+			"active",
+			"page_id",
+			"protected $table = 'page_user';",
+			"protected $table = 'page_user'",
+			"left",
+			"100px",
+			"4",
+			"h5",
+			"event_success",
+			"message_success",
+			"p",
+			"2",
+			"h5",
+			"h3",
+			"STAR WARS- The Old Republic – Knights of the Fallen Empire – “Sacrifice” Trailer",
+			"h1",
+			"members-content-wrapper",
+			"bootstrap",
+			"fwrite(STDOUT, __METHOD__ . \" - says: \");",
+			"ajax",
+			"type",
+			"click",
+			"validateRequired",
+			"name",
+			"price",
+			"zip",
+			"Zip",
+			"zip",
+			"button",
+			"street",
+			"Street",
+			"street",
+			"h4",
+			"platform",
+			"h2",
+			"platform",
+			"row",
+			"12",
+			"h4",
+			"1000",
+			"1500",
+			"closeTutorialBtn",
+			"_renderTutorial",
+			"h3",
+			"category_id",
+			"forum_categories",
+			"span",
+			"6",
+			"4",
+			"h5",
+			"h4",
+			"get",
+			"Auth::user()",
+			"$the_user",
+			"$user",
+			"$profile",
+			"user",
+			"faker",
+			"Faker",
+			"faker",
+			"Faker",
+			"faker",
+			"]",
+			"Event::count()",
+			"user",
+			"find",
+			"landing",
+			"blooddivision",
+			"10",
+			"3",
+			"count",
+			"request",
+			"subscriptions",
+			"subscription",
+			"response",
+			"it",
+			"200",
+			"route::get('/",
+			"@home",
+			"blog",
+			"bl",
+			"blog",
+			"#banner-area-wrapper",
+			"#banner-area",
+			"#",
+			"header",
+			"#banner-area-wrapper {display: none}",
+			"<style>",
+			"</style>",
+			"<style>\n#banner-area-wrapper {display: none}\n</style>",
+			"prop",
+			"span",
+			"h4",
+			"p",
+			"Illuminate",
+			"Closure",
+			"3px",
+			"1px",
+			"3",
+			":",
+			"3",
+			"on",
+			">\n",
+			"get",
+			"bind",
+			";",
+			"data",
+			"185px",
+			"h3",
+			"bloodDivisionFeedForm",
+			"append",
+			"bloodDivisionForumWrapper",
+			"bloodDivisionLoginRegisterWrapper",
+			"35",
+			"h4",
+			"App",
+			"blooddivision",
+			"App",
+			"span",
+			"width",
+			"30px",
+			"40px",
+			"70px",
+			"Sidebar",
+			"bloodDivisionSidebarLink",
+			"input"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 292.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git-checkout":
+	{
+		"height": 144.0
+	},
+	"output.git-commit":
+	{
+		"height": 132.0
+	},
+	"output.git-pull":
+	{
+		"height": 152.0
+	},
+	"output.git-push":
+	{
+		"height": 104.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 112.0
+	},
+	"pinned_build_system": "",
+	"project": "collage3.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"sub",
+				"app/Subscription.php"
+			],
+			[
+				"routetest",
+				"tests/acceptance/RouteTest.php"
+			],
+			[
+				"notest",
+				"tests/notes.txt"
+			],
+			[
+				"routes",
+				"app/Http/routes.php"
+			],
+			[
+				"page.p",
+				"app/Page.php"
+			],
+			[
+				"page",
+				"app/Http/Controllers/PageController.php"
+			],
+			[
+				"facto",
+				"tests/factories/factories.php"
+			],
+			[
+				"createpagetabe",
+				"database/migrations/2015_10_21_180644_create_pages_table.php"
+			],
+			[
+				"fact",
+				"tests/factories/factories.php"
+			],
+			[
+				"user",
+				"app/User.php"
+			],
+			[
+				"routest",
+				"tests/acceptance/RouteTest.php"
+			],
+			[
+				"createpage",
+				"database/migrations/2015_10_21_180644_create_pages_table.php"
+			],
+			[
+				"createuser",
+				"database/migrations/2014_10_12_000000_create_users_table.php"
+			],
+			[
+				"actiontest",
+				"tests/model/ActionTest.php"
+			],
+			[
+				"action",
+				"app/Action.php"
+			],
+			[
+				"routetes",
+				"tests/acceptance/RouteTest.php"
+			],
+			[
+				"pageadmin",
+				"app/Http/Middleware/PageAdmin.php"
+			],
+			[
+				"fac",
+				"tests/factories/factories.php"
+			],
+			[
+				"subsc",
+				"tests/model/SubscriptionTest.php"
+			],
+			[
+				"composer",
+				"composer.lock"
+			],
+			[
+				"app",
+				"config/app.php"
+			],
+			[
+				"helpers",
+				"app/Http/helpers.php"
+			],
+			[
+				"footer",
+				"resources/views/partials/layout_footer.blade.php"
+			],
+			[
+				"about",
+				"resources/views/pages/about.blade.php"
+			],
+			[
+				"welcome.",
+				"resources/assets/sass/welcome.scss"
+			],
+			[
+				"welcome",
+				"resources/views/welcome.blade.php"
+			],
+			[
+				"model",
+				"database/factories/ModelFactory.php"
+			],
+			[
+				"layout",
+				"resources/views/partials/layout_header.blade.php"
+			],
+			[
+				"profile",
+				"resources/assets/sass/app/views/profile.scss"
+			],
+			[
+				"profileve",
+				"resources/views/pages/profile_events.blade.php"
+			],
+			[
+				"userc",
+				"app/Http/Controllers/UserController.php"
+			],
+			[
+				"pro",
+				"resources/views/layouts/profile.blade.php"
+			],
+			[
+				"us",
+				"app/User.php"
+			],
+			[
+				"rank",
+				"app/Rank.php"
+			],
+			[
+				"profile.scss",
+				"resources/assets/sass/app/views/profile.scss"
+			],
+			[
+				"profile.b",
+				"resources/views/layouts/profile.blade.php"
+			],
+			[
+				"author",
+				"public/js/pages/authorization.js"
+			],
+			[
+				"",
+				"app/Http/Controllers/EventController.php"
+			],
+			[
+				"eventc",
+				"app/Http/Controllers/EventController.php"
+			],
+			[
+				"contac",
+				"resources/views/pages/contact.blade.php"
+			],
+			[
+				"contact",
+				"app/Http/Controllers/ContactController.php"
+			],
+			[
+				"helper",
+				"app/helpers.php"
+			],
+			[
+				"createeve",
+				"resources/views/pages/create_event.blade.php"
+			],
+			[
+				"createhelp",
+				"database/migrations/2016_02_19_004046_create_help_articles_tables.php"
+			],
+			[
+				"createcont",
+				"database/migrations/2016_02_19_004245_create_contact_message_table.php"
+			],
+			[
+				"createconta",
+				"app/Http/Requests/CreateContactRequest.php"
+			],
+			[
+				"route",
+				"app/Http/routes.php"
+			],
+			[
+				"login",
+				"resources/views/auth/login.blade.php"
+			],
+			[
+				"createevet",
+				"resources/views/pages/create_event.blade.php"
+			],
+			[
+				"checkfor",
+				"vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php"
+			],
+			[
+				"lar",
+				"storage/logs/laravel.log"
+			],
+			[
+				"conta",
+				"resources/views/pages/contact.blade.php"
+			],
+			[
+				"createc",
+				"database/migrations/2016_02_19_004245_create_contact_message_table.php"
+			],
+			[
+				"createco",
+				"app/Http/Requests/CreateContactRequest.php"
+			],
+			[
+				"all.",
+				"public/css/all.css"
+			],
+			[
+				"welcoem",
+				"public/css/welcome.css"
+			],
+			[
+				"compse",
+				"vendor/laravel/framework/src/Illuminate/Foundation/Providers/ComposerServiceProvider.php"
+			],
+			[
+				"lay",
+				"resources/views/partials/layout_footer.blade.php"
+			],
+			[
+				"createevent",
+				"resources/views/pages/create_event.blade.php"
+			],
+			[
+				"compo",
+				"composer.json"
+			],
+			[
+				"rout",
+				"app/Http/routes.php"
+			],
+			[
+				"event",
+				"app/Event.php"
+			],
+			[
+				"_all",
+				"resources/assets/sass/app/views/_all.scss"
+			],
+			[
+				"about.",
+				"resources/assets/sass/app/views/about.scss"
+			],
+			[
+				"team",
+				"resources/assets/sass/app/views/team.scss"
+			],
+			[
+				"members",
+				"resources/views/pages/members.blade.php"
+			],
+			[
+				"profile.",
+				"resources/views/layouts/profile.blade.php"
+			],
+			[
+				"header.scss",
+				"resources/assets/sass/app/_partials/desktop/header.scss"
+			],
+			[
+				"home.scs",
+				"resources/assets/sass/app/views/home.scss"
+			],
+			[
+				"home",
+				"resources/views/home.blade.php"
+			],
+			[
+				"gul",
+				"gulpfile.js"
+			],
+			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"global",
+				"public/js/global.js"
+			],
+			[
+				"auth",
+				"public/js/pages/authorization.js"
+			],
+			[
+				"rou",
+				"tests/RouteTest.php"
+			],
+			[
+				"game",
+				"app/Game.php"
+			],
+			[
+				"homec",
+				"app/Http/Controllers/HomeController.php"
+			],
+			[
+				"database",
+				"database/seeds/DatabaseSeeder.php"
+			],
+			[
+				"roleta",
+				"database/seeds/RoleTableSeeder.php"
+			],
+			[
+				"roletabl",
+				"database/seeds/RoleTableSeeder.php"
+			],
+			[
+				"createroles",
+				"database/migrations/2016_02_14_164815_create_roles_table.php"
+			],
+			[
+				"2014_10_12_000000_create_users_table",
+				"database/migrations/2014_10_12_000000_create_users_table.php"
+			],
+			[
+				"laravel",
+				"storage/logs/laravel.log"
+			],
+			[
+				"gametable",
+				"database/seeds/GameTableSeeder.php"
+			],
+			[
+				"2016_02_02_134900_create_tags_table",
+				"database/migrations/2016_02_02_134900_create_tags_table.php"
+			],
+			[
+				"createrolse",
+				"database/migrations/2016_02_14_164815_create_roles_table.php"
+			],
+			[
+				"tableseer",
+				"database/seeds/EventTableSeeder.php"
+			],
+			[
+				"role",
+				"app/Role.php"
+			],
+			[
+				"createevents",
+				"database/migrations/2016_01_12_210702_create_events_table.php"
+			],
+			[
+				"create_e",
+				"database/migrations/2016_01_12_210702_create_events_table.php"
+			],
+			[
+				"addre",
+				"app/Address.php"
+			],
+			[
+				"addresstes",
+				"tests/AddressTest.php"
+			],
+			[
+				"address",
+				"app/Address.php"
+			],
+			[
+				"all",
+				"public/js/all.js"
+			],
+			[
+				"layouts",
+				"resources/views/layouts/app.blade.php"
+			],
+			[
+				"gulpfi",
+				"gulpfile.js"
+			],
+			[
+				"app/helpers",
+				"vendor/laravel/framework/src/Illuminate/Support/helpers.php"
+			],
+			[
+				"flyer",
+				"app/Http/Controllers/FlyersController.php"
+			],
+			[
+				"create",
+				"database/migrations/2016_02_08_214341_create_flyers_table.php"
+			],
+			[
+				"form",
+				"resources/views/flyers/form.blade.php"
+			],
+			[
+				".blade",
+				"resources/views/pages/home.blade.php"
+			],
+			[
+				"fly",
+				"app/Flyer.php"
+			],
+			[
+				"photo",
+				"app/Photo.php"
+			],
+			[
+				"ro",
+				"app/Http/routes.php"
+			],
+			[
+				"phot",
+				"app/Photo.php"
+			],
+			[
+				"crete",
+				"database/migrations/2016_02_08_214549_crete_flyer_photos_table.php"
+			],
+			[
+				"partialsheader",
+				"resources/views/partials/layout_header.blade.php"
+			],
+			[
+				"register",
+				"resources/views/partials/register_help_modal.blade.php"
+			],
+			[
+				"app.b",
+				"resources/views/layouts/app.blade.php"
+			],
+			[
+				"aut",
+				"public/js/pages/authorization.js"
+			],
+			[
+				"regise",
+				"resources/views/auth/register.blade.php"
+			],
+			[
+				"regis",
+				"resources/assets/sass/app/views/register.scss"
+			],
+			[
+				"createe",
+				"resources/views/pages/create_event.blade.php"
+			],
+			[
+				"cre",
+				"app/Http/Requests/CreateEventRequest.php"
+			],
+			[
+				"auth_h",
+				"resources/views/partials/auth_help_modal.blade.php"
+			],
+			[
+				"profilescs",
+				"resources/assets/sass/app/views/profile.scss"
+			],
+			[
+				"authm",
+				"resources/views/partials/auth_help_modal.blade.php"
+			],
+			[
+				"createvene",
+				"resources/views/pages/create_event.blade.php"
+			],
+			[
+				"authmoda",
+				"resources/views/partials/auth_help_modal.blade.php"
+			],
+			[
+				"mem",
+				"resources/views/pages/members.blade.php"
+			],
+			[
+				"wlecome",
+				"resources/views/welcome.blade.php"
+			],
+			[
+				"layapp",
+				"resources/views/layouts/app.blade.php"
+			],
+			[
+				"login.",
+				"resources/assets/sass/app/views/login.scss"
+			],
+			[
+				"tag",
+				"app/Tag.php"
+			],
+			[
+				"create_eve",
+				"resources/views/pages/create_event.blade.php"
+			],
+			[
+				"create_evet",
+				"resources/views/pages/create_event.blade.php"
+			],
+			[
+				"profie",
+				"resources/views/pages/profile_events.blade.php"
+			],
+			[
+				"profile.scs",
+				"resources/assets/sass/app/views/profile.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 288.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

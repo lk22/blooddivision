@@ -29,7 +29,7 @@ class PageController extends Controller
     */
     public function getMembersPage()
     {
-    	$all_members = User::paginate(5)->setPath('/members');
+    	$all_members = User::all();
     	return view('pages.members')->with('all_members', $all_members);
     }
 }

@@ -77,7 +77,7 @@ class User extends Authenticatable implements SluggableInterface
     *   @return void
     */
     public function events(){
-        return $this->hasMany('Blooddivision\Event');
+        return $this->belongsToMany('Blooddivision\Event')->withTimestamps();
     }
 
     /**

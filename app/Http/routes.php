@@ -20,7 +20,6 @@ Route::get('/', function(){
     return view('welcome');
 });
 
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -37,11 +36,15 @@ Route::group(['middleware' => ['web']], function () {
 });
 
 Route::group(['middleware' => 'web'], function () {
+
+
     Route::auth();
 
     Route::get('/test', function () {
-
-        return 'hi there';
+        $events = Event::with('user')->latest()->take(5)->get();
+        foreach ($events as $event) {
+            echo $event->user->avatar . "<br>";
+        }
     });
 
     Route::get('/', function () {
