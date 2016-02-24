@@ -134,10 +134,10 @@
             <div class="row social-media-row">
                 <a href="https://www.facebook.com/groups/1545118995710570/" target="_blank" class="btn btn-primary btn-block faa-parent animated-hover faa-pulse">Blood Division official facebook page <i class="fa fa-facebook-official"></i></a>
             </div>
-            <div class="row social-media-row">
+            <!-- <div class="row social-media-row">
                 <a href="" target="_blank" class="btn btn-danger btn-block faa-parent animated-hover faa-pulse">Blood Division Google plus page <i class="fa fa-google-plus-square"></i></a>
             </div>
-            <div class="row wantTo-signup-row">
+ -->            <div class="row wantTo-signup-row">
                 <h3 class="text-center">READY TO JOIN THE COMMUNITY? <a href="{{ url('/register') }}">JOIN HERE</a></h3>
             </div>
         </div>
