@@ -226,16 +226,16 @@
   .navbar-default button {
     border: none; }
     .navbar-default button .icon-bar {
-      color: #FFF; }
+      color: #e67e22; }
   .navbar-default .navbar-brand {
-    color: #fff; }
+    color: #e67e22; }
     .navbar-default .navbar-brand:hover {
       color: #e74c3c;
       transition: ease-in-out 0.2s all; }
     .navbar-default .navbar-brand:not(:hover) {
       transition: ease-in-out 0.2s all; }
   .navbar-default .nav li a {
-    color: #fff; }
+    color: #e67e22; }
     .navbar-default .nav li a:hover {
       color: #e74c3c;
       transition: ease-in-out 0.2s all; }
@@ -245,7 +245,7 @@
     background: #fff;
     min-width: 167px; }
     .navbar-default .nav li.dropdown .dropdown-menu li a {
-      color: #000; }
+      color: #e67e22; }
       .navbar-default .nav li.dropdown .dropdown-menu li a:hover {
         color: #e74c3c;
         transition: ease-in-out 0.2s all; }
