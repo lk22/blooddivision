@@ -5,13 +5,13 @@
 		@foreach($events as $event)
 			<div class="row events-row events-wrapper">
 				<div class="panel panel-default event">
-					<div class="panel-heading event-header">{{$event->event_name}} created by {{$event->name}}</div>
+					<div class="panel-heading event-header">{{$event->event_name}} created by {{$event->user->name}}</div>
 					<div class="panel-body">
 						<div class="event-game">
 							<h5>Game: {{$event->event_game}}</h5>
 						</div>
 						<div class="event-datetime">
-							<h5>Date: {{$event->event_datetime}}</h5>
+							<h5>Description: {{$event->event_description}}</h5>
 						</div>
 					</div>
 				</div>

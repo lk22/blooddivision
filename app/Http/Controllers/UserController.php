@@ -174,6 +174,10 @@ class UserController extends Controller
     
     public function storeProfileGame(CreateGameRequest $request){
         Game::create(['game' => $request->get('game_name'), 'user_id' => Auth::user()->id])->save();
+
+        $auth = auth()->user()->name;
+
+        return redirect('/profile/' . $auth . '/your-games' );
     }
 
     // Event::whereHas(['' => function($query){

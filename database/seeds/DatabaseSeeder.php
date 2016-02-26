@@ -17,6 +17,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
+        
+        if(App::environment() === 'production')
+            exit('I just stopped you from being fired. Love Phil');
+
     	//Model::ungard();
         DB::statement('SET FOREIGN_KEY_CHECKS = 0');
 

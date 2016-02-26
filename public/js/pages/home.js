@@ -123,21 +123,10 @@ home.init();
 
 $(function(){
 
-	$('a[href*=#]:not([href=#])').click(function(){
-		if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname){
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-			if(target.length){
-				$('html, body').delay(200).animate({
-					scrollTop: target.offset().top
-				}, 800);
-				$('.scrollTopContainer').delay(200).animate({
-					opacity: "1",
-					right: "-1px"
-				}, 1500);
-			}
+	$('#left-sidebar').affix({
+		offset:{
+			top:20
 		}
-		return false;
 	});
 
 });

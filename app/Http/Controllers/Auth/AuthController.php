@@ -8,6 +8,7 @@ use Blooddivision\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Socialite;
+use Blooddivision\BlooddivisionMailer;
 
 class AuthController extends Controller
 {
@@ -54,6 +55,8 @@ class AuthController extends Controller
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
         ]);
+
+        
     }
 
     /**
@@ -62,13 +65,19 @@ class AuthController extends Controller
      * @param  array  $data
      * @return User
      */
-    protected function create(array $data)
+    protected function create(array $data, BlooddivisionMailer $mailer)
     {
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+
+        $mailer->sendConfirmationEmailTo($user);
+
+        session()->flash('confirmation_message','Please confirm your email address');
+
+        $this->redirectTo = '/login';
     }
 
     /**

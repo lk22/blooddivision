@@ -9,7 +9,7 @@ use Blooddivision\Comment;
 use Blooddivision\Game;
 use Blooddivision\Event;
 use Bloddivision\Message;
-use Bloddivision\Rank;
+use Blooddivision\Rank;
 
 class User extends Authenticatable implements SluggableInterface
 {
@@ -39,8 +39,14 @@ class User extends Authenticatable implements SluggableInterface
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'avatar', 'cover', 'remember_token'
+        'name', 'email', 'password', 'verified', 'token', 'avatar', 'cover', 'remember_token'
     ];
+
+    /**
+     * fields that are protected to the use
+     * @var array
+     */
+    protected $guarded = ['token', 'verified'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -51,12 +57,19 @@ class User extends Authenticatable implements SluggableInterface
         'password', 'remember_token',
     ];
 
+    public static function boot(){
+        parent::boot();
+
+        static::creating(function($user){
+            $user->token = str_random(30);
+        });
+    }
+
     /**
     *   create one to many relationship between users and messages
     *
     *   @return void
     */
-
     public function message(){
         return $this->hasMany('Blooddivision\Message');
     }
@@ -100,8 +113,8 @@ class User extends Authenticatable implements SluggableInterface
      * one to one relation user to rank
      * @return [type] [description]
      */
-    public function rank(){
-        return $this->hasOne('Blooddivision\Rank');
+    public function ranks(){
+        return $this->belongsTo('Blooddivision\Rank');
     }
 
     /**

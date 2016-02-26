@@ -20141,6 +20141,56 @@ $(function(){
 
 });
 
+$(function(){
+
+	$('a[href*=#]:not([href=#])').click(function(){
+		if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname){
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			if(target.length){
+				$('html, body').delay(200).animate({
+					scrollTop: target.offset().top
+				}, 800);
+				$('.scrollTopContainer').delay(200).animate({
+					opacity: "1",
+					right: "-1px"
+				}, 1500);
+			}
+		}
+		return false;
+	});
+
+});
+
+$(function(){
+
+	$('#app-nav').affix({
+		offset: {
+			top: 0
+		}
+	});
+
+});
+
+$(function(){
+
+	var $element = $('#app-nav');
+	var $document = $(document);
+
+	$document.scroll(function(){
+		if($document.scrollTop() >= 100){
+			$element.stop().css({
+				top: '-60px'
+			});
+		} else {
+        	$element.stop().css({
+            	top: '0px'
+        	});
+    	}
+	});
+
+
+});
 
 
 // global app variable definition
@@ -20266,25 +20316,13 @@ home.init();
 
 $(function(){
 
-	$('a[href*=#]:not([href=#])').click(function(){
-		if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname){
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-			if(target.length){
-				$('html, body').delay(200).animate({
-					scrollTop: target.offset().top
-				}, 800);
-				$('.scrollTopContainer').delay(200).animate({
-					opacity: "1",
-					right: "-1px"
-				}, 1500);
-			}
+	$('#left-sidebar').affix({
+		offset:{
+			top:20
 		}
-		return false;
 	});
 
 });
-
 var Auth;
 
 Auth = {

@@ -9,7 +9,7 @@ if (! function_exists('flash'))
 	 */
 	function flash($message)
 	{
-		return session()->flash('flash_message', $message);
+		return session()->flash('message', $message);
 	}
 }
 

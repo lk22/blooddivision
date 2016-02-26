@@ -91,15 +91,18 @@
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 banner-footer-wrapper">
 					<div class="row inner-banner-footer-wrapper">
 						<div class="profile-listing">
-							<span class="profile-link">
+							<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 profile-link">
 								<a href="/profile/{{auth()->user()->name}}"><i class="fa fa-home"></i> Home</a>
-							</span>
-							<span class="profile-link">
+							</div>
+							<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 profile-link">
 								<a href="/profile/{{auth()->user()->name}}/your-events"><i class="fa fa-calendar-o"></i> Your events</a>
-							</span>
-							<span class="profile-link">
+							</div>
+							<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 profile-link">
 								<a href="/profile/{{auth()->user()->name}}/your-games"><i class="fa fa-gamepad"></i> Your games</a>
-							</span>
+							</div>
+							<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 profile-link">
+								<a href="/profile/{{auth()->user()->name}}/settings"><i class="fa fa-cogs"></i> Settings</a>
+							</div>
 						</div>
 					</div>
 				</div>

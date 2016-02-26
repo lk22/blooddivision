@@ -32,6 +32,7 @@ $factory->define(Blooddivision\User::class, function(faker\Generator $faker) {
         ]),
         'profile_desc' => $faker->paragraph,
         'password' => bcrypt('secret'),
+        'verified' => true,
         'remember_token' => str_random(10),
     ];
 });

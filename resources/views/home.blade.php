@@ -30,13 +30,13 @@
                         </div>
 
                         @if(!$event->user->avatar)
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
-                                <span><img class="center-block img img-circle" src="/images/mystery-man.jpg" height="55" width="55" alt=""></span>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 event-user-info">
+                                <span><img class="center-block img img-circle" src="/images/mystery-man.jpg" height="100" width="100" alt=""></span>
                                 <p class="text-center">{{$event->user->name}}</p>
                             </div>
                          @else
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
-                                <span><img class="center-block img img-circle" src="{{ $event->user->avatar }}" height="55" width="55" alt=""></span>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 event-user-info">
+                                <span><img class="center-block img img-circle" src="{{ $event->user->avatar }}" height="100" width="100" alt=""></span>
                                 <p class="text-center">{{$event->user->name}}</p>
                             </div>
                         @endif

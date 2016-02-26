@@ -15,6 +15,7 @@
 use Blooddivision\User;
 use Blooddivision\Game;
 use Blooddivision\Event;
+use Blooddivision\Rank;
 
 Route::get('/', function(){
     return view('welcome');
@@ -41,10 +42,14 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('/test', function () {
-        $events = Event::with('user')->latest()->take(5)->get();
-        foreach ($events as $event) {
-            echo $event->user->avatar . "<br>";
+        // $events = Event::with('user')->latest()->take(5)->get();
+        // 
+        $tests = Rank::with('user')->get();
+        foreach ($tests as $test) {
+            echo $test->id . ': ' .$test->rank .  ' belongs to ' . $test->user->name ."<br><br>";
         }
+        
+        // dd($tests);
     });
 
     Route::get('/', function () {

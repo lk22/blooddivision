@@ -11,6 +11,19 @@
 		 	border:none;
 		 	-webkit-border-radius: 0px 0px 0px 0px; 
 		 	border-radius: 0px 0px 0px 0px; 
+		 	z-index:2px;
+		 	
+		 	&.affix-header{
+		 		background: #FFF;
+		 		top: 0px;
+		        z-index: 9999;
+        		width: 102%; 
+        		transition: top 0.5s ease 0s;
+			    -webkit-transition: top 0.5s ease 0s;
+			    -moz-transition: top 0.5s ease 0s;
+			    -o-transition: top 0.5s ease 0s;
+		 	}
+		 	
 		 	button{
 		 		border:none;
 		 		.icon-bar{
@@ -19,7 +32,7 @@
 		 	}
 
 		 	.navbar-brand{
-		 		color: #e67e22; 
+		 		color: #d35400; 
 		 		
 		 		&:hover{
 		 			color: #e74c3c;

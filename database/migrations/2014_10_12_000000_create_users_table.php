@@ -41,6 +41,16 @@ class CreateUsersTable extends Migration
             $table->string('password', 60);
 
             /**
+             * verification
+             */
+            $table->boolean('verified')->default(false);
+
+            /**
+             * email token
+             */
+            $table->string('token')->nullable();
+
+            /**
             * the profile avatar 
             */
             $table->string('avatar');

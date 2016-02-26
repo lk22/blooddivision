@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default blooddivision-header-navba">
+<nav id="app-nav" class="navbar navbar-default affix-header blooddivision-header-navba">
         <div class="container">
             <div class="navbar-header">
 
