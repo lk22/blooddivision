@@ -31,6 +31,8 @@ var paths = {
 
 elixir(function(mix) {
 
+	mix.babel('test.js');
+
 /*
 *	Add Sass support
 */
@@ -156,7 +158,6 @@ elixir(function(mix) {
 		'public/js/vendor/sweetalert-dev.js',
 		'public/js/vendor/react.js',
 		'public/js/vendor/alertify.min.js',
-		'public/js/vendor/angular.min.js',
 		'public/js/vendor/vue.min.js',
 		'global.js',
 		'public/js/pages/home.js',

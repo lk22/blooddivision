@@ -883,15 +883,22 @@
 .container-fluid.profile-content-wrapper {
   width: 100%;
   height: auto;
-  background: #fff;
+  background: #E9EAED;
+  padding: 0px 0px 10px 0px;
   /**
  			* inner profile content wrapper
  			*/ }
   .container-fluid.profile-content-wrapper .inner-profile-content-wrapper {
-    width: 60%;
+    width: 90%;
+    height: auto;
+    font-size: 12px;
+    padding-top: 20px;
     /**
  					 * home content wrapper
  					 */
+    /**
+						 * description container
+						 */
     /**
 					* the events wrapper
 					*/
@@ -910,6 +917,12 @@
     /**
 					 * adding game row
 					 */ }
+    .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .left-profile-sidebar {
+      padding: 25px;
+      background: #FFF; }
+      .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .left-profile-sidebar .row {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #E9EAED; }
     .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .events-wrapper {
       padding-top: 10px;
       /**

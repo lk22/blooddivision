@@ -1,0 +1,1 @@
+{"version":3,"sources":["test.js"],"names":[],"mappings":";;AAAA,IAAA,OAAA,GAAA,OAAA,CAAA,WAAA,CAAA,CAAA;;AAEA,IAAA,OAAA,EAAA,CAAA","file":"test.js","sourcesContent":["var Counter = require('./Counter');\n\nnew counter();"],"sourceRoot":"/source/"}

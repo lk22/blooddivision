@@ -20143,27 +20143,6 @@ $(function(){
 
 $(function(){
 
-	$('a[href*=#]:not([href=#])').click(function(){
-		if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname){
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-			if(target.length){
-				$('html, body').delay(200).animate({
-					scrollTop: target.offset().top
-				}, 800);
-				$('.scrollTopContainer').delay(200).animate({
-					opacity: "1",
-					right: "-1px"
-				}, 1500);
-			}
-		}
-		return false;
-	});
-
-});
-
-$(function(){
-
 	$('#app-nav').affix({
 		offset: {
 			top: 0
@@ -20189,6 +20168,65 @@ $(function(){
     	}
 	});
 
+});
+
+$(function(){
+
+	var $element = $('#profile-banner-footer-affix');
+	var $document = $(document);
+
+	// $element.affix({
+	// 	offset:{
+	// 		top: 250
+	// 	}
+	// });
+});
+
+
+$(function(){
+
+	var $button = $('.add-game');
+
+	$button.click(function(e){
+		e.preventDefault();
+		$.ajax({
+			url: '/profile/{slug}/your-games',
+			type: 'post',
+			dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+			data: $('add-game-form').serialize()
+		})
+		.done(function() {
+			console.log("success");
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		.always(function() {
+			console.log("complete");
+		});
+	})
+
+
+});
+
+$(function(){
+
+	$('a[href*=#]:not([href=#])').click(function(){
+		if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname){
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			if(target.length){
+				$('html, body').delay(200).animate({
+					scrollTop: target.offset().top
+				}, 800);
+				$('.scrollTopContainer').delay(200).animate({
+					opacity: "1",
+					right: "-1px"
+				}, 1500);
+			}
+		}
+		return false;
+	});
 
 });
 
@@ -20323,6 +20361,10 @@ $(function(){
 	});
 
 });
+
+
+
+
 var Auth;
 
 Auth = {

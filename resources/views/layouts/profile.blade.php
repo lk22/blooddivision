@@ -88,7 +88,7 @@
 					</div>
 				</div>
 				@endif
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 banner-footer-wrapper">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 banner-footer-wrapper" id="profile-banner-footer-affix">
 					<div class="row inner-banner-footer-wrapper">
 						<div class="profile-listing">
 							<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 profile-link">
@@ -122,7 +122,7 @@
 	<script src="https://fb.me/react-dom-0.14.6.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <!--<script src="{{ elixir('js/all.js') }}"></script>-->
+    <<script src="{{ elixir('js/all.js') }}"></script>
 
             <script>
 // $(function(){

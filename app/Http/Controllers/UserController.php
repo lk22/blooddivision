@@ -29,7 +29,7 @@ class UserController extends Controller
 
     public function profile($slug){
     	// step 1 => get the specific user
-      $auth = auth()->user(); 
+      $auth = auth()->user();
     	$user = User::Where('name', $slug)->get(); //- first name og lastname conventeres automatisk til leo-knudsen
     	// step 2 => get the events belongs to the user
 
@@ -93,9 +93,7 @@ class UserController extends Controller
     	* select all games
     	*/
     	$games = Game::all();
-
-
-
+        
     	/**
     	* return the view
     	*/
@@ -173,11 +171,14 @@ class UserController extends Controller
      */
     
     public function storeProfileGame(CreateGameRequest $request){
-        Game::create(['game' => $request->get('game_name'), 'user_id' => Auth::user()->id])->save();
+        Game::create([
+            'game' => $request->get('game_name'),
+            'user_id' => Auth::user()->id
+            ])->save();
 
         $auth = auth()->user()->name;
 
-        return redirect('/profile/' . $auth . '/your-games' );
+        return redirect('/profile/' . $auth . '/your-games');
     }
 
     // Event::whereHas(['' => function($query){

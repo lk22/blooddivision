@@ -26,7 +26,7 @@
 					<input type="text" class="form-control" name="game_name" placeholder="Your Game here">
 				</div>
 				<div class="form-group col-xs-12 col-sm-12 col-md-2 col-lg-2">
-					<input type="submit" class="btn btn-success" value="add game">
+					<input type="submit" class="add-game btn btn-success" value="add game">
 				</div>
 			</form>
 		</div>

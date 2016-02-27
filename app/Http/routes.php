@@ -111,8 +111,8 @@ Route::group(['prefix' => '/profile/{slug}', 'middleware' => 'web'], function() 
     Route::post('/create-event', 'UserController@storeEvent');
 
     // the games route
-    Route::get('your-games', 'UserController@profileGames');
-    Route::post('your-games', 'UserController@storeProfileGame');
+    Route::get('/your-games', 'UserController@profileGames');
+    Route::post('/your-games', 'UserController@storeProfileGame');
 
     // the stats route
     // Route::get('your-stats', 'UserController@profileStats');
