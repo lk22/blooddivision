@@ -91,6 +91,7 @@ Route::group(['middleware' => 'web'], function () {
     
     // profile route
     Route::get('/profile/{slug}', 'UserController@profile');
+    Route::post('/profile/{slug}', 'UserController@editDescription');
     
 });
 

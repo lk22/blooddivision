@@ -939,8 +939,9 @@
         width: 100%;
         height: auto; }
         .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .about-profile .user-description .edit_description_form {
-          margin-top: 20px;
-          border-top: 1px solid #E9EAED; }
+          margin: 20px auto 0px auto;
+          border-top: 1px solid #E9EAED;
+          width: 80%; }
           .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .about-profile .user-description .edit_description_form .submit {
             color: #fff; }
     .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .events-wrapper {

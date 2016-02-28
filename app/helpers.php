@@ -2,11 +2,6 @@
 
 namespace Blooddivision;
 use Carbon\Carbon;
-use Bloddivision\User;
-use Bloddivision\Event;
-use Bloddivision\Tag;
-use Bloddivision\Game;
-use Bloddivision\Comment;
 
 /**
 * global helper class 
@@ -73,19 +68,6 @@ class Helper
 	}
 
 	/**
-	 * flashing message extending session global helper
-	 * @param  [type] $message [description]
-	 * @return [type]          [description]
-	 */
-	public function flash($key, $message){
-
-		/**
-		 * flashing message
-		 */	
-		return session()->flash($key, $message);
-	}
-
-	/**
 	 * render all error messages 
 	 * @param  [type] $startpoint [description]
 	 * @param  [type] $endpoint   [description]
@@ -110,7 +92,7 @@ class Helper
 	}
 
 	public function loopContent($array, $val, array $content){
-		foreach($array as $val)(){
+		foreach($array as $val){
 			return $content;
 		}
 	}

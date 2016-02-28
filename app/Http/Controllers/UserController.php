@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Blooddivision\Http\Requests;
 use Blooddivision\Http\Requests\CreateEventRequest;
 use Blooddivision\Http\Requests\CreateGameRequest;
+use Blooddivision\Http\Requests\EditUserDescriptionRequest;
 use Blooddivision\Http\Controllers\Controller;
 use Auth;
 use Blooddivision\User;
@@ -13,6 +14,7 @@ use Blooddivision\Event;
 use Blooddivision\Game;
 use Blooddivision\Rank;
 use Carbon\Carbon;
+use Blooddivision\Helper;
 
 // brug sluggable i stedet for a lede efter User->name. https://github.com/cviebrock/eloquent-sluggable
 // aldrig brug DB klassen. Hvis du gør, kan det med 90% sikkerhed gøres på en nemmere måde.
@@ -189,5 +191,15 @@ class UserController extends Controller
     // }]);
     // 
     
+    public function editDescription(EditUserDescriptionRequest $request, $slug){
+
+        $auth = auth()->user();
+        User::where('id', $auth->id)->update(['profile_desc' => $request->get('description')]);
+
+        Helper::flash('update_message', 'Your Description is edited successfully');
+
+        return redirect('/profile/' . $auth->name);
+
+    }
 
 }
