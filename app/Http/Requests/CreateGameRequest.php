@@ -24,7 +24,7 @@ class CreateGameRequest extends Request
     public function rules()
     {
         return [
-            'game_name' => 'required'
+            'game_name' => 'required|min:10'
         ];
     }
 }

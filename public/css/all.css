@@ -877,16 +877,24 @@
 /**
 	* profile page
 	*/
-@-webkit-keyframes editcover {
-  from {
-    left: -68px; }
-  to {
-    left: 0px; } }
-@keyframes editcover {
-  from {
-    left: -68px; }
-  to {
-    left: 0px; } }
+.btn {
+  border-radius: 0px 0px 0px 0px;
+  background: #f39c12;
+  text-decoration: uppercase;
+  border: none; }
+  .btn:hover {
+    background: #e74c3c;
+    color: #FFF;
+    transition: ease-in-out 0.2s all; }
+  .btn:not(:hover) {
+    transition: ease-in-out 0.2s all; }
+
+.form-control {
+  border-radius: 0px 0px 0px 0px;
+  border: none;
+  background: #BDC3C7; }
+  .form-control:placeholder-shown {
+    color: #fff; }
 
 /**
 * profile stylesheet
@@ -1055,12 +1063,24 @@
     /**
 					 * adding game row
 					 */ }
-    .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .left-profile-sidebar {
+    .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .about-profile {
       padding: 25px;
       background: #FFF; }
-      .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .left-profile-sidebar .row {
+      .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .about-profile .row {
         padding-bottom: 10px;
         border-bottom: 1px solid #E9EAED; }
+      .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .about-profile .buttons {
+        padding-top: 20px;
+        height: 50px;
+        width: 100%; }
+      .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .about-profile .user-description {
+        width: 100%;
+        height: auto; }
+        .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .about-profile .user-description .edit_description_form {
+          margin-top: 20px;
+          border-top: 1px solid #E9EAED; }
+          .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .about-profile .user-description .edit_description_form .submit {
+            color: #fff; }
     .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .events-wrapper {
       padding-top: 10px;
       /**
@@ -1493,6 +1513,9 @@
 
 #profile {
   background: #E9EAED; }
+
+.none {
+  display: none; }
 
 /**
 *	landing page stylesheet

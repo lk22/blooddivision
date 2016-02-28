@@ -164,11 +164,9 @@ elixir(function(mix) {
 		// 'public/js/pages/events.js',
 		// 'public/js/pages/members.js',
 		'public/js/pages/authorization.js',
+		'public/js/pages/profile.js',
 		// 'public/js/pages/helpCenter.js',
-		// 'public/js/pages/profile/timeline.js',
-		// 'public/js/pages/profile/events.js',
-		// 'public/js/pages/profile/createEvent.js',
-		// 'public/js/pages/profile/games.js'
+
 	], 'public/js/all.js', 'public/js');
 
 	// mix.babel('resources/assets/js/components.jsx');

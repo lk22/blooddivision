@@ -93,11 +93,14 @@ class UserController extends Controller
     	* select all games
     	*/
     	$games = Game::all();
-        
+
+        $auth = auth()->user();
+        $ranks = Rank::with('user')->where('ranks.user_id', $auth->id)->take(1)->get();
+
     	/**
     	* return the view
     	*/
-    	return view('pages.create_event', compact('user', 'games'));
+    	return view('pages.create_event', compact('user', 'games', 'ranks'));
     }
 
     /**

@@ -5,45 +5,70 @@
 /**
  * Append token to all requests
  */
-// $(function(){
-// 	$.ajaxPrefilter(function( options ) {
-// 	    if ( !options.beforeSend) {
-// 	        options.beforeSend = function (xhr) {
-// 	            xhr.setRequestHeader('Accept', 'application/json');
-// 				var token = Blooddivision.token;
+function setAffix(element, offset){
+	var $element = $(element);
 
-// 				if (token) {
-// 					xhr.setRequestHeader('X-XSRF-TOKEN', token);
-// 				}
-// 	        }
-// 	    }
-// 	});
-// });
+	$element.affix({
+		offset:offset
+	});
+}
+
 /**
- * [addNewGame to profile]
- * @param {[string]} url  [description]
- * @param {[request type]} type [description]
+ * Setting REQUEST Token function
+ * @param {[type]} token [description]
+ */
+function setToken(token){
+	$.ajaxSetup({
+		headers: token
+	});
+}
+
+function do_slide_and_change_on(field, changeable, change){
+	var $default = 400;
+	var $this = $(field).slideToggle($default);
+	var $change = change;
+
+	if($this){
+		change_html_on(getChangeable(changeable), $change);
+	}
+
+	return $this;
+}
+
+function getChangeable(field){
+	var $field = $('.' + field);
+
+	return $field;
+}
+
+function change_html_on(element, change){
+	var $this = element;
+
+	$this.html(change);
+}
+
+function setValue(value){
+	return value;
+}
+
+/**
+ * setting CSRF TOKEN to work with every ajax request to pass the CSRF Middleware
+ * @param  {String} ){	setToken({		'X-CSRF-Token': $('meta[name  [description]
+ * @return {[type]}                                  [description]
+ */
+$(function(){
+	setToken({
+		'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+	});
+});
+
+/**
+ * affixing the header 
  */
 $(function(){
 
-	$.ajax({
-		url: 'login',
-		type: 'post',
-		data: $('.add-game-form').serialize(),
-		failed: function(data){
-			console.log("could not add following game: " + data);
-		}
-	});
-
-
-});
-
-$(function(){
-
-	$('#app-nav').affix({
-		offset: {
-			top: 0
-		}
+	setAffix('#app-nav', {
+		top: 0
 	});
 
 });
@@ -89,7 +114,7 @@ $(function(){
 		$.ajax({
 			url: '/profile/{slug}/your-games',
 			type: 'post',
-			dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+			dataType: 'json',
 			data: $('add-game-form').serialize()
 		})
 		.done(function() {
@@ -102,7 +127,6 @@ $(function(){
 			console.log("complete");
 		});
 	})
-
 
 });
 
@@ -123,6 +147,44 @@ $(function(){
 			}
 		}
 		return false;
+	});
+
+});
+
+$(function(){
+
+	var $element = $('.edit_description_btn');
+	
+	$element.bind('click', function(){
+
+		// do_slide_and_change_on(
+		// 	'.none',
+		// 	'edit_description_btn',
+		// 	'Cancel'
+		// );
+		// 
+		$('.about-description-row, .buttons').slideUp(400);
+		$('.user-description').slideDown(400);
+
+	});
+
+	$('.about-profile').on('mouseleave', function(){
+
+		if(!$('.description').val()){
+			$('.user-description').slideUp(400);
+			$('.edit_description_btn').html(setValue("Edit description"));
+			$('.about-description-row, .buttons').slideDown(400);
+		}
+
+	});
+
+	$('.close_edit_description_btn').on('click', function(){
+
+		if(!$('.description').val()){
+			$('.user-description').slideUp(400);
+			$('.about-description-row, .buttons').slideDown(400);
+		}
+
 	});
 
 });
