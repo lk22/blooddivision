@@ -25,7 +25,42 @@
 	padding-bottom:0px;
 	background: #E9EAED; 
 	
+	.btn{
+	-webkit-border-radius: 0px 0px 0px 0px; 
+	border-radius: 0px 0px 0px 0px;
+	background: #f39c12;
+	text-decoration: uppercase;
+	border:none;
+	color: #FFF; 
+	&:hover{
+		background: #e74c3c;
+		color: #FFF; 
+		-webkit-transition:ease-in-out 0.2s all;
+		 -moz-transition:ease-in-out 0.2s all;
+		 -ms-transition:ease-in-out 0.2s all;
+		 -o-transition:ease-in-out 0.2s all;
+		 transition:ease-in-out 0.2s all; 
+	}
+
+	&:not(:hover){
+		-webkit-transition:ease-in-out 0.2s all;
+		 -moz-transition:ease-in-out 0.2s all;
+		 -ms-transition:ease-in-out 0.2s all;
+		 -o-transition:ease-in-out 0.2s all;
+		 transition:ease-in-out 0.2s all; 
+	}
+}
+
+.form-control{
+	-webkit-border-radius: 0px 0px 0px 0px; 
+	border-radius: 0px 0px 0px 0px;
+	border:none;
+	background: #BDC3C7; 
 	
+	&:placeholder-shown{
+		color: #fff; 
+	}
+}
 }
 
 #profile{

@@ -741,25 +741,6 @@
 /**
 	* profile page
 	*/
-.btn {
-  border-radius: 0px 0px 0px 0px;
-  background: #f39c12;
-  text-decoration: uppercase;
-  border: none; }
-  .btn:hover {
-    background: #e74c3c;
-    color: #FFF;
-    transition: ease-in-out 0.2s all; }
-  .btn:not(:hover) {
-    transition: ease-in-out 0.2s all; }
-
-.form-control {
-  border-radius: 0px 0px 0px 0px;
-  border: none;
-  background: #BDC3C7; }
-  .form-control:placeholder-shown {
-    color: #fff; }
-
 /**
 * profile stylesheet
 */
@@ -1399,6 +1380,24 @@
 #app-layout {
   padding-bottom: 0px;
   background: #E9EAED; }
+  #app-layout .btn {
+    border-radius: 0px 0px 0px 0px;
+    background: #f39c12;
+    text-decoration: uppercase;
+    border: none;
+    color: #FFF; }
+    #app-layout .btn:hover {
+      background: #e74c3c;
+      color: #FFF;
+      transition: ease-in-out 0.2s all; }
+    #app-layout .btn:not(:hover) {
+      transition: ease-in-out 0.2s all; }
+  #app-layout .form-control {
+    border-radius: 0px 0px 0px 0px;
+    border: none;
+    background: #BDC3C7; }
+    #app-layout .form-control:placeholder-shown {
+      color: #fff; }
 
 #profile {
   background: #E9EAED; }
