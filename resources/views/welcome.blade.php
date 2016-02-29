@@ -8,14 +8,14 @@
     <source src="STAR WARS- The Old Republic – Knights of the Fallen Empire – “Sacrifice” Trailer.mp4" type="video/mp4">
     <source src="STAR WARS- The Old Republic – Knights of the Fallen Empire – “Sacrifice” Trailer.webm" type="video/webm">
 </video> -->
-<video autoplay loop muted poster="/images/swtor1.jpg" id="video-bg">
+<!-- <video autoplay loop muted poster="/images/swtor1.jpg" id="video-bg">
  
     <source src="/video/official trailer2.avi" type="video/avi">
     <source src="/video/official trailer2.mp4" type="video/mp4">
     <source src="/video/official trailer2.webm" type="video/webm">
      
 </video>
-    <!-- inner banner wrapper -->
+ -->    <!-- inner banner wrapper -->
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 banner-wrapper">
         <h1 class="text-center">JOIN THE NEW DIVISION OF BLOOD!</h1>
         <h4 class="text-center">And fight epic battles in various worlds!</h4>
@@ -49,7 +49,7 @@
         </div>
     </div><!-- see more wrapper end -->
 </div><!-- welcome banner wrapper end -->
-<div class="hidden-md hidden-lg container-fluid mobile-platform-wrapper">
+<!-- <div class="hidden-md hidden-lg container-fluid mobile-platform-wrapper">
     <div class="row">
         <h3 class="text-center">Join our battles on</h3>
     </div>
@@ -66,7 +66,7 @@
         </div>
     </div>
 
-</div>
+</div> -->
 <!-- about wrapper -->
 <div id="services" class="container-fluid blooddivision-about-wrapper">
     <div class="row">

@@ -13,6 +13,10 @@
 		 	border-radius: 0px 0px 0px 0px; 
 		 	z-index:2px;
 		 	
+		 	&.navbar{
+		 		margin-bottom:0px;
+		 	}
+		 	
 		 	&.affix-header{
 		 		background: #FFF;
 		 		top: 0px;

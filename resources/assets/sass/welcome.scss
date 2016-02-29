@@ -2,6 +2,16 @@
 *	landing page stylesheet
 */
 
+$i4-oriental: 		320px;
+$i4-landscape: 		480px;
+$i5-oriental: 		$i4-oriental;
+$i5-landscape: 		568px;
+$i6-oriental: 		375px;
+$i6-landscape: 		667px;
+$i6-plus-oriental: 	414px;
+$i6-plus-landscape: 736px;
+$break-large: 		1200px;
+
 	/**
 	*	welcome wrapper
 	*/
@@ -11,6 +21,15 @@
 			height: auto;
 			margin: 0px;
 			z-index:1;
+			
+			padding-bottom:150px;
+			
+			background: url('../images/swb1.jpg') center center;
+			-webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -ms-background-size: cover; 
+		    -o-background-size: cover; 
+			background-size: cover;
 
 			#video-bg{
 				position: absolute;
@@ -22,7 +41,7 @@
 				height: auto;
 				min-height: 100%;
 				z-index: -100;
-				background: transparent url(/images/swtor1.jpg) no-repeat;
+				background: url(/images/swtor1.jpg) no-repeat;
 			}
 			/**
 			*	the banner wrapper
@@ -107,7 +126,7 @@
 	.container-fluid.mobile-platform-wrapper{
 		height:400px;
 		width: auto;
-		margin-top:179px;
+		// margin-top:179px;
 		background: #2c3e50;
 		color: #fff;
 		margin-bottom:20px;  
@@ -122,6 +141,7 @@
 			height: auto;
 			z-index:2;
 			background: #FFF; 
+			padding-top:30px;
 			/**
 			*	the inner wrapper 
 			*/
@@ -136,6 +156,33 @@
 
 						.icon-column{
 							
+							@media screen and (max-width: $i4-oriental){
+								padding-left:50px !important;
+							}
+
+							@media screen and (max-width: $i4-landscape){
+								padding-left:130px !important;
+							}
+
+							@media screen and (max-width: $i5-landscape){
+								padding-left:175px !important;
+							}
+
+							@media screen and (max-width: $i6-oriental){
+								padding-left:80px !important;
+							}
+
+							@media screen and (max-width: $i6-landscape){
+								padding-left:230px !important;
+							}
+							
+							@media screen and (max-width: $i6-plus-oriental){
+								padding-left:80px !important;
+							}
+
+							@media screen and (max-width: $i6-plus-landscape){
+								padding-left:230px !important;
+							}
 							/**
 							*	the icon
 							*/
@@ -144,7 +191,6 @@
 									font-size: 6em;
 									text-align:center;
 								}
-
 						}
 				}
 		}

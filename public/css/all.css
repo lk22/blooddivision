@@ -224,6 +224,8 @@
   border: none;
   border-radius: 0px 0px 0px 0px;
   z-index: 2px; }
+  .navbar-default.navbar {
+    margin-bottom: 0px; }
   .navbar-default.affix-header {
     background: #FFF;
     top: 0px;
@@ -1338,6 +1340,10 @@
   height: auto;
   margin: 0px;
   z-index: 1;
+  padding-bottom: 150px;
+  background: url("../images/swb1.jpg") center center;
+  -ms-background-size: cover;
+  background-size: cover;
   /**
 			*	the banner wrapper
 			*/
@@ -1357,7 +1363,7 @@
     height: auto;
     min-height: 100%;
     z-index: -100;
-    background: transparent url(/images/swtor1.jpg) no-repeat; }
+    background: url(/images/swtor1.jpg) no-repeat; }
   .container-fluid.blooddivision-welcome-wrapper .banner-wrapper {
     padding-top: 50px; }
   .container-fluid.blooddivision-welcome-wrapper .platform-wrapper {
@@ -1403,7 +1409,6 @@
 .container-fluid.mobile-platform-wrapper {
   height: 400px;
   width: auto;
-  margin-top: 179px;
   background: #2c3e50;
   color: #fff;
   margin-bottom: 20px; }
@@ -1416,6 +1421,7 @@
   height: auto;
   z-index: 2;
   background: #FFF;
+  padding-top: 30px;
   /**
 			*	the inner wrapper 
 			*/ }
@@ -1430,6 +1436,27 @@
       /**
 							*	the icon
 							*/ }
+      @media screen and (max-width: 320px) {
+        .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-column {
+          padding-left: 50px !important; } }
+      @media screen and (max-width: 480px) {
+        .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-column {
+          padding-left: 130px !important; } }
+      @media screen and (max-width: 568px) {
+        .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-column {
+          padding-left: 175px !important; } }
+      @media screen and (max-width: 375px) {
+        .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-column {
+          padding-left: 80px !important; } }
+      @media screen and (max-width: 667px) {
+        .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-column {
+          padding-left: 230px !important; } }
+      @media screen and (max-width: 414px) {
+        .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-column {
+          padding-left: 80px !important; } }
+      @media screen and (max-width: 736px) {
+        .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-column {
+          padding-left: 230px !important; } }
       .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-column .fa {
         font-size: 6em;
         text-align: center; }
@@ -1528,6 +1555,10 @@
   height: auto;
   margin: 0px;
   z-index: 1;
+  padding-bottom: 150px;
+  background: url("../images/swb1.jpg") center center;
+  -ms-background-size: cover;
+  background-size: cover;
   /**
 			*	the banner wrapper
 			*/
@@ -1547,7 +1578,7 @@
     height: auto;
     min-height: 100%;
     z-index: -100;
-    background: transparent url(/images/swtor1.jpg) no-repeat; }
+    background: url(/images/swtor1.jpg) no-repeat; }
   .container-fluid.blooddivision-welcome-wrapper .banner-wrapper {
     padding-top: 50px; }
   .container-fluid.blooddivision-welcome-wrapper .platform-wrapper {
@@ -1593,7 +1624,6 @@
 .container-fluid.mobile-platform-wrapper {
   height: 400px;
   width: auto;
-  margin-top: 179px;
   background: #2c3e50;
   color: #fff;
   margin-bottom: 20px; }
@@ -1606,6 +1636,7 @@
   height: auto;
   z-index: 2;
   background: #FFF;
+  padding-top: 30px;
   /**
 			*	the inner wrapper 
 			*/ }
@@ -1620,6 +1651,27 @@
       /**
 							*	the icon
 							*/ }
+      @media screen and (max-width: 320px) {
+        .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-column {
+          padding-left: 50px !important; } }
+      @media screen and (max-width: 480px) {
+        .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-column {
+          padding-left: 130px !important; } }
+      @media screen and (max-width: 568px) {
+        .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-column {
+          padding-left: 175px !important; } }
+      @media screen and (max-width: 375px) {
+        .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-column {
+          padding-left: 80px !important; } }
+      @media screen and (max-width: 667px) {
+        .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-column {
+          padding-left: 230px !important; } }
+      @media screen and (max-width: 414px) {
+        .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-column {
+          padding-left: 80px !important; } }
+      @media screen and (max-width: 736px) {
+        .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-column {
+          padding-left: 230px !important; } }
       .container-fluid.blooddivision-about-wrapper .inner-about-wrapper .icon-column .fa {
         font-size: 6em;
         text-align: center; }
