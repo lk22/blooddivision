@@ -71,7 +71,7 @@ $factory->define(Blooddivision\Game::class, function(faker\Generator $faker){
 			'Destiny'
 		]),
 		'game_cover' => $faker->randomElement([
-			'/images/covers/battleforont.jpeg',
+			'/images/covers/battlefront.jpeg',
 			'/images/covers/Destiny.jpg',
 			'/images/covers/gta5.jpg',
 			'/images/covers/halo5cover.jpg',

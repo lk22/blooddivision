@@ -140,9 +140,10 @@ elixir(function(mix) {
 	 */
 	
 		mix.styles([
+			'vendor/font-awesome-animation.min.css',
+			'../../bower_components/bootstrap/dist/css/bootstrap.css',
 			'welcome.css',
 			'app.css',
-			'vendor/font-awesome-animation.min.css',
 			'vendor/animate.css',
 			'vendor/sweetalert.css',
 			'vendor/alertify.boostrap.css',
@@ -155,6 +156,8 @@ elixir(function(mix) {
 */
 
 	mix.scripts([
+		// 'public/js/vendor/jquery.min.js',
+		// 'public/js/vendor/bootstrap.min.js',
 		'public/js/vendor/sweetalert-dev.js',
 		'public/js/vendor/react.js',
 		'public/js/vendor/alertify.min.js',

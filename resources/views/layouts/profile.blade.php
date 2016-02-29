@@ -14,7 +14,7 @@
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/all.css">
 
 
     <style>
@@ -113,42 +113,37 @@
 	<!-- profile content wrapper -->
 	<div class="container-fluid profile-content-wrapper">
 		<div class="container inner-profile-content-wrapper">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 about-profile">
+				<div class="row about-description-row">
+					<h4>About {{$the_user->name}}</h4>
+					{{$the_user->profile_desc}}
+				</div>
+				<div class="buttons">
+					<p class="edit_description_btn text-right btn btn-primary pull-right">Edit description</p>
+				</div>
+				<div class="user-description none">
+					<form action="" method="post" class="edit_description_form">
+					<h5>Tell us about you.</h5>
+						{!! csrf_field() !!}
+						<div class="form-group description-edit">
+							<textarea name="description" class="form-control description" placeholder="Write about you here.." value="{{ $the_user->profile_desc }}" id="" cols="30" rows="3"></textarea>
+						</div>
+						<div class="form-group submit">
+							<input type="submit" class="btn pull-right" value="Change info">
+							<p class="close_edit_description_btn text-right btn btn-primary pull-left">Cancel</p>
+						</div>
+					</form>
+				</div>
+			</div>
 			@yield('profile_content')
 		</div>
 	</div>
 	@include('partials.layout_footer')
 	<!-- JavaScripts -->
-	<script src="https://fb.me/react-0.14.6.min.js"></script>
-	<script src="https://fb.me/react-dom-0.14.6.min.js"></script>
+<!-- 	<script src="https://fb.me/react-0.14.6.min.js"></script>
+	<script src="https://fb.me/react-dom-0.14.6.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <<script src="{{ elixir('js/all.js') }}"></script>
-
-            <script>
-// $(function(){
-// var auth = "<?php Auth::user()->name ?>";
-//     $('.submit').click(function(e){
-//     	e.preventDefault();
-//         $.ajax({
-//             url: '/profile/'+auth+'/create-event',
-//             type: 'post',
-//             dataType: 'json',
-//             data: $('.create').serialize(),
-//         })
-//         .done(function() {
-//             console.log("success");
-//         })
-//         .fail(function() {
-//             console.log("error");
-//         })
-//         .always(function() {
-//             console.log("complete");
-//         });
-        
-//     });
-// });
-    
-        
-    </script>
+    <script src="{{ elixir('js/all.js') }}"></script>
 </body>
 </html>

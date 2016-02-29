@@ -43,9 +43,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 see-more-wrapper">
         <h4 class="text-center">See more</h4>
         <div class="caret-down">
-            <a href="#services">
-                <i class="fa fa-angle-down"></i>
-            </a>
+            <i class="fa fa-angle-down"></i>
         </div>
     </div><!-- see more wrapper end -->
 </div><!-- welcome banner wrapper end -->

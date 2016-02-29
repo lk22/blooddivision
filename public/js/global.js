@@ -65,13 +65,13 @@ $(function(){
 /**
  * affixing the header 
  */
-$(function(){
+// $(function(){
 
-	setAffix('#app-nav', {
-		top: 0
-	});
+// 	setAffix('#app-nav', {
+// 		top: 0
+// 	});
 
-});
+// });
 
 $(function(){
 
@@ -105,47 +105,47 @@ $(function(){
 });
 
 
-$(function(){
+// $(function(){
 
-	var $button = $('.add-game');
+// 	var $button = $('.add-game');
 
-	$button.click(function(e){
-		e.preventDefault();
-		$.ajax({
-			url: '/profile/{slug}/your-games',
-			type: 'post',
-			dataType: 'json',
-			data: $('add-game-form').serialize()
-		})
-		.done(function() {
-			console.log("success");
-		})
-		.fail(function() {
-			console.log("error");
-		})
-		.always(function() {
-			console.log("complete");
-		});
-	})
+// 	$button.click(function(e){
+// 		e.preventDefault();
+// 		$.ajax({
+// 			url: '/profile/{slug}/your-games',
+// 			type: 'post',
+// 			dataType: 'json',
+// 			data: $('add-game-form').serialize()
+// 		})
+// 		.done(function() {
+// 			console.log("success");
+// 		})
+// 		.fail(function() {
+// 			console.log("error");
+// 		})
+// 		.always(function() {
+// 			console.log("complete");
+// 		});
+// 	})
 
-});
+// });
 
-$(function(){
+// $(function(){
 
-	$('a[href*=#]:not([href=#])').click(function(){
-		if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname){
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-			if(target.length){
-				$('html, body').delay(200).animate({
-					scrollTop: target.offset().top
-				}, 800);
-			}
-		}
-		return false;
-	});
+// 	$('a[href*=#], :not([href=#])').click(function(){
+// 		if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname){
+// 			var target = $(this.hash);
+// 			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+// 			if(target.length){
+// 				$('html, body').delay(200).animate({
+// 					scrollTop: target.offset().top
+// 				}, 800);
+// 			}
+// 		}
+// 		return false;
+// 	});
 
-});
+// });
 
 $(function(){
 

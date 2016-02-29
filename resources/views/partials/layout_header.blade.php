@@ -34,7 +34,6 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li><a href="{{ url('#services') }}">Services <i class="fa fa-info-circle"></i></a></li>
                         <li><a href="{{ url('/members') }}">Crew members <i class="fa fa-users"></i></a></li>
                         <li><a href="{{ url('/login') }}">Login <i class="fa fa-user"></i></a></li>
                         <li><a href="{{ url('/register') }}">Register <i class="fa fa-user-plus"></i></a></li>
@@ -44,17 +43,17 @@
                         <!-- <li><a href="{{ url('/forum') }}">Forum <i class="fa fa-comments"></i></a></li> -->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} 
-                                @if(!Auth::user()->avatar)
+                                {{ auth()->user()->name }} 
+                                @if(!auth()->user()->avatar)
                                 
                                 <span class="avatar"><img class="img img-circle" src="/images/mystery-man.jpg" height="25" width="25" alt=""></span>
                                 @else
-                                <span class="avatar"><img class="img img-circle" src="{{Auth::user()->avatar}}" height="25" width="25" alt=""></span>
+                                <span class="avatar"><img class="img img-circle" src="{{auth()->user()->avatar}}" height="25" width="25" alt=""></span>
                                 @endif
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="/profile/{{Auth::user()->name}}"><i class="fa fa-male"></i> Profile</a></li>
+                                <li><a href="/profile/{{auth()->user()->name}}"><i class="fa fa-male"></i> Profile</a></li>
                                 <li><a href="{{ url('/profile/settings{user}') }}"><i class="fa fa-cogs"></i> Profile Settings</a></li>
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>

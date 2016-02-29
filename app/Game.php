@@ -19,9 +19,14 @@ class Game extends Model
     */
     protected $fillable = [
     	'game',
-    	'game_cover',
-        'user_id'
+    	'game_cover'
     ];
+
+    /**
+     * fields that are protected against mass assignments
+     * @var array
+     */
+    protected $guarded = ['user_id'];
 
     /**
      * mutate the user relation 

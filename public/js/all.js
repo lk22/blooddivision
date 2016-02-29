@@ -20168,13 +20168,13 @@ $(function(){
 /**
  * affixing the header 
  */
-$(function(){
+// $(function(){
 
-	setAffix('#app-nav', {
-		top: 0
-	});
+// 	setAffix('#app-nav', {
+// 		top: 0
+// 	});
 
-});
+// });
 
 $(function(){
 
@@ -20208,47 +20208,47 @@ $(function(){
 });
 
 
-$(function(){
+// $(function(){
 
-	var $button = $('.add-game');
+// 	var $button = $('.add-game');
 
-	$button.click(function(e){
-		e.preventDefault();
-		$.ajax({
-			url: '/profile/{slug}/your-games',
-			type: 'post',
-			dataType: 'json',
-			data: $('add-game-form').serialize()
-		})
-		.done(function() {
-			console.log("success");
-		})
-		.fail(function() {
-			console.log("error");
-		})
-		.always(function() {
-			console.log("complete");
-		});
-	})
+// 	$button.click(function(e){
+// 		e.preventDefault();
+// 		$.ajax({
+// 			url: '/profile/{slug}/your-games',
+// 			type: 'post',
+// 			dataType: 'json',
+// 			data: $('add-game-form').serialize()
+// 		})
+// 		.done(function() {
+// 			console.log("success");
+// 		})
+// 		.fail(function() {
+// 			console.log("error");
+// 		})
+// 		.always(function() {
+// 			console.log("complete");
+// 		});
+// 	})
 
-});
+// });
 
-$(function(){
+// $(function(){
 
-	$('a[href*=#]:not([href=#])').click(function(){
-		if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname){
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-			if(target.length){
-				$('html, body').delay(200).animate({
-					scrollTop: target.offset().top
-				}, 800);
-			}
-		}
-		return false;
-	});
+// 	$('a[href*=#], :not([href=#])').click(function(){
+// 		if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname){
+// 			var target = $(this.hash);
+// 			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+// 			if(target.length){
+// 				$('html, body').delay(200).animate({
+// 					scrollTop: target.offset().top
+// 				}, 800);
+// 			}
+// 		}
+// 		return false;
+// 	});
 
-});
+// });
 
 $(function(){
 
@@ -20527,6 +20527,33 @@ $(function(){
 	// 		}
 	// 	}
 	// });
+
+});
+$(function(){
+
+	var $element = $('.edit_description_btn');
+	
+	$element.bind('click', function(){
+
+		// do_slide_and_change_on(
+		// 	'.none',
+		// 	'edit_description_btn',
+		// 	'Cancel'
+		// );
+		// 
+		$('.about-description-row, .buttons').slideUp(400);
+		$('.user-description').slideDown(400);
+
+	});
+
+	$('.close_edit_description_btn').on('click', function(){
+
+		if(!$('.description').val()){
+			$('.user-description').slideUp(400);
+			$('.about-description-row, .buttons').slideDown(400);
+		}
+
+	});
 
 });
 //# sourceMappingURL=all.js.map

@@ -9,13 +9,13 @@
     <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 inner-content-wrapper">
         <div class="row welcome-user-container">
             <span class="userimage">
-                @if(Auth::user()->avatar)
-                    <img class="img img-circle" src="{{Auth::user()->avatar}}" alt="">
+                @if(auth()->user()->avatar)
+                    <img class="img img-circle" src="{{auth()->user()->avatar}}" alt="">
                 @else
                     <img class="img img-circle" src="/images/mystery-man.jpg" alt="">
                 @endif
             </span>
-            <span class="welcomeMessage"><p>Welcome: {{Auth::user()->name}}</p></span>
+            <span class="welcomeMessage"><p>Welcome: {{auth()->user()->name}}</p></span>
         </div>
         <!-- right sidebar -->
         <div class="row right-content">

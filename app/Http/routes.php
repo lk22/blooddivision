@@ -91,8 +91,8 @@ Route::group(['middleware' => 'web'], function () {
     
     // profile route
     Route::get('/profile/{slug}', 'UserController@profile');
-    Route::post('/profile/{slug}', 'UserController@editDescription');
     
+    Route::get('/profile/{slug}/settings', 'UserSettingsController@index');
 });
 
 /**
@@ -100,7 +100,7 @@ Route::group(['middleware' => 'web'], function () {
 */
 
 Route::group(['prefix' => '/profile/{slug}', 'middleware' => 'web'], function() {
-
+    Route::post('/', 'UserController@editDescription');
     // the events route
     Route::get('your-events', 'UserController@profileEvents');
 
@@ -120,4 +120,14 @@ Route::group(['prefix' => '/profile/{slug}', 'middleware' => 'web'], function() 
 
     // the about route
     Route::get('biography', 'UserController@profileAbout');
+});
+
+Route::group(['prefix' => '/profile/{slug}', 'middleware' => 'web'], function(){
+
+    
+
+    Route::get('/games', 'UserSettingsController@gamesSettings');
+
+    Route::get('/events', 'UserSettingsController@eventsSettings');
+
 });
