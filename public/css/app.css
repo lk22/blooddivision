@@ -1199,7 +1199,6 @@
   width: 100%;
   height: auto;
   margin: 0px;
-  display: none;
   z-index: 1;
   /**
 			*	the banner wrapper
@@ -1390,7 +1389,6 @@
   width: 100%;
   height: auto;
   margin: 0px;
-  display: none;
   z-index: 1;
   /**
 			*	the banner wrapper
