@@ -168,16 +168,6 @@ $(function(){
 
 	});
 
-	$('.about-profile').on('mouseleave', function(){
-
-		if(!$('.description').val()){
-			$('.user-description').slideUp(400);
-			$('.edit_description_btn').html(setValue("Edit description"));
-			$('.about-description-row, .buttons').slideDown(400);
-		}
-
-	});
-
 	$('.close_edit_description_btn').on('click', function(){
 
 		if(!$('.description').val()){
