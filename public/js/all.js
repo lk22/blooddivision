@@ -20286,10 +20286,10 @@ $(function(){
 
 		closeNav: $('.close-settings-btn'),
 
-		openSettingsSidebar: function(sidebar) {
-			$('.' + sidebar).animate({
-				"width": "270px"
-			},500);
+		openSettingsSidebar: function(sidebar, time, delay) {
+			$('.' + sidebar).delay(delay).animate({
+				"width": "350px"
+			},time);
 		}, 
 
 		asideBody: function(body, direction, value, duration) {
@@ -20298,20 +20298,22 @@ $(function(){
 			}, duration);
 		},
 
-		closeSettingsSidebar: function(sidebar) {
-			$('.' + sidebar).animate({
+		closeSettingsSidebar: function(sidebar, time, delay) {
+			$('.' + sidebar).delay(delay).animate({
 				"width": "0px"
-			},500);
+			},time);
 		}
 
 	};  
 
 	settings.openNav.bind('click', function(){
-		settings.openSettingsSidebar('settings-sidebar');
+		settings.openSettingsSidebar('settings-sidebar', 500, 50);
+		$('.overlay').delay(200).fadeIn(500);
 	});
 
 	settings.closeNav.bind('click', function(){
-		settings.closeSettingsSidebar('settings-sidebar');
+		settings.closeSettingsSidebar('settings-sidebar', 500, 50);
+		$('.overlay').delay(200).fadeOut(500);
 		$('body').animate({"background-color": "rgba(0,0,0,0.4)"}, 500);
 	});
 });

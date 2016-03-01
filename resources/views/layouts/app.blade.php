@@ -44,6 +44,7 @@
     </style>
 </head>
 <body id="app-layout">
+<div class="overlay"></div>
     @include('partials.layout_header')
 
     @yield('content')

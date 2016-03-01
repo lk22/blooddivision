@@ -32,6 +32,7 @@
     </style>
 </head>
 <body id="modal-wrap profile" style="background: #E9EAED">
+	<div class="overlay"></div>
 	@include('partials.layout_header')
 	@foreach($user as $the_user)
 	<!-- the profile wrapper -->

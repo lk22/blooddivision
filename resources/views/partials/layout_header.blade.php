@@ -80,11 +80,26 @@
             </div>
         </div>
         <div class="row sidebar-nav">
+            <p class="text-center">Menu</p>
+            <a href="/home"><i class="fa fa-home"></i> Home</a>
+            <a href="/members"><i class="fa fa-users"></i> Crew Members</a>
+            <a href="/events"><i class="fa fa-calendar"> Events</i> </a>
+            <a href="/forum"><i class="fa fa-gamepad"></i> Forum</a>
+        </div>
+
+        <div class="row sidebar-nav">
             <p class="text-center">Profile</p>
-            <a href="/profile/{{auth()->user()->name}}"><i class="fa fa-user"></i> Profile</a>
+            <a href="/profile/{{auth()->user()->name}}"><i class="fa fa-user"></i> Home</a>
             <a href="/profile/{{auth()->user()->name}}/your-events"><i class="fa fa-calendar"> Events</i> </a>
             <a href="/profile/{{auth()->user()->name}}/your-games"><i class="fa fa-gamepad"></i> Games</a>
             <a href="/profile/{{auth()->user()->name}}/settings"><i class="fa fa-cogs"></i> Settings</a>
+        </div>
+
+        <div class="row sidebar-nav">
+            <p class="text-center">Settings</p>
+            <a href="/profile/{{auth()->user()->name}}/settings"><i class="fa fa-cogs"></i> General</a>
+            <a href="/profile/{{auth()->user()->name}}/settings/events"><i class="fa fa-calendar"> Events</i> </a>
+            <a href="/profile/{{auth()->user()->name}}/settings/games"><i class="fa fa-gamepad"></i> Games</a>
         </div>
     </div>
 @endif

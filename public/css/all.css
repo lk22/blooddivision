@@ -7072,7 +7072,7 @@ button.close {
     padding: 18px; }
     .settings-sidebar .close-settings-btn .fa {
       color: #e67e22;
-      font-size: 20px;
+      font-size: 28px;
       cursor: pointer; }
       .settings-sidebar .close-settings-btn .fa:hover {
         color: #e74c3c;
@@ -8345,6 +8345,16 @@ button.close {
   padding-bottom: 0px;
   background: #E9EAED;
   overflow-x: hidden; }
+  #app-layout .overlay {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: #000;
+    opacity: 0.3;
+    display: none;
+    z-index: 9999; }
   #app-layout .btn {
     border-radius: 0px 0px 0px 0px;
     background: #f39c12;

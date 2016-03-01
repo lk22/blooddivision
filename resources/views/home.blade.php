@@ -42,7 +42,7 @@
                         <br>
                     </div>
                 @endforeach
-                <a href="{{ url('/members') }}">See all users</a>
+                <a href="{{ url('/events') }}">See all events</a>
             </div>
         </div><!-- right sidebar end -->
     </div>
