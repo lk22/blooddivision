@@ -8,19 +8,24 @@
 		</div>
 		<div class="row">
 			@foreach($games as $game)
-				<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 game-container">
+				<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 game-container">
 				@if(!$game->game_cover)
-					<a href="#edit-game-cover">
+					<a href="#edit-game-cover center-block">
 						<span class="edit-game-cover">
 							edit cover here
 						</span>
 					</a>
 				@else
-					
 					<img class="img img-circle" src="{{$game->game_cover}}" alt="">
+					<h5 class="text-center">{{$game->game}}</h5>
 				@endif
 				</div>
+
 			@endforeach
+			
+		</div>
+		<div class="row">
+			<a href="/profile/{{auth()->user()->name}}/settings/games" class="btn add-game-btn pull-right">Add game</a>
 		</div>
 	@else
 		<div class="row add-game-wrapper">

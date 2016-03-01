@@ -3,10 +3,8 @@
 @section('content')
 <!-- content wrapper -->
 <div class="container-fluid content-wrapper">
-    <div class="hidden-xs hidden-sm col-md-1 col-lg-1 sidebar-partial">
-        @include('partials.home-menu-partial')
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 inner-content-wrapper">
+
+    <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 inner-content-wrapper">
         <div class="row welcome-user-container">
             <span class="userimage">
                 @if(auth()->user()->avatar)

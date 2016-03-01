@@ -6997,7 +6997,6 @@ button.close {
   .navbar-default.affix-header {
     background: #FFF;
     top: 0px;
-    z-index: 9999;
     width: 100%;
     transition: top 0.5s ease 0s;
     -webkit-transition: top 0.5s ease 0s;
@@ -7030,6 +7029,75 @@ button.close {
         color: #e74c3c;
         transition: ease-in-out 0.2s all; }
       .navbar-default .nav li.dropdown .dropdown-menu li a:not(:hover) {
+        transition: ease-in-out 0.2s all; }
+
+.sidebar-btn {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  height: 50px;
+  width: 50px;
+  padding: 18px; }
+  .sidebar-btn:hover {
+    background: #fff;
+    transition: ease-in-out 0.2s all; }
+  .sidebar-btn:not(:hover) {
+    transition: ease-in-out 0.2s all; }
+  .sidebar-btn .fa {
+    color: #e67e22;
+    font-size: 20px;
+    cursor: pointer; }
+    .sidebar-btn .fa:hover {
+      color: #e74c3c;
+      transition: ease-in-out 0.2s all; }
+    .sidebar-btn .fa:not(:hover) {
+      transition: ease-in-out 0.2s all; }
+
+.settings-sidebar {
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  background: #ddd;
+  overflow-x: hidden;
+  transition: 0.5s;
+  z-index: 9999; }
+  .settings-sidebar .close-settings-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 50px;
+    width: 50px;
+    padding: 18px; }
+    .settings-sidebar .close-settings-btn .fa {
+      color: #e67e22;
+      font-size: 20px;
+      cursor: pointer; }
+      .settings-sidebar .close-settings-btn .fa:hover {
+        color: #e74c3c;
+        transition: ease-in-out 0.2s all; }
+      .settings-sidebar .close-settings-btn .fa:not(:hover) {
+        transition: ease-in-out 0.2s all; }
+  .settings-sidebar .sidebar-user-container {
+    padding: 20px 20px 20px 20px;
+    border-bottom: 1px solid #000;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #FFF; }
+    .settings-sidebar .sidebar-user-container .name-container {
+      padding-top: 25px; }
+  .settings-sidebar .sidebar-nav {
+    padding: 20px 0px 20px 0px; }
+    .settings-sidebar .sidebar-nav a {
+      display: block;
+      color: #e67e22;
+      border-top: 1px solid #fff;
+      padding: 5px 20px 5px 20px; }
+      .settings-sidebar .sidebar-nav a:hover {
+        background: #e67e22;
+        color: #FFF;
+        transition: ease-in-out 0.2s all; }
+      .settings-sidebar .sidebar-nav a:not(:hover) {
         transition: ease-in-out 0.2s all; }
 
 /**
@@ -7855,9 +7923,11 @@ button.close {
     .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .games-wrapper {
       padding: 25px;
       background: #FFF; }
-      .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .games-wrapper .game-container img {
-        height: 150px;
-        width: 150px; }
+      .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .games-wrapper .game-container {
+        margin: 10px auto 10px auto; }
+        .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .games-wrapper .game-container img {
+          height: 150px;
+          width: 150px; }
     .container-fluid.profile-content-wrapper .inner-profile-content-wrapper .events-wrapper {
       padding-top: 10px;
       /**

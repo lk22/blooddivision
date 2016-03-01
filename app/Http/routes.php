@@ -41,20 +41,20 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::auth();
 
-    Route::get('/test', function () {
-        // $events = Event::with('user')->latest()->take(5)->get();
-        // 
-        $tests = Rank::with('user')->get();
-        foreach ($tests as $test) {
-            echo $test->id . ': ' .$test->rank .  ' belongs to ' . $test->user->name ."<br><br>";
-        }
+    // Route::get('/test', function () {
+    //     // $events = Event::with('user')->latest()->take(5)->get();
+    //     // 
+    //     $tests = Rank::with('user')->get();
+    //     foreach ($tests as $test) {
+    //         echo $test->id . ': ' .$test->rank .  ' belongs to ' . $test->user->name ."<br><br>";
+    //     }
         
-        // dd($tests);
-    });
+    //     // dd($tests);
+    // });
 
-    Route::get('/', function () {
-        return view('welcome');
-    });
+    // Route::get('/', function () {
+    //     return view('welcome');
+    // });
 
     Route::get('/members', 'PageController@getMembersPage');
     
@@ -122,9 +122,8 @@ Route::group(['prefix' => '/profile/{slug}', 'middleware' => 'web'], function() 
     Route::get('biography', 'UserController@profileAbout');
 });
 
-Route::group(['prefix' => '/profile/{slug}', 'middleware' => 'web'], function(){
+Route::group(['prefix' => '/profile/{slug}/settings', 'middleware' => 'web'], function(){
 
-    
 
     Route::get('/games', 'UserSettingsController@gamesSettings');
 

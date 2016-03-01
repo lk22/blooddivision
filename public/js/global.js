@@ -174,3 +174,41 @@ $(function(){
 	});
 
 });
+
+$(function(){
+
+	var settings = {
+
+		openNav: $('.settings-btn'),
+
+		closeNav: $('.close-settings-btn'),
+
+		openSettingsSidebar: function(sidebar) {
+			$('.' + sidebar).animate({
+				"width": "270px"
+			},500);
+		}, 
+
+		asideBody: function(body, direction, value, duration) {
+			$('#' + body).animate({
+				direction:value 
+			}, duration);
+		},
+
+		closeSettingsSidebar: function(sidebar) {
+			$('.' + sidebar).animate({
+				"width": "0px"
+			},500);
+		}
+
+	};  
+
+	settings.openNav.bind('click', function(){
+		settings.openSettingsSidebar('settings-sidebar');
+	});
+
+	settings.closeNav.bind('click', function(){
+		settings.closeSettingsSidebar('settings-sidebar');
+		$('body').animate({"background-color": "rgba(0,0,0,0.4)"}, 500);
+	});
+});
