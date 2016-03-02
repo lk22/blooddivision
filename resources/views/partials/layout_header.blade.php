@@ -63,26 +63,26 @@
     </nav>
 @if(auth()->user())
     <div class="sidebar-btn">
-        <i class="fa fa-tasks settings-btn"></i>
+        <i class="fa fa-bars settings-btn"></i>
     </div>
     <div class="settings-sidebar">
         <div class="close-settings-btn">
             <i class="fa fa-times"></i>
         </div>
-        <div class="row sidebar-user-container">
+        <!-- <div class="row sidebar-user-container">
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
                 <img class="img img-circle" src="{{auth()->user()->avatar}}" height="65" width="65" alt="">
             </div>
             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 name-container">
                 {{auth()->user()->name}}
             </div>
-        </div>
+        </div> -->
         <div class="row sidebar-nav">
             <p class="text-center">Menu</p>
             <a href="/home"><i class="fa fa-home"></i> Home</a>
             <a href="/members"><i class="fa fa-users"></i> Crew Members</a>
             <a href="/events"><i class="fa fa-calendar"> Events</i> </a>
-            <a href="/forum"><i class="fa fa-gamepad"></i> Forum</a>
+            <a href="/forum"><i class="fa fa-comment"></i> Forum</a>
         </div>
 
         <div class="row sidebar-nav">

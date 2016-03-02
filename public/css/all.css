@@ -7059,7 +7059,7 @@ button.close {
   position: fixed;
   top: 0px;
   right: 0px;
-  background: #ddd;
+  background: #fff;
   overflow-x: hidden;
   transition: 0.5s;
   z-index: 9999; }
@@ -7069,7 +7069,7 @@ button.close {
     right: 20px;
     height: 50px;
     width: 50px;
-    padding: 18px; }
+    padding: 10px; }
     .settings-sidebar .close-settings-btn .fa {
       color: #e67e22;
       font-size: 28px;
@@ -7091,7 +7091,7 @@ button.close {
     .settings-sidebar .sidebar-nav a {
       display: block;
       color: #e67e22;
-      border-top: 1px solid #fff;
+      border-bottom: 1px solid #ddd;
       padding: 5px 20px 5px 20px; }
       .settings-sidebar .sidebar-nav a:hover {
         background: #e67e22;
@@ -7871,6 +7871,7 @@ button.close {
   height: auto;
   background: #E9EAED;
   padding: 0px 0px 10px 0px;
+  z-index: 1;
   /**
  			* inner profile content wrapper
  			*/ }
@@ -8376,6 +8377,19 @@ button.close {
 
 #profile {
   background: #E9EAED; }
+
+.overlay {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: #000;
+  opacity: 0.3;
+  display: none;
+  z-index: 9999;
+  height: 100%;
+  width: 100%; }
 
 .none {
   display: none; }

@@ -76,7 +76,22 @@
 
 #profile{
 	background: #E9EAED; 
+	
 }
+
+.overlay{
+		position:fixed;
+		top: 0px;
+		bottom:0px;
+		left: 0px;
+		right:0px;
+		background: #000;
+		opacity: 0.3;
+		display:none;
+		z-index:9999;
+		height: 100%;
+		width: 100%;  
+	}
 
 .none{
 	display:none;
