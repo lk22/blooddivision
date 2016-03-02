@@ -114,6 +114,28 @@ class CommentTest extends TestCase
     }
 
     /**
+     * test if comment_class_fillable_is_array
+     * @test
+     * @return void
+     */
+    public function check_if_comment_class_fillable_is_array(){
+        /**
+         * output testing method to terminal
+         */
+        fwrite(STDOUT, __METHOD__. " - says: test passed! \n\n");
+    
+        /**
+         * instanciate object
+         * @var $comment
+         */
+        $comment = new Comment;
+
+        if($comment->fillable = array()){
+            throw new Exception("property is not array", 1);
+        }
+    }
+
+    /**
      * test if comment_class_fillable_has_correct_value
      * @test
      * @return void
@@ -122,7 +144,7 @@ class CommentTest extends TestCase
         /**
          * output testing method to terminal
          */
-        fwrite(STDOUT, __METHOD__. " - says: test passed!");
+        fwrite(STDOUT, __METHOD__. " - says: test passed! \n\n");
     
         /**
          * instanciate object
@@ -132,6 +154,8 @@ class CommentTest extends TestCase
 
         $this->assertAttributeContains('comment', 'fillable', $comment);
     }
+
+    
     /**
     * show a message within end of test runnings
     * @return void
