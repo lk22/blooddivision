@@ -6994,6 +6994,8 @@ button.close {
   z-index: 2px; }
   .navbar-default.navbar {
     margin-bottom: 0px; }
+  .navbar-default > .container {
+    width: 83.5%; }
   .navbar-default.affix-header {
     background: #FFF;
     top: 0px;
@@ -7034,7 +7036,7 @@ button.close {
 .sidebar-btn {
   position: fixed;
   top: 0px;
-  right: 20px;
+  right: 40px;
   height: 50px;
   width: 50px;
   padding: 18px; }
@@ -8353,7 +8355,7 @@ button.close {
     left: 0px;
     right: 0px;
     background: #000;
-    opacity: 0.3;
+    opacity: 0.8;
     display: none;
     z-index: 9999; }
   #app-layout .btn {

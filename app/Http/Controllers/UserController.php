@@ -28,6 +28,7 @@ class UserController extends Controller
     * show the user profile layout
     * @return profile
     */
+   
 
     public function profile($slug){
     	// step 1 => get the specific user
@@ -54,7 +55,7 @@ class UserController extends Controller
     */
 
     public function profileEvents($name){
-      $auth = auth()->user();
+      $auth = Helper::getAuth();
     	// step 1 => get the profile
     	$user = User::where('name', $name)->get();
     	// step 2 => get the events belongs to the user
@@ -127,8 +128,6 @@ class UserController extends Controller
     	* step 2 => redirect the user to the your events route
     	*/
     	return redirect('/profile/' . Auth::user()->name . ' /your-events');
-
-        $helper->flash('event_success', 'Your Event is successfully created' . Auth::user()->name .'');
     }
 
     /**
@@ -137,6 +136,13 @@ class UserController extends Controller
     * @return void
     */
     public function thrashEvent($id){
+
+        $auth = Helper::getAuth();
+
+        if($id == $auth->id){
+            Event::where('id', $auth->id)->delete();
+        }
+
     	Event::where('id', $id)->delete();
     	return redirect('/profile/{{Auth::user()->name}}/your-events');
     }
@@ -149,7 +155,7 @@ class UserController extends Controller
     
     public function profileGames(){
 
-        $auth = auth()->user();
+        $auth = Helper::getAuth();
         /**
          * fetch the user
          * @var [array]
@@ -195,8 +201,6 @@ class UserController extends Controller
 
         $auth = auth()->user();
         User::where('id', $auth->id)->update(['profile_desc' => $request->get('description')]);
-
-        Helper::flash('update_message', 'Your Description is edited successfully');
 
         return redirect('/profile/' . $auth->name);
 

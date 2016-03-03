@@ -155,7 +155,27 @@ class CommentTest extends TestCase
         $this->assertAttributeContains('comment', 'fillable', $comment);
     }
 
+    /**
+     * test if comment_class_has_threads_method
+     * @test
+     * @return void
+     */
+    public function check_if_comment_class_has_threads_method(){
+        /**
+         * output testing method to terminal
+         */
+        fwrite(STDOUT, __METHOD__. " - says: test passed!");
     
+        /**
+         * instanciate object
+         * @var $comment
+         */
+        $comment = new Comment;
+
+        if(!method_exists($comment, "threads")){
+            throw new Exception("Method dosen't exist", 1);
+        }
+    }
     /**
     * show a message within end of test runnings
     * @return void

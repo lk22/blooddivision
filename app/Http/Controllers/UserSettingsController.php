@@ -7,6 +7,7 @@ use Blooddivision\User;
 use Blooddivision\Rank;
 use Blooddivision\Event;
 use Blooddivision\Game;
+use Blooddivision\Helper;
 use Blooddivision\Http\Requests;
 
 class UserSettingsController extends Controller
@@ -26,11 +27,20 @@ class UserSettingsController extends Controller
 
     public function index($slug){
 
-    	if($slug == $this->user->slug){
+        $user = Helper::getAuth();
 
-    		$this->user->where('slug', $slug)->get();
+        $events = $this->user->where('id', $user->id)->get();
+    	Helper::dieAndDump($events);
 
-    	}
+    }
 
+    public function eventsSettings(){
+        // grab all the users events
+        
+        // return view
+    }
+
+    public function gamesSettings(){
+        // logic here
     }
 }

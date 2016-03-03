@@ -70,7 +70,7 @@ class User extends Authenticatable implements SluggableInterface
     *
     *   @return void
     */
-    public function message(){
+    public function messages(){
         return $this->hasMany('Blooddivision\Message');
     }
 
@@ -80,7 +80,7 @@ class User extends Authenticatable implements SluggableInterface
     *   @return void
     */
 
-    public function comment(){
+    public function comments(){
         return $this->hasMany('Blooddivision\Comment');
     }
 
@@ -147,4 +147,40 @@ class User extends Authenticatable implements SluggableInterface
     public function scopeJoinGames($query){
         return $query->with('games')->where('id', \Auth::user()->id)->get();
     }
+
+    /**
+     * order by random
+     * @param  [type] $query [description]
+     * @return [type]        [description]
+     */
+    public function scopeRandom($query){
+        return $query->orderBy("RAND()"); // order by random
+    }
+
+    /**
+     * get users firstname
+     * @param  [type] $value [description]
+     * @return [type]        [description]
+     */
+    public function getFirstnameAttribute($value){
+        return ucwords(STRTOLOWER($value));
+    }
+
+    /**
+     * get users lastname
+     * @param  [type] $value [description]
+     * @return [type]        [description]
+     */
+    public function getLastnameAttribute($value){
+        return UCWORDS(STRTOLOWER($value));
+    }
+
+    /**
+     * get users fullname
+     * @return [type] [description]
+     */
+    public function getFullnameAttribute(){
+        return $this->firstname . ' ' . $this->lastname;
+    }
+
 }
