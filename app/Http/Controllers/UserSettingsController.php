@@ -29,7 +29,7 @@ class UserSettingsController extends Controller
 
         $user = Helper::getAuth();
 
-        $events = $this->user->with('events')->where('users.id', $user->id)->where('users.slug', $slug)->get();
+        $events = $this->user->where('id', $user->id)->get();
     	Helper::dieAndDump($events);
 
     }

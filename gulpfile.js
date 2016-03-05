@@ -37,7 +37,7 @@ elixir(function(mix) {
 *	Add Sass support
 */
 
-	mix.sass(["app.scss", "welcome.scss"]);
+	mix.sass(["app.scss", "welcome.scss"]).browserSync({proxy: 'blooddivision.app'});
 
 /**
 * copy scripts and stylesheets
@@ -162,14 +162,13 @@ elixir(function(mix) {
 		'public/js/vendor/react.js',
 		'public/js/vendor/alertify.min.js',
 		'public/js/vendor/vue.min.js',
-		'global.js',
 		'public/js/pages/home.js',
-		// 'public/js/pages/events.js',
-		// 'public/js/pages/members.js',
+		'public/js/pages/events.js',
+		'public/js/pages/members.js',
 		'public/js/pages/authorization.js',
 		'public/js/pages/profile.js',
-		// 'public/js/pages/helpCenter.js',
-
+		'public/js/pages/helpCenter.js',
+		'global.js',
 	], 'public/js/all.js', 'public/js');
 
 	// mix.babel('resources/assets/js/components.jsx');
@@ -178,6 +177,8 @@ elixir(function(mix) {
 // do a version control of the javascript and css files
 
 	mix.version(['css/welcome.css', 'css/app.css', 'js/all.js']);
+
+	
 
 });
 
