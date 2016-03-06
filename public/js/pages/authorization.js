@@ -21,9 +21,6 @@ Auth = {
 			this.regPass  = $('.password-field');
 			this.confirmPassword = $('.confirm-password');
 			this.registerSerialize = this.register.serialize();
-
-
-			this.errors = [];
 		},
 
 		closeRegisterHint: $('.register-hint'),

@@ -1,0 +1,16 @@
+/**
+ * settings header wrapper
+ */
+	
+	.container-fluid.manage-header{
+		width: 100%;
+		height: auto;
+		background: #f7f7f9;
+		border-bottom: 1px solid #e5e5e5;
+		border-top: 1px solid #e5e5e5;
+		padding: 0px 0px 10px 15px;
+		
+		.inner-header{
+			width: 83.3%; 
+		}
+	}

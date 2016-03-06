@@ -19,16 +19,16 @@ $factory->define(Blooddivision\User::class, function(faker\Generator $faker) {
         'name' => str_slug($faker->name, '-'),
         'email' => $faker->email,
         'avatar' => $faker->randomElement([
-	        '/images/avatars/005-avatar-large-190x190-93034cb05164464887fa7f3e6fc936d8.jpg',
-	        '/images/avatars/008-avatar-large-190x190-88284542f8f44f58b7be6281c1347d25.jpg',
-	        '/images/avatars/1039002_0_2039002_3001_24_1.png',
-	        '/images/avatars/avatar-302-0e1742296505457fae4db552f5af41c3.png'
+	        '005-avatar-large-190x190-93034cb05164464887fa7f3e6fc936d8.jpg',
+	        '008-avatar-large-190x190-88284542f8f44f58b7be6281c1347d25.jpg',
+	        '1039002_0_2039002_3001_24_1.png',
+	        'avatar-302-0e1742296505457fae4db552f5af41c3.png'
         ]),
         'cover' => $faker->randomElement([
-        	'/images/halopic2.jpg',
-        	'/images/destiny1.jpg',
-        	'/images/swtor1.jpg',
-        	'/images/halo4screenshot2.jpg'
+        	'halopic2.jpg',
+        	'destiny1.jpg',
+        	'swtor1.jpg',
+        	'halo4screenshot2.jpg'
         ]),
         'profile_desc' => $faker->paragraph,
         'password' => bcrypt('secret'),
@@ -71,12 +71,12 @@ $factory->define(Blooddivision\Game::class, function(faker\Generator $faker){
 			'Destiny'
 		]),
 		'game_cover' => $faker->randomElement([
-			'/images/covers/battlefront.jpeg',
-			'/images/covers/Destiny.jpg',
-			'/images/covers/gta5.jpg',
-			'/images/covers/halo5cover.jpg',
-			'/images/covers/swtor_logo.png',
-			'/images/covers/wowlogo.png'
+			'battlefront.jpeg',
+			'Destiny.jpg',
+			'gta5.jpg',
+			'halo5cover.jpg',
+			'swtor_logo.png',
+			'wowlogo.png'
 		]),
 		'user_id' => rand(0, 20)
 	];

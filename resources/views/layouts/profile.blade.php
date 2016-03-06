@@ -36,7 +36,7 @@
 	@include('partials.layout_header')
 	@foreach($user as $the_user)
 	<!-- the profile wrapper -->
-	<div class="container-fluid profile-banner-wrapper" style="background-image: url({{$the_user->cover}});">
+	<div class="container-fluid profile-banner-wrapper" style="background-image: url('/images/profile_cover/{{$the_user->cover}}');">
 		<!-- inner banner wrapper -->
 		<div class="container inner-profile-wrapper">
 			<!-- the banner -->
@@ -54,7 +54,7 @@
 						</div>
 					@else
 						<!-- else then show the profile picture -->
-						<img class="img img-thumbnail img-responsive profile-image" src="{{ auth()->user()->avatar }}" alt="">
+						<img class="img img-thumbnail img-responsive profile-image" src="/images/avatars/{{ auth()->user()->avatar }}" alt="">
 						<div class="row edit-profile">
 							<a class="edit-img-link" href="/profile{{ auth()->user()->name }}?profileImg=edit">Edit profile picture. <span class="text-right img-icon"><i class="fa fa-camera"></i></span></a>
 						</div>
@@ -130,7 +130,7 @@
 							<textarea name="description" class="form-control description" placeholder="Write about you here.." value="{{ $the_user->profile_desc }}" id="" cols="30" rows="3"></textarea>
 						</div>
 						<div class="form-group submit">
-							<input type="submit" class="btn pull-right" value="Change info">
+							<input type="submit" class="description btn pull-right" value="Change info">
 							<p class="close_edit_description_btn text-right btn btn-primary pull-left">Cancel</p>
 						</div>
 					</form>

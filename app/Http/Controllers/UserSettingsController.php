@@ -9,7 +9,9 @@ use Blooddivision\Event;
 use Blooddivision\Game;
 use Blooddivision\Helper;
 use Blooddivision\Http\Requests;
-
+use Blooddivision\Http\Requests\ManageUserRequest;
+use File;
+use Input;
 class UserSettingsController extends Controller
 {
 
@@ -27,10 +29,32 @@ class UserSettingsController extends Controller
 
     public function index($slug){
 
-        $user = Helper::getAuth();
+        $auth = Helper::getAuth();
 
-        $events = $this->user->where('id', $user->id)->get();
-    	Helper::dieAndDump($events);
+        $user = $this->user->getUser();
+
+        // $rank = $this->rank->with('user')->where('rank.user_id', $auth->id)->get();
+    	
+        // Helper::getView('layouts.settings', $user);
+
+        return view('pages.profile-settings.manage-general', compact('user'));
+    }
+
+    public function updateUser(ManageUserRequest $request){
+
+        $request->file('avatar')->move('images/avatars', $request->file('avatar')->getClientOriginalName());
+
+        $request->file('cover')->move('images/profile_cover', $request->file('avatar')->getClientOriginalName());
+
+        $this->user->where('id', auth()->user()->id)->update([
+            'name' => $request->get('name'),
+            'email' => $request->get('email'),
+            'avatar' => $request->file('avatar')->getClientOriginalName(),
+            'cover' => $request->file('cover')->getClientOriginalName(),
+            'profile_desc' => $request->get('description')
+        ]);
+
+        return redirect()->back();
 
     }
 

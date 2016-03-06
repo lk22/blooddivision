@@ -114,7 +114,7 @@
 		}
 
 .sidebar-btn{
-	position:fixed;
+	position:absolute;
 	top: 0px;
 	right:40px;
 	height:50px;
@@ -122,7 +122,7 @@
 	padding:18px;
 	
 	&:hover{
-		background: #fff; 
+		color: #FFF; 
 		-webkit-transition:ease-in-out 0.2s all;
 		-moz-transition:ease-in-out 0.2s all;
 		-ms-transition:ease-in-out 0.2s all;

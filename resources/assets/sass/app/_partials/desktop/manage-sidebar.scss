@@ -1,0 +1,48 @@
+/**
+ * manage sidebar
+ */
+
+ 	.manage-sidebar-wrapper{
+ 		height: auto;
+ 		
+ 		.account-navigation{
+ 			ul{
+ 				list-style-type:none;
+ 				
+ 				li{
+ 					padding:10px 0px 10px 0px;
+ 					
+ 					&.section{
+ 						font-size:15px;
+ 						border-bottom:1px solid #e5e5e5;
+ 					}
+
+ 					&.nav-item{
+ 						font-size:13px;
+ 						border-bottom:1px solid #e5e5e5;
+ 					}
+ 					
+ 					a{
+ 						color: #000; 
+ 						
+ 						&:hover{
+ 							color: #D35400;
+ 							-webkit-transition: ease-in-out 0.2s all;
+ 							 -moz-transition: ease-in-out 0.2s all;
+ 							 -ms-transition: ease-in-out 0.2s all;
+ 							 -o-transition: ease-in-out 0.2s all;
+ 							 transition: ease-in-out 0.2s all; 
+ 						}
+
+ 						&:not(:hover){
+ 							-webkit-transition: ease-in-out 0.2s all;
+ 							 -moz-transition: ease-in-out 0.2s all;
+ 							 -ms-transition: ease-in-out 0.2s all;
+ 							 -o-transition: ease-in-out 0.2s all;
+ 							 transition: ease-in-out 0.2s all;
+ 						}
+ 					}
+ 				}
+ 			}
+ 		} 
+ 	}

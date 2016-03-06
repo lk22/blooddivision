@@ -5,6 +5,7 @@ namespace Blooddivision;
 use \Session;
 use Guard;
 use Auth;
+use Filesystem;
 
 /**
  * Global helper class
@@ -29,14 +30,17 @@ use Auth;
 		
 			protected $auth;
 
+			protected $filesystem;
+
 		/**
 		 * constructor
 		 * @param Auth => $auth
 		 */
 		
-			public function __construct(Auth $auth){
+			public function __construct(Auth $auth, Filesystem $filesystem){
 				$this->session = session();
 				$this->auth = $auth;
+				$this->filesystem = $filesystem;
 			}
 
 		/**
@@ -124,6 +128,10 @@ use Auth;
 					case isset($instance) && !is_object($instance):
 						throw new Exception("instance is not an object of a eloquent model", 1);
 						break;
+
+					case isset($instance):
+						return view($path, compact($instance));
+					break;
 					
 					case isset($instance) && is_array($instance):
 						return view($path, compact($instance));
@@ -188,6 +196,14 @@ use Auth;
 
 			public static function dieAndDump($dump){
 				return dd($dump);
+			}
+
+		/**
+		 * get contents of any file 
+		 */
+		
+			public static function getFile($file){
+				return $this->filesystem->get($file);
 			}
 	}
 

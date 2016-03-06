@@ -17,8 +17,8 @@ use Blooddivision\Game;
 use Blooddivision\Event;
 use Blooddivision\Rank;
 
-Route::get('/', function(){
-    return view('welcome');
+Route::get('/search', function(){
+    return view('search');
 });
 
 /*
@@ -41,20 +41,20 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::auth();
 
-    // Route::get('/test', function () {
-    //     // $events = Event::with('user')->latest()->take(5)->get();
-    //     // 
-    //     $tests = Rank::with('user')->get();
-    //     foreach ($tests as $test) {
-    //         echo $test->id . ': ' .$test->rank .  ' belongs to ' . $test->user->name ."<br><br>";
-    //     }
+    Route::get('/test', function () {
+        // $events = Event::with('user')->latest()->take(5)->get();
+        // 
+        // $tests = Rank::with('user')->get();
+        // foreach ($tests as $test) {
+        //     echo $test->id . ': ' .$test->rank .  ' belongs to ' . $test->user->name ."<br><br>";
+        // }
         
-    //     // dd($tests);
-    // });
+        dd(bcrypt('23'));
+    });
 
-    // Route::get('/', function () {
-    //     return view('welcome');
-    // });
+    Route::get('/', function () {
+        return view('welcome');
+    });
 
     Route::get('/members', 'PageController@getMembersPage');
     
@@ -92,7 +92,7 @@ Route::group(['middleware' => 'web'], function () {
     // profile route
     Route::get('/profile/{slug}', 'UserController@profile');
     
-    Route::get('/profile/{slug}/settings', 'UserSettingsController@index');
+    Route::get('/profile/{slug}/settings/general', 'UserSettingsController@index');
 });
 
 /**
@@ -124,6 +124,8 @@ Route::group(['prefix' => '/profile/{slug}', 'middleware' => 'web'], function() 
 
 Route::group(['prefix' => '/profile/{slug}/settings', 'middleware' => 'web'], function(){
 
+    Route::get('/general', 'UserSettingsController@index');
+    Route::post('/general', 'UserSettingsController@updateUser');
 
     Route::get('/games', 'UserSettingsController@gamesSettings');
 

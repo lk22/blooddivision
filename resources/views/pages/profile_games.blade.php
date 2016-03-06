@@ -16,7 +16,7 @@
 						</span>
 					</a>
 				@else
-					<img class="img img-circle" src="{{$game->game_cover}}" alt="">
+					<img class="img img-circle" src="/images/covers{{$game->game_cover}}" alt="">
 					<h5 class="text-center">{{$game->game}}</h5>
 				@endif
 				</div>

@@ -183,4 +183,8 @@ class User extends Authenticatable implements SluggableInterface
         return $this->firstname . ' ' . $this->lastname;
     }
 
+    public function getUser(){
+        return $this->where('id', auth()->user()->id)->get();
+    }
+
 }

@@ -46,7 +46,7 @@
                                 
                                 <span class="avatar"><img class="img img-circle" src="/images/mystery-man.jpg" height="25" width="25" alt=""></span>
                                 @else
-                                <span class="avatar"><img class="img img-circle" src="{{auth()->user()->avatar}}" height="25" width="25" alt=""></span>
+                                <span class="avatar"><img class="img img-circle" src="/images/avatars/{{auth()->user()->avatar}}" height="25" width="25" alt=""></span>
                                 @endif
                             </a>
 
@@ -95,7 +95,7 @@
 
         <div class="row sidebar-nav">
             <p class="text-center">Settings</p>
-            <a href="/profile/{{auth()->user()->name}}/settings"><i class="fa fa-cogs"></i> General</a>
+            <a href="/profile/{{auth()->user()->name}}/settings/general"><i class="fa fa-cog fa-spin"></i> General</a>
             <a href="/profile/{{auth()->user()->name}}/settings/events"><i class="fa fa-calendar"> Events</i> </a>
             <a href="/profile/{{auth()->user()->name}}/settings/games"><i class="fa fa-gamepad"></i> Games</a>
         </div>

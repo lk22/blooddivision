@@ -8,7 +8,7 @@
         <div class="row welcome-user-container">
             <span class="userimage">
                 @if(auth()->user()->avatar)
-                    <img class="img img-circle" src="{{auth()->user()->avatar}}" alt="">
+                    <img class="img img-circle" src="/images/avatars/{{auth()->user()->avatar}}" alt="">
                 @else
                     <img class="img img-circle" src="/images/mystery-man.jpg" alt="">
                 @endif
@@ -34,7 +34,7 @@
                             </div>
                          @else
                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 event-user-info">
-                                <span><img class="center-block img img-circle" src="{{ $event->user->avatar }}" height="100" width="100" alt=""></span>
+                                <span><img class="center-block img img-circle" src="/images/avatars/{{ $event->user->avatar }}" height="100" width="100" alt=""></span>
                                 <p class="text-center">{{$event->user->name}}</p>
                             </div>
                         @endif

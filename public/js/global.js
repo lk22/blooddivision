@@ -51,6 +51,37 @@ function setValue(value){
 	return value;
 }
 
+
+function prev_avatar(input){
+	if(input.files && input.files[0])
+	{
+		var reader = new FileReader();
+		reader.onload = function(file){
+
+			$('.container-fluid.show-avatar').slideDown(400);
+			$('#target').fadeIn(800).attr('src', file.target.result);
+
+		}
+
+		reader.readAsDataURL(input.files[0]);
+	}
+}
+
+function prev_cover(input){
+	if(input.files && input.files[0])
+	{
+		var reader = new FileReader();
+		reader.onload = function(file){
+
+			$('.container-fluid.show-cover').slideDown(800);
+			$('#target').fadeIn(800).attr('src', file.target.result);
+
+		}
+
+		reader.readAsDataURL(input.files[0]);
+	}
+}
+
 /**
  * setting CSRF TOKEN to work with every ajax request to pass the CSRF Middleware
  * @param  {String} ){	setToken({		'X-CSRF-Token': $('meta[name  [description]
@@ -213,4 +244,25 @@ $(function(){
 		$('.overlay').delay(200).fadeOut(500);
 		$('body').animate({"background-color": "rgba(0,0,0,0.4)"}, 500);
 	});
+});
+
+
+$(function(){
+
+
+	
+
+	$('.avatarInput').change(function(){
+		prev_avatar(this);
+	});
+
+	$('.coverInput').change(function(){
+		prev_cover(this);
+	});
+
+	$('#cancel').click(function(){
+		$('.show-avatar').delay(200).slideUp(600);
+	})
+
+
 });
