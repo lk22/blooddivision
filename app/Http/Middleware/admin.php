@@ -19,6 +19,7 @@ class admin
         if(!auth()->user()->isSuperAdmin()){
             return redirect()->route('/');
         }
+        
         return $next($request);
     }
 }

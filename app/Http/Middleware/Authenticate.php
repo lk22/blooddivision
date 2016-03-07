@@ -15,12 +15,12 @@ class Authenticate
      * @param  string|null  $guard
      * @return mixed
      */
-    public function handle($request, Closure $next, $guard = null)
+    public function handle($request, Closure $next, $guard = null) 
     {
         if (Auth::guard($guard)->guest()) {
-            if ($request->ajax()) {
+            if (!$request->ajax()) {
                 return response('Unauthorized.', 401);
-            } else {
+            }else {
                 return redirect()->guest('/');
             }
         }

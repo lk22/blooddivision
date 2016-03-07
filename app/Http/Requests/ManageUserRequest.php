@@ -26,8 +26,8 @@ class ManageUserRequest extends Request
         return [
             'avatar' => 'mimes:jpeg,png,jpg',
             'cover'  => 'mimes:jpeg,png,jpg',
-            'name'   => 'required|unique:users,name,' . auth()->user()->id,
-            'email'  => 'email|required',
+            'name'   => 'unique:users,name,' . auth()->user()->id,
+            'email'  => 'email',
             'description' => 'min:10|max:255'
         ];
     }

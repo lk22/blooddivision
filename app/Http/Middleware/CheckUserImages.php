@@ -19,12 +19,7 @@ class CheckUserImages
     public function handle($request, Closure $next, ManageUserRequest $user_request)
     {
 
-        if(!$user_request->file('avatar')->isValid() && empty($user_request->file('avatar')) || !$user_request->file('cover')->isValid() && empty($user_request->file('cover'))){
-            return redirect()->back();
-        }else{
-            File::put('avatars', $user_request->file('avatar'));
-            File::put('profile_cover', $user_request->file('cover'));
-        }
+        
 
         return $next($request);
     }

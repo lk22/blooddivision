@@ -929,8 +929,20 @@
   margin-top: -20px;
   color: #FFF;
   /**
+ 			 * overlay
+ 			 */
+  /**
  			* inner profile wrapper
  			*/ }
+  .container-fluid.profile-banner-wrapper .overlay {
+    height: 100%;
+    width: 100%;
+    background: #000;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px; }
   .container-fluid.profile-banner-wrapper .inner-profile-wrapper {
     width: 65%;
     color: #FFF;
@@ -1453,7 +1465,7 @@
 .container-fluid.signup-oppurtunity-wrapper {
   height: 650px;
   width: 100%;
-  background: url("../images/halopic2.jpg") center center;
+  background: url("../images/profile_cover/halopic2.jpg") center center;
   -ms-background-size: cover;
   background-size: cover;
   color: #FFF;
@@ -1575,28 +1587,107 @@
 #search .container-fluid.search-wrapper {
   width: 100%;
   height: 100%;
-  padding: 0px; }
+  padding: 0px;
+  background: #e5e5e5; }
+  #search .container-fluid.search-wrapper .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #000;
+    opacity: 0.8;
+    display: none;
+    height: 100%;
+    width: 100%; }
   #search .container-fluid.search-wrapper p {
     font-size: 13px;
     padding-left: 15px; }
   #search .container-fluid.search-wrapper .header {
     padding-top: 10px;
     margin-bottom: 10px;
-    background: #e5e5e5;
-    width: 100%; }
+    padding-bottom: 3px;
+    background: #fff;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    height: 52px; }
+    #search .container-fluid.search-wrapper .header .title {
+      margin-top: -3px; }
     #search .container-fluid.search-wrapper .header .form-control {
       background: #FFF;
       border: 1px solid #ccc; }
+    #search .container-fluid.search-wrapper .header .results {
+      width: 91.5%;
+      height: 300px;
+      background: #FFF;
+      position: absolute;
+      top: 34px;
+      z-index: 9999;
+      margin-left: 40px;
+      overflow-y: scroll;
+      border-left: 1px solid #e5e5e5;
+      border-right: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5; }
+      #search .container-fluid.search-wrapper .header .results .result {
+        padding: 10px 40px 10px 40px; }
+        #search .container-fluid.search-wrapper .header .results .result:hover {
+          background: #e5e5e5; }
     #search .container-fluid.search-wrapper .header .categories {
-      padding-top: 8px; }
+      padding-top: 6px;
+      padding-left: 0px; }
       #search .container-fluid.search-wrapper .header .categories span {
-        margin-left: 1px; }
+        margin-left: 8px;
+        font-size: 11px; }
+    #search .container-fluid.search-wrapper .header .blue {
+      height: 5px;
+      width: 25%;
+      position: absolute;
+      top: 52px;
+      left: 0px;
+      background: #3498DB; }
+    #search .container-fluid.search-wrapper .header .green {
+      height: 5px;
+      width: 25%;
+      position: absolute;
+      top: 52px;
+      left: 25%;
+      background: #2ecc71; }
+    #search .container-fluid.search-wrapper .header .red {
+      height: 5px;
+      width: 25%;
+      position: absolute;
+      top: 52px;
+      left: 50%;
+      background: #e74c3c; }
+    #search .container-fluid.search-wrapper .header .orange {
+      height: 5px;
+      width: 25%;
+      position: absolute;
+      top: 52px;
+      left: 75%;
+      background: #f39c12; }
   #search .container-fluid.search-wrapper .content {
-    width: 65%; }
+    width: 63%;
+    padding-top: 70px;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    background: #fff; }
     #search .container-fluid.search-wrapper .content .result {
-      padding: 0px 10px 0px 10px; }
+      padding: 10px;
+      margin: 10px 0px 10px 0px; }
       #search .container-fluid.search-wrapper .content .result:hover {
         background: #ddd; }
+      #search .container-fluid.search-wrapper .content .result .media a img {
+        height: 150px;
+        width: 150px; }
+      #search .container-fluid.search-wrapper .content .result .media .media-body h4 {
+        margin-left: 14px; }
+    #search .container-fluid.search-wrapper .content .affix {
+      left: 63.5%;
+      width: 17%; }
+    #search .container-fluid.search-wrapper .content .category {
+      border-bottom: 1px solid #e5e5e5; }
 
 /**
 *	landing page stylesheet
@@ -1736,7 +1827,7 @@
 .container-fluid.signup-oppurtunity-wrapper {
   height: 650px;
   width: 100%;
-  background: url("../images/halopic2.jpg") center center;
+  background: url("../images/profile_cover/halopic2.jpg") center center;
   -ms-background-size: cover;
   background-size: cover;
   color: #FFF;

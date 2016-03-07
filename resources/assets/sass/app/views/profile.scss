@@ -54,7 +54,21 @@
  			margin-top:-20px;
  			color: #FFF;
  			
-
+ 			/**
+ 			 * overlay
+ 			 */
+ 			
+ 				.overlay{
+ 					height: 100%;
+ 					width: 100%;
+ 					background: #000;
+ 					position:absolute;
+ 					top: 0px;
+ 					left: 0px;
+ 					right: 0px;
+ 					bottom: 0px;      
+ 				}
+ 			
  			/**
  			* inner profile wrapper
  			*/

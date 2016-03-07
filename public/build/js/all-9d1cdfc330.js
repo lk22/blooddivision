@@ -20681,8 +20681,14 @@ $(function(){
 
 $(function(){
 
+	var url = window.location.href;
 
-	
+	var avatar = $('input[name=avatar]').val();
+	var cover = $('input[name=cover]').val();
+	var name = $('input[name=name]').val();
+	var email = $('input[name=email]').val();
+	var description = $('input[name=description]').val();
+
 
 	$('.avatarInput').change(function(){
 		prev_avatar(this);
@@ -20694,9 +20700,34 @@ $(function(){
 
 	$('#cancel').click(function(){
 		$('.show-avatar').delay(200).slideUp(600);
-	})
+	});
 
+	// $('.edit-user').click(function(e){
+	// 	e.preventDefault();
+
+	// 	$.ajax({url:url, method:'post', data: avatar + cover + name + email + description}, function(data, textStatus, xhr) {
+	// 		console.log(data, textStatus, xhr);
+	// 	});
+		
+	// });
+
+	$('.search-input').bind('click', function(){
+		$('.results').show();
+		$('.overlay').fadeIn(400);
+	});
+
+	$('.search-input').bind('keyup', function(){
+		$('.results').show();
+		$('.overlay').fadeIn(400);
+	});
+
+	$('.results').on('mouseleave', function(){
+		$(this).fadeOut(400);
+		$('.overlay').fadeOut(400);
+	});
 
 });
+
+
 
 //# sourceMappingURL=all.js.map

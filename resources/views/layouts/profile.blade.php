@@ -37,6 +37,7 @@
 	@foreach($user as $the_user)
 	<!-- the profile wrapper -->
 	<div class="container-fluid profile-banner-wrapper" style="background-image: url('/images/profile_cover/{{$the_user->cover}}');">
+	<div class="overlay"></div>
 		<!-- inner banner wrapper -->
 		<div class="container inner-profile-wrapper">
 			<!-- the banner -->

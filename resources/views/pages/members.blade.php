@@ -13,7 +13,7 @@
 						@if(!$member->avatar)
 							<img class="img img-circle img-responsive center-block" src="/images/mystery-man.jpg" alt="">
 						@else
-							<img class="img img-circle img-responsive center-block" src="{{ $member->avatar }}" alt="">
+							<img class="img img-circle img-responsive center-block" src="/images/avatars/{{ $member->avatar }}" alt="">
 						@endif
 					</div>
 					<div class="row member-information-row">

@@ -77,7 +77,7 @@
 				</div>
 			</div>
 			<div class="form-group submit">
-				<input type="submit" class="btn btn-primary pull-left" value="Edit information">
+				<input type="submit" class="btn btn-primary pull-left edit-user" value="Edit information">
 			</div>
 			@endforeach
 		</form>
