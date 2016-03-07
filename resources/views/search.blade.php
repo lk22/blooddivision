@@ -159,6 +159,11 @@
 			<div class="red"></div>
 			<div class="orange"></div>	
 		</section>
+		<section class="container-fluid search-results-banner">
+			<div class="container-inner-banner">
+				
+			</div>
+		</section>
 		<section class="content container">
 		<div class="row did-you-mean">
 			<p>Mente du <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>?</p>

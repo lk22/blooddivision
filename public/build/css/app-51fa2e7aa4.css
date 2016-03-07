@@ -1325,7 +1325,9 @@
       .container-fluid.members-content-wrapper .members-row .member-wrapper:not(:hover) {
         transition: ease-in-out 0.2s all; }
       .container-fluid.members-content-wrapper .members-row .member-wrapper .member-picture-wrapper .img {
-        border: 1px solid; }
+        border: 1px solid #000;
+        height: 200px;
+        width: 200px; }
 
 /**
 *	landing page stylesheet
