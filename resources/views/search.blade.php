@@ -23,7 +23,7 @@
 		<section class="header container">
 			<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
 				<div class="title">
-					<h4>Search Machine</h4>
+					<h4>InspiSearch</h4>
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
@@ -161,10 +161,137 @@
 		</section>
 		<section class="container-fluid search-results-banner">
 			<div class="container-inner-banner">
-				
+				<div class="row title">
+					<h1 class="text-center">InspiSearch</h1>
+				</div>
+				<div class="row slogan">
+					<h4 class="text-center">Your inspirational search tool for your work needs</h4>
+				</div>
+				<div class="row banner-search col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+					<form action="#" method="post" class="banner-form">
+						<div class="input-group">
+						<span class="input-group-addon" id="search-addon"><i class="fa fa-search"></i></span>
+						<input type="text" class="form-control banner-search-input" value="{{e('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')}}" aria-describedby="basic-addon">
+						<div class="container results banner-results none">
+						<div class="row result">
+							<div class="row">
+								<p>Lorem Ipsum</p>
+								<hr>
+							</div>
+							<div class="row">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							</div>
+						</div>
+						<div class="row result">
+							<div class="row">
+								<p>Lorem Ipsum</p>
+								<hr>
+							</div>
+							<div class="row">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							</div>
+						</div>
+						<div class="row result">
+							<div class="row">
+								<p>Lorem Ipsum</p>
+								<hr>
+							</div>
+							<div class="row">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							</div>
+						</div>
+						<div class="row result">
+							<div class="row">
+								<p>Lorem Ipsum</p>
+								<hr>
+							</div>
+							<div class="row">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							</div>
+						</div>
+						<div class="row result">
+							<div class="row">
+								<p>Lorem Ipsum</p>
+								<hr>
+							</div>
+							<div class="row">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							</div>
+						</div>
+						<div class="row result">
+							<div class="row">
+								<p>Lorem Ipsum</p>
+								<hr>
+							</div>
+							<div class="row">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							</div>
+						</div>
+						<div class="row result">
+							<div class="row">
+								<p>Lorem Ipsum</p>
+								<hr>
+							</div>
+							<div class="row">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							</div>
+						</div>
+						<div class="row result">
+							<div class="row">
+								<p>Lorem Ipsum</p>
+								<hr>
+							</div>
+							<div class="row">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							</div>
+						</div>
+						<div class="row result">
+							<div class="row">
+								<p>Lorem Ipsum</p>
+								<hr>
+							</div>
+							<div class="row">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							</div>
+						</div>
+						<div class="row result">
+							<div class="row">
+								<p>Lorem Ipsum</p>
+								<hr>
+							</div>
+							<div class="row">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							</div>
+						</div>
+						<div class="row result">
+							<div class="row">
+								<p>Lorem Ipsum</p>
+								<hr>
+							</div>
+							<div class="row">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							</div>
+						</div>
+						<div class="row result">
+							<div class="row">
+								<p>Lorem Ipsum</p>
+								<hr>
+							</div>
+							<div class="row">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
 			</div>
 		</section>
-		<section class="content container">
+		<section class="content container none" id="content">
 		<div class="row did-you-mean">
 			<p>Mente du <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>?</p>
 		</div>
@@ -459,20 +586,20 @@
 				</div>	
 
 			</div>
-			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 pull-right content-categories" data-spy="affix" data-offset-top="60">
-				<h4 class="text-right">Kategorier</h4>
-				<p class="text-left category">Biler</p>
-				<p class="text-left category">Cykler</p>
-				<p class="text-left category">Lejligheder</p>
-				<p class="text-left category">Ejendome</p>
-				<p class="text-left category">Komputer spil</p>
-				<p class="text-left category">Skateboarding</p>
-				<p class="text-left category">Biler</p>
-				<p class="text-left category">Cykler</p>
-				<p class="text-left category">Lejligheder</p>
-				<p class="text-left category">Ejendome</p>
-				<p class="text-left category">Komputer spil</p>
-				<p class="text-left category">Skateboarding</p>
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 pull-right content-categories" data-spy="affix" data-offset-top="568">
+				<h4 class="text-left">Kategorier</h4>
+				<p class="text-left category">Web Desgin</p>
+				<p class="text-left category">Logo Design</p>
+				<p class="text-left category">App Design</p>
+				<p class="text-left category">Frontend Development</p>
+				<p class="text-left category">Backend Development</p>
+				<p class="text-left category">App Development</p>
+				<p class="text-left category">Development Tools</p>
+				<p class="text-left category">Analytic tools</p>
+				<p class="text-left category">Code Design</p>
+				<p class="text-left category">Ios systems</p>
+				<p class="text-left category">Android Development</p>
+				<p class="text-left category">General work tools</p>
 			</div>
 		</section>
 	</div>

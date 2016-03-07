@@ -19,10 +19,10 @@ $factory->define(Blooddivision\User::class, function(faker\Generator $faker) {
         'name' => str_slug($faker->name, '-'),
         'email' => $faker->email,
         'avatar' => $faker->randomElement([
-	        '005-avatar-large-190x190-93034cb05164464887fa7f3e6fc936d8.jpg',
-	        '008-avatar-large-190x190-88284542f8f44f58b7be6281c1347d25.jpg',
-	        '1039002_0_2039002_3001_24_1.png',
-	        'avatar-302-0e1742296505457fae4db552f5af41c3.png'
+	  		'005-avatar-large-190x190-93034cb05164464887fa7f3e6fc936d8.jpg',
+	  		'008-avatar-large-190x190-88284542f8f44f58b7be6281c1347d25.jpg',
+	  		'1039002_0_2039002_3001_24_1.png',
+	  		'ninja-background-128.png'
         ]),
         'cover' => $faker->randomElement([
         	'halopic2.jpg',

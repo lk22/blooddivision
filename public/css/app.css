@@ -1577,9 +1577,9 @@
   left: 0px;
   right: 0px;
   background: #000;
-  opacity: 0.8;
+  opacity: 0.5;
   display: none;
-  z-index: 9999;
+  z-index: 1;
   height: 100%;
   width: 100%; }
 
@@ -1589,8 +1589,7 @@
 #search .container-fluid.search-wrapper {
   width: 100%;
   height: 100%;
-  padding: 0px;
-  background: #e5e5e5; }
+  padding: 0px; }
   #search .container-fluid.search-wrapper .overlay {
     position: fixed;
     top: 0px;
@@ -1613,7 +1612,8 @@
     width: 100%;
     position: fixed;
     z-index: 9999;
-    height: 52px; }
+    height: 52px;
+    top: -60px; }
     #search .container-fluid.search-wrapper .header .title {
       margin-top: -3px; }
     #search .container-fluid.search-wrapper .header .form-control {
@@ -1669,6 +1669,36 @@
       top: 52px;
       left: 75%;
       background: #f39c12; }
+  #search .container-fluid.search-wrapper .container-fluid.search-results-banner {
+    min-height: 586px;
+    width: 100%;
+    background: #000;
+    background: url("../../images/architecture-1048092_1920.jpg") center center;
+    background-size: cover;
+    color: #FFF;
+    padding: 114px 0px 0px 0px; }
+    #search .container-fluid.search-wrapper .container-fluid.search-results-banner .banner-search {
+      padding: 75px 40px 0px 40px; }
+      #search .container-fluid.search-wrapper .container-fluid.search-results-banner .banner-search .banner-form .banner-search-input {
+        background: #FFF;
+        border: 1px solid #ccc; }
+      #search .container-fluid.search-wrapper .container-fluid.search-results-banner .banner-search .banner-form .results {
+        width: 99.6%;
+        height: 150px;
+        background: #FFF;
+        position: absolute;
+        top: 34px;
+        z-index: 9999;
+        margin-left: -36px;
+        overflow-y: scroll;
+        border-left: 1px solid #e5e5e5;
+        border-right: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+        color: #000; }
+        #search .container-fluid.search-wrapper .container-fluid.search-results-banner .banner-search .banner-form .results .result {
+          padding: 10px 40px 10px 40px; }
+          #search .container-fluid.search-wrapper .container-fluid.search-results-banner .banner-search .banner-form .results .result:hover {
+            background: #e5e5e5; }
   #search .container-fluid.search-wrapper .content {
     width: 63%;
     padding-top: 70px;
@@ -1687,7 +1717,8 @@
         margin-left: 14px; }
     #search .container-fluid.search-wrapper .content .affix {
       left: 63.5%;
-      width: 17%; }
+      width: 17%;
+      top: 81px; }
     #search .container-fluid.search-wrapper .content .category {
       border-bottom: 1px solid #e5e5e5; }
 
