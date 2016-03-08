@@ -43,8 +43,11 @@
 								<h4>Lorem Ipsum</h4>
 								<hr>
 							</div>
+						</div>
+						<div class="row result">
 							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+								<h4>Lorem Ipsum</h4>
+								<hr>
 							</div>
 						</div>
 						<div class="row result">
@@ -52,8 +55,11 @@
 								<h4>Lorem Ipsum</h4>
 								<hr>
 							</div>
+						</div>
+						<div class="row result">
 							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+								<h4>Lorem Ipsum</h4>
+								<hr>
 							</div>
 						</div>
 						<div class="row result">
@@ -61,8 +67,11 @@
 								<h4>Lorem Ipsum</h4>
 								<hr>
 							</div>
+						</div>
+						<div class="row result">
 							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+								<h4>Lorem Ipsum</h4>
+								<hr>
 							</div>
 						</div>
 						<div class="row result">
@@ -70,8 +79,11 @@
 								<h4>Lorem Ipsum</h4>
 								<hr>
 							</div>
+						</div>
+						<div class="row result">
 							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+								<h4>Lorem Ipsum</h4>
+								<hr>
 							</div>
 						</div>
 						<div class="row result">
@@ -79,8 +91,11 @@
 								<h4>Lorem Ipsum</h4>
 								<hr>
 							</div>
+						</div>
+						<div class="row result">
 							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+								<h4>Lorem Ipsum</h4>
+								<hr>
 							</div>
 						</div>
 						<div class="row result">
@@ -88,71 +103,20 @@
 								<h4>Lorem Ipsum</h4>
 								<hr>
 							</div>
-							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
-							</div>
 						</div>
 						<div class="row result">
 							<div class="row">
 								<h4>Lorem Ipsum</h4>
 								<hr>
-							</div>
-							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
-							</div>
-						</div>
-						<div class="row result">
-							<div class="row">
-								<h4>Lorem Ipsum</h4>
-								<hr>
-							</div>
-							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
-							</div>
-						</div>
-						<div class="row result">
-							<div class="row">
-								<h4>Lorem Ipsum</h4>
-								<hr>
-							</div>
-							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
-							</div>
-						</div>
-						<div class="row result">
-							<div class="row">
-								<h4>Lorem Ipsum</h4>
-								<hr>
-							</div>
-							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
-							</div>
-						</div>
-						<div class="row result">
-							<div class="row">
-								<h4>Lorem Ipsum</h4>
-								<hr>
-							</div>
-							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
-							</div>
-						</div>
-						<div class="row result">
-							<div class="row">
-								<h4>Lorem Ipsum</h4>
-								<hr>
-							</div>
-							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
 							</div>
 						</div>
 					</div>
 				</form>
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 categories" >
-				<span>Video <i class="fa fa-youtube-play"></i></span>
-				<span>Billeder <i class="fa fa-image"></i></span>
-				<span>Kategorier <i class="fa fa-th"></i></span>
+				<span><a href="#">Video <i class="fa fa-youtube-play"></i></a></span>
+				<span><a href="#">Billeder <i class="fa fa-image"></i></a></span>
+				<span><a href="#">Kategorier <i class="fa fa-th"></i></a></span>
 			</div>
 			<div class="blue"></div>
 			<div class="green"></div>
@@ -178,112 +142,137 @@
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')}}" aria-describedby="basic-addon">
 						<div class="container results banner-results none">
-						<div class="row result">
-							<div class="row">
-								<p>Lorem Ipsum</p>
-								<hr>
+							<div class="row result">
+								<div class="row">
+								<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-						</div>
-						<div class="row result">
-							<div class="row">
-								<p>Lorem Ipsum</p>
-								<hr>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-						</div>
-						<div class="row result">
-							<div class="row">
-								<p>Lorem Ipsum</p>
-								<hr>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-						</div>
-						<div class="row result">
-							<div class="row">
-								<p>Lorem Ipsum</p>
-								<hr>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-						</div>
-						<div class="row result">
-							<div class="row">
-								<p>Lorem Ipsum</p>
-								<hr>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-						</div>
-						<div class="row result">
-							<div class="row">
-								<p>Lorem Ipsum</p>
-								<hr>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-						</div>
-						<div class="row result">
-							<div class="row">
-								<p>Lorem Ipsum</p>
-								<hr>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-						</div>
-						<div class="row result">
-							<div class="row">
-								<p>Lorem Ipsum</p>
-								<hr>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-						</div>
-						<div class="row result">
-							<div class="row">
-								<p>Lorem Ipsum</p>
-								<hr>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-						</div>
-						<div class="row result">
-							<div class="row">
-								<p>Lorem Ipsum</p>
-								<hr>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-						</div>
-						<div class="row result">
-							<div class="row">
-								<p>Lorem Ipsum</p>
-								<hr>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
-							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
-							</div>
-						</div>
-						<div class="row result">
-							<div class="row">
-								<p>Lorem Ipsum</p>
-								<hr>
-							</div>
-							<div class="row">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut possimus nemo aspernatur repellendus saepe, amet at similique nihil explicabo quidem architecto repudiandae sed ad commodi placeat sapiente eum, sunt.</p>
+							<div class="row result">
+								<div class="row">
+									<h4>Lorem Ipsum</h4>
+									<hr>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -293,7 +282,7 @@
 		</section>
 		<section class="content container none" id="content">
 		<div class="row did-you-mean">
-			<p>Mente du <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>?</p>
+			<p>Mente du <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicih3g elit.</a>?</h3>
 		</div>
 			<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 				<div class="row result">
@@ -586,20 +575,20 @@
 				</div>	
 
 			</div>
-			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 pull-right content-categories" data-spy="affix" data-offset-top="568">
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 pull-right content-categories" data-spy="affix" data-offset-top="706">
 				<h4 class="text-left">Kategorier</h4>
-				<p class="text-left category">Web Desgin</p>
-				<p class="text-left category">Logo Design</p>
-				<p class="text-left category">App Design</p>
-				<p class="text-left category">Frontend Development</p>
-				<p class="text-left category">Backend Development</p>
-				<p class="text-left category">App Development</p>
-				<p class="text-left category">Development Tools</p>
-				<p class="text-left category">Analytic tools</p>
-				<p class="text-left category">Code Design</p>
-				<p class="text-left category">Ios systems</p>
-				<p class="text-left category">Android Development</p>
-				<p class="text-left category">General work tools</p>
+				<a href="#"><p class="text-left category">Web Desgin</p></a>
+				<a href="#"><p class="text-left category">Logo Design</p></a>
+				<a href="#"><p class="text-left category">App Design</p></a>
+				<a href="#"><p class="text-left category">Frontend Development</p></a>
+				<a href="#"><p class="text-left category">Backend Development</p></a>
+				<a href="#"><p class="text-left category">App Development</p></a>
+				<a href="#"><p class="text-left category">Development Tools</p></a>
+				<a href="#"><p class="text-left category">Analytic tools</p></a>
+				<a href="#"><p class="text-left category">Code Design</p></a>
+				<a href="#"><p class="text-left category">Ios systems</p></a>
+				<a href="#"><p class="text-left category">Android Development</p></a>
+				<a href="#"><p class="text-left category">General work tools</p></a>
 			</div>
 		</section>
 	</div>

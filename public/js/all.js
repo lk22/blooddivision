@@ -20734,14 +20734,14 @@ $(function(){
 
 	$('.banner-search-input').bind('click', function(){
 		$('.banner-results').fadeIn(400);
-		$('.overlay').fadeIn(400);
+		// $('.overlay').fadeIn(400);
 	});
 
 	var $element = $('.header');
 	var $document = $(document);
 
 	$document.scroll(function(){
-		if($document.scrollTop() >= 586){
+		if($document.scrollTop() >= 706){
 			$element.stop().css({
 				top: '0px'
 			});
@@ -20757,7 +20757,7 @@ $(function(){
 
 		$('.content').fadeIn(500);
 
-		$document.scrollTop(568);
+		$document.scrollTop(705);
 
 	});
 

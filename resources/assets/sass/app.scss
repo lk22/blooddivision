@@ -165,6 +165,10 @@
 				span{
 					margin-left:8px;
 					font-size:11px;
+					
+					a{
+						color: #000; 
+					}
 				}
 			}
 			.blue{
@@ -205,7 +209,7 @@
 		} 
 
 		.container-fluid.search-results-banner{
-			min-height:586px;
+			min-height:706px;
 			width: 100%;
 			background: #000; 
 			background: url('../../images/architecture-1048092_1920.jpg') center center;
@@ -213,10 +217,10 @@
 			-o-background-size: cover; 
 			background-size: cover; 
 			color: #FFF; 
-			padding:114px 0px 0px 0px;
+			padding:175px 0px 0px 0px;
 			
 			.banner-search{
-				padding:75px 40px 0px 40px;
+				padding:25px 40px 0px 40px;
 				
 				.banner-form{
 					.banner-search-input{
@@ -238,7 +242,7 @@
 					    border-bottom: 1px solid #e5e5e5;
 					    color: #000; 
 		    			.result{
-							padding:10px 40px 10px 40px;
+							padding:0px 40px 0px 40px;
 							
 							&:hover{
 								background: #e5e5e5; 
@@ -257,6 +261,12 @@
 			border-left:1px solid #e5e5e5;
 			border-right:1px solid #e5e5e5;
 			background: #fff; 
+			
+			.did-you-mean{
+				p{
+					margin-left: 25px;
+				}
+			}
 			.result{
 				padding: 10px;
 				margin: 10px 0px 10px 0px;
@@ -280,13 +290,15 @@
 			}
 
 			.affix{
-				left: 63.5%;
-    			width: 17%; 
-    			top: 81px; 
+				left: 65%;
+			    width: 16%;
+			    top: 81px; 
 			}
 
 			.category{
 				border-bottom:1px solid #e5e5e5;
+				color: #000;
+				padding-left:0px; 
 			}
 		} 
 	}

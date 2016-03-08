@@ -24,8 +24,8 @@ class ManageUserRequest extends Request
     public function rules()
     {
         return [
-            'avatar' => 'mimes:jpeg,png,jpg',
-            'cover'  => 'mimes:jpeg,png,jpg',
+            'avatar' => 'image|present',
+            'cover'  => 'image|present',
             'name'   => 'unique:users,name,' . auth()->user()->id,
             'email'  => 'email',
             'description' => 'min:10|max:255'

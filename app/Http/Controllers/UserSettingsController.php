@@ -7,7 +7,7 @@ use Blooddivision\User;
 use Blooddivision\Rank;
 use Blooddivision\Event;
 use Blooddivision\Game;
-use Blooddivision\Helper;
+use Blooddivision\Helpers\Helper;
 use Blooddivision\Http\Requests;
 use Blooddivision\Http\Requests\ManageUserRequest;
 use File;
@@ -42,9 +42,13 @@ class UserSettingsController extends Controller
 
     public function updateUser(ManageUserRequest $request){
 
-        $request->file('avatar')->move('images/avatars', $request->file('avatar')->getClientOriginalName());
+        if(!$request->file('avatar') == null){
+            $request->file('avatar')->move('images/avatars', $request->file('avatar')->fileClientOriginalName());
+        }
 
-        $request->file('cover')->move('images/profile_cover', $request->file('avatar')->getClientOriginalName());
+        if(!$request->file('cover') == null){
+            $request->file('cover')->move('images/profile_cover', $request->file('avatar')->getClientOriginalName());
+        }
 
         $this->user->where('id', auth()->user()->id)->update([
             'name' => $request->get('name'),

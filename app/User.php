@@ -187,4 +187,12 @@ class User extends Authenticatable implements SluggableInterface
         return $this->where('id', auth()->user()->id)->get();
     }
 
+    public function updateValue($key, $value){
+        return $this->update([$key => $value]);
+    }
+
+    public function updateWhereUser($key, $value, $field, $w_value){
+        return updateValue($key, $value)->where($field, $w_value);
+    }
+
 }

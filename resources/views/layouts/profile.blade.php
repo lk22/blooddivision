@@ -103,7 +103,7 @@
 								<a href="/profile/{{auth()->user()->name}}/your-games"><i class="fa fa-gamepad"></i> Your games</a>
 							</div>
 							<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 profile-link">
-								<a href="/profile/{{auth()->user()->name}}/settings"><i class="fa fa-cogs"></i> Settings</a>
+								<a href="/profile/{{auth()->user()->name}}/settings/general"><i class="fa fa-cogs"></i> Settings</a>
 							</div>
 						</div>
 					</div>

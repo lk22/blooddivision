@@ -8547,6 +8547,8 @@ button.close {
       #search .container-fluid.search-wrapper .header .categories span {
         margin-left: 8px;
         font-size: 11px; }
+        #search .container-fluid.search-wrapper .header .categories span a {
+          color: #000; }
     #search .container-fluid.search-wrapper .header .blue {
       height: 5px;
       width: 25%;
@@ -8576,15 +8578,15 @@ button.close {
       left: 75%;
       background: #f39c12; }
   #search .container-fluid.search-wrapper .container-fluid.search-results-banner {
-    min-height: 586px;
+    min-height: 706px;
     width: 100%;
     background: #000;
     background: url("../../images/architecture-1048092_1920.jpg") center center;
     background-size: cover;
     color: #FFF;
-    padding: 114px 0px 0px 0px; }
+    padding: 175px 0px 0px 0px; }
     #search .container-fluid.search-wrapper .container-fluid.search-results-banner .banner-search {
-      padding: 75px 40px 0px 40px; }
+      padding: 25px 40px 0px 40px; }
       #search .container-fluid.search-wrapper .container-fluid.search-results-banner .banner-search .banner-form .banner-search-input {
         background: #FFF;
         border: 1px solid #ccc; }
@@ -8602,7 +8604,7 @@ button.close {
         border-bottom: 1px solid #e5e5e5;
         color: #000; }
         #search .container-fluid.search-wrapper .container-fluid.search-results-banner .banner-search .banner-form .results .result {
-          padding: 10px 40px 10px 40px; }
+          padding: 0px 40px 0px 40px; }
           #search .container-fluid.search-wrapper .container-fluid.search-results-banner .banner-search .banner-form .results .result:hover {
             background: #e5e5e5; }
   #search .container-fluid.search-wrapper .content {
@@ -8611,6 +8613,8 @@ button.close {
     border-left: 1px solid #e5e5e5;
     border-right: 1px solid #e5e5e5;
     background: #fff; }
+    #search .container-fluid.search-wrapper .content .did-you-mean p {
+      margin-left: 25px; }
     #search .container-fluid.search-wrapper .content .result {
       padding: 10px;
       margin: 10px 0px 10px 0px; }
@@ -8622,11 +8626,13 @@ button.close {
       #search .container-fluid.search-wrapper .content .result .media .media-body h4 {
         margin-left: 14px; }
     #search .container-fluid.search-wrapper .content .affix {
-      left: 63.5%;
-      width: 17%;
+      left: 65%;
+      width: 16%;
       top: 81px; }
     #search .container-fluid.search-wrapper .content .category {
-      border-bottom: 1px solid #e5e5e5; }
+      border-bottom: 1px solid #e5e5e5;
+      color: #000;
+      padding-left: 0px; }
 
 /**
 *	landing page stylesheet
