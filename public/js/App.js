@@ -1,10 +1,18 @@
 /**
- * ajax globals
+ * setting token
  */
+$.ajaxPrefilter(function(options, originalOptions, xhr){
+	var token = $('meta[name="csrf-token"]').attr('content');
+
+	if(token){
+		return xhr.setRequestHeader('X-CSRF-TOKEN', token);
+	}
+});
 
 /**
- * Append token to all requests
+ * set affix for element
  */
+
 function setAffix(element, offset){
 	var $element = $(element);
 
@@ -13,15 +21,10 @@ function setAffix(element, offset){
 	});
 }
 
-/**
- * Setting REQUEST Token function
- * @param {[type]} token [description]
- */
 function setToken(token){
-	$.ajaxSetup({
-		headers: token
-	});
+	return token;
 }
+
 
 function do_slide_and_change_on(field, changeable, change){
 	var $default = 400;
@@ -325,7 +328,7 @@ $(function(){
 
 		$('.content').fadeIn(500);
 
-		$document.scrollTop(705);
+		$document.scrollTop(710);
 
 	});
 

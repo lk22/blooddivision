@@ -26,12 +26,13 @@ var paths = {
 	'sa': bower + 'sweetalert/dist/',
 	'alertify': bower + 'alertify.js/lib/',
 	'angular': bower + 'angular',
-	'vue': bower + 'vue/dist/'
+	'vue': bower + 'vue/dist/',
+	'select2': bower + 'select2/dist/js/selct2.min.js'
 };
 
 elixir(function(mix) {
 
-	mix.babel('test.js');
+
 
 /*
 *	Add Sass support
@@ -65,10 +66,10 @@ elixir(function(mix) {
 	* React JS
 	*/
 
-		mix.copy(
-			paths.react + 'dist/react.js',
-			'public/js/vendor/react.js'
-		);
+		// mix.copy(
+		// 	paths.react + 'dist/react.js',
+		// 	'public/js/vendor/react.js'
+		// );
 
 	/**
 	 * font awesome animation
@@ -136,6 +137,15 @@ elixir(function(mix) {
 		);
 
 	/**
+	 * select2 js
+	 */
+		
+		mix.copy(
+			paths.select2,
+			'public/js/vendor/select2.min.js'
+		);
+
+	/**
 	 * mix stylesheets
 	 */
 	
@@ -156,22 +166,16 @@ elixir(function(mix) {
 */
 
 	mix.scripts([
-		// 'public/js/vendor/jquery.min.js',
-		// 'public/js/vendor/bootstrap.min.js',
 		'public/js/vendor/sweetalert-dev.js',
-		'public/js/vendor/react.js',
 		'public/js/vendor/alertify.min.js',
-		'public/js/vendor/vue.min.js',
-		'public/js/pages/home.js',
-		'public/js/pages/events.js',
-		'public/js/pages/members.js',
-		'public/js/pages/authorization.js',
-		'public/js/pages/profile.js',
+		'public/js/vendor/select2.min.js',
+		'public/js/pages/Auth.js',
+		'public/js/pages/Contact.js',
+		'public/js/pages/Event.js',
 		'public/js/pages/helpCenter.js',
-		'global.js',
+		'public/js/pages/profile.js',
+		'App.js'
 	], 'public/js/all.js', 'public/js');
-
-	// mix.babel('resources/assets/js/components.jsx');
 
 
 // do a version control of the javascript and css files

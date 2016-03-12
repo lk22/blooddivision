@@ -92,4 +92,7 @@ class EventController extends Controller
     	*/
     	return redirect('/events');
     }
-}
+
+    public function participate(){
+        
+    }

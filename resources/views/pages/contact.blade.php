@@ -3,16 +3,20 @@
 @section('content')
 	<div class="container contact-wrapper">
 		<div class="row">
+			<h1 class="text-center">Contact us for more information</h1>
+			<hr>
+		</div>
+		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-offset-3 col-lg-6 col-lg-offset-3">
-				<form action="contact-us" method="post">
+				<form action="contact-us" method="post" class="contact-wrapper">
 				{{ csrf_field() }}
 					<div class="form-group">
 						<label class="control-label" for="name">name: </label>
-						<input type="text" name="name" placeholder="Enter your name here..." class="form-control">
+						<input type="text" name="name" placeholder="Enter your name here..." class="form-control name">
 					</div>
 					<div class="form-group">
 						<label class="control-label" for="email"> email:</label>
-						<input type="email" name="email" placeholder="Enter your name here..." class="form-control">
+						<input type="email" name="email" placeholder="Enter your name here..." class="form-control email">
 					</div>
 
 					<div class="form-group">

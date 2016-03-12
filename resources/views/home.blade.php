@@ -48,3 +48,4 @@
     </div>
 </div><!-- content wrapper -->
 @endsection
+<script>console.log(Blooddivision.user);</script>

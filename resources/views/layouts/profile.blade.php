@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{!! csrf_token() !!}">
 	<title> {{ auth()->user()->name}} - Profile</title>
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -142,8 +143,6 @@
 	</div>
 	@include('partials.layout_footer')
 	<!-- JavaScripts -->
-<!-- 	<script src="https://fb.me/react-0.14.6.min.js"></script>
-	<script src="https://fb.me/react-dom-0.14.6.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="{{ elixir('js/all.js') }}"></script>

@@ -68,10 +68,10 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary register-btn">
                                     <i class="fa fa-btn fa-user"></i>Register
                                 </button>
-                                <span class="hidden-xs hidden-sm auth-login-helper" data-toggle="modal" data-target="#authRegisterModal"><i class="fa fa-question-circle"></i> Need Help?</span>
+                                <span class="hidden-xs hidden-sm auth-registration-helper" data-toggle="modal" data-target="#authRegisterModal"><i class="fa fa-question-circle"></i> Need Help?</span>
                             </div>
                         </div>
                         <div class="form-group">

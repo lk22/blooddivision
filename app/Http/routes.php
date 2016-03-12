@@ -21,6 +21,10 @@ Route::get('/search', function(){
     return view('search');
 });
 
+Route::get('/angular', function(){
+    return view('angular');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
