@@ -80,7 +80,7 @@ Auth = {
 	 * @return     {<type>}  { description_of_the_return_value }
 	 */
 
-	_bindEvents: function() {
+	_bindEvents: function () {
 
 		this.authEmail.bind('click', function(){
 			$(this).focus();
@@ -112,7 +112,7 @@ Auth = {
 		});
 
 		this.authPass.bind('mouseenter', function(){
-			$(this).focus()
+			$(this).focus();
 		});
 
 		this.authPass.bind('mouseleave', function(){
@@ -146,6 +146,8 @@ Auth = {
 		});
 		
 	}
+
+	
 };
 
 /**

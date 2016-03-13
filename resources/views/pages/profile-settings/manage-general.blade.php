@@ -30,7 +30,7 @@
 					<label for="" class="label-control">Avatar:</label>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 input">
-					<a href="/images/avatars/{{$the_user_avatar}}"><span><img class="img img-thumbnail" src="/images/avatars/{{$the_user->avatar}}" width="150" height="150" alt=""></span></a>
+					<a href="/images/avatars/{{$the_user->avatar}}"><span><img class="img img-thumbnail" src="/images/avatars/{{$the_user->avatar}}" width="150" height="150" alt=""></span></a>
 					<input type="file" multiple="multiple" name="avatar" class="form-control avatarInput" value="{{$the_user->avatar}}">
 					<div class="container-fluid show-avatar">
 						<img src="#" height="150" width="150" class="img img-thumbnail center-block" id="target" alt="your image" style="display:none">

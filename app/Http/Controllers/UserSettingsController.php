@@ -25,11 +25,11 @@ class UserSettingsController extends Controller
     	$this->rank = $rank;
     	$this->event = $event;
     	$this->game = $game;
+
+        $auth = Helper::getAuth();
     }
 
     public function index($slug){
-
-        $auth = Helper::getAuth();
 
         $user = $this->user->getUser();
 
@@ -64,11 +64,15 @@ class UserSettingsController extends Controller
 
     public function eventsSettings(){
         // grab all the users events
-        
+            $user = $this->user->joinEvents(); // fetching all events from the particullar logged in user        
         // return view
+        
+        return view('pages.profile-settings.manage-events', compact('user'));
     }
 
     public function gamesSettings(){
-        // logic here
+        $user = $this->user->joinGames();
+
+        return view('pages.profile-settings.manage-games', compact('user'));
     }
 }
