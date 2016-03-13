@@ -134,5 +134,7 @@ Route::group(['prefix' => '/profile/{slug}/settings', 'middleware' => 'web'], fu
     Route::get('/games', 'UserSettingsController@gamesSettings');
 
     Route::get('/events', 'UserSettingsController@eventsSettings');
+    Route::get('/events/create-event', 'UserSettingsController@createEventView');
+    Route::post('/events/create-event', 'UserSettingsController@storeEvent');
 
 });

@@ -46,6 +46,8 @@ class Event extends Model implements SluggableInterface
     	'user_id'				// the specific user that has added the event 
     ];
 
+    protected $guarded = ['user_id'];
+
     /**
     * set event dates property
     * @var $dates = [] 
@@ -54,8 +56,7 @@ class Event extends Model implements SluggableInterface
     protected $dates = ['event_datetime'];
 
     /**
-    *	Events belongs to relationship on users
-    *
+    *	Events belongs to relationship on user
     *	@return void
     */
     public function user(){
@@ -92,12 +93,19 @@ class Event extends Model implements SluggableInterface
     *   Format the event time to the setted time of the event to start
     *   @return void
     */
-
     public function setEventStartTimeAttribute($date){
         // $this->attributes['event_start_time'] = Carbon::createFromFormat('H-m-s', $date);
     }
 
     public function setEventEndTimeAttribute($date){
         // $this->attributes['event_end_time'] = Carbon::createFromFormat("H-m-s", $date);
+    }
+
+    /**
+     * adding user/events join query
+     * @return [type] [description]
+     */
+    public function joinUser(){
+        return $this->with('user')->where('events.user_id', auth()->user()->id)->get();
     }
 }

@@ -14,7 +14,7 @@ use Blooddivision\Event;
 use Blooddivision\Game;
 use Blooddivision\Rank;
 use Carbon\Carbon;
-use Blooddivision\Helper;
+use Blooddivision\Helpers\Helper;
 
 // brug sluggable i stedet for a lede efter User->name. https://github.com/cviebrock/eloquent-sluggable
 // aldrig brug DB klassen. Hvis du gør, kan det med 90% sikkerhed gøres på en nemmere måde.

@@ -4,7 +4,9 @@
 	@if(count($events) >= 1)
 		@foreach($events as $event)
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 events-wrapper">
-				
+				{{$event->event_name}}
+				{{$event->event_game}}
+				{{$event->event_datetime}}
 			</div>
 		@endforeach
 		<a class="create-profile-event btn btn-default" href="/profile/{{Auth::user()->name}}/create-event">Create new event <i class="fa fa-calendar-plus-o"></i></a>

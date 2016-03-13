@@ -10,6 +10,7 @@ use Blooddivision\Game;
 use Blooddivision\Helpers\Helper;
 use Blooddivision\Http\Requests;
 use Blooddivision\Http\Requests\ManageUserRequest;
+use Blooddivision\Http\Requests\CreateEventRequest;
 use File;
 use Input;
 class UserSettingsController extends Controller
@@ -18,7 +19,8 @@ class UserSettingsController extends Controller
 	protected $user,
 			  $rank,
 			  $event,
-			  $game;
+			  $game,
+              $auth;
 
     public function __construct(User $user, Rank $rank, Event $event, Game $game){
     	$this->user = $user;
@@ -26,7 +28,7 @@ class UserSettingsController extends Controller
     	$this->event = $event;
     	$this->game = $game;
 
-        $auth = Helper::getAuth();
+        $this->auth = Helper::getAuth();
     }
 
     public function index($slug){
@@ -64,15 +66,30 @@ class UserSettingsController extends Controller
 
     public function eventsSettings(){
         // grab all the users events
-            $user = $this->user->joinEvents(); // fetching all events from the particullar logged in user        
+            $user = $this->user->getUser(); 
+
+            $events = Event::with('user')->where('events.user_id', auth()->user()->id)->get();
+
+            $games = $this->game->all();
+
         // return view
-        
-        return view('pages.profile-settings.manage-events', compact('user'));
+            return view('pages.profile-settings.manage-events', compact('user', 'events', 'games'));
+    }
+
+    public function createEventView(){
+        $user = $this->user->getUser();
+         return view('pages.profile-settings.manage-create-event', compact('user'));
+    }
+
+    public function storeEvent(CreateEventRequest $request){
+        $data = $request->all();
+
+        $data['user_id'] = auth()->user()->id;
+
+        $event = $this->event->create($request->all());
     }
 
     public function gamesSettings(){
-        $user = $this->user->joinGames();
-
         return view('pages.profile-settings.manage-games', compact('user'));
     }
 }

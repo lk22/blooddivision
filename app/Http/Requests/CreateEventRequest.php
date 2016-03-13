@@ -31,7 +31,7 @@ class CreateEventRequest extends Request
             'event_name'        => 'required',
             'event_game'        => 'required',
             'event_datetime'    => 'required',
-            'event_desc'        => 'required'
+            'event_desc'        => 'required|max:255'
         ];
     }
 }

@@ -144,12 +144,12 @@ class User extends Authenticatable implements SluggableInterface
      * @param  [type] $query [description]
      * @return [type]        [description]
      */
-    public function JoinGames(){
-        return $this->with('games')->where('id', \Auth::user()->id)->get();
+    public function JoinGames($relation){
+        return $this->with($relation)->where('id', \Auth::user()->id)->get();
     }
 
-    public function JoinEvents(){
-        return $this->with('events')->where('id', \Auth::user()->id)->get();
+    public function JoinEvents($relation){
+        return $this->with($relation)->where('id', \Auth::user()->id)->get();
     }
 
     /**
@@ -188,7 +188,7 @@ class User extends Authenticatable implements SluggableInterface
     }
 
     public function getUser(){
-        return $this->where('id', auth()->user()->id)->get();
+        return $this->where('id', \Auth::user()->id)->get();
     }
 
     public function updateValue($key, $value){
