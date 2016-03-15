@@ -66,7 +66,7 @@ class UserController extends Controller
 
         $ranks = Rank::with('user')->where('ranks.user_id', $auth->id)->take(1)->get();
         
-        // $events = $user->events;
+        $use->events;
 
     	// step 4 => load view
     	return view('pages.profile_events', compact('user', 'events', 'ranks'));

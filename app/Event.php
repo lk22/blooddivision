@@ -81,25 +81,9 @@ class Event extends Model implements SluggableInterface
         return $condition;
     }
 
-    public function getEventDateTimeAttribute(){
-        // return $this->event_date_time;
-    }
-
-    public function setCreatedAtAttribute($date){
-        // $this->attributes['event_datetime'] = Carbon::createFromFormat('d-m-Y', $date);
-    }
-
-    /**
-    *   Format the event time to the setted time of the event to start
-    *   @return void
-    */
-    public function setEventStartTimeAttribute($date){
-        // $this->attributes['event_start_time'] = Carbon::createFromFormat('H-m-s', $date);
-    }
-
-    public function setEventEndTimeAttribute($date){
-        // $this->attributes['event_end_time'] = Carbon::createFromFormat("H-m-s", $date);
-    }
+    // public function setCreatedAtAttribute($date){
+    //     $this->attributes['event_datetime'] = Carbon::createFromFormat('y-m-d', $date);
+    // }
 
     /**
      * adding user/events join query

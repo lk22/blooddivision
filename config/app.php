@@ -174,6 +174,9 @@ return [
 
         Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
 
+        AdamWathan\Form\FormServiceProvider::class,
+        AdamWathan\BootForms\BootFormsServiceProvider::class,
+
     ],
 
     /*
@@ -220,6 +223,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         // 'Debugbar'  => Barryvdh\Debugbar\Facade::class,
+        'Form'      => AdamWathan\Form\Facades\Form::class,
+        'BootForm'  => AdamWathan\BootForms\Facades\BootForm::class,
 
         // eloquent models
         'MessageOfTheDay' => Blooddivision\MessageOfTheDay::class,

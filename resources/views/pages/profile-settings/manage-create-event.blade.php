@@ -32,15 +32,13 @@
 
 			<div class="form-group">
 				<label for="" class="control-label">Event datetime:</label>
-				<input type="datetime-local" class="form-control event-datetime-input" placeholder="your event date and time goes here..." name="event_datetime">
+				<input type="date" class="form-control event-datetime-input" placeholder="your event date and time goes here..." name="event_datetime">
 			</div>
 
 			<div class="form-group">
 				<label for="" class="control-label">Event description:</label>
 				<textarea class="form-control manage-description" name="event_desc" id="" cols="30" rows="5"></textarea>
 			</div>
-
-			
 
 			<div class="form-group">
 				<input type="submit" class="btn btn-primary" value='Create'>

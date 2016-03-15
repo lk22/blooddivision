@@ -4,25 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "66f049fcbab7b20ec0d28a671acf329b",
-    "content-hash": "c2557f2cf28b7d1a526ce6d9769ee870",
+    "hash": "c36f6c628cbab525cf0c94497a9e2a3c",
+    "content-hash": "7539250420a0ada154d8ab95fd3b9ecd",
     "packages": [
         {
             "name": "adamwathan/bootforms",
-            "version": "v0.7.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/adamwathan/bootforms.git",
-                "reference": "9da18932543690d98e45dd684f5acd8bb9a86349"
+                "reference": "20ce41da79e3e35488d559f7ef5ab3dba6ef92ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/adamwathan/bootforms/zipball/9da18932543690d98e45dd684f5acd8bb9a86349",
-                "reference": "9da18932543690d98e45dd684f5acd8bb9a86349",
+                "url": "https://api.github.com/repos/adamwathan/bootforms/zipball/20ce41da79e3e35488d559f7ef5ab3dba6ef92ba",
+                "reference": "20ce41da79e3e35488d559f7ef5ab3dba6ef92ba",
                 "shasum": ""
             },
             "require": {
-                "adamwathan/form": "~0.7.1",
+                "adamwathan/form": "^0.8",
                 "php": ">=5.4.0"
             },
             "require-dev": {
@@ -47,30 +47,30 @@
                 }
             ],
             "description": "Just a Formbuilder with some Bootstrap specific conveniences. Remembers old input, retrieves error messages and handles all your boilerplate Bootstrap markup automatically.",
-            "time": "2015-12-08 16:07:27"
+            "time": "2016-02-11 20:17:34"
         },
         {
             "name": "adamwathan/form",
-            "version": "v0.7.2",
+            "version": "v0.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/adamwathan/form.git",
-                "reference": "e99a0a046d150adb1b2ef6b1fb1ab73b51d2929e"
+                "reference": "4ea288c2f7048fc28d0d5b147c321eeac7cac53e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/adamwathan/form/zipball/e99a0a046d150adb1b2ef6b1fb1ab73b51d2929e",
-                "reference": "e99a0a046d150adb1b2ef6b1fb1ab73b51d2929e",
+                "url": "https://api.github.com/repos/adamwathan/form/zipball/4ea288c2f7048fc28d0d5b147c321eeac7cac53e",
+                "reference": "4ea288c2f7048fc28d0d5b147c321eeac7cac53e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=5.4.0"
             },
             "require-dev": {
                 "illuminate/support": "4.*",
                 "mockery/mockery": "~0.9",
                 "phpunit/phpunit": "3.7.*",
-                "satooshi/php-coveralls": "dev-master"
+                "satooshi/php-coveralls": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -89,7 +89,7 @@
                 }
             ],
             "description": "A basic framework agnostic form building package with a few extra niceties like remembering old input and retrieving error messages.",
-            "time": "2015-08-07 18:04:49"
+            "time": "2016-02-19 21:50:34"
         },
         {
             "name": "barryvdh/laravel-debugbar",
@@ -411,6 +411,66 @@
                 "string"
             ],
             "time": "2015-11-06 14:35:42"
+        },
+        {
+            "name": "filp/whoops",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/filp/whoops.git",
+                "reference": "8da9523f07c62d56fe1cf36f8ae29b333afc181f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/8da9523f07c62d56fe1cf36f8ae29b333afc181f",
+                "reference": "8da9523f07c62d56fe1cf36f8ae29b333afc181f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "^4.8 || ^5.0",
+                "symfony/var-dumper": "~3.0"
+            },
+            "suggest": {
+                "symfony/var-dumper": "Pretty print complex values better with var-dumper available",
+                "whoops/soap": "Formats errors as SOAP responses"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Whoops\\": "src/Whoops/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Filipe Dobreira",
+                    "homepage": "https://github.com/filp",
+                    "role": "Developer"
+                }
+            ],
+            "description": "php error handling for cool kids",
+            "homepage": "https://github.com/filp/whoops",
+            "keywords": [
+                "error",
+                "exception",
+                "handling",
+                "library",
+                "whoops",
+                "zf2"
+            ],
+            "time": "2016-03-13 10:22:39"
         },
         {
             "name": "fzaninotto/faker",
@@ -1016,16 +1076,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.2.22",
+            "version": "v5.2.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "aec1b7cb9ec0bac0107361a3730cac9b6f945ef4"
+                "reference": "87c090845f135ca94eba903f1c8462e60e3a6e36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/aec1b7cb9ec0bac0107361a3730cac9b6f945ef4",
-                "reference": "aec1b7cb9ec0bac0107361a3730cac9b6f945ef4",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/87c090845f135ca94eba903f1c8462e60e3a6e36",
+                "reference": "87c090845f135ca94eba903f1c8462e60e3a6e36",
                 "shasum": ""
             },
             "require": {
@@ -1140,7 +1200,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-02-27 22:09:19"
+            "time": "2016-03-14 14:22:33"
         },
         {
             "name": "laravel/socialite",
@@ -3281,16 +3341,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.23",
+            "version": "4.8.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "6e351261f9cd33daf205a131a1ba61c6d33bd483"
+                "reference": "a1066c562c52900a142a0e2bbf0582994671385e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6e351261f9cd33daf205a131a1ba61c6d33bd483",
-                "reference": "6e351261f9cd33daf205a131a1ba61c6d33bd483",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a1066c562c52900a142a0e2bbf0582994671385e",
+                "reference": "a1066c562c52900a142a0e2bbf0582994671385e",
                 "shasum": ""
             },
             "require": {
@@ -3349,7 +3409,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-02-11 14:56:33"
+            "time": "2016-03-14 06:16:08"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -3939,7 +3999,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "adamwathan/bootforms": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
