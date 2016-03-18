@@ -52,7 +52,7 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="/profile/{{auth()->user()->name}}"><i class="fa fa-male"></i> Profile</a></li>
-                                <li><a href="{{ url('/profile/settings{user}') }}"><i class="fa fa-cogs"></i> Profile Settings</a></li>
+                                <li><a href="{{ url('/profile/' . auth()->user()->name . '/settings/general') }}"><i class="fa fa-cogs"></i> Profile Settings</a></li>
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
                         </li>
@@ -90,14 +90,14 @@
             <a href="/profile/{{auth()->user()->name}}"><i class="fa fa-user"></i> Home</a>
             <a href="/profile/{{auth()->user()->name}}/your-events"><i class="fa fa-calendar"> Events</i> </a>
             <a href="/profile/{{auth()->user()->name}}/your-games"><i class="fa fa-gamepad"></i> Games</a>
-            <a href="/profile/{{auth()->user()->name}}/settings"><i class="fa fa-cogs"></i> Settings</a>
+            <a href="/profile/{{auth()->user()->name}}/manage/general"><i class="fa fa-cogs"></i> Settings</a>
         </div>
 
         <div class="row sidebar-nav">
             <p class="text-center">Settings</p>
-            <a href="/profile/{{auth()->user()->name}}/settings/general"><i class="fa fa-cog fa-spin"></i> General</a>
-            <a href="/profile/{{auth()->user()->name}}/settings/events"><i class="fa fa-calendar"> Events</i> </a>
-            <a href="/profile/{{auth()->user()->name}}/settings/games"><i class="fa fa-gamepad"></i> Games</a>
+            <a href="/profile/{{auth()->user()->name}}/manage/general"><i class="fa fa-cog fa-spin"></i> General</a>
+            <a href="/profile/{{auth()->user()->name}}/manage/events"><i class="fa fa-calendar"> Events</i> </a>
+            <a href="/profile/{{auth()->user()->name}}/manage/games"><i class="fa fa-gamepad"></i> Games</a>
         </div>
     </div>
 @endif

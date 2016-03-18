@@ -21,7 +21,6 @@ class EventPolicy
      *
      * @return void
      */
-    
     public function before($user, $ability){
         if($user->isSuperAdmin() && auth()->user()){
             return true;

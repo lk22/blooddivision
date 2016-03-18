@@ -30,7 +30,11 @@
 					<label for="" class="label-control">Avatar:</label>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 input">
+				@if(!$the_user->avatar)
+					<a href="/images/avatars/{{$the_user->avatar}}"><span><img class="img img-thumbnail" src="/images/mystery-man.jpg" width="150" height="150" alt=""></span></a>
+				@else
 					<a href="/images/avatars/{{$the_user->avatar}}"><span><img class="img img-thumbnail" src="/images/avatars/{{$the_user->avatar}}" width="150" height="150" alt=""></span></a>
+				@endif
 					<input type="file" multiple="multiple" name="avatar" class="form-control avatarInput" value="{{$the_user->avatar}}">
 					<div class="container-fluid show-avatar">
 						<img src="#" height="150" width="150" class="img img-thumbnail center-block" id="target" alt="your image" style="display:none">
@@ -44,7 +48,13 @@
 					<label for="" class="label-control">Cover:</label>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 input">
+				@if(!$the_user->cover)
+					<div class="no-cover">
+						<p class="text-center">No Cover</p>
+					</div>
+				@else
 					<span><img class="img img-thumbnail" src="/images/profile_cover/{{$the_user->cover}}" width="150" height="150" alt=""></span>
+				@endif
 					<input type="file" multiple="multiple" name="cover" class="form-control coverInput" value="{{$the_user->cover}}">
 					<div class="container-fluid show-cover">
 						<img src="#" height="250" width="250" class="img img-thumbnail center-block" id="target" alt="your image" style="display:none">

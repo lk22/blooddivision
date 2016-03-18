@@ -50,13 +50,13 @@ class Event extends Model implements SluggableInterface
 
     /**
     * set event dates property
-    * @var $dates = [] 
+    * @var $dates = array 
     */
 
         protected $dates = ['event_datetime'];
 
     /**
-    *	Events belongs to relationship on user
+    *	Events belongs to one user
     *	@return void
     */
    
@@ -115,6 +115,10 @@ class Event extends Model implements SluggableInterface
     
         public function scopeWhereUserIsAuthorized($query){
             return $query->where('id', auth()->user()->id);
+        }
+
+        public function scopeGetEventsWhereUserIsAuthorized($query){
+            return $query->where('id', auth()->user()->id)->get();
         }
     
 }

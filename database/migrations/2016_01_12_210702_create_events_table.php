@@ -14,11 +14,11 @@ class CreateEventsTable extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('event_name');
-            $table->string('event_game');
-            $table->text('event_description');
+            $table->string('name');
+            $table->string('game');
+            $table->text('description');
             $table->boolean('completed')->default(false);
-            $table->timestamp('event_datetime');
+            $table->timestamp('datetime');
             $table->softDeletes();
             $table->timestamps();
             $table->integer('user_id')->unsigned();

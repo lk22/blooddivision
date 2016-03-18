@@ -3,13 +3,13 @@
 		<ul>
 			<li class="section">General</li>
 			<li class="nav-item">
-				<a href="/profile/{{auth()->user()->name}}/settings/general">Information</a>
+				<a href="/profile/{{auth()->user()->name}}/manage/general">Information</a>
 			</li>
 			<li class="nav-item">
-				<a href="/profile/{{auth()->user()->name}}/settings/events">Events</a>
+				<a href="/profile/{{auth()->user()->name}}/manage/events">Events</a>
 			</li>
 			<li class="nav-item">
-				<a href="/profile/{{auth()->user()->name}}/settings/games">
+				<a href="/profile/{{auth()->user()->name}}/manage/games">
 				Games
 				</a>
 			</li>

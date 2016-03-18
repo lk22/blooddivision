@@ -197,7 +197,7 @@ use Blooddivision\Rank;
      * users manage backend 
      */
 
-        Route::group(['prefix' => '/profile/{slug}/settings', 'middleware' => 'web'], function(){
+        Route::group(['prefix' => '/profile/{slug}/manage', 'middleware' => 'web'], function(){
 
             /**
              * settings for profile page
@@ -215,10 +215,26 @@ use Blooddivision\Rank;
             /**
              * manage user events
              */
+            
+                /**
+                 * users events
+                 */
 
-                Route::get('/events', 'ManageController@eventsSettings');
-                Route::get('/events/create', 'ManageController@createEventView');
-                Route::post('/events/create', 'ManageController@storeEvent');
+                    Route::get('/events', 'ManageController@eventsSettings');
+
+                /**
+                 * create the event
+                 */
+                
+                    Route::get('/events/create', 'ManageController@createEventView');
+                    Route::post('/events/create', 'ManageController@storeEvent');
+
+                /**
+                 * edit the event
+                 */
+                
+                    Route::get('/events/edit/{slug}', 'ManageController@editEventView');
+                    Route::post('/events/edit/{slug}', 'ManageController@updateEvent');
 
         // 'ManageController@manageGamesView'
         

@@ -55,7 +55,7 @@ class UserController extends Controller
         
     	// step 3 => get the profile view
         // 
-        	return view('pages.profile_home', compact('user', 'events', 'ranks'));
+        	return view('pages.profile.profile_home', compact('user', 'events', 'ranks'));
             return vide('layouts.profile', compact('user', 'ranks'));
     }
 
@@ -69,16 +69,16 @@ class UserController extends Controller
     	$user = $this->user->where('name', $name)->get();
 
     	// step 2 => get the events belongs to the user
-        $events = $this->event->with('user')->where('events.user_id', auth()->user()->id)->get();
+        $events = $this->event->with('user')->getEventsWhereUserIsAuthorized();
 
         $ranks = $this->rank->with('user')->where('ranks.user_id', auth()->user()->id)->take(1)->get();
         
         // $user->events;
         // 
-        dd($events);
+        // dd($events);
 
     	// step 4 => load view
-    	return view('pages.profile_events', compact('user', 'events', 'ranks'));
+    	return view('pages.profile.profile_events', compact('user', 'events', 'ranks'));
     }
 
     /**
@@ -90,30 +90,6 @@ class UserController extends Controller
     	$the_event = $this->event->where('event_title', $slug)->limit(1)->get();
     }
 
-    /**
-    * create event form 
-    * @return void
-    */
-
-    public function createProfileEvent(){
-    	/**
-    	* select the authorized user
-    	*/
-    	$user = $this->user->where('name', auth()->user()->name)->limit(1)->get();
-
-    	/**
-    	* select all games
-    	*/
-    	$games = $this->game->all();
-
-        $auth = auth()->user();
-        $ranks = $this->rank->with('user')->where('ranks.user_id', $auth->id)->take(1)->get();
-
-    	/**
-    	* return the view
-    	*/
-    	return view('pages.create_event', compact('user', 'games', 'ranks'));
-    }
 
     /**
     * store the created event
@@ -174,11 +150,12 @@ class UserController extends Controller
          */
     
         $games = $this->game->with('user')->where('games.user_id', auth()->user()->id)->get();
+        
         $ranks = $this->rank->with('user')->where('ranks.user_id', auth()->user()->id)->take(1)->get();
 
         // dd($games);
 
-        return view('pages.profile_games', compact('user', 'games', 'ranks'));
+        return view('pages.profile.profile_games', compact('user', 'games', 'ranks'));
     }
 
     /**
