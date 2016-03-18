@@ -19,7 +19,6 @@ class User extends Authenticatable implements SluggableInterface
     *
     * @return Cviebrock\EloquentSluggable\SluggableTrait
     */
-
     use SluggableTrait;
 
     /**
@@ -79,7 +78,6 @@ class User extends Authenticatable implements SluggableInterface
     *
     *   @return void
     */
-
     public function comments(){
         return $this->hasMany('Blooddivision\Comment');
     }
@@ -89,8 +87,17 @@ class User extends Authenticatable implements SluggableInterface
     *
     *   @return void
     */
-    public function events(){
+    public function belongsToEvents(){
         return $this->belongsToMany('Blooddivision\Event')->withTimestamps();
+    }
+
+    /**
+     * one to many relationship
+     *
+     * @return     <type>
+     */
+    public function events(){
+        return $this->hasMany('Blooddivision\Event');
     }
 
     /**
@@ -125,7 +132,11 @@ class User extends Authenticatable implements SluggableInterface
         return $this->with('rank')->where('users.id', 'ranks.user_id')->take(1)->get();
     }
 
-
+    /**
+     * get the url from the slug
+     *
+     * @return     <type>
+     */
     public function url() {
         return route('user.profile', $this->slug);
     }
@@ -148,6 +159,13 @@ class User extends Authenticatable implements SluggableInterface
         return $this->with($relation)->where('id', \Auth::user()->id)->get();
     }
 
+    /**
+     * one to many relation with the particullar authorized user and the users events 
+     *
+     * @param      <type>  $relation  (description)
+     *
+     * @return     <type>
+     */
     public function JoinEvents($relation){
         return $this->with($relation)->where('id', \Auth::user()->id)->get();
     }

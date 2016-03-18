@@ -14,14 +14,20 @@ use Auth;
 
 class HomeController extends Controller
 {
+
+    protected $event;
+    protected $user;
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Event $event, User $user)
     {
         $this->middleware('auth');
+
+        $this->event = $event;
+        $this->user = $user;
     }
 
     /**
@@ -31,13 +37,9 @@ class HomeController extends Controller
      */
     public function index(){
         
-        $latest_users = User::latest()->limit(3)->get();
-        $feed = Message::all();
-        $events = Event::with('user')->latest()->take(5)->get();
-        // $games = Game::latest()->take(1)->where('user_id', Auth::user()->id)-get();
-        // $games = Game::with('user')->findOrFail('games.id')->whereUser()->take(1)->latest()->get();
+        $events = $this->event->with('user')->latest()->take(5)->get();
 
-        return view('home', compact('latest_users', 'feed', 'events', 'games'));
+        return view('home', compact('events'));
     }
 
     /**

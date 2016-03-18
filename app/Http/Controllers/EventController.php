@@ -4,13 +4,19 @@ namespace Blooddivision\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+
 use Blooddivision\Http\Requests;
 use Blooddivision\Http\Requests\CreateEventRequest;
 use Blooddivision\Http\Controllers\Controller;
+
 use Blooddivision\Event;
 use Blooddivision\User;
+
 use Auth;
 use DB;
+
+use Blooddivision\Helpers\Helper;
+
 
 class EventController extends Controller
 {
@@ -20,8 +26,11 @@ class EventController extends Controller
     *
     *	@return void
     */
-    public function __construct(){
+    public function __construct(Event $event, User $user){
     	$this->middleware('auth');
+
+        $this->event = $event;
+        $this->user = $user;
     }
 
     /**
@@ -29,13 +38,11 @@ class EventController extends Controller
     *	@return void
     */
     public function events(){
-    	
-        /**
-    	* get all the scheduled events from all the users
-        * @return \Illuminate\Database\QueryBuilder::class
-    	*/
     
-        $events = DB::table('events')->leftJoin('users', 'users.id', '=', 'events.user_id')->where('users.id', 'events.user_id')->select('*')->get();
+    
+        $events = $this->user->belongsToEvents;
+
+        dd($events);
         
         // $events = Event::with('users')->where('users.user_id', 'events.user_id')->get();
 
@@ -68,6 +75,11 @@ class EventController extends Controller
     */
 
     public function storeEvent(CreateEventRequest $request){
+
+        $data = $request->all();
+
+        $data['user_id'] = auth()->user()->id;
+
     	/**
     	*	create the new event
     	*	@param event_title 			=> $request->get('event_title'), 
@@ -78,7 +90,7 @@ class EventController extends Controller
     	*	@param user_id				=> Auth::user->id
     	*	@return model
     	*/
-    	Event::create([
+    	$this->event->create([
     		'event_title' 		=> $request->get('event_title'), 
     		'event_game' 		=> $request->get('event_game'), 
     		'event_description' => $request->get('event_desc'),
@@ -96,3 +108,5 @@ class EventController extends Controller
     public function participate(){
         
     }
+
+}

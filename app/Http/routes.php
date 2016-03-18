@@ -17,13 +17,9 @@ use Blooddivision\Game;
 use Blooddivision\Event;
 use Blooddivision\Rank;
 
-Route::get('/search', function(){
-    return view('search');
-});
-
-Route::get('/angular', function(){
-    return view('angular');
-});
+// Route::get('/search', function(){
+//     return view('search');
+// });
 
 /*
 |--------------------------------------------------------------------------
@@ -36,105 +32,210 @@ Route::get('/angular', function(){
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
-});
+    Route::group(['middleware' => 'web'], function () {
 
-Route::group(['middleware' => 'web'], function () {
+        /**
+         * Auth 
+         */
+
+            Route::auth();
+
+        /**
+         * testing route
+         */
+
+            Route::get('/test', function () {
+                // $events = Event::with('user')->latest()->take(5)->get();
+                // 
+                // $tests = Rank::with('user')->get();
+                // foreach ($tests as $test) {
+                //     echo $test->id . ': ' .$test->rank .  ' belongs to ' . $test->user->name ."<br><br>";
+                // }
+                
+                // dd(bcrypt('23'));
+            });
+
+        /**
+         * welcome page
+         */
+
+            Route::get('/', function () {
+                return view('welcome');
+            });
+
+        /**
+         * members route
+         */
+
+            Route::get('/members', 'PageController@getMembersPage');
+            
+        /**
+         * home route for authorized user
+         */
+
+            // home route
+            Route::get('/home', 'HomeController@index');
+
+        /**
+         * events
+         */
+
+            // route group for events
+            Route::group(['prefix' => 'events'], function(){
+
+                /**
+                 * all events
+                 */
+                    Route::get('/', 'EventController@events');
+
+                /**
+                 * latest events
+                 */
+                    Route::get('/latest', 'EventController@latest');
+
+                /**
+                 * completed events
+                 */
+                    Route::get('/completed', 'EventController@completed');
+
+                /**
+                 * single event
+                 */
+                    Route::get('/event/{id}', 'EventController@event');
+
+            });
+
+            Route::get('about', function(){
+            	return view('pages.about');
+            });
+            
+        /**
+         * contact page
+         */
+
+            Route::get('contact-us', 'ContactController@index');
+            Route::post('contact-us', 'ContactController@create');
+
+            // forum route
+            Route::group(['prefix' => 'forum', 'middleware' => 'web'], function () {
+
+                /**
+                 * show all threads in general
+                 */
+                
+                    Route::get('/', 'ForumController@index');
+
+                /**
+                 * filtered threads from thread categories
+                 */
+                
+                    Route::post('/filter/{category}', 'ForumController@filter');
 
 
-    Route::auth();
+                /**
+                 * show posts from particullar thread
+                 */
+                
+                    Route::get('/forum/{thread}/', 'ForumController@posts');
 
-    Route::get('/test', function () {
-        // $events = Event::with('user')->latest()->take(5)->get();
-        // 
-        // $tests = Rank::with('user')->get();
-        // foreach ($tests as $test) {
-        //     echo $test->id . ': ' .$test->rank .  ' belongs to ' . $test->user->name ."<br><br>";
-        // }
+                /**
+                 * show single post
+                 */
+
+                    Route::get('/forum/{thread}/{post}', 'ForumController@post');
+
+            });
         
-        dd(bcrypt('23'));
-    });
+            
+        });
 
-    Route::get('/', function () {
-        return view('welcome');
-    });
+    /**
+    * set a route group for the profile navigations
+    */
 
-    Route::get('/members', 'PageController@getMembersPage');
+        Route::group(['prefix' => '/profile/{slug}', 'middleware' => 'web'], function() {
+
+            /**
+             * profile page
+             */
+            
+                Route::get('/', 'UserController@profile');
+
+            /**
+             * change user description
+             */
+
+                Route::post('/', 'UserController@editDescription');
+
+            /**
+             * users events
+             */
+        
+                Route::get('your-events', 'UserController@profileEvents');
+
+            /**
+             * users single event
+             */
+            
+                Route::get('/your-events/{name}', 'UserController@profileEvent');
+
+            /**
+             * users games route
+             */
+
+
+                Route::get('/your-games', 'UserController@profileGames');
+
+            // /**
+            //  * biography
+            //  */
+
+            //     Route::get('biography', 'UserController@profileAbout');
+        });
+
+    /**
+     * users manage backend 
+     */
+
+        Route::group(['prefix' => '/profile/{slug}/settings', 'middleware' => 'web'], function(){
+
+            /**
+             * settings for profile page
+             */
+
+                Route::get('/general', 'ManageController@index');
+                Route::post('/general', 'ManageController@updateUser');
+
+            /**
+             * games main view
+             */
+
+                Route::get('/games', 'ManageController@gamesSettings');
+
+            /**
+             * manage user events
+             */
+
+                Route::get('/events', 'ManageController@eventsSettings');
+                Route::get('/events/create', 'ManageController@createEventView');
+                Route::post('/events/create', 'ManageController@storeEvent');
+
+        // 'ManageController@manageGamesView'
+        
+        /**
+         * manage users games 
+         */
     
+            Route::get('/games', function() {
+                $game = new Game;
 
-    // home route
-    Route::get('/home', 'HomeController@index');
+                $games = $game->whereUserIsAuthorized()->get();
 
-    // route group for events
-    Route::group(['prefix' => '/events'], function(){
-        // all events
-        Route::get('/', 'EventController@events');
+                dd($games);
+            });
+            Route::get('/games/create', 'ManageController@createGame');
+            Route::post('/games/create', 'ManageController@storeGame');
+            Route::get('/games/{game}/edit', 'ManageController@editGameView');
+            Route::post('/games/{game}/edit', 'ManageController@editGame');
 
-        // latest events
-        Route::get('/latest', 'EventController@latest');
-
-        // completed events
-        Route::get('/completed', 'EventController@completed');
-
-        // event route
-        Route::get('/event/{id}', 'EventController@event');
-
-    });
-
-    Route::get('about', function(){
-    	return view('pages.about');
-    });
-
-    Route::get('contact-us', 'ContactController@index');
-    Route::post('contact-us', 'ContactController@create');
-
-    
-    // forum route
-    Route::get('/forum', 'ForumController@index');
-    
-    // profile route
-    Route::get('/profile/{slug}', 'UserController@profile');
-    
-    Route::get('/profile/{slug}/settings/general', 'UserSettingsController@index');
-});
-
-/**
-* set a route group for the profile navigations
-*/
-
-Route::group(['prefix' => '/profile/{slug}', 'middleware' => 'web'], function() {
-    Route::post('/', 'UserController@editDescription');
-    // the events route
-    Route::get('your-events', 'UserController@profileEvents');
-
-    // the event route
-    Route::get('/your-events/{name}', 'UserController@profileEvent');
-
-    // create-event route
-    Route::get('/create-event', 'UserController@createProfileEvent');
-    Route::post('/create-event', 'UserController@storeEvent');
-
-    // the games route
-    Route::get('/your-games', 'UserController@profileGames');
-    Route::post('/your-games', 'UserController@storeProfileGame');
-
-    // the stats route
-    // Route::get('your-stats', 'UserController@profileStats');
-
-    // the about route
-    Route::get('biography', 'UserController@profileAbout');
-});
-
-Route::group(['prefix' => '/profile/{slug}/settings', 'middleware' => 'web'], function(){
-
-    Route::get('/general', 'UserSettingsController@index');
-    Route::post('/general', 'UserSettingsController@updateUser');
-
-    Route::get('/games', 'UserSettingsController@gamesSettings');
-
-    Route::get('/events', 'UserSettingsController@eventsSettings');
-    Route::get('/events/create-event', 'UserSettingsController@createEventView');
-    Route::post('/events/create-event', 'UserSettingsController@storeEvent');
-
-});
+        });

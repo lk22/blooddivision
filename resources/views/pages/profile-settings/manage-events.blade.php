@@ -4,7 +4,7 @@
 	
 	<div class="row">
 		<h4 class="pull-left">Your events</h4>
-		<a href="/profile/{{auth()->user()->name}}/settings/events/create-event" class="btn btn-primary pull-right">Create event <i class="fa fa-plus"></i></a>
+		<a href="/profile/{{auth()->user()->name}}/settings/events/create" class="btn btn-primary pull-right">Create event <i class="fa fa-plus"></i></a>
 	</div>
 
 	<div class="row manage-events-wrapper">
@@ -20,7 +20,7 @@
 							<p>{{$event->event_description}}</p>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-							<a class="btn pull-right" href="/profile/{{auth()->user()->name}}/settings/events/edit-event">Edit <i class="fa fa-pencil"></i></a>
+							<a class="btn pull-right" href="/profile/{{auth()->user()->name}}/settings/events/edit">Edit <i class="fa fa-pencil"></i></a>
 						</div>
 					</div>
 				</div>

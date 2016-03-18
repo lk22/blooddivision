@@ -13,7 +13,7 @@ use Blooddivision\Http\Requests\ManageUserRequest;
 use Blooddivision\Http\Requests\CreateEventRequest;
 use File;
 use Input;
-class UserSettingsController extends Controller
+class ManageController extends Controller
 {
 
 	protected $user,
@@ -68,9 +68,10 @@ class UserSettingsController extends Controller
         // grab all the users events
             $user = $this->user->getUser(); 
 
-            $events = Event::with('user')->where('events.user_id', auth()->user()->id)->get();
+            $events = $this->event->whereUserIsAuthorized()->get();
 
             $games = $this->game->all();
+
 
         // return view
             return view('pages.profile-settings.manage-events', compact('user', 'events', 'games'));
@@ -86,10 +87,10 @@ class UserSettingsController extends Controller
 
         $data['user_id'] = auth()->user()->id;
 
-        $event = $this->event->create($request->all());
+        $event = $this->event->create($data);
     }
 
-    public function gamesSettings(){
-        return view('pages.profile-settings.manage-games', compact('user'));
+    public function manageGamesView(){
+
     }
 }

@@ -19,7 +19,8 @@
         "guzzlehttp/guzzle": "~5.3|~6.0",
         "laracasts/testdummy": "^2.3",
         "swiftmailer/swiftmailer": "^5.4",
-        "filp/whoops": "^2.1"
+        "filp/whoops": "^2.1",
+        "raveren/kint": "dev-master"
     },
     "require-dev": {
         "mockery/mockery": "0.9.*",

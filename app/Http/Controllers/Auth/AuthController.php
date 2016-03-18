@@ -65,7 +65,7 @@ class AuthController extends Controller
      * @param  array  $data
      * @return User
      */
-    protected function create(array $data, BlooddivisionMailer $mailer)
+    protected function create(array $data)
     {
         return User::create([
             'name' => $data['name'],
@@ -73,11 +73,11 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
 
-        $mailer->sendConfirmationEmailTo($user);
+        // $mailer->sendConfirmationEmailTo($user);
 
-        session()->flash('confirmation_message','Please confirm your email address');
+        // session()->flash('confirmation_message','Please confirm your email address');
 
-        $this->redirectTo = '/login';
+        // $this->redirectTo = '/login';
     }
 
     /**

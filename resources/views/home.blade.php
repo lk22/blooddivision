@@ -13,12 +13,12 @@
                     <img class="img img-circle" src="/images/mystery-man.jpg" alt="">
                 @endif
             </span>
-            <span class="welcomeMessage"><p>Welcome: {{auth()->user()->name}}</p></span>
+            <span class="welcomeMessage"><p>{{e('Welcome: ')}} {{auth()->user()->name}}</p></span>
         </div>
         <!-- right sidebar -->
         <div class="row right-content">
             <div class="row latest-events-row">
-                <h3>Latest Events</h3>
+                <h3>{{e('Latest events')}}</h3>
                 @foreach($events as $event)
                     <div class="row event-row">
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -26,7 +26,6 @@
                             <span>{{ $event->event_game }}</span> 
                             <p>{{ $event->event_description}}</p>
                         </div>
-
                         @if(!$event->user->avatar)
                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 event-user-info">
                                 <span><img class="center-block img img-circle" src="/images/mystery-man.jpg" height="100" width="100" alt=""></span>
@@ -48,4 +47,3 @@
     </div>
 </div><!-- content wrapper -->
 @endsection
-<script>console.log(Blooddivision.user);</script>

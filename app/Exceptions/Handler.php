@@ -49,38 +49,38 @@ class Handler extends ExceptionHandler
         return parent::render($request, $e);
     }
 
-    public function convertExceptionToResponse(Exception $e){
+    // public function convertExceptionToResponse(Exception $e){
 
-        if (config('app.debug')) {
-           $whoops = new \Whoops\Run;
+    //     if (config('app.debug')) {
+    //        $whoops = new \Whoops\Run;
 
-                $handler = new \Whoops\Handler\PrettyPageHandler();
-                //$handler->setEditor('phpstorm');
-                $handler->setEditor(
-                    function ($file, $line) {
-                        // if your development server is not local it's good to map remote files to local
-                        $translations = array('^' . env('SERVER_HOME') => env('LOCAL_HOME')); // change to your path
-                        foreach ($translations as $from => $to) {
-                            $file = rawurlencode(preg_replace('#' . $from . '#', $to, $file, 1));
-                        }
-                        return array(
-                            'url' => "subl://open?url=file://$file&line=$line",
-                            'ajax' => false
-                        );
-                    }
-                );
-                $handler->addResourcePath(base_path('app/Exceptions'));
+    //             $handler = new \Whoops\Handler\PrettyPageHandler();
+    //             //$handler->setEditor('phpstorm');
+    //             $handler->setEditor(
+    //                 function ($file, $line) {
+    //                     // if your development server is not local it's good to map remote files to local
+    //                     $translations = array('^' . env('SERVER_HOME') => env('LOCAL_HOME')); // change to your path
+    //                     foreach ($translations as $from => $to) {
+    //                         $file = rawurlencode(preg_replace('#' . $from . '#', $to, $file, 1));
+    //                     }
+    //                     return array(
+    //                         'url' => "subl://open?url=file://$file&line=$line",
+    //                         'ajax' => false
+    //                     );
+    //                 }
+    //             );
+    //             $handler->addResourcePath(base_path('app/Exceptions'));
                 
-                $whoops->pushHandler($handler);
+    //             $whoops->pushHandler($handler);
 
-                return response()->make(
-                    $whoops->handleException($e),
-                    method_exists($e, 'getStatusCode') ? $e->getStatusCode() : 500,
-                    method_exists($e, 'getHeaders') ? $e->getHeaders() : []
-                );
+    //             return response()->make(
+    //                 $whoops->handleException($e),
+    //                 method_exists($e, 'getStatusCode') ? $e->getStatusCode() : 500,
+    //                 method_exists($e, 'getHeaders') ? $e->getHeaders() : []
+    //             );
         
-        }
-            return parent::convertExceptionToResponse($e);
+    //     }
+    //         return parent::convertExceptionToResponse($e);
         
-    }
+    // }
 }

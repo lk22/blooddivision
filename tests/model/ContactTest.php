@@ -25,26 +25,6 @@ class ContactTest extends TestCase
     }
 
     /**
-     * test if contact_class_exists
-     * @test
-     * @return void
-     */
-    public function check_if_contact_class_exists(){
-    	/**
-    	 * output testing method to terminal
-    	 */
-    	fwrite(STDOUT, __METHOD__. " - says: test passed!");
-    
-    	/**
-    	 * instanciate object
-    	 * @var $contact
-    	 */
-    	$contact = new Contact;
-
-    	$this->assertInstanceOf('Blooddivision\Contact', $contact);
-    }
-
-    /**
     * show a message within end of test runnings
     * @return void
     */

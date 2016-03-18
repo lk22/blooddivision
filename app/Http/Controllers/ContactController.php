@@ -7,10 +7,13 @@ use Blooddivision\Contact;
 use Blooddivision\Http\Requests;
 use Blooddivision\Http\Requests\CreateContactRequest;
 use Blooddivision\Http\Controllers\Controller;
-use Blooddivision\Helper;
-
 class ContactController extends Controller
 {
+
+    public function __construct(Contact $contact){
+        $this->contact = $contact;
+    }
+
 	/**
 	 * get contact page
 	 * @return [type] [description]
@@ -25,7 +28,7 @@ class ContactController extends Controller
      * @return [type]                        [description]
      */
     public function create(CreateContactRequest $request){
-    	Contact::create([
+    	$this->contact->create([
     		'name' => $request->get('name'),
     		'email' => $request->get('email'),
     		'message' => $request->get('message')

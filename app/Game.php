@@ -32,11 +32,26 @@ class Game extends Model
      * mutate the user relation 
      */
     public function user(){
-        return $this->belongsTo('Blooddivision\User', 'id');
+        return $this->belongsTo('Blooddivision\User');
     }
 
-    public function scopeWhereUser($query){
+    /**
+     * find all the records that belongs to the user
+     *
+     * @param      <type>  $query  (description)
+     *
+     * @return     <type>
+     */
+    public function scopeWhereUserIsAuthorized($query){
         return $query->where('user_id', auth()->user()->id);
+    }
+
+    public function scopeOrderByName($query, $order){
+        return $query->orderBy('game', $order);
+    }
+
+    public function scopeOrderByCover($query, $order){
+        return $query->orderBy('game_cover', $order);
     }
 
     /**

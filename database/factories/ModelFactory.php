@@ -52,6 +52,7 @@ $factory->define(Blooddivision\Event::class, function(faker\Generator $faker){
 			'Star Wars Battlefront',
 		]),
 		'event_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi voluptates, totam ducimus quas quam molestiae dolorum numquam deleniti, similique eaque, est molestias! Officiis molestias, amet voluptatibus asperiores iste, dignissimos rem.',
+		'completed' => $faker->randomElement([true, false]),
 		'event_datetime' => $faker->date('Y-m-d', \Carbon\Carbon::now()), 
 		'user_id' => rand(0, 20),
 	];
@@ -115,5 +116,12 @@ $factory->define(Blooddivision\Rank::class, function(faker\Generator $faker){
 			'Over Sergeant'
 		]),
 		'user_id' => rand(0, 20)
+	];
+});
+
+$factory->define(Blooddivision\Article::class, function (faker\Generator $faker) {
+	return [
+		'title' => $faker->name,
+		'body' => $faker->paragraph
 	];
 });

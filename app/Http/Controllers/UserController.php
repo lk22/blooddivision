@@ -14,7 +14,6 @@ use Blooddivision\Event;
 use Blooddivision\Game;
 use Blooddivision\Rank;
 use Carbon\Carbon;
-use Blooddivision\Helpers\Helper;
 
 // brug sluggable i stedet for a lede efter User->name. https://github.com/cviebrock/eloquent-sluggable
 // aldrig brug DB klassen. Hvis du gør, kan det med 90% sikkerhed gøres på en nemmere måde.
@@ -29,24 +28,35 @@ class UserController extends Controller
     * @return profile
     */
    
+   protected $user,
+             $event,
+             $game,
+             $rank;
+   
+   public function __construct(User $user, Event $event, Game $game, Rank $rank){
+        $this->user = $user;
+        $this->event = $event;
+        $this->game = $game;
+        $this->rank = $rank;
+   }
+   
 
     public function profile($slug){
     	// step 1 => get the specific user
-      $auth = auth()->user();
-    	$user = User::Where('name', $slug)->get(); //- first name og lastname conventeres automatisk til leo-knudsen
-    	// step 2 => get the events belongs to the user
 
-       // $events = $user->events; // ==== $user->events()->get();
-       $events = Event::with('user')->where('events.user_id', $auth->id)->latest()->get();
+            $user = $this->user->Where('name', $slug)->get(); 
 
-       $ranks = Rank::with('user')->where('ranks.user_id', $auth->id)->take(1)->get();
+            $events = $this->event->with('user')->where('events.user_id', auth()->user()->id)->latest()->get();
 
-       $games = Game::latest()->take(1);
+            $ranks = $this->rank->with('user')->where('ranks.user_id', auth()->user()->id)->take(1)->get();
+
+            $games = $this->game->latest()->take(1);
         // $events = Event::all()->take(10)->get(); // get  
         
     	// step 3 => get the profile view
-    	return view('pages.profile_home', compact('user', 'events', 'ranks'));
-        return vide('layouts.profile', compact('user', 'ranks'));
+        // 
+        	return view('pages.profile_home', compact('user', 'events', 'ranks'));
+            return vide('layouts.profile', compact('user', 'ranks'));
     }
 
     /**
@@ -55,18 +65,17 @@ class UserController extends Controller
     */
 
     public function profileEvents($name){
-      $auth = Helper::getAuth();
-    	// step 1 => get the profile
-    	$user = User::where('name', $name)->get();
+    	// step 1 => get the user
+    	$user = $this->user->where('name', $name)->get();
+
     	// step 2 => get the events belongs to the user
+        $events = $this->event->with('user')->where('events.user_id', auth()->user()->id)->get();
 
-    	// $events = User::all()->event()->get();
-
-        $events = Event::with('user')->where('events.user_id', $auth->id)->get();
-
-        $ranks = Rank::with('user')->where('ranks.user_id', $auth->id)->take(1)->get();
+        $ranks = $this->rank->with('user')->where('ranks.user_id', auth()->user()->id)->take(1)->get();
         
-        $use->events;
+        // $user->events;
+        // 
+        dd($events);
 
     	// step 4 => load view
     	return view('pages.profile_events', compact('user', 'events', 'ranks'));
@@ -78,7 +87,7 @@ class UserController extends Controller
     */
 
     public function profileEvent($slug){
-    	$the_event = Event::where('event_title', $slug)->limit(1)->get();
+    	$the_event = $this->event->where('event_title', $slug)->limit(1)->get();
     }
 
     /**
@@ -90,15 +99,15 @@ class UserController extends Controller
     	/**
     	* select the authorized user
     	*/
-    	$user = User::where('name', Auth::user()->name)->limit(1)->get();
+    	$user = $this->user->where('name', auth()->user()->name)->limit(1)->get();
 
     	/**
     	* select all games
     	*/
-    	$games = Game::all();
+    	$games = $this->game->all();
 
         $auth = auth()->user();
-        $ranks = Rank::with('user')->where('ranks.user_id', $auth->id)->take(1)->get();
+        $ranks = $this->rank->with('user')->where('ranks.user_id', $auth->id)->take(1)->get();
 
     	/**
     	* return the view
@@ -113,21 +122,22 @@ class UserController extends Controller
     */
 
     public function storeEvent(CreateEventRequest $request){
+
+        $data = $request->all();
+
+        $data['user_id'] = auth()->user()->id;
+
     	/**
     	* step 1 => create the model row
     	*/
-    	Event::create([
-    		'event_name' => $request->get('event_name'),
-            'event_game' => $request->get('event_game'),
-            'event_datetime' => $request->get('event_datetime'),
-            'event_description' => $request->get('event_desc'),
-            'user_id' => auth()->user()->id
-    	]);
+    
+    	   $this->event->create($data);
 
     	/**
     	* step 2 => redirect the user to the your events route
     	*/
-    	return redirect('/profile/' . Auth::user()->name . ' /your-events');
+        
+    	   return redirect('/profile/' . auth()->user()->name . ' /your-events');
     }
 
     /**
@@ -137,13 +147,11 @@ class UserController extends Controller
     */
     public function thrashEvent($id){
 
-        $auth = Helper::getAuth();
-
         if($id == $auth->id){
-            Event::where('id', $auth->id)->delete();
+            $this->event->where('id', auth()->user()->id)->delete();
         }
 
-    	Event::where('id', $id)->delete();
+    	$this->event->where('id', $id)->delete();
     	return redirect('/profile/{{Auth::user()->name}}/your-events');
     }
 
@@ -154,21 +162,19 @@ class UserController extends Controller
      */
     
     public function profileGames(){
-
-        $auth = Helper::getAuth();
         /**
          * fetch the user
          * @var [array]
          */
-        $user = User::where('name', Auth::user()->name)->get();
+        $user = $this->user->where('name', auth()->user()->name)->get();
         // $games = Game::find('id')->with('user')->get();
     
         /**
          * fetch the users added games
          */
     
-        $games = Game::with('user')->where('games.user_id', $auth->id)->get();
-        $ranks = Rank::with('user')->where('ranks.user_id', $auth->id)->take(1)->get();
+        $games = $this->game->with('user')->where('games.user_id', auth()->user()->id)->get();
+        $ranks = $this->rank->with('user')->where('ranks.user_id', auth()->user()->id)->take(1)->get();
 
         // dd($games);
 
@@ -182,12 +188,17 @@ class UserController extends Controller
      */
     
     public function storeProfileGame(CreateGameRequest $request){
-        Game::create([
-            'game' => $request->get('game_name'),
-            'user_id' => Auth::user()->id
+
+        $data = $request->all();
+
+        $data['user_id'] = $this->helper->getAuth();
+
+        $this->game->create([
+            'game' => $data['game_name'],
+            'user_id' => auth()->user()->id
             ])->save();
 
-        $auth = auth()->user()->name;
+        $authName = auth()->user()->name;
 
         return redirect('/profile/' . $auth . '/your-games');
     }
@@ -200,7 +211,7 @@ class UserController extends Controller
     public function editDescription(EditUserDescriptionRequest $request, $slug){
 
         $auth = auth()->user();
-        User::where('id', $auth->id)->update(['profile_desc' => $request->get('description')]);
+        $this->user->where('id', $auth->id)->update(['profile_desc' => $request->get('description')]);
 
         return redirect('/profile/' . $auth->name);
 
