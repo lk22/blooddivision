@@ -233,8 +233,8 @@ use Blooddivision\Rank;
                  * edit the event
                  */
                 
-                    Route::get('/events/edit/{slug}', 'ManageController@editEventView');
-                    Route::post('/events/edit/{slug}', 'ManageController@updateEvent');
+                    Route::get('/events/edit/{name}', 'ManageController@editEventView');
+                    Route::post('/events/edit/{name}', 'ManageController@updateEvent');
 
         // 'ManageController@manageGamesView'
         

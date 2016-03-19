@@ -191,7 +191,6 @@ class ManageController extends Controller
         /**
          * set the user id to the authorized user id
          */
-
             $data['user_id'] = auth()->user()->id;
 
         /**
@@ -211,11 +210,15 @@ class ManageController extends Controller
      * the edit view
      * @return [type] [description]
      */
-    public function editEventView($slug){
+    public function editEventView($id){
 
-        $this->user->getUser();
+        $user = $this->user->getUser();
 
-        $this->event->where('slug', $slug)->get();
+        $events = $this->event->with('user')->get();
+
+        dd($events);
+
+        return view('pages.profile-manage.manage-edit-event', compact('user', 'event'));
 
     }
 

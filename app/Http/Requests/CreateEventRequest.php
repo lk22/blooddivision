@@ -28,10 +28,10 @@ class CreateEventRequest extends Request
         * @return array
         */
         return [
-            'event_name'        => 'required',
-            'event_game'        => 'required',
-            'event_datetime'    => 'required',
-            'event_desc'        => 'required|max:255'
+            'name'        => 'required',
+            'game'        => 'required',
+            'datetime'    => 'required',
+            'description'        => 'required|max:255'
         ];
     }
 }

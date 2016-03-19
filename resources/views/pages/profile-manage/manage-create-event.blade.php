@@ -22,22 +22,22 @@
 
 			<div class="form-group">
 				<label for="" class="control-label">Event name:</label>
-				<input placeholder="Enter event name here" type="text" name="event_name" class="form-control">
+				<input placeholder="Enter event name here" type="text" name="name" class="form-control">
 			</div>
 
 			<div class="form-group">
 				<label for="" class="control-label">Event game:</label>
-				<input type="text" class="form-control" placeholder="Enter game name here" name="event_game">
+				<input type="text" class="form-control" placeholder="Enter game name here" name="game">
 			</div>
 
 			<div class="form-group">
 				<label for="" class="control-label">Event datetime:</label>
-				<input type="date" class="form-control event-datetime-input" placeholder="your event date and time goes here..." name="event_datetime">
+				<input type="date" class="form-control event-datetime-input" placeholder="your event date and time goes here..." name="datetime">
 			</div>
 
 			<div class="form-group">
 				<label for="" class="control-label">Event description:</label>
-				<textarea class="form-control manage-description" name="event_desc" id="" cols="30" rows="5"></textarea>
+				<textarea class="form-control manage-description" name="description" id="" cols="30" rows="5"></textarea>
 			</div>
 
 			<div class="form-group">

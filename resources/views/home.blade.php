@@ -22,9 +22,9 @@
                 @foreach($events as $event)
                     <div class="row event-row">
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <span><h5>{{ $event->event_name }}</h5></span>
-                            <span>{{ $event->event_game }}</span> 
-                            <p>{{ $event->event_description}}</p>
+                            <span><h5>{{ $event->name }}</h5></span>
+                            <span>{{ $event->game }}</span> 
+                            <p>{{ $event->description}}</p>
                         </div>
                         @if(!$event->user->avatar)
                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 event-user-info">

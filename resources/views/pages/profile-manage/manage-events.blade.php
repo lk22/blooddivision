@@ -13,14 +13,16 @@
 			@foreach($events as $event)
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<p>Event: {{$event->event_name}}</p>
+						<p class="text-left">Event: {{$event->name}}</p>
+						<p class="text-right">Created at: {{$event->created_at}}</p>
 					</div>
 					<div class="panel-body">
 						<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
-							<p>{{$event->event_description}}</p>
+							<p>{{$event->description}}</p>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-							<a class="btn pull-right" href="/profile/{{auth()->user()->name}}/manage/events/edit/{event_name}">Edit <i class="fa fa-pencil"></i></a>
+							<a class="btn pull-left" href="/profile/{{auth()->user()->name}}/manage/events/edit/{name}"><i class="fa fa-pencil"></i></a>
+							<a class="btn pull-right" href="/profile/{{auth()->user()->name}}/manage/events/delete{id}"><i class="fa fa-times"></i></a>
 						</div>
 					</div>
 				</div>

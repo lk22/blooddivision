@@ -39,10 +39,10 @@ class Event extends Model implements SluggableInterface
     */
 
         protected $fillable = [
-        	'event_name',			// the event name
-        	'event_game',			// the event game
-        	'event_description',	// the event description
-            'event_datetime',       // the event date and time
+        	'name',			// the event name
+        	'game',			// the event game
+        	'description',	// the event description
+            'datetime',       // the event date and time
         	'user_id'				// the specific user that has added the event 
         ];
 
@@ -53,7 +53,7 @@ class Event extends Model implements SluggableInterface
     * @var $dates = array 
     */
 
-        protected $dates = ['event_datetime'];
+        protected $dates = ['datetime'];
 
     /**
     *	Events belongs to one user

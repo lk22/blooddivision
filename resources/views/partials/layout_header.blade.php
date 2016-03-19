@@ -52,7 +52,7 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="/profile/{{auth()->user()->name}}"><i class="fa fa-male"></i> Profile</a></li>
-                                <li><a href="{{ url('/profile/' . auth()->user()->name . '/settings/general') }}"><i class="fa fa-cogs"></i> Profile Settings</a></li>
+                                <li><a href="{{ url('/profile/' . auth()->user()->name . '/manage/general') }}"><i class="fa fa-cogs"></i> Profile Settings</a></li>
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
                         </li>

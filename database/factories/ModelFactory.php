@@ -42,8 +42,8 @@ $factory->define(Blooddivision\User::class, function(faker\Generator $faker) {
 */
 $factory->define(Blooddivision\Event::class, function(faker\Generator $faker){
 	return [
-		'event_name' => "leokk2200",
-		'event_game' => $faker->randomElement([
+		'name' => "leokk2200",
+		'game' => $faker->randomElement([
 			'Destiny',
 			'Halo 5',
 			'Grand Theft Auto V',
@@ -51,9 +51,9 @@ $factory->define(Blooddivision\Event::class, function(faker\Generator $faker){
 			'Star Wars The old Republic',
 			'Star Wars Battlefront',
 		]),
-		'event_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi voluptates, totam ducimus quas quam molestiae dolorum numquam deleniti, similique eaque, est molestias! Officiis molestias, amet voluptatibus asperiores iste, dignissimos rem.',
+		'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi voluptates, totam ducimus quas quam molestiae dolorum numquam deleniti, similique eaque, est molestias! Officiis molestias, amet voluptatibus asperiores iste, dignissimos rem.',
 		'completed' => $faker->randomElement([true, false]),
-		'event_datetime' => $faker->date('Y-m-d', \Carbon\Carbon::now()), 
+		'datetime' => $faker->date('Y-m-d', \Carbon\Carbon::now()), 
 		'user_id' => rand(0, 20),
 	];
 });
