@@ -120,5 +120,9 @@ class Event extends Model implements SluggableInterface
         public function scopeGetEventsWhereUserIsAuthorized($query){
             return $query->where('id', auth()->user()->id)->get();
         }
+
+        public function withUser(){
+            return $this->with('user');
+        }
     
 }

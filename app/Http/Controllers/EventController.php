@@ -40,11 +40,9 @@ class EventController extends Controller
     public function events(){
     
     
-        $events = $this->user->belongsToEvents;
+        $events = $this->event->with('user')->latest()->get();
 
-        dd($events);
-        
-        // $events = Event::with('users')->where('users.user_id', 'events.user_id')->get();
+        // dd($events);
 
     	/**
     	* return events view with the all the events
@@ -91,11 +89,11 @@ class EventController extends Controller
     	*	@return model
     	*/
     	$this->event->create([
-    		'event_title' 		=> $request->get('event_title'), 
-    		'event_game' 		=> $request->get('event_game'), 
-    		'event_description' => $request->get('event_desc'),
-            'event_datetime'    => $request->get('event_datetime'),
-    		'user_id'	 		=> auth()->user()->id
+    		'name' 		  => $request->get('event_title'), 
+    		'game' 		  => $request->get('event_game'), 
+    		'description' => $request->get('event_desc'),
+            'datetime'    => $request->get('event_datetime'),
+    		'user_id'	  => auth()->user()->id
     	])->save();
 
     	/**
