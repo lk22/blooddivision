@@ -23,8 +23,7 @@ class CommentTest extends TestCase
         echo "Hello Tester of Blood Division\n";
         // logic message here ...
     }
-        
-    }
+    
     /**
     * show a message within end of test runnings
     * @return void
