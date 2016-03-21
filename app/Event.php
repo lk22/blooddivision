@@ -90,7 +90,7 @@ class Event extends Model implements SluggableInterface
      * @return [type]        [description]
      */
     
-        public function scopeCompleted($query){
+        public function scopeWhereCompleted($query){
             return $query->where('completed', 1);
         }
 
@@ -102,8 +102,8 @@ class Event extends Model implements SluggableInterface
      * @return     <type>
      */
     
-        public function scopeArchived($query){
-            return $query->where('archived', 1);
+        public function scopeWhereArchived($query){
+            dd($query->where('archived', 1));
         }
 
 

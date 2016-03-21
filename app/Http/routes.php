@@ -101,7 +101,7 @@ use Blooddivision\Rank;
                 /**
                  * single event
                  */
-                    Route::get('/event/{id}', 'EventController@event');
+                    Route::get('/event/{slug?}', 'EventController@event');
 
             });
 

@@ -40,9 +40,7 @@ class EventController extends Controller
     public function events(){
     
     
-        $events = $this->event->with('user')->latest()->get();
-
-        // dd($events);
+        $events = $this->event->with('user')->get();
 
     	/**
     	* return events view with the all the events
@@ -89,10 +87,10 @@ class EventController extends Controller
     	*	@return model
     	*/
     	$this->event->create([
-    		'name' 		  => $request->get('event_title'), 
-    		'game' 		  => $request->get('event_game'), 
-    		'description' => $request->get('event_desc'),
-            'datetime'    => $request->get('event_datetime'),
+    		'name' 		  => $request->get('name'), 
+    		'game' 		  => $request->get('game'), 
+    		'description' => $request->get('description'),
+            'datetime'    => $request->get('datetime'),
     		'user_id'	  => auth()->user()->id
     	])->save();
 
@@ -103,8 +101,12 @@ class EventController extends Controller
     	return redirect('/events');
     }
 
-    public function participate(){
-        
+    public function event($slug){
+
+        $event = $this->event->with('user')->where('events.slug', $slug)->get();
+
+        return view('pages.event', compact('event'));
+
     }
 
 }
