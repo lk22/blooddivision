@@ -1582,6 +1582,8 @@
         color: #000; }
   .container-fluid.events-wrapper .events {
     background: #FFF; }
+    .container-fluid.events-wrapper .events .container {
+      width: auto; }
     .container-fluid.events-wrapper .events .event {
       width: 93%;
       margin-top: 10px;
