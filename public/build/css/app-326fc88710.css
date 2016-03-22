@@ -1273,14 +1273,14 @@
     .navbar-default button .icon-bar {
       color: #e67e22; }
   .navbar-default .navbar-brand {
-    color: #d35400; }
+    color: #2980b9; }
     .navbar-default .navbar-brand:hover {
       color: #e74c3c;
       transition: ease-in-out 0.2s all; }
     .navbar-default .navbar-brand:not(:hover) {
       transition: ease-in-out 0.2s all; }
   .navbar-default .nav li a {
-    color: #e67e22; }
+    color: #2980b9; }
     .navbar-default .nav li a:hover {
       color: #e74c3c;
       transition: ease-in-out 0.2s all; }
@@ -1290,7 +1290,7 @@
     background: #fff;
     min-width: 167px; }
     .navbar-default .nav li.dropdown .dropdown-menu li a {
-      color: #e67e22; }
+      color: #2c3e50; }
       .navbar-default .nav li.dropdown .dropdown-menu li a:hover {
         color: #e74c3c;
         transition: ease-in-out 0.2s all; }
@@ -1310,7 +1310,7 @@
   .sidebar-btn:not(:hover) {
     transition: ease-in-out 0.2s all; }
   .sidebar-btn .fa {
-    color: #e67e22;
+    color: #2980b9;
     font-size: 20px;
     cursor: pointer; }
     .sidebar-btn .fa:hover {
@@ -1337,7 +1337,7 @@
     width: 50px;
     padding: 10px; }
     .settings-sidebar .close-settings-btn .fa {
-      color: #e67e22;
+      color: #2980b9;
       font-size: 28px;
       cursor: pointer; }
       .settings-sidebar .close-settings-btn .fa:hover {
@@ -1356,11 +1356,11 @@
     padding: 20px 0px 20px 0px; }
     .settings-sidebar .sidebar-nav a {
       display: block;
-      color: #e67e22;
+      color: #2980b9;
       border-bottom: 1px solid #ddd;
       padding: 5px 20px 5px 20px; }
       .settings-sidebar .sidebar-nav a:hover {
-        background: #e67e22;
+        background: #2c3e50;
         color: #FFF;
         transition: ease-in-out 0.2s all; }
       .settings-sidebar .sidebar-nav a:not(:hover) {
@@ -1769,6 +1769,50 @@
         border-radius: none;
         background: #2ecc71;
         color: #fff; }
+
+/**
+	 * forum page
+	 */
+/**
+ * forum page
+ */
+/**
+	 * main wrapper
+	 */
+.forum-wrapper {
+  height: 100%;
+  width: 100%;
+  /**
+			 * header
+			 */
+  /**
+			 * threads container
+			 */ }
+  .forum-wrapper .forum-header {
+    height: 80px;
+    background: #2c3e50;
+    color: #fff; }
+    .forum-wrapper .forum-header .container {
+      width: 89.1%; }
+      .forum-wrapper .forum-header .container .filter-container {
+        margin-left: 50.3%; }
+  .forum-wrapper .threads-container {
+    min-height: 600px;
+    color: #fff; }
+    .forum-wrapper .threads-container .contents {
+      min-height: 550px;
+      margin: 0px 20px 0px -36px; }
+      .forum-wrapper .threads-container .contents .thread-header {
+        background: #2980b9;
+        height: 55px; }
+      .forum-wrapper .threads-container .contents .thread-body {
+        border: 1px solid #2980b9;
+        min-height: 150px;
+        color: #000; }
+        .forum-wrapper .threads-container .contents .thread-body .row {
+          border-bottom: 1px solid #ececec; }
+          .forum-wrapper .threads-container .contents .thread-body .row .thread-desc {
+            color: #777; }
 
 /**
 	*	main page
@@ -2623,7 +2667,7 @@
 
 #app-layout {
   padding-bottom: 0px;
-  background: #E9EAED;
+  background: #fff;
   overflow-x: hidden; }
   #app-layout .overlay {
     position: fixed;
@@ -2637,12 +2681,12 @@
     z-index: 9999; }
   #app-layout .btn {
     border-radius: 0px 0px 0px 0px;
-    background: #f39c12;
+    background: #2980b9;
     text-decoration: uppercase;
     border: none;
     color: #FFF; }
     #app-layout .btn:hover {
-      background: #e74c3c;
+      background: #2c3e50;
       color: #FFF;
       transition: ease-in-out 0.2s all; }
     #app-layout .btn:not(:hover) {

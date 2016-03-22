@@ -14,14 +14,8 @@ class ForumController extends Controller
      * @return Collection [forum threads, tags]
      */
     public function index(){
-    	/**
-    	 * step 1 grab all tags
-    	 * make sure the tags model is ready to use
-    	 */
-
-    	/**
-    	 * step 2 grab the all threads
-    	 */
+    	
+        return view('pages.forum.forum');
 
     }
 }

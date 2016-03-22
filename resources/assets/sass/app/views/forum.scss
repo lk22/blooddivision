@@ -1,0 +1,62 @@
+/**
+ * forum page
+ */
+
+	/**
+	 * main wrapper
+	 */
+	
+		.forum-wrapper{
+			height: 100%;
+			width: 100%;
+			
+			/**
+			 * header
+			 */
+			
+				.forum-header{
+					height:80px;
+					background: #2c3e50; 
+					color: #fff; 
+					
+					.container{
+						width:89.1%;
+						
+
+						.filter-container{
+							margin-left: 50.3%; 
+						}
+					}
+				}
+
+			/**
+			 * threads container
+			 */
+			
+				.threads-container{
+					min-height:600px;
+					color: #fff; 
+					.contents{
+						min-height: 550px; 
+						margin: 0px 20px 0px -36px;
+						.thread-header{
+							background: #2980b9;
+							height:55px;
+						}
+
+						.thread-body{
+							border:1px solid #2980b9;
+							min-height:150px;
+							color: #000; 
+							
+							.row{
+								border-bottom:1px solid #ececec;
+								
+								.thread-desc{
+									color: #777; 
+								}
+							}
+						}
+					}
+				}
+		}

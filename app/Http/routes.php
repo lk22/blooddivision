@@ -17,9 +17,9 @@ use Blooddivision\Game;
 use Blooddivision\Event;
 use Blooddivision\Rank;
 
-// Route::get('/search', function(){
-//     return view('search');
-// });
+Route::get('/search', function(){
+    return view('search');
+});
 
 /*
 |--------------------------------------------------------------------------

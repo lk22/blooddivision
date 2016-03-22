@@ -375,6 +375,5 @@ class UserTest extends TestCase
        echo "\n\n----------------------------------\n\n";
        echo "user model is now tested\n\n";
        echo "----------------------------------\n\n";
-       echo "gkjwpegpewpokpokp";
     }
 }
