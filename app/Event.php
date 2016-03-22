@@ -91,7 +91,7 @@ class Event extends Model implements SluggableInterface
      */
     
         public function scopeWhereCompleted($query){
-            return $query->where('completed', 1);
+            return $query->where('completed', 1)->get();
         }
 
     /**

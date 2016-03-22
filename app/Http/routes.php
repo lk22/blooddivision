@@ -87,6 +87,7 @@ use Blooddivision\Rank;
                  * all events
                  */
                     Route::get('/', 'EventController@events');
+                    Route::get('/all', 'EventController@events');
 
                 /**
                  * latest events
@@ -101,7 +102,7 @@ use Blooddivision\Rank;
                 /**
                  * single event
                  */
-                    Route::get('/event/{slug?}', 'EventController@event');
+                    Route::get('/event/{slug}', 'EventController@event');
 
             });
 

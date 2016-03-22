@@ -54,6 +54,10 @@ class EventController extends Controller
      */
     public function latest(){
 
+        $events = $this->event->with('user')->latest()->get();
+
+        return view('pages.events', compact('events'));
+
     }
 
     /**
@@ -61,6 +65,10 @@ class EventController extends Controller
      * @return [type] [description]
      */
     public function completed(){
+
+        $events = $this->event->with('user')->whereCompleted();
+
+        return view('pages.events', compact('events'));
 
     }
 
