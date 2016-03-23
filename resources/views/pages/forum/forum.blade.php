@@ -29,107 +29,236 @@
 				</div>
 				<!-- thread body -->
 				<div class="thread-body p-left-15 p-right-15 m-bottom-15">
-					<div class="row">
+					<div class="row p-top-10">
 						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 							<h5>General Chat</h5>
 							<p class="thread-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-							<h5>Center Col</h5>
+							<h5>topics: 8</h5>
+							<p>posts: 10</p>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-							<h5>Right</h5>
+							<h5>2016-06/12</h5>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row p-top-10">
 						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 							<h5>General Chat</h5>
 							<p class="thread-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-							<h5>Center Col</h5>
+							<h5>topics: 8</h5>
+							<p>posts: 10</p>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-							<h5>Right</h5>
+							<h5>2016-06/12</h5>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row p-top-10">
 						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 							<h5>General Chat</h5>
 							<p class="thread-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-							<h5>Center Col</h5>
+							<h5>topics: 8</h5>
+							<p>posts: 10</p>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-							<h5>Right</h5>
+							<h5>2016-06/12</h5>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row p-top-10">
 						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 							<h5>General Chat</h5>
 							<p class="thread-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-							<h5>Center Col</h5>
+							<h5>topics: 8</h5>
+							<p>posts: 10</p>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-							<h5>Right</h5>
+							<h5>2016-06/12</h5>
 						</div>
 					</div>
 				</div>
+
 				<!-- thread header -->
-				<div class="thread-header m-top-15  p-top-10 p-left-15">
+				<div class="thread-header m-top-15 p-top-10 p-left-15">
 					<h5>GENERAL</h5>
 				</div>
 				<!-- thread body -->
 				<div class="thread-body p-left-15 p-right-15 m-bottom-15">
-					<div class="row">
+					<div class="row p-top-10">
 						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 							<h5>General Chat</h5>
 							<p class="thread-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-							<h5>Center Col</h5>
+							<h5>topics: 8</h5>
+							<p>posts: 10</p>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-							<h5>Right</h5>
+							<h5>2016-06/12</h5>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row p-top-10">
 						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 							<h5>General Chat</h5>
 							<p class="thread-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-							<h5>Center Col</h5>
+							<h5>topics: 8</h5>
+							<p>posts: 10</p>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-							<h5>Right</h5>
+							<h5>2016-06/12</h5>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row p-top-10">
 						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 							<h5>General Chat</h5>
 							<p class="thread-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-							<h5>Center Col</h5>
+							<h5>topics: 8</h5>
+							<p>posts: 10</p>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-							<h5>Right</h5>
+							<h5>2016-06/12</h5>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row p-top-10">
 						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 							<h5>General Chat</h5>
 							<p class="thread-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-							<h5>Center Col</h5>
+							<h5>topics: 8</h5>
+							<p>posts: 10</p>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-							<h5>Right</h5>
+							<h5>2016-06/12</h5>
+						</div>
+					</div>
+				</div>
+
+				<!-- thread header -->
+				<div class="thread-header m-top-15 p-top-10 p-left-15">
+					<h5>GENERAL</h5>
+				</div>
+				<!-- thread body -->
+				<div class="thread-body p-left-15 p-right-15 m-bottom-15">
+					<div class="row p-top-10">
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<h5>General Chat</h5>
+							<p class="thread-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+							<h5>topics: 8</h5>
+							<p>posts: 10</p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+							<h5>2016-06/12</h5>
+						</div>
+					</div>
+					<div class="row p-top-10">
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<h5>General Chat</h5>
+							<p class="thread-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+							<h5>topics: 8</h5>
+							<p>posts: 10</p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+							<h5>2016-06/12</h5>
+						</div>
+					</div>
+					<div class="row p-top-10">
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<h5>General Chat</h5>
+							<p class="thread-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+							<h5>topics: 8</h5>
+							<p>posts: 10</p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+							<h5>2016-06/12</h5>
+						</div>
+					</div>
+					<div class="row p-top-10">
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<h5>General Chat</h5>
+							<p class="thread-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+							<h5>topics: 8</h5>
+							<p>posts: 10</p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+							<h5>2016-06/12</h5>
+						</div>
+					</div>
+				</div>
+
+				<!-- thread header -->
+				<div class="thread-header m-top-15 p-top-10 p-left-15">
+					<h5>GENERAL</h5>
+				</div>
+				<!-- thread body -->
+				<div class="thread-body p-left-15 p-right-15 m-bottom-15">
+					<div class="row p-top-10">
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<h5>General Chat</h5>
+							<p class="thread-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+							<h5>topics: 8</h5>
+							<p>posts: 10</p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+							<h5>2016-06/12</h5>
+						</div>
+					</div>
+					<div class="row p-top-10">
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<h5>General Chat</h5>
+							<p class="thread-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+							<h5>topics: 8</h5>
+							<p>posts: 10</p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+							<h5>2016-06/12</h5>
+						</div>
+					</div>
+					<div class="row p-top-10">
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<h5>General Chat</h5>
+							<p class="thread-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+							<h5>topics: 8</h5>
+							<p>posts: 10</p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+							<h5>2016-06/12</h5>
+						</div>
+					</div>
+					<div class="row p-top-10">
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<h5>General Chat</h5>
+							<p class="thread-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+							<h5>topics: 8</h5>
+							<p>posts: 10</p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+							<h5>2016-06/12</h5>
 						</div>
 					</div>
 				</div>
