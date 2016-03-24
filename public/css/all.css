@@ -6918,6 +6918,36 @@ button.close {
 /*
 *	structure components variables
 */
+.b-1 {
+  border: 1px; }
+
+.b-2 {
+  border: 2px; }
+
+.b-3 {
+  border: 3px; }
+
+.b-4 {
+  border: 4px; }
+
+.b-5 {
+  border: 5px; }
+
+.b-solid {
+  border-style: solid; }
+
+.b-blue {
+  border-color: #2980b9; }
+
+.b-red {
+  border-color: #e74c3c; }
+
+.b-dark-blue {
+  border-color: #34495e; }
+
+.b-darker-blue {
+  border-color: #2c3e50; }
+
 /**
  * margins
  */
@@ -8466,6 +8496,20 @@ button.close {
         transition: ease-in-out 0.2s all; }
 
 /**
+	 * contact
+	 */
+/**
+ * contact page
+ */
+.contact-wrapper {
+  height: 100%;
+  width: 100%; }
+  .contact-wrapper .contact-header {
+    background: #2C3E50;
+    height: 80px;
+    color: #fff; }
+
+/**
 	* events
 	*/
 /**
@@ -8475,21 +8519,23 @@ button.close {
 	* app events wrapper
 	*/
 .container-fluid.events-wrapper {
-  margin-top: 10px;
+  margin-top: -1px;
   margin-bottom: 10px;
-  width: 65%;
-  font-family: 'Lato'; }
+  width: 100%; }
   .container-fluid.events-wrapper .filter-header {
     background: #FFF;
-    padding: 10px; }
-    .container-fluid.events-wrapper .filter-header .filter {
-      margin-left: 10px; }
-      .container-fluid.events-wrapper .filter-header .filter a {
-        color: #000; }
+    padding: 10px;
+    height: 80px;
+    background: #34495e;
+    color: #fff; }
+    .container-fluid.events-wrapper .filter-header .container {
+      width: 86%; }
+    .container-fluid.events-wrapper .filter-header .filter a {
+      color: #FFF; }
   .container-fluid.events-wrapper .events {
     background: #FFF; }
     .container-fluid.events-wrapper .events .container {
-      width: auto; }
+      width: 86%; }
     .container-fluid.events-wrapper .events .event {
       width: 93%;
       margin-top: 10px;
@@ -8696,18 +8742,20 @@ button.close {
 			 */ }
   .forum-wrapper .forum-header {
     height: 80px;
-    background: #2c3e50;
-    color: #fff; }
+    background: #34495e;
+    color: #fff;
+    margin-top: -1px; }
     .forum-wrapper .forum-header .container {
       width: 89.1%; }
       .forum-wrapper .forum-header .container .filter-container {
-        margin-left: 50.3%; }
+        margin-left: 53.3%; }
   .forum-wrapper .threads-container {
     min-height: 600px;
     color: #fff; }
+    .forum-wrapper .threads-container .container {
+      width: 86%; }
     .forum-wrapper .threads-container .contents {
-      min-height: 550px;
-      margin: 0px 20px 0px -36px; }
+      min-height: 550px; }
       .forum-wrapper .threads-container .contents .thread-header {
         background: #2980b9;
         height: 55px; }
@@ -8732,7 +8780,6 @@ button.close {
 .container-fluid.content-wrapper {
   min-height: 500px;
   width: 100%;
-  margin-top: -20px;
   font-size: 12px;
   /*
 			* welcome user container
@@ -8745,20 +8792,6 @@ button.close {
 			*/ }
   .container-fluid.content-wrapper a {
     color: #000; }
-  .container-fluid.content-wrapper .welcome-user-container {
-    width: 100%;
-    padding: 20px;
-    border: 1px solid #ECECEC;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    background: #fff; }
-    .container-fluid.content-wrapper .welcome-user-container .userimage img {
-      height: 55px;
-      width: 55px; }
-    .container-fluid.content-wrapper .welcome-user-container .welcomeMessage p {
-      font-size: 12px;
-      display: inline;
-      margin-left: 10px; }
   .container-fluid.content-wrapper .sidebar-partial {
     padding: 70px;
     background: #fff;
@@ -9336,6 +9369,11 @@ button.close {
 /**
 *	Team view styles
 */
+.member-header {
+  height: 80px;
+  color: #FFF;
+  background: #34495e; }
+
 /**
 	*	memmbers wrapper	
 	*/
@@ -9585,6 +9623,20 @@ button.close {
     opacity: 0.8;
     display: none;
     z-index: 9999; }
+  #app-layout .user-banner {
+    height: 80px;
+    padding: 15px;
+    border: 1px solid #ECECEC;
+    background: #2c3e50;
+    color: #FFF; }
+    #app-layout .user-banner .container {
+      width: 86%; }
+    #app-layout .user-banner .userimage img {
+      height: 55px;
+      width: 55px; }
+    #app-layout .user-banner .welcomeMessage h5 {
+      display: inline;
+      margin-left: 10px; }
   #app-layout .btn {
     border-radius: 0px 0px 0px 0px;
     background: #2980b9;

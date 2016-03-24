@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="row member-header p-top-20">
+	<div class="container">
+		<h4 class="text-center">Division Members</h4>
+	</div>
+</div>
 <!-- members content wrapper -->
 <div class="container-fluid members-content-wrapper">
 	<!-- inner wrapper -->

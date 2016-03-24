@@ -9,7 +9,6 @@
 		.container-fluid.content-wrapper{
 			min-height:500px;
 			width: 100%; 
-			margin-top:-20px;
 			font-size: 12px;
 			a{
 				color: #000; 
@@ -19,28 +18,7 @@
 			* welcome user container
 			*/
 		
-				.welcome-user-container{
-					width: 100%; 
-					padding:20px;
-					border:1px solid #ECECEC; 
-					margin-bottom:10px;
-					margin-top:20px;
-					background: #fff;
-					.userimage{
-						img{
-							height: 55px;
-							width: 55px;
-						}
-					}
-
-					.welcomeMessage{
-						p{
-							font-size: 12px;
-							display:inline;
-							margin-left:10px;
-						}
-					}
-				}
+				
 
 			/**
 			*	sidebar

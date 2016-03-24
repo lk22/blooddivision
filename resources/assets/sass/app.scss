@@ -9,9 +9,9 @@
 // base variables
 	@import 'vars/_all';
 	
-// grid base components
+// helper 
 
-	@import 'base/_all';
+	@import 'helpers/_all';
 	
 // mixins
 	@import 'mixins/_all';
@@ -39,6 +39,28 @@
 		opacity: 0.8;
 		display:none;
 		z-index:9999;
+	}
+
+	.user-banner{
+		height: 80px;
+		padding:15px;
+		border:1px solid #ECECEC; 
+		background: #2c3e50;
+		color: #FFF; 
+		.container{ width:86%; }
+		.userimage{
+			img{
+				height: 55px;
+				width: 55px;
+			}
+		}
+
+		.welcomeMessage{
+			h5{
+				display:inline;
+				margin-left:10px;
+			}
+		}
 	}
 	.btn{
 		-webkit-border-radius: 0px 0px 0px 0px; 

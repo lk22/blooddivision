@@ -2,9 +2,8 @@
 
 @section('content')
 	<div class="container contact-wrapper">
-		<div class="row">
-			<h1 class="text-center">Contact us for more information</h1>
-			<hr>
+		<div class="row contact-header">
+			<h2 class="text-center">{{e('CONTACT US FOR MORE INFORMATION')}}</h2>
 		</div>
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-offset-3 col-lg-6 col-lg-offset-3">

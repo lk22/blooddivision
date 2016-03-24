@@ -2,22 +2,12 @@
 
 @section('content')
 <!-- content wrapper -->
-<div class="container-fluid content-wrapper">
-
+@include('partials.user-banner')
+<div class="container-fluid content-wrapper m-top-15">
     <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 inner-content-wrapper">
-        <div class="row welcome-user-container">
-            <span class="userimage">
-                @if(auth()->user()->avatar)
-                    <img class="img img-circle" src="/images/avatars/{{auth()->user()->avatar}}" alt="">
-                @else
-                    <img class="img img-circle" src="/images/mystery-man.jpg" alt="">
-                @endif
-            </span>
-            <span class="welcomeMessage"><p>{{e('Welcome: ')}} {{auth()->user()->name}}</p></span>
-        </div>
         <!-- right sidebar -->
         <div class="row right-content">
-            <div class="row latest-events-row">
+            <div class="row latest-events-row m-top-15">
                 <h3>{{e('Latest events')}}</h3>
                 @foreach($events as $event)
                     <div class="row event-row">

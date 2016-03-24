@@ -16,15 +16,15 @@
 			
 				.forum-header{
 					height:80px;
-					background: #2c3e50; 
+					background: #34495e; 
 					color: #fff; 
-					
+					margin-top:-1px;
 					.container{
 						width:89.1%;
 						
 
 						.filter-container{
-							margin-left: 50.3%; 
+							margin-left: 53.3%; 
 						}
 					}
 				}
@@ -36,10 +36,10 @@
 				.threads-container{
 					min-height:600px;
 					color: #fff; 
-					width: 86.666667%; 
+					.container{width:86%;}
 					.contents{
 						min-height: 550px; 
-						margin: 0px 20px 0px -36px;
+
 						.thread-header{
 							background: #2980b9;
 							height:55px;
