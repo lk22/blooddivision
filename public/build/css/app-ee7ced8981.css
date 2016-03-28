@@ -1282,7 +1282,7 @@
 	*	navbar
 	*/
 .navbar-default {
-  background: transparent;
+  background: #34495e;
   border: none;
   border-radius: 0px 0px 0px 0px;
   z-index: 2px; }

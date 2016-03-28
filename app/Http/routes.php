@@ -80,31 +80,31 @@ Route::get('/search', function(){
          * events
          */
 
-            // route group for events
-            Route::group(['prefix' => 'events'], function(){
+            // // route group for events
+            // Route::group(['prefix' => 'events'], function(){
 
-                /**
-                 * all events
-                 */
-                    Route::get('/', 'EventController@events');
-                    Route::get('/all', 'EventController@events');
+            //     /**
+            //      * all events
+            //      */
+            //         Route::get('/', 'EventController@events');
+            //         Route::get('/all', 'EventController@events');
 
-                /**
-                 * latest events
-                 */
-                    Route::get('/latest', 'EventController@latest');
+            //     /**
+            //      * latest events
+            //      */
+            //         Route::get('/latest', 'EventController@latest');
 
-                /**
-                 * completed events
-                 */
-                    Route::get('/completed', 'EventController@completed');
+            //     /**
+            //      * completed events
+            //      */
+            //         Route::get('/completed', 'EventController@completed');
 
-                /**
-                 * single event
-                 */
-                    Route::get('/event/{slug}', 'EventController@event');
+            //     /**
+            //      * single event
+            //      */
+            //         Route::get('/event/{slug}', 'EventController@event');
 
-            });
+            // });
 
             Route::get('about', function(){
             	return view('pages.about');

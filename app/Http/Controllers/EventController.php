@@ -14,12 +14,16 @@ use Blooddivision\User;
 
 use Auth;
 use DB;
+use Response;
 
 use Blooddivision\Helpers\Helper;
+use Blooddivision\Transformers\EventTransformer;
 
 
 class EventController extends Controller
 {
+
+    protected $eventTransformer;
 
     /**
     *	tell the controller wich middleware to use
@@ -31,6 +35,7 @@ class EventController extends Controller
 
         $this->event = $event;
         $this->user = $user;
+        // $this->eventTransformer = $eventTransformer;
     }
 
     /**
@@ -46,6 +51,12 @@ class EventController extends Controller
     	* return events view with the all the events
     	*/
     	return view('pages.events')->with('events', $events);
+    
+        // dd($events);
+        // 
+        // transform data return $this->eventTransformer->transform($events);
+        
+        // return $events;
     }
 
     /**

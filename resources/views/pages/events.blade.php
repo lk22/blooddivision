@@ -11,19 +11,19 @@
 			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 				<h3>EVENTS</h3>
 			</div>
-			<div class="col-xs-12 col-sm-12 col-md-4 col-md-offset-5 col-lg-4 col-lg-offset-5">
-				 
-			</div>
-				<div class="all filter pull-right btn m-top-15"><a href="/events/all"> <i class="fa fa-globe"> All</i></a></div>
-				<div class="latest filter pull-right btn m-top-15"><a href="/events/latest"> <i class="fa fa-hourglass-start"> Latest</i></a></div>
-				<div class="completed filter pull-right btn m-top-15"><a href="/events/completed"> <i class="fa fa-check"> Completed</i></a></div>
-				<div class="archived filter pull-right btn m-top-15"><a href="/events/archived"> <i class="fa fa-check"> Archived</i></a></div>
+				<div class="col-xs-12 col-sm-12 col-md-4 col-md-offset-5 col-lg-4 col-lg-offset-5">
+					 <div class="all filter pull-right btn m-top-15"><a href="/events/all"> <i class="fa fa-globe"> All</i></a></div>
+					<div class="latest filter pull-right btn m-top-15"><a href="/events/latest"> <i class="fa fa-hourglass-start"> Latest</i></a></div>
+					<div class="completed filter pull-right btn m-top-15"><a href="/events/completed"> <i class="fa fa-check"> Completed</i></a></div>
+					<div class="archived filter pull-right btn m-top-15"><a href="/events/archived"> <i class="fa fa-check"> Archived</i></a></div>
+				</div>
 			</div>
 		</div>
 		<!-- events -->
 		<div class="row events">
 			<!-- inner -->
 			<div class="container">
+			@if(count($events) >= 1)
 				<!-- loop through all events -->
 				@foreach($events as $event)
 					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -48,6 +48,7 @@
 						</div>
 					</div>
 				@endforeach
+			@endif
 			</div>
 		</div>
 	</section>
